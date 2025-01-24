@@ -1,1 +1,1 @@
-# WTL_BE_Clean_Architecture
+# WTL_BE_Quickly
