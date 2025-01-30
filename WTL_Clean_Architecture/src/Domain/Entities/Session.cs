@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class Session
+public partial class Session : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
-    public Guid UserId { get; set; }
+    public long UserId { get; set; }
 
     public string? AccessToken { get; set; }
 

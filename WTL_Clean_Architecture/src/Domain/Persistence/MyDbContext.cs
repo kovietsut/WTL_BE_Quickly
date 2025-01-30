@@ -48,7 +48,12 @@ public partial class MyDbContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=PHATNT;Database=WebTruyenLo;Trusted_Connection=True;TrustServerCertificate=True;User ID=sa;Password=123456");
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlServer("ConnectionString");
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -56,7 +61,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Actions__3214EC0701FE5DAF");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -70,7 +74,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__AuthMeth__3214EC078CF7B1CD");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.AuthId).HasMaxLength(255);
             entity.Property(e => e.AuthType).HasMaxLength(50);
             entity.Property(e => e.CreatedAt)
@@ -90,7 +93,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Chapters__3214EC07F52585A5");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -114,7 +116,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__ChapterI__3214EC07E2B6F532");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.FilePath).IsUnicode(false);
             entity.Property(e => e.FileSize)
                 .HasMaxLength(255)
@@ -141,7 +142,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Comments__3214EC07CE8527B9");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -167,7 +167,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__CommentR__3214EC072CADC68D");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -187,7 +186,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Featured__3214EC0736CEA38B");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -207,9 +205,7 @@ public partial class MyDbContext : DbContext
 
         modelBuilder.Entity<FeaturedCollectionManga>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Featured__3214EC07D1296EAC");
-
-            entity.Property(e => e.Id).ValueGeneratedNever();
+            entity.HasKey(e => e.Id).HasName("PK__Featured__3214EC07A35C926C");
 
             entity.HasOne(d => d.FeaturedCollection).WithMany(p => p.FeaturedCollectionMangas)
                 .HasForeignKey(d => d.FeaturedCollectionId)
@@ -226,7 +222,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Featured__3214EC07DA4FFC3C");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -255,7 +250,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Generes__3214EC07C42CC74C");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -269,7 +263,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Mangas__3214EC07903C34BB");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -313,8 +306,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__MangaGen__3214EC077172674E");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
-
             entity.HasOne(d => d.Genre).WithMany(p => p.MangaGenres)
                 .HasForeignKey(d => d.GenreId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -330,7 +321,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__MangaInt__3214EC075D87671E");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -356,7 +346,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Roles__3214EC07CE933FCB");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -370,7 +359,6 @@ public partial class MyDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__Sessions__3214EC075127621B");
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -391,7 +379,6 @@ public partial class MyDbContext : DbContext
 
             entity.HasIndex(e => e.Email, "UQ__Users__A9D1053495D01949").IsUnique();
 
-            entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.Address).HasMaxLength(255);
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")

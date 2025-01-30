@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class FeaturedCollectionPermission
+public partial class FeaturedCollectionPermission : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
@@ -13,13 +12,13 @@ public partial class FeaturedCollectionPermission
 
     public bool IsDeleted { get; set; }
 
-    public Guid? MangaId { get; set; }
+    public long? MangaId { get; set; }
 
-    public Guid? UserId { get; set; }
+    public long? UserId { get; set; }
 
-    public Guid? FeaturedCollectionId { get; set; }
+    public long? FeaturedCollectionId { get; set; }
 
-    public Guid? ActionId { get; set; }
+    public long? ActionId { get; set; }
 
     public int PermissionType { get; set; }
 

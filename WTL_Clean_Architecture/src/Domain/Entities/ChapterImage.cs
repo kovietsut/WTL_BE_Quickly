@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class ChapterImage
+public partial class ChapterImage : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
     public bool IsDeleted { get; set; }
 
-    public Guid? CreatedBy { get; set; }
+    public long? CreatedBy { get; set; }
 
-    public Guid? ModifiedBy { get; set; }
+    public long? ModifiedBy { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -21,7 +20,7 @@ public partial class ChapterImage
 
     public string? FilePath { get; set; }
 
-    public Guid? ChapterId { get; set; }
+    public long? ChapterId { get; set; }
 
     public virtual Chapter? Chapter { get; set; }
 

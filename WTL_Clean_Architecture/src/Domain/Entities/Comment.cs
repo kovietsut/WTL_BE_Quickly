@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class Comment
+public partial class Comment : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
-    public Guid? MangaId { get; set; }
+    public long? MangaId { get; set; }
 
-    public Guid UserId { get; set; }
+    public long UserId { get; set; }
 
-    public Guid? ParentCommentId { get; set; }
+    public long? ParentCommentId { get; set; }
 
     public string Content { get; set; } = null!;
 
@@ -23,7 +22,7 @@ public partial class Comment
 
     public bool IsSpoiler { get; set; }
 
-    public Guid? ChapterId { get; set; }
+    public long? ChapterId { get; set; }
 
     public virtual Chapter? Chapter { get; set; }
 

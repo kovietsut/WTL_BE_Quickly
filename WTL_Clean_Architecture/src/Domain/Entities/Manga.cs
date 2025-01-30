@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class Manga
+public partial class Manga : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
@@ -31,17 +30,17 @@ public partial class Manga
 
     public string? CoverImage { get; set; }
 
-    public Guid? CreatedBy { get; set; }
+    public long? CreatedBy { get; set; }
 
-    public Guid? ModifiedBy { get; set; }
+    public long? ModifiedBy { get; set; }
 
-    public Guid? SubAuthor { get; set; }
+    public long? SubAuthor { get; set; }
 
-    public Guid? Publishor { get; set; }
+    public long? Publishor { get; set; }
 
-    public Guid? Artist { get; set; }
+    public long? Artist { get; set; }
 
-    public Guid? Translator { get; set; }
+    public long? Translator { get; set; }
 
     public virtual User? ArtistNavigation { get; set; }
 

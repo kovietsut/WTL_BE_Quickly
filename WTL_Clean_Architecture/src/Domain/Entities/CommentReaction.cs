@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class CommentReaction
+public partial class CommentReaction : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
-    public Guid CommentId { get; set; }
+    public long CommentId { get; set; }
 
-    public Guid UserId { get; set; }
+    public long UserId { get; set; }
 
     public int ReactionType { get; set; }
 

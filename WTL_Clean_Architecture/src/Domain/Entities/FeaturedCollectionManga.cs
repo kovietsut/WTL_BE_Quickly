@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class FeaturedCollectionManga
+public partial class FeaturedCollectionManga : IEntityBase<long>
 {
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     public bool IsDeleted { get; set; }
 
-    public Guid MangaId { get; set; }
+    public long MangaId { get; set; }
 
-    public Guid FeaturedCollectionId { get; set; }
+    public long FeaturedCollectionId { get; set; }
 
     public virtual FeaturedCollection FeaturedCollection { get; set; } = null!;
 

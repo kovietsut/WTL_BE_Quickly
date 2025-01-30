@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class MangaGenre
+public partial class MangaGenre : IEntityBase<long>
 {
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     public bool IsDeleted { get; set; }
 
-    public Guid MangaId { get; set; }
+    public long MangaId { get; set; }
 
-    public Guid GenreId { get; set; }
+    public long GenreId { get; set; }
 
     public virtual Genere Genre { get; set; } = null!;
 

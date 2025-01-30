@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class Genere
+public partial class Genere : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
     public DateTime CreatedAt { get; set; }
 

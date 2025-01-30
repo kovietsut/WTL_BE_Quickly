@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class User
+public partial class User : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
-    public Guid RoleId { get; set; }
+    public long RoleId { get; set; }
 
     public string? FullName { get; set; }
 

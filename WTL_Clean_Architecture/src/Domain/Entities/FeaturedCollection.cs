@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class FeaturedCollection
+public partial class FeaturedCollection : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
-    public Guid? CreatedBy { get; set; }
+    public long? CreatedBy { get; set; }
 
-    public Guid? ModifiedBy { get; set; }
+    public long? ModifiedBy { get; set; }
 
     public DateTime CreatedAt { get; set; }
 

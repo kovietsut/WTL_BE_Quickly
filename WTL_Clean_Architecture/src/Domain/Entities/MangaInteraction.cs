@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class MangaInteraction
+public partial class MangaInteraction : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
-    public Guid UserId { get; set; }
+    public long UserId { get; set; }
 
-    public Guid? MangaId { get; set; }
+    public long? MangaId { get; set; }
 
-    public Guid? ChapterId { get; set; }
+    public long? ChapterId { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 

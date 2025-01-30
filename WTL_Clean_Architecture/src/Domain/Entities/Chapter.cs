@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Domain.Entities.Interfaces;
 
 namespace Domain.Entities;
 
-public partial class Chapter
+public partial class Chapter : IEntityBase<long>
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
 
     public bool IsDeleted { get; set; }
 
@@ -13,9 +12,9 @@ public partial class Chapter
 
     public DateTime? UpdatedAt { get; set; }
 
-    public Guid? CreatedBy { get; set; }
+    public long? CreatedBy { get; set; }
 
-    public Guid? ModifiedBy { get; set; }
+    public long? ModifiedBy { get; set; }
 
     public string Name { get; set; } = null!;
 
