@@ -1,16 +1,18 @@
-﻿using Domain.Entities.Interfaces;
-
-namespace Domain.Entities;
+﻿namespace Domain.Entities;
 
 public partial class FeaturedCollection : EntityBase<long>
 {
+    public long Id { get; set; }
+
     public long? CreatedBy { get; set; }
 
     public long? ModifiedBy { get; set; }
 
-    public DateTime CreatedAt { get; set; }
+    public DateTimeOffset CreatedAt { get; set; }
 
-    public DateTime? UpdatedAt { get; set; }
+    public DateTimeOffset? UpdatedAt { get; set; }
+
+    public bool IsDeleted { get; set; }
 
     public string Name { get; set; } = null!;
 

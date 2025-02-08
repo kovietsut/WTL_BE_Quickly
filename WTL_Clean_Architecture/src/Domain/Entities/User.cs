@@ -2,6 +2,8 @@
 
 public partial class User : EntityBase<long>
 {
+    public long Id { get; set; }
+
     public long RoleId { get; set; }
 
     public string? FullName { get; set; }
@@ -10,9 +12,11 @@ public partial class User : EntityBase<long>
 
     public string? Avatar { get; set; }
 
-    public DateTime CreatedAt { get; set; }
+    public DateTimeOffset CreatedAt { get; set; }
 
-    public DateTime? UpdatedAt { get; set; }
+    public DateTimeOffset? UpdatedAt { get; set; }
+
+    public bool IsDeleted { get; set; }
 
     public string? Address { get; set; }
 
@@ -57,6 +61,4 @@ public partial class User : EntityBase<long>
     public virtual ICollection<Manga> MangaTranslatorNavigations { get; set; } = new List<Manga>();
 
     public virtual Role Role { get; set; } = null!;
-
-    public virtual ICollection<Session> Sessions { get; set; } = new List<Session>();
 }

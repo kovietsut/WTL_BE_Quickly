@@ -2,6 +2,8 @@
 
 public partial class Comment : EntityBase<long>
 {
+    public long Id { get; set; }
+
     public long? MangaId { get; set; }
 
     public long UserId { get; set; }
@@ -10,9 +12,11 @@ public partial class Comment : EntityBase<long>
 
     public string Content { get; set; } = null!;
 
-    public DateTime CreatedAt { get; set; }
+    public DateTimeOffset CreatedAt { get; set; }
 
-    public DateTime? UpdatedAt { get; set; }
+    public DateTimeOffset? UpdatedAt { get; set; }
+
+    public bool IsDeleted { get; set; }
 
     public bool IsSpoiler { get; set; }
 

@@ -2,6 +2,10 @@
 
 public partial class MangaGenre : EntityBase<long>
 {
+    public long Id { get; set; }
+
+    public bool IsDeleted { get; set; }
+
     public long MangaId { get; set; }
 
     public long GenreId { get; set; }

@@ -2,15 +2,19 @@
 
 public partial class MangaInteraction : EntityBase<long>
 {
+    public long Id { get; set; }
+
     public long UserId { get; set; }
 
     public long? MangaId { get; set; }
 
     public long? ChapterId { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTimeOffset CreatedAt { get; set; }
 
-    public DateTime UpdatedAt { get; set; }
+    public DateTimeOffset? UpdatedAt { get; set; }
+
+    public bool IsDeleted { get; set; }
 
     public int? InteractionType { get; set; }
 

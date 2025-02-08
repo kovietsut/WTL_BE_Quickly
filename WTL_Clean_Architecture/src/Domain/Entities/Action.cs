@@ -2,9 +2,13 @@
 
 public partial class Action : EntityBase<long>
 {
-    public DateTime CreatedAt { get; set; }
+    public long Id { get; set; }
 
-    public DateTime? UpdatedAt { get; set; }
+    public DateTimeOffset CreatedAt { get; set; }
+
+    public DateTimeOffset? UpdatedAt { get; set; }
+
+    public bool IsDeleted { get; set; }
 
     public string Name { get; set; } = null!;
 

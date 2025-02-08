@@ -2,6 +2,8 @@
 
 public partial class CommentReaction : EntityBase<long>
 {
+    public long Id { get; set; }
+
     public long CommentId { get; set; }
 
     public long UserId { get; set; }
