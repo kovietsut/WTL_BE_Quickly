@@ -1,11 +1,7 @@
-﻿using Domain.Entities.Interfaces;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public partial class Comment : IEntityBase<long>
+public partial class Comment : EntityBase<long>
 {
-    public long Id { get; set; }
-
     public long? MangaId { get; set; }
 
     public long UserId { get; set; }
@@ -17,8 +13,6 @@ public partial class Comment : IEntityBase<long>
     public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
-
-    public bool IsDeleted { get; set; }
 
     public bool IsSpoiler { get; set; }
 

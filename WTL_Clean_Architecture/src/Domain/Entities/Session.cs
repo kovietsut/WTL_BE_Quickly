@@ -1,11 +1,7 @@
-﻿using Domain.Entities.Interfaces;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public partial class Session : IEntityBase<long>
+public partial class Session : EntityBase<long>
 {
-    public long Id { get; set; }
-
     public long UserId { get; set; }
 
     public string? AccessToken { get; set; }
@@ -17,8 +13,6 @@ public partial class Session : IEntityBase<long>
     public DateTime? UpdatedAt { get; set; }
 
     public DateTime? ExpiresAt { get; set; }
-
-    public bool IsDeleted { get; set; }
 
     public virtual User User { get; set; } = null!;
 }

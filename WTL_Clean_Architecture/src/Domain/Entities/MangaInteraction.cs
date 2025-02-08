@@ -1,11 +1,7 @@
-﻿using Domain.Entities.Interfaces;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public partial class MangaInteraction : IEntityBase<long>
+public partial class MangaInteraction : EntityBase<long>
 {
-    public long Id { get; set; }
-
     public long UserId { get; set; }
 
     public long? MangaId { get; set; }
@@ -15,8 +11,6 @@ public partial class MangaInteraction : IEntityBase<long>
     public DateTime? CreatedAt { get; set; }
 
     public DateTime UpdatedAt { get; set; }
-
-    public bool IsDeleted { get; set; }
 
     public int? InteractionType { get; set; }
 

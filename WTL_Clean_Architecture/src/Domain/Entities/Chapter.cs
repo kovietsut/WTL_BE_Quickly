@@ -1,13 +1,7 @@
-﻿using Domain.Entities.Interfaces;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public partial class Chapter : IEntityBase<long>
+public partial class Chapter : EntityBase<long>
 {
-    public long Id { get; set; }
-
-    public bool IsDeleted { get; set; }
-
     public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }

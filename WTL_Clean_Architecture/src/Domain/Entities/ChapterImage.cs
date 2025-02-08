@@ -1,13 +1,7 @@
-﻿using Domain.Entities.Interfaces;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public partial class ChapterImage : IEntityBase<long>
+public partial class ChapterImage : EntityBase<long>
 {
-    public long Id { get; set; }
-
-    public bool IsDeleted { get; set; }
-
     public long? CreatedBy { get; set; }
 
     public long? ModifiedBy { get; set; }

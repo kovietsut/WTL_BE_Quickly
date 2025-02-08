@@ -1,12 +1,7 @@
-﻿using Domain.Entities.Interfaces;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public partial class FeaturedCollectionManga : IEntityBase<long>
+public partial class FeaturedCollectionManga : EntityBase<long>
 {
-    public long Id { get; set; }
-
-    public bool IsDeleted { get; set; }
 
     public long MangaId { get; set; }
 

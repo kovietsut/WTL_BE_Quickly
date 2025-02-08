@@ -1,11 +1,7 @@
-﻿using Domain.Entities.Interfaces;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public partial class User : IEntityBase<long>
+public partial class User : EntityBase<long>
 {
-    public long Id { get; set; }
-
     public long RoleId { get; set; }
 
     public string? FullName { get; set; }
@@ -18,13 +14,15 @@ public partial class User : IEntityBase<long>
 
     public DateTime? UpdatedAt { get; set; }
 
-    public bool IsDeleted { get; set; }
-
     public string? Address { get; set; }
 
     public string? PhoneNumber { get; set; }
 
     public bool? Gender { get; set; }
+
+    public string? PasswordHash { get; set; }
+
+    public string? SecurityStamp { get; set; }
 
     public virtual ICollection<AuthMethod> AuthMethods { get; set; } = new List<AuthMethod>();
 

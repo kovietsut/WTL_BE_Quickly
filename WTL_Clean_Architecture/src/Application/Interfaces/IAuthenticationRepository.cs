@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Application.Models;
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Interfaces

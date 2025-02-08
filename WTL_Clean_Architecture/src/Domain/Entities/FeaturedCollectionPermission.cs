@@ -1,16 +1,10 @@
-﻿using Domain.Entities.Interfaces;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public partial class FeaturedCollectionPermission : IEntityBase<long>
+public partial class FeaturedCollectionPermission : EntityBase<long>
 {
-    public long Id { get; set; }
-
     public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
-
-    public bool IsDeleted { get; set; }
 
     public long? MangaId { get; set; }
 

@@ -79,7 +79,6 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
-            entity.Property(e => e.PasswordHash).HasMaxLength(255);
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -396,6 +395,9 @@ public partial class MyDbContext : DbContext
                 .HasForeignKey(d => d.RoleId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Users__RoleId__4222D4EF");
+
+            entity.Property(e => e.PasswordHash).HasMaxLength(255);
+            entity.Property(e => e.SecurityStamp).HasMaxLength(255);
         });
 
         OnModelCreatingPartial(modelBuilder);

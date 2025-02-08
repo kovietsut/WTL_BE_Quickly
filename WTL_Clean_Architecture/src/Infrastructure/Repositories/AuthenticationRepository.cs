@@ -1,4 +1,6 @@
-﻿using Application.Interfaces;
+﻿using Application.Features.Users.Commands;
+using Application.Interfaces;
+using Application.Models;
 using Domain.Entities;
 using Domain.Persistence;
 using Infrastructure.Configurations;
@@ -32,7 +34,7 @@ namespace Infrastructure.Repositories
                 Email = model.Email.Trim(),
                 RoleId = model.RoleId,
                 CreatedAt = DateTime.Now,
-                //SecurityStamp = Guid.NewGuid().ToString(),
+                SecurityStamp = Guid.NewGuid().ToString(),
             };
             user.PasswordHash = _iEncryptionRepository.EncryptPassword(model.Password, user.SecurityStamp);
             return await CreateAsync(user);
@@ -48,8 +50,8 @@ namespace Infrastructure.Repositories
             try
             {
                 var user = await _iUserRepository.GetByIdAsync(userId);
-                if (user == null) return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Usser Doest Not Exist");
-                user.ModifiedAt = DateTime.Now;
+                if (user == null) return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "User Doest Not Exist");
+                user.UpdatedAt = DateTime.Now;
                 user.Email = model.Email.Trim();
                 await _iUserRepository.UpdateAsync(user);
                 return JsonUtil.Success(user.Id);
@@ -72,7 +74,7 @@ namespace Infrastructure.Repositories
                 }
                 var user = await _iUserRepository.GetByIdAsync(userId);
                 if (user == null) return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "User Does Not Exist");
-                if (user.IsEnabled == false) return JsonUtil.Error(StatusCodes.Status403Forbidden, _errorCodes?.Status403?.Forbidden, "User Has Blocked");
+                if (user.IsDeleted == true) return JsonUtil.Error(StatusCodes.Status403Forbidden, _errorCodes?.Status403?.Forbidden, "User Has Blocked");
                 var checkPassword = _iEncryptionRepository.EncryptPassword(model.CurrentPassword, user.SecurityStamp);
                 if (user.PasswordHash != checkPassword) return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Incorrect Password");
                 user.SecurityStamp = Guid.NewGuid().ToString();

@@ -4,7 +4,7 @@
     {
         string CreateSalt();
         string CreateSalt(string code);
-        string EncryptPassword(string username, string password);
+        string EncryptPassword(string password, string securityStamp);
         string HashSHA256(string value);
     }
 }

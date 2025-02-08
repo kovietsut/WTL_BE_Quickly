@@ -1,11 +1,7 @@
-﻿using Domain.Entities.Interfaces;
+﻿namespace Domain.Entities;
 
-namespace Domain.Entities;
-
-public partial class CommentReaction : IEntityBase<long>
+public partial class CommentReaction : EntityBase<long>
 {
-    public long Id { get; set; }
-
     public long CommentId { get; set; }
 
     public long UserId { get; set; }
