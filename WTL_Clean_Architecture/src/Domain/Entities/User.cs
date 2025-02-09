@@ -2,8 +2,6 @@
 
 public partial class User : EntityBase<long>
 {
-    public long Id { get; set; }
-
     public long RoleId { get; set; }
 
     public string? FullName { get; set; }
@@ -16,7 +14,6 @@ public partial class User : EntityBase<long>
 
     public DateTimeOffset? UpdatedAt { get; set; }
 
-    public bool IsDeleted { get; set; }
 
     public string? Address { get; set; }
 

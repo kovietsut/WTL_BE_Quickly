@@ -1,5 +1,5 @@
 ﻿using Application.Interfaces;
-using Infrastructure.Configurations;
+using Domain.Configurations;
 using Microsoft.Extensions.Options;
 using System.Security.Cryptography;
 using System.Text;

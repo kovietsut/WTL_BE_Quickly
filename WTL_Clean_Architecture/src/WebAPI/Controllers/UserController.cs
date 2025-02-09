@@ -1,5 +1,8 @@
-﻿using Application.Interfaces;
+﻿using Application.Features.Users.GetById;
+using Application.Features.Users.GetList;
+using Application.Interfaces;
 using Application.Models;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,22 +14,28 @@ namespace WebAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _iUserRepository;
+        private readonly IMediator _mediator;
 
-        public UserController(IUserRepository iUserRepository)
+        public UserController(IUserRepository iUserRepository, IMediator mediator)
         {
             _iUserRepository = iUserRepository;
+            _mediator = mediator;
         }
 
         [HttpGet("{userId}")]
         public async Task<IActionResult> Get(int userId)
         {
-            return await _iUserRepository.GetUser(userId);
+            var query = new GetUserByIdQuery(userId);
+            var result = await _mediator.Send(query);
+            return result;
         }
 
         [HttpGet("get-list")]
         public async Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText, int? roleId)
         {
-            return await _iUserRepository.GetList(pageNumber, pageSize, searchText, roleId);
+            var query = new GetListUserQuery(pageNumber, pageSize, searchText, roleId);
+            var result = await _mediator.Send(query);
+            return result;
         }
 
         [HttpPost]

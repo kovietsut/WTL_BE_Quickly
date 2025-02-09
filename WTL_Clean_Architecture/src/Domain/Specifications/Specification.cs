@@ -10,6 +10,8 @@ namespace Domain.Specifications
         public Expression<Func<TEntity, object>>? OrderByExpression { get; private set; }
         public Expression<Func<TEntity, object>>? OrderByDescendingExpression { get; private set; }
         public bool IsSplitQuery { get; protected set; }
+        public int? Skip { get; private set; }
+        public int? Take { get; private set; }
 
         public Specification() {}
 
@@ -18,5 +20,10 @@ namespace Domain.Specifications
         protected void AddInclude(Expression<Func<TEntity, object>> includeExpression) => IncludeExpressions.Add(includeExpression);
         protected void AddOrderBy(Expression<Func<TEntity, object>> orderByExpression) => OrderByExpression = orderByExpression;
         protected void AddOrderByDescending(Expression<Func<TEntity, object>> orderByDescendingExpression) => OrderByExpression = orderByDescendingExpression;
+        protected void ApplyPaging(int? skip, int? take)
+        {
+            Skip = skip;
+            Take = take;
+        }
     }
 }

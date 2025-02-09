@@ -1,6 +1,6 @@
 ﻿using Application.Interfaces;
+using Domain.Configurations;
 using Domain.Persistence;
-using Infrastructure.Configurations;
 using Infrastructure.Repositories;
 using Infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;

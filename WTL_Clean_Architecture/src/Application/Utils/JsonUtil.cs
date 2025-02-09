@@ -1,9 +1,8 @@
 ﻿using FluentValidation.Results;
-using Infrastructure.Configurations;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Infrastructure.Utils
+namespace Application.Utils
 {
     public static class JsonUtil
     {

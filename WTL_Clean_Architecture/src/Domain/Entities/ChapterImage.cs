@@ -2,10 +2,6 @@
 
 public partial class ChapterImage : EntityBase<long>
 {
-    public long Id { get; set; }
-
-    public bool IsDeleted { get; set; }
-
     public long? CreatedBy { get; set; }
 
     public long? ModifiedBy { get; set; }

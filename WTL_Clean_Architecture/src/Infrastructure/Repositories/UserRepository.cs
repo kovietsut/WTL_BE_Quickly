@@ -1,10 +1,13 @@
-﻿using Application.Features.Users.Commands;
+﻿using Application.Features.Users.Create;
+using Application.Features.Users.Update;
 using Application.Interfaces;
 using Application.Models;
+using Application.Utils;
+using Domain.Configurations;
 using Domain.Entities;
 using Domain.Persistence;
-using Infrastructure.Configurations;
-using Infrastructure.Utils;
+using Domain.Specifications;
+using Domain.Specifications.Users;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -25,76 +28,25 @@ namespace Infrastructure.Repositories
             _errorCodes = errorCodes.Value;
         }
 
-        public List<string> GetListEmail(List<long?> listIds)
+        public async Task<User?> GetUserById(long id)
         {
-            var emails = FindAll().Where(x => listIds.Contains(x.Id)).Select(x => x.Email).ToList();
-            return emails;
+            var query = FindByCondition(x => x.Id == id);
+            var specification = new GetUserByIdSpecification(id);
+            return await SpecificationQueryBuilder.GetQuery(query, specification).SingleOrDefaultAsync();
+        }
+           
+
+        public async Task<User?> GetUserByEmail(string email)
+        {
+            var query = FindByCondition(x => x.Email == email);
+            var specification = new GetUserByEmailSpecification(email);
+            return await SpecificationQueryBuilder.GetQuery(query, specification).SingleOrDefaultAsync();
         }
 
-        public Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText, int? roleId)
+        public async Task<List<User>> GetList(int? pageNumber, int? pageSize, string? searchText, int? roleId)
         {
-            try
-            {
-                pageNumber ??= 1; pageSize ??= 10;
-                var list = FindAll(false, x => x.Role).Where(x => x.IsDeleted == true && (x.RoleId == roleId || roleId == null) &&
-                (searchText == null || x.FullName.Contains(searchText.Trim()) || x.PhoneNumber.Contains(searchText.Trim())
-                    || x.Address.Contains(searchText.Trim()) || x.Email.Contains(searchText.Trim())))
-                    .Select(x => new
-                    {
-                        UserId = x.Id,
-                        x.IsDeleted,
-                        x.FullName,
-                        x.Email,
-                        x.PhoneNumber,
-                        x.Avatar,
-                        x.Gender,
-                        x.Address,
-                        x.RoleId,
-                        RoleName = x.Role.Name
-                    });
-                var listData = list.Skip(((int)pageNumber - 1) * (int)pageSize)
-                    .Take((int)pageSize).OrderByDescending(x => x.UserId).ToList();
-                if (list != null)
-                {
-                    var totalRecords = list.Count();
-                    return Task.FromResult<IActionResult>(JsonUtil.Success(listData, dataCount: totalRecords));
-                }
-                return Task.FromResult<IActionResult>(JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Empty List Data"));
-            }
-            catch (Exception ex)
-            {
-                return Task.FromResult<IActionResult>(JsonUtil.Error(StatusCodes.Status401Unauthorized, _errorCodes?.Status401?.Unauthorized, ex.Message));
-            }
-        }
-
-        public Task<User> GetUserByEmail(string email) =>
-            FindByCondition(x => x.Email.Equals(email)).SingleOrDefaultAsync();
-
-        public Task<User> GetUserById(long id) =>
-            FindByCondition(x => x.Id == id).SingleOrDefaultAsync();
-
-        public async Task<IActionResult> GetUser(long userId)
-        {
-            var user = await GetUserById(userId);
-            if (user == null)
-            {
-                return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "User does not exist");
-            }
-            var result = new
-            {
-                user.Id,
-                user.IsDeleted,
-                user.RoleId,
-                user.Email,
-                user.FullName,
-                user.PhoneNumber,
-                user.Address,
-                user.Gender,
-                user.Avatar,
-                user.CreatedAt,
-                user.UpdatedAt
-            };
-            return JsonUtil.Success(result);
+            var specification = new GetListUsersSpecification(pageNumber, pageSize, searchText, roleId);
+            return await SpecificationQueryBuilder.GetQuery(FindAll(), specification).ToListAsync();
         }
 
         public async Task<IActionResult> CreateUserAsync(CreateUserDto model)
@@ -105,19 +57,18 @@ namespace Infrastructure.Repositories
                 var check = await validator.ValidateAsync(model);
                 if (!check.IsValid)
                 {
-                    return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation, check.Errors);
+                    return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", check.Errors);
                 }
                 var userByEmail = await GetUserByEmail(model.Email);
                 if (userByEmail != null && userByEmail.Email != null)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Email existed");
                 }
-                var userByPhoneNumber = FindByCondition(x => x.PhoneNumber != null && x.PhoneNumber.Equals(model.PhoneNumber.Trim())).FirstOrDefault();
+                var userByPhoneNumber = FindByCondition(x => !string.IsNullOrEmpty(x.PhoneNumber) && x.PhoneNumber.Equals(model.PhoneNumber.Trim())).FirstOrDefault();
                 if (userByPhoneNumber != null && userByPhoneNumber.PhoneNumber != null)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Phone number existed");
                 }
-
                 var user = new User()
                 {
                     IsDeleted = true,
@@ -148,7 +99,7 @@ namespace Infrastructure.Repositories
                 var check = await validator.ValidateAsync(model);
                 if (!check.IsValid)
                 {
-                    return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation, check.Errors);
+                    return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", check.Errors);
                 }
                 var currentUser = await GetByIdAsync(userId);
                 if (currentUser == null)
@@ -160,7 +111,6 @@ namespace Infrastructure.Repositories
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Email existed");
                 }
-
                 var userByPhoneNumber = FindByCondition(x => x.PhoneNumber != null && x.PhoneNumber.Equals(model.PhoneNumber.Trim())).FirstOrDefault();
                 if (userByPhoneNumber != null && currentUser.PhoneNumber != userByPhoneNumber.PhoneNumber)
                 {

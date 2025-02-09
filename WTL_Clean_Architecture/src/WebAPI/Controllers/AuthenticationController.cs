@@ -1,7 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.Models;
-using Infrastructure.Configurations;
-using Infrastructure.Utils;
+using Application.Utils;
+using Domain.Configurations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -127,7 +127,7 @@ namespace WebAPI.Controllers
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Token doesn't match");
                 }
                 //Update token is used
-                storedToken.IsEnabled = false;
+                storedToken.IsDeleted = true;
                 await _iTokenRepository.UpdateAsync(storedToken);
                 //Create new token
                 var user = await _iUserRepository.GetUserById(storedToken.UserId);

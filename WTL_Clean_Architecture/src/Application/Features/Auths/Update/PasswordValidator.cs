@@ -1,7 +1,7 @@
 ﻿using Application.Models;
 using FluentValidation;
 
-namespace Application.Features.Users.Commands
+namespace Application.Features.Auths.Update
 {
     public class PasswordValidator : AbstractValidator<PasswordDto>
     {

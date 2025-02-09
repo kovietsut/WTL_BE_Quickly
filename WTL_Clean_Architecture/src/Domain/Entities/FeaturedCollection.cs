@@ -2,8 +2,6 @@
 
 public partial class FeaturedCollection : EntityBase<long>
 {
-    public long Id { get; set; }
-
     public long? CreatedBy { get; set; }
 
     public long? ModifiedBy { get; set; }
@@ -11,8 +9,6 @@ public partial class FeaturedCollection : EntityBase<long>
     public DateTimeOffset CreatedAt { get; set; }
 
     public DateTimeOffset? UpdatedAt { get; set; }
-
-    public bool IsDeleted { get; set; }
 
     public string Name { get; set; } = null!;
 

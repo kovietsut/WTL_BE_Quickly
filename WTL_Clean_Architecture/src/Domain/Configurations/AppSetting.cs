@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Configurations
+﻿namespace Domain.Configurations
 {
     public class AppSetting
     {

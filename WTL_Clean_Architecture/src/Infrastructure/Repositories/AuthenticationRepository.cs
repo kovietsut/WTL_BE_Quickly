@@ -1,10 +1,10 @@
-﻿using Application.Features.Users.Commands;
+﻿using Application.Features.Auths.Update;
 using Application.Interfaces;
 using Application.Models;
+using Application.Utils;
+using Domain.Configurations;
 using Domain.Entities;
 using Domain.Persistence;
-using Infrastructure.Configurations;
-using Infrastructure.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;

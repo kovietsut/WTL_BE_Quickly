@@ -2,8 +2,6 @@
 
 public partial class AuthMethod : EntityBase<long>
 {
-    public long Id { get; set; }
-
     public long UserId { get; set; }
 
     public string? AuthType { get; set; }
@@ -13,8 +11,6 @@ public partial class AuthMethod : EntityBase<long>
     public DateTimeOffset CreatedAt { get; set; }
 
     public DateTimeOffset? UpdatedAt { get; set; }
-
-    public bool IsDeleted { get; set; }
 
     public string? AccessToken { get; set; }
 

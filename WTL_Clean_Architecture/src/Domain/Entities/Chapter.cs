@@ -2,10 +2,6 @@
 
 public partial class Chapter : EntityBase<long>
 {
-    public long Id { get; set; }
-
-    public bool IsDeleted { get; set; }
-
     public DateTimeOffset CreatedAt { get; set; }
 
     public DateTimeOffset? UpdatedAt { get; set; }
