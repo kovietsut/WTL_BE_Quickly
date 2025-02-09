@@ -33,7 +33,7 @@ namespace Infrastructure.Repositories
                 IsDeleted = false,
                 Email = model.Email.Trim(),
                 RoleId = model.RoleId,
-                CreatedAt = DateTime.Now,
+                CreatedAt = DateTimeOffset.UtcNow,
                 SecurityStamp = Guid.NewGuid().ToString(),
             };
             user.PasswordHash = _iEncryptionRepository.EncryptPassword(model.Password, user.SecurityStamp);
@@ -51,7 +51,7 @@ namespace Infrastructure.Repositories
             {
                 var user = await _iUserRepository.GetByIdAsync(userId);
                 if (user == null) return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "User Doest Not Exist");
-                user.UpdatedAt = DateTime.Now;
+                user.UpdatedAt = DateTimeOffset.UtcNow;
                 user.Email = model.Email.Trim();
                 await _iUserRepository.UpdateAsync(user);
                 return JsonUtil.Success(user.Id);

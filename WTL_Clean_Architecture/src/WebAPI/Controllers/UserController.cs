@@ -1,5 +1,8 @@
-﻿using Application.Features.Users.GetById;
+﻿using Application.Features.Users.Create;
+using Application.Features.Users.Delete;
+using Application.Features.Users.GetById;
 using Application.Features.Users.GetList;
+using Application.Features.Users.Update;
 using Application.Interfaces;
 using Application.Models;
 using MediatR;
@@ -41,19 +44,43 @@ namespace WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateUserAsync([FromBody] CreateUserDto model)
         {
-            return await _iUserRepository.CreateUserAsync(model);
+            var query = new CreateUserCommand()
+            {
+                Email = model.Email,
+                Password = model.Password,
+                RoleId = model.RoleId,
+                FullName = model.FullName,
+                PhoneNumber = model.PhoneNumber,
+                Address = model.Address,
+                Gender = model.Gender
+            };
+            var result = await _mediator.Send(query);
+            return result;
         }
 
         [HttpPut("{userId}")]
-        public async Task<IActionResult> UpdateUserAsync(int userId, [FromBody] UpdateUserDto model)
+        public async Task<IActionResult> UpdateUserAsync(long userId, [FromBody] UpdateUserDto model)
         {
-            return await _iUserRepository.UpdateUserAsync(userId, model);
+            var query = new UpdateUserCommand()
+            {
+                Id = userId,
+                Email = model.Email,
+                RoleId = model.RoleId,
+                FullName = model.FullName,
+                PhoneNumber = model.PhoneNumber,
+                Address = model.Address,
+                Gender = model.Gender
+            };
+            var result = await _mediator.Send(query);
+            return result;
         }
 
         [HttpDelete("{userId}")]
-        public async Task<IActionResult> DeleteUserAsync(int userId)
+        public async Task<IActionResult> DeleteUserAsync(long userId)
         {
-            return await _iUserRepository.DeleteUserAsync(userId);
+            var query = new DeleteUserCommand(userId);
+            var result = await _mediator.Send(query);
+            return result;
         }
     }
 }

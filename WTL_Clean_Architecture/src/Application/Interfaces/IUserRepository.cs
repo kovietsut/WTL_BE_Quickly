@@ -1,6 +1,5 @@
 ﻿using Application.Models;
 using Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Interfaces
 {
@@ -8,9 +7,10 @@ namespace Application.Interfaces
     {
         Task<User?> GetUserById(long id);
         Task<User?> GetUserByEmail(string email);
+        Task<User?> GetUserByPhoneNumber(string phoneNumber);
         Task<List<User>> GetList(int? pageNumber, int? pageSize, string? searchText, int? roleId);
-        Task<IActionResult> CreateUserAsync(CreateUserDto model);
-        Task<IActionResult> UpdateUserAsync(int userId, UpdateUserDto model);
-        Task<IActionResult> DeleteUserAsync(long id);
+        Task<User> CreateUserAsync(CreateUserDto model);
+        Task<User> UpdateUserAsync(long userId, UpdateUserDto model);
+        Task<User?> DeleteUserAsync(long id);
     }
 }
