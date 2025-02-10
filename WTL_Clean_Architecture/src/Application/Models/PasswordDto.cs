@@ -5,10 +5,10 @@ namespace Application.Models
     public class PasswordDto
     {
         [Required]
-        public string? CurrentPassword { get; set; }
+        public required string CurrentPassword { get; set; }
         [Required]
-        public string? NewPassword { get; set; }
+        public required string NewPassword { get; set; }
         [Required]
-        public string? ConfirmPassword { get; set; }
+        public required string ConfirmPassword { get; set; }
     }
 }

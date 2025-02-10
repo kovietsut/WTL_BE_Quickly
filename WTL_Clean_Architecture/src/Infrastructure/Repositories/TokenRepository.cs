@@ -2,6 +2,8 @@
 using Application.Models;
 using Domain.Entities;
 using Domain.Persistence;
+using Domain.Specifications;
+using Domain.Specifications.Auths;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -25,15 +27,23 @@ namespace Infrastructure.Repositories
             _iUserRepository = iUserRepository;
         }
 
-        public Task<AuthMethod> GetTokenByRefreshToken(string refreshToken) =>
-            FindByCondition(x => x.RefreshToken.Equals(refreshToken)).SingleOrDefaultAsync();
-
-        public async Task<string> CreateToken(int userId)
+        private SigningCredentials GetSigningCredentials()
         {
-            var signingCredentials = GetSigningCredentials();
-            var claims = await GetClaims(userId);
-            var token = GenerateTokenOptions(signingCredentials, claims);
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            var key = _configuration["Jwt:Secret"];
+            if (string.IsNullOrEmpty(key))
+            {
+                throw new InvalidOperationException("JWT Secret is not configured.");
+            }
+            var secret = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
+            return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
+        }
+
+        private string GenerateRefreshToken()
+        {
+            var random = new byte[32];
+            var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(random);
+            return Convert.ToBase64String(random);
         }
 
         private JwtSecurityToken GenerateTokenOptions(SigningCredentials signingCredentials, List<Claim> claims)
@@ -50,35 +60,32 @@ namespace Infrastructure.Repositories
 
         private async Task<List<Claim>> GetClaims(int userId)
         {
-            var currentUser = await _iUserRepository.GetUserById(userId);
+            var currentUser = await _iUserRepository.GetUserById(userId) ?? throw new Exception("User not found");
             var role = currentUser.RoleId;
             var claims = new List<Claim>
-        {
-            new("id", currentUser.Id.ToString()),
-            new("email", currentUser.Email),
-            new("role", role.ToString()),
-            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-            new(JwtRegisteredClaimNames.Iat, DateTime.Now.ToString()),
-        };
+            {
+                new("id", currentUser.Id.ToString()),
+                new("email", currentUser.Email),
+                new("role", role.ToString()),
+                new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new(JwtRegisteredClaimNames.Iat, DateTime.Now.ToString()),
+            };
             return claims;
         }
 
-        private SigningCredentials GetSigningCredentials()
+        public async Task<AuthMethod?> GetTokenByRefreshToken(string refreshToken)
         {
-            var key = _configuration["Jwt:Secret"];
-            var secret = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
-            return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
+            var query = FindByCondition(x => x.RefreshToken == refreshToken);
+            var specification = new GetTokenByRefreshTokenSpecification(refreshToken);
+            return await SpecificationQueryBuilder.GetQuery(query, specification).SingleOrDefaultAsync();
         }
 
-        // Refresh Token
-        private string GenerateRefreshToken()
+        public async Task<string> CreateToken(int userId)
         {
-            var random = new byte[32];
-            using (var rng = RandomNumberGenerator.Create())
-            {
-                rng.GetBytes(random);
-                return Convert.ToBase64String(random);
-            }
+            var signingCredentials = GetSigningCredentials();
+            var claims = await GetClaims(userId);
+            var token = GenerateTokenOptions(signingCredentials, claims);
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
         public DateTime ConvertUnixTimeToDateTime(long utcExpireDate)
@@ -91,10 +98,15 @@ namespace Infrastructure.Repositories
 
         public async Task<TokenDto> GenerateToken(UserTokenDto model)
         {
-            var currentUser = await _iUserRepository.GetUserByEmail(model.Email);
+            var currentUser = await _iUserRepository.GetUserByEmail(model.Email) ?? throw new Exception("User not found");
             var role = currentUser.RoleId;
             var jwtTokenHandler = new JwtSecurityTokenHandler();
-            var secretKeyBytes = Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]);
+            var secretKey = _configuration["Jwt:Secret"];
+            if (string.IsNullOrEmpty(secretKey))
+            {
+                throw new InvalidOperationException("JWT Secret is not configured.");
+            }
+            var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
             var tokenDescription = new SecurityTokenDescriptor
             {
                 Issuer = _configuration["Jwt:Issuer"],
@@ -134,11 +146,15 @@ namespace Infrastructure.Repositories
 
         public async Task<string> IssueToken(string email)
         {
-            var currentUser = await _iUserRepository.GetUserByEmail(email);
-            if (currentUser == null) return null;
+            var currentUser = await _iUserRepository.GetUserByEmail(email) ?? throw new Exception("User not found");
             var role = currentUser.RoleId;
             var jwtTokenHandler = new JwtSecurityTokenHandler();
-            var secretKeyBytes = Encoding.UTF8.GetBytes(_configuration["Jwt:Secret"]);
+            var secretKey = _configuration["Jwt:Secret"];
+            if (string.IsNullOrEmpty(secretKey))
+            {
+                throw new InvalidOperationException("JWT Secret is not configured.");
+            }
+            var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
             var tokenDescription = new SecurityTokenDescriptor
             {
                 Issuer = _configuration["Jwt:Issuer"],

@@ -1,10 +1,11 @@
-﻿using Application.Interfaces;
+﻿using Application.Features.Auths.Login;
+using Application.Features.Users.Create;
+using Application.Features.Users.Update;
 using Application.Models;
 using Application.Utils;
-using Domain.Configurations;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
@@ -16,58 +17,42 @@ namespace WebAPI.Controllers
     [Authorize]
     public class AuthenticationController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
-        private readonly IAuthenticationRepository _iAuthRepository;
-        private readonly IUserRepository _iUserRepository;
-        private readonly ITokenRepository _iTokenRepository;
-        private readonly ErrorCode _errorCodes;
+        private readonly IMediator _mediator;
 
-        public AuthenticationController(IConfiguration configuration, IAuthenticationRepository authenticationService, IUserRepository iUserRepository,
-            ITokenRepository iTokenRepository, IOptions<ErrorCode> errorCodes)
+        public AuthenticationController(IMediator mediator)
         {
-            _configuration = configuration;
-            _iAuthRepository = authenticationService;
-            _iUserRepository = iUserRepository;
-            _iTokenRepository = iTokenRepository;
-            _errorCodes = errorCodes.Value;
+            _mediator = mediator;
         }
 
         [AllowAnonymous]
         [HttpPost("sign-up")]
-        public async Task<IActionResult> SignUp([FromBody] SignUpDto model)
+        public async Task<IActionResult> SignUp([FromBody] CreateUserDto model)
         {
-            var userEntity = await _iUserRepository.GetUserByEmail(model.Email);
-            if (userEntity != null) return JsonUtil.Error(StatusCodes.Status404NotFound, null, $"Email {userEntity.Email} is existed");
-            var response = await _iAuthRepository.SignUp(model);
-            return JsonUtil.Success(response);
+            var query = new CreateUserCommand()
+            {
+                Email = model.Email,
+                Password = model.Password,
+                RoleId = model.RoleId,
+                FullName = model.FullName,
+                PhoneNumber = model.PhoneNumber,
+                Address = model.Address,
+                Gender = model.Gender
+            };
+            var result = await _mediator.Send(query);
+            return result;
         }
 
         [AllowAnonymous]
         [HttpPost("sign-in")]
         public async Task<IActionResult> SignIn([FromBody] SignInDto model)
         {
-            var user = await _iUserRepository.GetUserByEmail(model.Email);
-            if (user == null)
+            var query = new LoginCommand()
             {
-                return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Incorrect Username or Password");
-            }
-            var checkPass = _iAuthRepository.CheckPassword(model, user.SecurityStamp);
-            if (checkPass != user.PasswordHash)
-            {
-                return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Incorrect Username or Password");
-            }
-            var userToken = new UserTokenDto()
-            {
-                UserId = user.Id,
-                Email = user.Email,
+                Email = model.Email,
+                Password = model.Password
             };
-            return JsonUtil.Success(new
-            {
-                UserId = user.Id,
-                user.Email,
-                user.FullName,
-                TokenData = await _iTokenRepository.GenerateToken(userToken)
-            });
+            var result = await _mediator.Send(query);
+            return result;
         }
 
         [HttpPost("refresh-token")]
@@ -146,17 +131,21 @@ namespace WebAPI.Controllers
         }
 
 
-        [HttpPut("{userId}/email")]
-        public async Task<IActionResult> UpdateEmail(int userId, [FromBody] UpdateEmailDto model)
+        [HttpPut("{userId}/profile")]
+        public async Task<IActionResult> UpdateEmail(int userId, [FromBody] UpdateUserDto model)
         {
-            try
+            var query = new UpdateUserCommand()
             {
-                return await _iAuthRepository.UpdateEmailUser(userId, model);
-            }
-            catch (Exception e)
-            {
-                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes?.Status500?.APIServerError, e.Message);
-            }
+                Id = userId,
+                Email = model.Email,
+                RoleId = model.RoleId,
+                FullName = model.FullName,
+                PhoneNumber = model.PhoneNumber,
+                Address = model.Address,
+                Gender = model.Gender
+            };
+            var result = await _mediator.Send(query);
+            return result;
         }
 
         [HttpPut("{userId}/change-password")]

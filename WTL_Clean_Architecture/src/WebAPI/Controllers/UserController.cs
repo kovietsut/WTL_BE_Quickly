@@ -3,7 +3,6 @@ using Application.Features.Users.Delete;
 using Application.Features.Users.GetById;
 using Application.Features.Users.GetList;
 using Application.Features.Users.Update;
-using Application.Interfaces;
 using Application.Models;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -16,12 +15,10 @@ namespace WebAPI.Controllers
     [Authorize]
     public class UserController : ControllerBase
     {
-        private readonly IUserRepository _iUserRepository;
         private readonly IMediator _mediator;
 
-        public UserController(IUserRepository iUserRepository, IMediator mediator)
+        public UserController(IMediator mediator)
         {
-            _iUserRepository = iUserRepository;
             _mediator = mediator;
         }
 

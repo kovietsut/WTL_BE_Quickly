@@ -23,7 +23,7 @@ public partial class User : EntityBase<long>
 
     public string? PasswordHash { get; set; }
 
-    public string? SecurityStamp { get; set; }
+    public string SecurityStamp { get; set; }
 
     public virtual ICollection<AuthMethod> AuthMethods { get; set; } = new List<AuthMethod>();
 

@@ -5,7 +5,7 @@ namespace Application.Interfaces
 {
     public interface ITokenRepository : IRepositoryBase<AuthMethod, long>
     {
-        Task<AuthMethod> GetTokenByRefreshToken(string refreshToken);
+        Task<AuthMethod?> GetTokenByRefreshToken(string refreshToken)
         // Làm basic
         Task<string> CreateToken(int userId);
         Task<string> IssueToken(string email);
