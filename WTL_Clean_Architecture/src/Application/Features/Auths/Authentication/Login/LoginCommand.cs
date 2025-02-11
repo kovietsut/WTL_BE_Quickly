@@ -15,21 +15,10 @@ namespace Application.Features.Auths.Authentication.Login
         public required string Password { get; set; }
     }
 
-    public class LoginCommmandHandler : IRequestHandler<LoginCommand, IActionResult>
+    public class LoginCommmandHandler(IUserRepository repository, IAuthenticationRepository authenticationRepository,
+        ITokenRepository tokenRepository, IOptions<ErrorCode> errorCodes) : IRequestHandler<LoginCommand, IActionResult>
     {
-        private readonly IUserRepository _repository;
-        private readonly IAuthenticationRepository _authenticationRepository;
-        private readonly ITokenRepository _tokenRepository;
-        private readonly ErrorCode _errorCodes;
-
-        public LoginCommmandHandler(IUserRepository repository, IAuthenticationRepository authenticationRepository,
-            ITokenRepository tokenRepository, IOptions<ErrorCode> errorCodes)
-        {
-            _repository = repository;
-            _authenticationRepository = authenticationRepository;
-            _tokenRepository = tokenRepository;
-            _errorCodes = errorCodes.Value;
-        }
+        private readonly ErrorCode _errorCodes = errorCodes.Value;
 
         public async Task<IActionResult> Handle(LoginCommand query, CancellationToken cancellationToken)
         {
@@ -40,12 +29,12 @@ namespace Application.Features.Auths.Authentication.Login
                     Email = query.Email,
                     Password = query.Password,
                 };
-                var user = await _repository.GetUserByEmail(query.Email);
+                var user = await repository.GetUserByEmail(query.Email);
                 if (user == null || user.SecurityStamp == null)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Incorrect Username or Password");
                 }
-                var checkPass = _authenticationRepository.CheckPassword(createUserDto, user.SecurityStamp);
+                var checkPass = authenticationRepository.CheckPassword(createUserDto, user.SecurityStamp);
                 if (checkPass != user.PasswordHash)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Incorrect Username or Password");
@@ -60,7 +49,7 @@ namespace Application.Features.Auths.Authentication.Login
                     UserId = user.Id,
                     user.Email,
                     user.FullName,
-                    TokenData = await _tokenRepository.GenerateToken(userToken)
+                    TokenData = await tokenRepository.GenerateToken(userToken)
                 });
             }
             catch (Exception ex)

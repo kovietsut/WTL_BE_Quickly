@@ -20,16 +20,9 @@ namespace Application.Features.Users.Create
         public bool? Gender { get; set; }
     }
 
-    public class CreateUserCommmandHandler : IRequestHandler<CreateUserCommand, IActionResult>
+    public class CreateUserCommmandHandler(IUserRepository repository, IOptions<ErrorCode> errorCodes) : IRequestHandler<CreateUserCommand, IActionResult>
     {
-        private readonly IUserRepository _repository;
-        private readonly ErrorCode _errorCodes;
-
-        public CreateUserCommmandHandler(IUserRepository repository, IOptions<ErrorCode> errorCodes)
-        {
-            _repository = repository;
-            _errorCodes = errorCodes.Value;
-        }
+        private readonly ErrorCode _errorCodes = errorCodes.Value;
 
         public async Task<IActionResult> Handle(CreateUserCommand query, CancellationToken cancellationToken)
         {
@@ -51,17 +44,17 @@ namespace Application.Features.Users.Create
                 {
                     return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", check.Errors);
                 }
-                var userByEmail = await _repository.GetUserByEmail(query.Email);
+                var userByEmail = await repository.GetUserByEmail(query.Email);
                 if (userByEmail != null && userByEmail.Email != null)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Email existed");
                 }
-                var userByPhoneNumber = await _repository.GetUserByPhoneNumber(query.PhoneNumber);
+                var userByPhoneNumber = await repository.GetUserByPhoneNumber(query.PhoneNumber);
                 if (userByPhoneNumber != null && userByPhoneNumber.PhoneNumber != null)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Phone number existed");
                 }
-                var user = await _repository.CreateUserAsync(createUserDto);
+                var user = await repository.CreateUserAsync(createUserDto);
                 return JsonUtil.Success(user.Id);
             }
             catch (Exception ex)
