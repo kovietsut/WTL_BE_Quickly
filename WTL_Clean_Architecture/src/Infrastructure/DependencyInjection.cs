@@ -23,6 +23,7 @@ namespace Infrastructure
            .AddScoped<IAuthenticationRepository, AuthenticationRepository>()
            .AddScoped<IUserRepository, UserRepository>()
            .AddScoped<ITokenRepository, TokenRepository>()
+           .AddScoped<IGenreRepository, GenreRepository>()
            ;
             return services;
         }
