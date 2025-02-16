@@ -49,7 +49,7 @@ namespace Infrastructure.Repositories
         {
             var user = new User()
             {
-                IsDeleted = true,
+                IsDeleted = false,
                 RoleId = model.RoleId,
                 SecurityStamp = Guid.NewGuid().ToString(),
                 CreatedAt = DateTimeOffset.UtcNow,

@@ -54,7 +54,7 @@ namespace Infrastructure
                     {
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Secret"]!)),
                         ValidIssuer = configuration["Jwt:Issuer"],
-                        ValidAudience = configuration["Jwt:Audience"],
+                        ValidAudience = configuration["Jwt:Issuer"],
                         ClockSkew = TimeSpan.Zero
                     };
                 });

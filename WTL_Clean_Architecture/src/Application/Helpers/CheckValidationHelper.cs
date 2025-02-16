@@ -4,7 +4,7 @@
     {
         public static bool IsNullOrDefault<T>(T value)
         {
-            var result = value == null || EqualityComparer<T>.Default.Equals(value, default(T));
+            var result = value != null || EqualityComparer<T>.Default.Equals(value, default(T));
             return result;
         }
 
