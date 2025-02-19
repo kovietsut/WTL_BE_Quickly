@@ -1,5 +1,6 @@
 ﻿using Application.Interfaces;
 using Domain.Configurations;
+using Domain.Entities;
 using Domain.Persistence;
 using Infrastructure.Repositories;
 using Infrastructure.UnitOfWork;
@@ -24,6 +25,8 @@ namespace Infrastructure
            .AddScoped<IUserRepository, UserRepository>()
            .AddScoped<ITokenRepository, TokenRepository>()
            .AddScoped<IGenreRepository, GenreRepository>()
+           .AddScoped<IAzureBlobRepository, AzureBlobRepository>()
+           .AddScoped<ISasTokenGenerator, SasTokenGenerator>()
            ;
             return services;
         }
@@ -70,6 +73,11 @@ namespace Infrastructure
                     .AddDatabase(configuration)
                     .AddAuthenticationInternal(configuration);
             return services;
+        }
+
+        public static void ConfigureAzureBlob(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.Configure<AzureBlobSettings>(configuration.GetSection("AzureClient"));
         }
     }
 }

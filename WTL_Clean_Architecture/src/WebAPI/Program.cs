@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGenWithAuth();
+builder.Services.ConfigureAzureBlob(builder.Configuration);
 
 builder.Services
     .AddApplication()
