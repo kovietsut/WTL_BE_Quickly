@@ -30,8 +30,9 @@ namespace Domain.Entities
                 ExpiresOn = expiryTime,
             };
             sasBuilder.SetPermissions(BlobSasPermissions.Read);
+            var accountKey = Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY", EnvironmentVariableTarget.User);
             var sasToken = sasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential(_azureBlobSettings.AccountName,
-            _azureBlobSettings.AccountKey)).ToString();
+            accountKey)).ToString();
             return sasToken;
         }
 

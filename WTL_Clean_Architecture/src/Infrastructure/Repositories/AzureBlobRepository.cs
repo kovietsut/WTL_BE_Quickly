@@ -23,9 +23,10 @@ namespace Infrastructure.Repositories
 
         public AzureBlobRepository(IOptions<AzureBlobSettings> azureBlobSettings, IOptions<ErrorCode> errorCodes, ISasTokenGenerator sasTokenGenerator)
         {
+            var accountKey = Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY", EnvironmentVariableTarget.User);
             _azureBlobSettings = azureBlobSettings.Value;
             _errorCodes = errorCodes.Value;
-            var sharedKeyCredential = new StorageSharedKeyCredential(_azureBlobSettings.AccountName, _azureBlobSettings.AccountKey);
+            var sharedKeyCredential = new StorageSharedKeyCredential(_azureBlobSettings.AccountName, accountKey);
             var blobUri = $"https://{_azureBlobSettings.AccountName}.blob.core.windows.net";
             _blobServiceClient = new BlobServiceClient(new Uri(blobUri), sharedKeyCredential);
             _sasTokenGenerator = sasTokenGenerator;
