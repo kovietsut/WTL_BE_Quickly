@@ -27,6 +27,7 @@ namespace Infrastructure
            .AddScoped<IGenreRepository, GenreRepository>()
            .AddScoped<IAzureBlobRepository, AzureBlobRepository>()
            .AddScoped<ISasTokenGenerator, SasTokenGenerator>()
+           .AddScoped<IMangaRepository, MangaRepository>()
            ;
             return services;
         }
