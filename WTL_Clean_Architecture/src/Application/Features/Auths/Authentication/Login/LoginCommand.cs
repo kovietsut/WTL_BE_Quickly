@@ -16,7 +16,7 @@ namespace Application.Features.Auths.Authentication.Login
     }
 
     public class LoginCommmandHandler(IUserRepository repository, IAuthenticationRepository authenticationRepository,
-        ITokenRepository tokenRepository, IOptions<ErrorCode> errorCodes) : IRequestHandler<LoginCommand, IActionResult>
+        ITokenRepository tokenRepository, IHttpContextAccessor httpContextAccessor, IOptions<ErrorCode> errorCodes) : IRequestHandler<LoginCommand, IActionResult>
     {
         private readonly ErrorCode _errorCodes = errorCodes.Value;
 

@@ -54,6 +54,7 @@ namespace WebAPI.Controllers
                 ReleaseStatus = model.ReleaseStatus,
                 Preface = model.Preface,
                 HasAdult = model.HasAdult,
+                CoverImage = model.CoverImage,
                 CreatedBy = model.CreatedBy,
                 SubAuthor = model.SubAuthor,
                 Publishor = model.Publishor,

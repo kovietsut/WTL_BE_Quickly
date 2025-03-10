@@ -28,6 +28,8 @@ namespace Infrastructure
            .AddScoped<IAzureBlobRepository, AzureBlobRepository>()
            .AddScoped<ISasTokenGenerator, SasTokenGenerator>()
            .AddScoped<IMangaRepository, MangaRepository>()
+           .AddScoped<IChapterRepository, ChapterRepository>()
+           .AddScoped<IChapterImageRepository, ChapterImageRepository>()
            ;
             return services;
         }

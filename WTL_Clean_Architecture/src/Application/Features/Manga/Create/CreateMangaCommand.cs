@@ -45,6 +45,7 @@ namespace Application.Features.Manga.Create
                     ReleaseStatus = query.ReleaseStatus,
                     Preface = query.Preface,
                     HasAdult = query.HasAdult,
+                    CoverImage = query.CoverImage,
                     CreatedBy = query.CreatedBy,
                     SubAuthor = query.SubAuthor,
                     Publishor = query.Publishor,
