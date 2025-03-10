@@ -71,10 +71,28 @@ namespace Infrastructure.Repositories
             return result;
         }
 
+        //public async Task<List<Chapter>> GetList(int? pageNumber, int? pageSize, string? searchText)
+        //{
+        //    var specification = new GetListChaptersSpecification(pageNumber, pageSize, searchText);
+        //    var query = SpecificationQueryBuilder.GetQuery(FindAll(), specification);
+        //    var result = await query.ToListAsync();
+        //    return result;
+        //}
         public async Task<List<Chapter>> GetList(int? pageNumber, int? pageSize, string? searchText)
         {
-            var specification = new GetListChaptersSpecification(pageNumber, pageSize, searchText);
-            var result = await SpecificationQueryBuilder.GetQuery(FindAll(), specification).ToListAsync();
+            var query = FindAll();
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                query = query.Where(c => c.Name.Contains(searchText));
+            }
+
+            if (pageNumber.HasValue && pageSize.HasValue)
+            {
+                query = query.Skip((pageNumber.Value - 1) * pageSize.Value).Take(pageSize.Value);
+            }
+
+            var result = await query.ToListAsync();
             return result;
         }
 

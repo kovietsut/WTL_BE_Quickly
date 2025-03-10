@@ -52,7 +52,7 @@ namespace Application.Features.Manga.Create
                     Artist = query.Artist,
                     Translator = query.Translator
                 };
-                var validator = new CreateMangaValidator();
+                var validator = new CreateMangaValidator(); 
                 var check = await validator.ValidateAsync(createMangaDto, cancellationToken);
                 if (!check.IsValid)
                 {
