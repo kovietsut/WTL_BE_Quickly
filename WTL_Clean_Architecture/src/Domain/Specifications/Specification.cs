@@ -19,7 +19,8 @@ namespace Domain.Specifications
 
         protected void AddInclude(Expression<Func<TEntity, object>> includeExpression) => IncludeExpressions.Add(includeExpression);
         protected void AddOrderBy(Expression<Func<TEntity, object>> orderByExpression) => OrderByExpression = orderByExpression;
-        protected void AddOrderByDescending(Expression<Func<TEntity, object>> orderByDescendingExpression) => OrderByExpression = orderByDescendingExpression;
+        protected void AddOrderByDescending(Expression<Func<TEntity, object>> orderByDescendingExpression) => OrderByDescendingExpression = orderByDescendingExpression;
+
         protected void ApplyPaging(int? skip, int? take)
         {
             Skip = skip;

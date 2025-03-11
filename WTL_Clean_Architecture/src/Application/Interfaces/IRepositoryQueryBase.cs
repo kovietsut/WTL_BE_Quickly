@@ -1,10 +1,11 @@
 ﻿using Domain.Entities;
+using Domain.Specifications;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace Application.Interfaces
 {
-    public interface IRepositoryQueryBase<T, in K> where T : EntityBase<K>
+    public interface IRepositoryQueryBase<T, K> where T : EntityBase<K>
     {
         IQueryable<T> FindAll(bool trackChanges = false);
         IQueryable<T> FindAll(bool trackChanges = false, params Expression<Func<T, object>>[] includeProperties);
@@ -15,7 +16,16 @@ namespace Application.Interfaces
         Task<T?> GetByIdAsync(K id);
         Task<T?> GetByIdAsync(K id, params Expression<Func<T, object>>[] includeProperties);
         bool Any(Expression<Func<T, bool>> predicate);
+
+        // 🚀 Specification Pattern Support
+        IQueryable<T> FindBySpecification(Specification<T, K>? specification, bool trackChanges = false);
+        Task<T?> GetBySpecificationAsync(Specification<T, K> specification, bool trackChanges = false);
     }
 
-    public interface IRepositoryQueryBase<T, K, TContext> : IRepositoryQueryBase<T, K> where T : EntityBase<K> where TContext : DbContext {}
+    // 🚀 Updated Generic Interface for Repositories
+    public interface IRepositoryQueryBase<T, K, TContext>
+        : IRepositoryQueryBase<T, K>
+        where T : EntityBase<K>
+        where TContext : DbContext
+    { }
 }

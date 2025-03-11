@@ -7,10 +7,11 @@ namespace Domain.Specifications
     {
         public static IQueryable<TEntity> GetQuery<TEntity, TKey>(
                 IQueryable<TEntity> query,
-                Specification<TEntity, TKey> specification
+                Specification<TEntity, TKey>? specification
             ) where TEntity : EntityBase<TKey>
         {
             var queryable = query;
+
             if (specification is not null)
             {
                 if (specification.Criteria is not null)
@@ -18,7 +19,7 @@ namespace Domain.Specifications
                     queryable = queryable.Where(specification.Criteria);
                 }
 
-                if (specification.IncludeExpressions is not null)
+                if (specification.IncludeExpressions.Any())
                 {
                     queryable = specification.IncludeExpressions.Aggregate(queryable, (current, include) => current.Include(include));
                 }
@@ -30,16 +31,26 @@ namespace Domain.Specifications
 
                 if (specification.OrderByDescendingExpression is not null)
                 {
-                    queryable = queryable.OrderBy(specification.OrderByDescendingExpression);
+                    queryable = queryable.OrderByDescending(specification.OrderByDescendingExpression);
                 }
 
                 if (specification.IsSplitQuery)
                 {
                     queryable = queryable.AsSplitQuery();
                 }
-            }
 
+                if (specification.Skip.HasValue)
+                {
+                    queryable = queryable.Skip(specification.Skip.Value);
+                }
+
+                if (specification.Take.HasValue)
+                {
+                    queryable = queryable.Take(specification.Take.Value);
+                }
+            }
             return queryable;
         }
     }
+
 }

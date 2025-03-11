@@ -63,7 +63,7 @@ namespace Infrastructure.Repositories
             var query = FindByCondition(x => x.Id == id);
             var specification = new GetChapterByIdSpecification(id);
             var result = await SpecificationQueryBuilder.GetQuery(query, specification).SingleOrDefaultAsync();
-            if(result != null)
+            if (result != null)
             {
                 var chapterImages = await _chapterImageRepository.GetListByChapterId(id);
                 result.ChapterImages = chapterImages;
@@ -71,27 +71,10 @@ namespace Infrastructure.Repositories
             return result;
         }
 
-        //public async Task<List<Chapter>> GetList(int? pageNumber, int? pageSize, string? searchText)
-        //{
-        //    var specification = new GetListChaptersSpecification(pageNumber, pageSize, searchText);
-        //    var query = SpecificationQueryBuilder.GetQuery(FindAll(), specification);
-        //    var result = await query.ToListAsync();
-        //    return result;
-        //}
         public async Task<List<Chapter>> GetList(int? pageNumber, int? pageSize, string? searchText)
         {
-            var query = FindAll();
-
-            if (!string.IsNullOrEmpty(searchText))
-            {
-                query = query.Where(c => c.Name.Contains(searchText));
-            }
-
-            if (pageNumber.HasValue && pageSize.HasValue)
-            {
-                query = query.Skip((pageNumber.Value - 1) * pageSize.Value).Take(pageSize.Value);
-            }
-
+            var specification = new GetListChaptersSpecification(pageNumber, pageSize, searchText);
+            var query = FindBySpecification(specification);
             var result = await query.ToListAsync();
             return result;
         }

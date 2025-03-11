@@ -11,6 +11,7 @@ namespace Domain.Specifications.Chapter
             if (pageNumber.HasValue && pageSize.HasValue)
             {
                 ApplyPaging((pageNumber.Value - 1) * pageSize.Value, pageSize.Value);
+                AddOrderByDescending(u => u.CreatedAt);
             }
         }
     }
