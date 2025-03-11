@@ -75,6 +75,7 @@ namespace Infrastructure.Repositories
         {
             var specification = new GetListChaptersSpecification(pageNumber, pageSize, searchText);
             var query = FindBySpecification(specification);
+            var total = await query.CountAsync();
             var result = await query.ToListAsync();
             return result;
         }

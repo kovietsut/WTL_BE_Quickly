@@ -7,6 +7,7 @@ namespace Application.Interfaces
 {
     public interface IRepositoryQueryBase<T, K> where T : EntityBase<K>
     {
+        Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null);
         IQueryable<T> FindAll(bool trackChanges = false);
         IQueryable<T> FindAll(bool trackChanges = false, params Expression<Func<T, object>>[] includeProperties);
         IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool trackChanges = false);
@@ -17,12 +18,10 @@ namespace Application.Interfaces
         Task<T?> GetByIdAsync(K id, params Expression<Func<T, object>>[] includeProperties);
         bool Any(Expression<Func<T, bool>> predicate);
 
-        // 🚀 Specification Pattern Support
         IQueryable<T> FindBySpecification(Specification<T, K>? specification, bool trackChanges = false);
         Task<T?> GetBySpecificationAsync(Specification<T, K> specification, bool trackChanges = false);
     }
 
-    // 🚀 Updated Generic Interface for Repositories
     public interface IRepositoryQueryBase<T, K, TContext>
         : IRepositoryQueryBase<T, K>
         where T : EntityBase<K>

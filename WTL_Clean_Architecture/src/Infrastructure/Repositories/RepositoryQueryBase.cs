@@ -18,6 +18,15 @@ namespace Infrastructure.Repositories
     {
         private readonly TContext _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
 
+        public async Task<int> CountAsync(Expression<Func<T, bool>>? predicate = null)
+        {
+            if (predicate == null)
+            {
+                return await _dbContext.Set<T>().CountAsync();
+            }
+            return await _dbContext.Set<T>().CountAsync(predicate);
+        }
+
         public IQueryable<T> FindAll(bool trackChanges = false) =>
             !trackChanges ? _dbContext.Set<T>().AsNoTracking() : _dbContext.Set<T>();
 
