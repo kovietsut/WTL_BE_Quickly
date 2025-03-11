@@ -92,3 +92,9 @@ bld/
 **/appsettings.Production.json
 .idea/.idea.OctoQual/.idea
 **/~$*.xlsx
+
+# Ignore app settings files
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
