@@ -37,7 +37,7 @@ namespace Application.Features.Genres.GetList
             });
             if (listData != null)
             {
-                var totalRecords = listData.Count();
+                var totalRecords = await _repository.CountAsync();
                 return JsonUtil.Success(listData, dataCount: totalRecords);
             }
             return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Empty List Data");

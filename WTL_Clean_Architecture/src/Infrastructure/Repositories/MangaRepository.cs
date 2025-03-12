@@ -66,7 +66,9 @@ namespace Infrastructure.Repositories
         public async Task<List<Manga>> GetList(int? pageNumber, int? pageSize, string? searchText)
         {
             var specification = new GetListMangasSpecification(pageNumber, pageSize, searchText);
-            return await SpecificationQueryBuilder.GetQuery(FindAll(), specification).ToListAsync();
+            var query = FindBySpecification(specification);
+            var result = await query.ToListAsync();
+            return result;
         }
 
         public async Task<Manga?> GetMangaById(long id)

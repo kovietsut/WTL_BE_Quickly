@@ -42,7 +42,9 @@ namespace Infrastructure.Repositories
         public async Task<List<User>> GetList(int? pageNumber, int? pageSize, string? searchText, int? roleId)
         {
             var specification = new GetListUsersSpecification(pageNumber, pageSize, searchText, roleId);
-            return await SpecificationQueryBuilder.GetQuery(FindAll(), specification).ToListAsync();
+            var query = FindBySpecification(specification);
+            var result = await query.ToListAsync();
+            return result;
         }
 
         public async Task<User> CreateUserAsync(CreateUserDto model)

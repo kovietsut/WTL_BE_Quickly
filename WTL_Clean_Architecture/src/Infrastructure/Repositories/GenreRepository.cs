@@ -39,7 +39,9 @@ namespace Infrastructure.Repositories
         public async Task<List<Genere>> GetList(int? pageNumber, int? pageSize, string? searchText)
         {
             var specification = new GetListGenresSpecification(pageNumber, pageSize, searchText);
-            return await SpecificationQueryBuilder.GetQuery(FindAll(), specification).ToListAsync();
+            var query = FindBySpecification(specification);
+            var result = await query.ToListAsync();
+            return result;
         }
 
         public async Task<Genere> UpdateGenreAsync(long genreId, UpdateGenreDto model)

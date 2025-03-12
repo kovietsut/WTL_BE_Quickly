@@ -37,9 +37,9 @@ namespace Application.Features.Chapter.GetList
                 x.ThumbnailImage,
                 x.PublishedDate
             });
-            var totalRecords = await _repository.CountAsync();
             if (listData != null)
             {
+                var totalRecords = await _repository.CountAsync();
                 return JsonUtil.Success(listData, dataCount: totalRecords);
             }
             return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Empty List Data");
