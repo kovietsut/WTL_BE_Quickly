@@ -30,6 +30,7 @@ namespace Infrastructure
            .AddScoped<IMangaRepository, MangaRepository>()
            .AddScoped<IChapterRepository, ChapterRepository>()
            .AddScoped<IChapterImageRepository, ChapterImageRepository>()
+           .AddScoped<IFeaturedCollectionRepository, FeaturedCollectionRepository>()
            ;
             return services;
         }
