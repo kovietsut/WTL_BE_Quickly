@@ -30,10 +30,10 @@ namespace WebAPI.Controllers
             return result;
         }
 
-        [HttpGet("{collectionId}")]
-        public async Task<IActionResult> Get(long collectionId)
+        [HttpGet]
+        public async Task<IActionResult> Get(long id)
         {
-            var query = new GetFeaturedCollectionByIdQuery(collectionId);
+            var query = new GetFeaturedCollectionByIdQuery(id);
             var result = await _mediator.Send(query);
             return result;
         }
