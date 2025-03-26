@@ -45,6 +45,7 @@ namespace WebAPI.Controllers
             {
                 Email = model.Email,
                 Password = model.Password,
+                RePassword = model.RePassword,
                 RoleId = model.RoleId,
                 FullName = model.FullName,
                 PhoneNumber = model.PhoneNumber,

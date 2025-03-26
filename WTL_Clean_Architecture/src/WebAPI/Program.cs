@@ -13,6 +13,19 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerGenWithAuth();
 builder.Services.ConfigureAzureBlob(builder.Configuration);
 
+// Add CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+});
+
 builder.Services
     .AddApplication()
     .AddPresentation()
@@ -35,6 +48,8 @@ app.UseExceptionHandler();
 app.UseAuthentication();
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 

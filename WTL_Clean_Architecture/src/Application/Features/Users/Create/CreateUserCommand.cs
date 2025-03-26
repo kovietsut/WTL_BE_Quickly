@@ -13,6 +13,7 @@ namespace Application.Features.Users.Create
     {
         public required string Email { get; set; }
         public required string Password { get; set; }
+        public required string RePassword { get; set; }
         public long RoleId { get; set; }
         public string? FullName { get; set; }
         public required string PhoneNumber { get; set; }
@@ -32,6 +33,7 @@ namespace Application.Features.Users.Create
                 {
                     Email = query.Email,
                     Password = query.Password,
+                    RePassword = query.RePassword,
                     RoleId = query.RoleId,
                     FullName = query.FullName,
                     PhoneNumber = query.PhoneNumber,
