@@ -24,23 +24,23 @@ namespace Infrastructure.Repositories
         public AzureBlobRepository(IOptions<AzureBlobSettings> azureBlobSettings, IOptions<ErrorCode> errorCodes, ISasTokenGenerator sasTokenGenerator)
         {
             var accountKey = Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY", EnvironmentVariableTarget.User);
-            _azureBlobSettings = azureBlobSettings.Value;
-            _errorCodes = errorCodes.Value;
+            _azureBlobSettings = azureBlobSettings?.Value ?? throw new ArgumentNullException(nameof(azureBlobSettings));
+            _errorCodes = errorCodes?.Value ?? throw new ArgumentNullException(nameof(errorCodes));
             var sharedKeyCredential = new StorageSharedKeyCredential(_azureBlobSettings.AccountName, accountKey);
             var blobUri = $"https://{_azureBlobSettings.AccountName}.blob.core.windows.net";
             _blobServiceClient = new BlobServiceClient(new Uri(blobUri), sharedKeyCredential);
-            _sasTokenGenerator = sasTokenGenerator;
+            _sasTokenGenerator = sasTokenGenerator ?? throw new ArgumentNullException(nameof(sasTokenGenerator));
         }
 
         public async Task<IActionResult> GetAttachment(string fileName, string folderName)
         {
             try
             {
-                if (folderName == null)
+                if (string.IsNullOrEmpty(folderName))
                 {
                     return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "Folder name is required");
                 }
-                if (fileName == null)
+                if (string.IsNullOrEmpty(fileName))
                 {
                     return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "File name is required");
                 }
@@ -51,7 +51,7 @@ namespace Infrastructure.Repositories
                     var blobUriWithSas = new Uri(file.Uri + "?" + sasToken).ToString();
                     var data = await file.OpenReadAsync();
                     var content = await file.DownloadContentAsync();
-                    var contentType = content.Value.Details.ContentType;
+                    var contentType = content?.Value?.Details?.ContentType;
                     return JsonUtil.Success(new
                     {
                         FilePath = blobUriWithSas,
@@ -71,7 +71,7 @@ namespace Infrastructure.Repositories
         {
             try
             {
-                if (folderName == null)
+                if (string.IsNullOrEmpty(folderName))
                 {
                     return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "Folder name is required");
                 }
@@ -90,7 +90,7 @@ namespace Infrastructure.Repositories
                     {
                         FilePath = blobUriWithSas,
                         Name = blobItem.Name,
-                        ContentType = blobItem.Properties.ContentType
+                        ContentType = blobItem.Properties?.ContentType
                     });
                 }
                 return JsonUtil.Success(blobs);
@@ -117,7 +117,7 @@ namespace Infrastructure.Repositories
             try
             {
                 var quality = 75;
-                if (folderName == null)
+                if (string.IsNullOrEmpty(folderName))
                 {
                     return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.BadRequest, "Folder name cannot be null");
                 }
@@ -162,11 +162,11 @@ namespace Infrastructure.Repositories
             try
             {
                 var quality = 75;
-                if (folderName == null)
+                if (string.IsNullOrEmpty(folderName))
                 {
                     return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.BadRequest, "Folder name cannot be null");
                 }
-                if (attachments == null || attachments.Count() <= 0)
+                if (attachments == null || !attachments.Any())
                 {
                     return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.BadRequest, "Please select at least 1 attachment");
                 }
@@ -185,7 +185,7 @@ namespace Infrastructure.Repositories
                     // Delete the temporary file
                     // File.Delete(tempFilePath);
                 }
-                return JsonUtil.Success($"Upload {attachments.Count()} Success");
+                return JsonUtil.Success($"Upload {attachments.Count} Success");
             }
             catch (Exception e)
             {
@@ -197,6 +197,10 @@ namespace Infrastructure.Repositories
         {
             try
             {
+                if (string.IsNullOrEmpty(fileName) || string.IsNullOrEmpty(folderName))
+                {
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.BadRequest, "File name and folder name are required");
+                }
                 var file = _blobServiceClient.GetBlobContainerClient(folderName).GetBlobClient(fileName);
                 await file.DeleteAsync();
                 return JsonUtil.Success($"File {fileName} has been deleted");

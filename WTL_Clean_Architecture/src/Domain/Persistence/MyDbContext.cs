@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using ActionEntity = Domain.Entities.Action;
+using Domain.Enums;
 
 namespace Domain.Persistence;
 
@@ -246,6 +247,16 @@ public partial class MyDbContext : DbContext
                 .HasMaxLength(255)
                 .IsUnicode(false);
             entity.Property(e => e.UpdatedAt).HasDefaultValueSql("(getdate())");
+            
+            // Configure enum properties
+            entity.Property(e => e.Format)
+                .HasConversion<int>();
+            entity.Property(e => e.Season)
+                .HasConversion<int>();
+            entity.Property(e => e.Region)
+                .HasConversion<int>();
+            entity.Property(e => e.ReleaseStatus)
+                .HasConversion<int>();
 
             entity.HasOne(d => d.ArtistNavigation).WithMany(p => p.MangaArtistNavigations)
                 .HasForeignKey(d => d.Artist)

@@ -2,6 +2,7 @@
 using Application.Models;
 using Application.Utils;
 using Domain.Configurations;
+using Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +14,10 @@ namespace Application.Features.Manga.Create
     {
         public string Title { get; set; }
         public DateTime? PublishedDate { get; set; }
-        public int? Format { get; set; }
-        public int? Season { get; set; }
-        public int? Region { get; set; }
-        public int? ReleaseStatus { get; set; }
+        public MangaFormat? Format { get; set; }
+        public MangaSeason? Season { get; set; }
+        public MangaRegion? Region { get; set; }
+        public MangaReleaseStatus? ReleaseStatus { get; set; }
         public string? Preface { get; set; }
         public bool? HasAdult { get; set; }
         public string? CoverImage { get; set; }

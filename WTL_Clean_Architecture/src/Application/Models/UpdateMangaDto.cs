@@ -1,4 +1,5 @@
-﻿
+﻿using Domain.Enums;
+
 namespace Application.Models
 {
     public class UpdateMangaDto
@@ -7,13 +8,13 @@ namespace Application.Models
 
         public DateTime? PublishedDate { get; set; }
 
-        public int? Format { get; set; }
+        public MangaFormat? Format { get; set; }
 
-        public int? Season { get; set; }
+        public MangaSeason? Season { get; set; }
 
-        public int? Region { get; set; }
+        public MangaRegion? Region { get; set; }
 
-        public int? ReleaseStatus { get; set; }
+        public MangaReleaseStatus? ReleaseStatus { get; set; }
 
         public string? Preface { get; set; }
 
