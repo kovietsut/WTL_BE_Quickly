@@ -4,6 +4,7 @@ using Application.Features.Manga.GetById;
 using Application.Features.Manga.GetList;
 using Application.Features.Manga.Update;
 using Application.Models;
+using Domain.SpecificationModels;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -34,9 +35,9 @@ namespace WebAPI.Controllers
 
         [AllowAnonymous]
         [HttpGet("get-list")]
-        public async Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText)
+        public async Task<IActionResult> GetList([FromQuery] MangaFilterDto filter)
         {
-            var query = new GetListMangaQuery(pageNumber, pageSize, searchText);
+            var query = new GetListMangaQuery { Filter = filter };
             var result = await _mediator.Send(query);
             return result;
         }
@@ -48,10 +49,10 @@ namespace WebAPI.Controllers
             {
                 Title = model.Title,
                 PublishedDate = model.PublishedDate,
-                Format = model.Format,
-                Season = model.Season,
-                Region = model.Region,
-                ReleaseStatus = model.ReleaseStatus,
+                Format = (Domain.Enums.MangaFormat?)model.Format,
+                Season = (Domain.Enums.MangaSeason?)model.Season,
+                Region = (Domain.Enums.MangaRegion?)model.Region,
+                ReleaseStatus = (Domain.Enums.MangaReleaseStatus?)model.ReleaseStatus,
                 Preface = model.Preface,
                 HasAdult = model.HasAdult,
                 CoverImage = model.CoverImage,
@@ -73,10 +74,10 @@ namespace WebAPI.Controllers
                 Id = mangaId,
                 Title = model.Title,
                 PublishedDate = model.PublishedDate,
-                Format = model.Format,
-                Season = model.Season,
-                Region = model.Region,
-                ReleaseStatus = model.ReleaseStatus,
+                Format = (Domain.Enums.MangaFormat?)model.Format,
+                Season = (Domain.Enums.MangaSeason?)model.Season,
+                Region = (Domain.Enums.MangaRegion?)model.Region,
+                ReleaseStatus = (Domain.Enums.MangaReleaseStatus?)model.ReleaseStatus,
                 Preface = model.Preface,
                 HasAdult = model.HasAdult,
                 SubAuthor = model.SubAuthor,

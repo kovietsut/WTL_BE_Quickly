@@ -21,7 +21,10 @@ namespace Domain.Specifications
 
                 if (specification.IncludeExpressions.Any())
                 {
-                    queryable = specification.IncludeExpressions.Aggregate(queryable, (current, include) => current.Include(include));
+                    foreach (var include in specification.IncludeExpressions)
+                    {
+                        queryable = queryable.Include(include);
+                    }
                 }
 
                 if (specification.OrderByExpression is not null)
@@ -52,5 +55,4 @@ namespace Domain.Specifications
             return queryable;
         }
     }
-
 }

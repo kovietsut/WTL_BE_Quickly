@@ -1,6 +1,8 @@
 ﻿using Application.Interfaces;
 using Application.Utils;
 using Domain.Configurations;
+using Domain.Mappers;
+using Domain.SpecificationModels;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,11 +10,9 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.Manga.GetList
 {
-    public class GetListMangaQuery(int? pageNumber, int? pageSize, string? searchText) : IRequest<IActionResult>
+    public class GetListMangaQuery : IRequest<IActionResult>
     {
-        public string? SearchText { get; set; } = searchText;
-        public int? PageNumber { get; set; } = pageNumber;
-        public int? PageSize { get; set; } = pageSize;
+        public MangaFilterDto Filter { get; set; }
     }
 
     public class GetListMangaQueryHandler : IRequestHandler<GetListMangaQuery, IActionResult>
@@ -28,19 +28,32 @@ namespace Application.Features.Manga.GetList
 
         public async Task<IActionResult> Handle(GetListMangaQuery query, CancellationToken cancellationToken)
         {
-            query.PageNumber ??= 1; query.PageSize ??= 10;
-            var list = await _repository.GetList(query.PageNumber, query.PageSize, query.SearchText);
-            var listData = list.Select(x => new
+            var (items, totalCount) = await _repository.GetList(query.Filter);
+            var listData = items.Select(x => new
             {
                 x.Id,
                 x.IsDeleted,
                 x.Title,
                 x.CoverImage,
+                Format = MangaMapper.ToDtoFormat(x.Format),
+                Season = MangaMapper.ToDtoSeason(x.Season),
+                Region = MangaMapper.ToDtoRegion(x.Region),
+                ReleaseStatus = MangaMapper.ToDtoReleaseStatus(x.ReleaseStatus),
+                x.PublishedDate,
+                x.Preface,
+                x.HasAdult,
+                x.CreatedAt,
+                x.UpdatedAt,
+                //Genres = x.MangaGenres.Select(mg => new { mg.Genre.Id, mg.Genre.Name }),
+                Author = x.SubAuthorNavigation != null ? new { x.SubAuthorNavigation.Id, x.SubAuthorNavigation.FullName } : null,
+                Artist = x.ArtistNavigation != null ? new { x.ArtistNavigation.Id, x.ArtistNavigation.FullName } : null,
+                Translator = x.TranslatorNavigation != null ? new { x.TranslatorNavigation.Id, x.TranslatorNavigation.FullName } : null,
+                Publisher = x.PublishorNavigation != null ? new { x.PublishorNavigation.Id, x.PublishorNavigation.FullName } : null
             });
+
             if (listData != null)
             {
-                var totalRecords = await _repository.CountAsync();
-                return JsonUtil.Success(listData, dataCount: totalRecords);
+                return JsonUtil.Success(listData, dataCount: totalCount);
             }
             return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Empty List Data");
         }

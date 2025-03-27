@@ -7,6 +7,8 @@ using Domain.Specifications;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Domain.Specifications.Mangas;
+using Domain.Mappers;
+using Domain.SpecificationModels;
 
 namespace Infrastructure.Repositories
 {
@@ -35,10 +37,10 @@ namespace Infrastructure.Repositories
                 CreatedAt = DateTimeOffset.UtcNow,
                 Title = model.Title.Trim(),
                 PublishedDate = model.PublishedDate,
-                Format = model.Format,
-                Season = model.Season,
-                Region = model.Region,
-                ReleaseStatus = model.ReleaseStatus,
+                Format = MangaMapper.ToDomainFormat(model.Format),
+                Season = MangaMapper.ToDomainSeason(model.Season),
+                Region = MangaMapper.ToDomainRegion(model.Region),
+                ReleaseStatus = MangaMapper.ToDomainReleaseStatus(model.ReleaseStatus),
                 Preface = model.Preface.Trim(),
                 HasAdult = model.HasAdult,
                 CoverImage = _sasTokenGenerator.GenerateCoverImageUriWithSas(model.CoverImage),
@@ -63,12 +65,18 @@ namespace Infrastructure.Repositories
             return manga;
         }
 
-        public async Task<List<Manga>> GetList(int? pageNumber, int? pageSize, string? searchText)
+        public async Task<(List<Manga> Items, int TotalCount)> GetList(MangaFilterDto filter)
         {
-            var specification = new GetListMangasSpecification(pageNumber, pageSize, searchText);
+            var specification = new GetListMangasSpecification(filter);
             var query = FindBySpecification(specification);
             var result = await query.ToListAsync();
-            return result;
+            
+            // Get total count with the same filters but without paging
+            var countSpecification = new GetListMangasSpecification(filter, includePaging: false);
+            var countQuery = FindBySpecification(countSpecification);
+            var totalCount = await countQuery.CountAsync();
+            
+            return (result, totalCount);
         }
 
         public async Task<Manga?> GetMangaById(long id)
@@ -84,10 +92,10 @@ namespace Infrastructure.Repositories
             currentManga.UpdatedAt = DateTimeOffset.UtcNow;
             currentManga.Title = model.Title.Trim();
             currentManga.PublishedDate = model.PublishedDate ?? currentManga.PublishedDate;
-            currentManga.Format = model.Format ?? currentManga.Format;
-            currentManga.Season = model.Season ?? currentManga.Season;
-            currentManga.Region = model.Region ?? currentManga.Region;
-            currentManga.ReleaseStatus = model.ReleaseStatus ?? currentManga.ReleaseStatus;
+            currentManga.Format = model.Format.HasValue ? MangaMapper.ToDomainFormat(model.Format) : currentManga.Format;
+            currentManga.Season = model.Season.HasValue ? MangaMapper.ToDomainSeason(model.Season) : currentManga.Season;
+            currentManga.Region = model.Region.HasValue ? MangaMapper.ToDomainRegion(model.Region) : currentManga.Region;
+            currentManga.ReleaseStatus = model.ReleaseStatus.HasValue ? MangaMapper.ToDomainReleaseStatus(model.ReleaseStatus) : currentManga.ReleaseStatus;
             currentManga.Preface = model.Preface.Trim() ?? currentManga.Preface.Trim();
             currentManga.HasAdult = model.HasAdult ?? currentManga.HasAdult;
             currentManga.CoverImage = model.CoverImage.Trim() ?? currentManga.CoverImage.Trim();

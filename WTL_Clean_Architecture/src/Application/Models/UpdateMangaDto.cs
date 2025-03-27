@@ -8,13 +8,13 @@ namespace Application.Models
 
         public DateTime? PublishedDate { get; set; }
 
-        public MangaFormat? Format { get; set; }
+        public MangaFormatDto? Format { get; set; }
 
-        public MangaSeason? Season { get; set; }
+        public MangaSeasonDto? Season { get; set; }
 
-        public MangaRegion? Region { get; set; }
+        public MangaRegionDto? Region { get; set; }
 
-        public MangaReleaseStatus? ReleaseStatus { get; set; }
+        public MangaReleaseStatusDto? ReleaseStatus { get; set; }
 
         public string? Preface { get; set; }
 

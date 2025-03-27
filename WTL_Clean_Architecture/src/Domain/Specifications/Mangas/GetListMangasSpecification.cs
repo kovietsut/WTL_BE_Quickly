@@ -1,20 +1,33 @@
 ﻿using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Domain.Mappers;
+using Domain.SpecificationModels;
 
 namespace Domain.Specifications.Mangas
 {
     public class GetListMangasSpecification : Specification<Manga, long>
     {
-        public GetListMangasSpecification(int? pageNumber, int? pageSize, string? searchText) :
+        public GetListMangasSpecification(MangaFilterDto filter, bool includePaging = true) :
             base(manga => manga.IsDeleted != true &&
-            (string.IsNullOrEmpty(searchText) || (manga.Title != null && manga.Title.Contains(searchText.Trim()))))
+            (string.IsNullOrEmpty(filter.SearchTerm) || (manga.Title != null && manga.Title.Contains(filter.SearchTerm.Trim()))) &&
+            (!filter.Format.HasValue || manga.Format == MangaMapper.ToDomainFormat(filter.Format)) &&
+            (!filter.Season.HasValue || manga.Season == MangaMapper.ToDomainSeason(filter.Season)) &&
+            (!filter.Region.HasValue || manga.Region == MangaMapper.ToDomainRegion(filter.Region)) &&
+            (!filter.ReleaseStatus.HasValue || manga.ReleaseStatus == MangaMapper.ToDomainReleaseStatus(filter.ReleaseStatus)) &&
+            (filter.GenreIds == null || !filter.GenreIds.Any() || manga.MangaGenres.Any(mg => filter.GenreIds.Contains(mg.GenreId))))
         {
-            ApplyPaging((pageNumber - 1) * pageSize, pageSize);
+            if (includePaging)
+            {
+                ApplyPaging((filter.Page - 1) * filter.PageSize, filter.PageSize);
+            }
             AddOrderByDescending(u => u.CreatedAt);
+            
+            // Include related entities
+            AddInclude(x => x.MangaGenres);
+            //AddInclude(x => x.MangaGenres).ThenInclude(mg => mg.Genre);
+            AddInclude(x => x.SubAuthorNavigation);
+            AddInclude(x => x.ArtistNavigation);
+            AddInclude(x => x.TranslatorNavigation);
+            AddInclude(x => x.PublishorNavigation);
         }
     }
 }
