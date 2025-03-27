@@ -27,6 +27,14 @@ namespace Domain.Specifications
                     }
                 }
 
+                if (specification.ThenIncludes.Any())
+                {
+                    foreach (var thenInclude in specification.ThenIncludes)
+                    {
+                        query = thenInclude(query);
+                    }
+                }
+
                 if (specification.OrderByExpression is not null)
                 {
                     queryable = queryable.OrderBy(specification.OrderByExpression);

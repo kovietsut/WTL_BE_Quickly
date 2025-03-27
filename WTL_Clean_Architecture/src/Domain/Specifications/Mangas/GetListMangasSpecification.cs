@@ -20,10 +20,10 @@ namespace Domain.Specifications.Mangas
                 ApplyPaging((filter.Page - 1) * filter.PageSize, filter.PageSize);
             }
             AddOrderByDescending(u => u.CreatedAt);
-            
+
             // Include related entities
             AddInclude(x => x.MangaGenres);
-            //AddInclude(x => x.MangaGenres).ThenInclude(mg => mg.Genre);
+                AddThenInclude<MangaGenre>(mg => mg.Genre);
             AddInclude(x => x.SubAuthorNavigation);
             AddInclude(x => x.ArtistNavigation);
             AddInclude(x => x.TranslatorNavigation);
