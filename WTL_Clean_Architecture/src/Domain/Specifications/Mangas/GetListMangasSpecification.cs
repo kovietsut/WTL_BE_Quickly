@@ -23,11 +23,13 @@ namespace Domain.Specifications.Mangas
 
             // Include related entities
             AddInclude(x => x.MangaGenres);
-                AddThenInclude<MangaGenre>(mg => mg.Genre);
+            AddThenInclude<MangaGenre>(mg => mg.Genre);
             AddInclude(x => x.SubAuthorNavigation);
             AddInclude(x => x.ArtistNavigation);
             AddInclude(x => x.TranslatorNavigation);
             AddInclude(x => x.PublishorNavigation);
+
+            IsSplitQuery = true;
         }
     }
 }

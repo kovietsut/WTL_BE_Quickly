@@ -10,6 +10,7 @@ namespace Domain.Specifications.Genres
         {
             ApplyPaging((pageNumber - 1) * pageSize, pageSize);
             AddOrderByDescending(u => u.CreatedAt);
+            IsSplitQuery = true;
         }
     }
 }

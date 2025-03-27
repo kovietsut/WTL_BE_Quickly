@@ -12,6 +12,8 @@ namespace Domain.Specifications.Chapter
             {
                 ApplyPaging((pageNumber.Value - 1) * pageSize.Value, pageSize.Value);
                 AddOrderByDescending(u => u.CreatedAt);
+
+                IsSplitQuery = true;
             }
         }
     }

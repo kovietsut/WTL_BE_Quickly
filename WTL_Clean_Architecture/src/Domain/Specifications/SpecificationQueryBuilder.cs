@@ -19,9 +19,9 @@ namespace Domain.Specifications
                     queryable = queryable.Where(specification.Criteria);
                 }
 
-                if (specification.IncludeExpressions.Any())
+                if (specification.Includes.Any())
                 {
-                    foreach (var include in specification.IncludeExpressions)
+                    foreach (var include in specification.Includes)
                     {
                         queryable = queryable.Include(include);
                     }
@@ -31,7 +31,7 @@ namespace Domain.Specifications
                 {
                     foreach (var thenInclude in specification.ThenIncludes)
                     {
-                        query = thenInclude(query);
+                        queryable = thenInclude(queryable);
                     }
                 }
 

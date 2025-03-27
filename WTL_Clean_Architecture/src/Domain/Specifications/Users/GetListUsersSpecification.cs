@@ -13,6 +13,7 @@ namespace Domain.Specifications.Users
         {
             ApplyPaging((pageNumber - 1) * pageSize, pageSize);
             AddOrderByDescending(u => u.CreatedAt);
+            IsSplitQuery = true;
         }
     }
 }
