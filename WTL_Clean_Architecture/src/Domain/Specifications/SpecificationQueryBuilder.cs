@@ -6,9 +6,8 @@ namespace Domain.Specifications
     public static class SpecificationQueryBuilder
     {
         public static IQueryable<TEntity> GetQuery<TEntity, TKey>(
-                IQueryable<TEntity> query,
-                Specification<TEntity, TKey>? specification
-            ) where TEntity : EntityBase<TKey>
+            IQueryable<TEntity> query, Specification<TEntity, TKey>? specification)
+            where TEntity : EntityBase<TKey>
         {
             var queryable = query;
 
@@ -19,20 +18,14 @@ namespace Domain.Specifications
                     queryable = queryable.Where(specification.Criteria);
                 }
 
-                if (specification.Includes.Any())
+                foreach (var include in specification.Includes)
                 {
-                    foreach (var include in specification.Includes)
-                    {
-                        queryable = queryable.Include(include);
-                    }
+                    queryable = include(queryable);
                 }
 
-                if (specification.ThenIncludes.Any())
+                foreach (var includeString in specification.IncludeStrings)
                 {
-                    foreach (var thenInclude in specification.ThenIncludes)
-                    {
-                        queryable = thenInclude(queryable);
-                    }
+                    queryable = queryable.Include(includeString);
                 }
 
                 if (specification.OrderByExpression is not null)
@@ -63,4 +56,5 @@ namespace Domain.Specifications
             return queryable;
         }
     }
+
 }

@@ -21,13 +21,11 @@ namespace Domain.Specifications.Mangas
             }
             AddOrderByDescending(u => u.CreatedAt);
 
-            // Include related entities
-            AddInclude(x => x.MangaGenres);
-            AddThenInclude<MangaGenre>(mg => mg.Genre);
-            AddInclude(x => x.SubAuthorNavigation);
-            AddInclude(x => x.ArtistNavigation);
-            AddInclude(x => x.TranslatorNavigation);
-            AddInclude(x => x.PublishorNavigation);
+            AddInclude("MangaGenres.Genre");
+            AddInclude(m => m.SubAuthorNavigation);
+            AddInclude(m => m.ArtistNavigation);
+            AddInclude(m => m.TranslatorNavigation);
+            AddInclude(m => m.PublishorNavigation);
 
             IsSplitQuery = true;
         }
