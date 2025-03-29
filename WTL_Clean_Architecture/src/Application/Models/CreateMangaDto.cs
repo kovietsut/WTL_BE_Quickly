@@ -33,5 +33,7 @@ namespace Application.Models
         public long? Artist { get; set; }
 
         public long? Translator { get; set; }
+
+        public List<long>? GenreIds { get; set; }
     }
 }

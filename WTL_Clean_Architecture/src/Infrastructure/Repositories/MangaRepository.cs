@@ -15,15 +15,16 @@ namespace Infrastructure.Repositories
     public class MangaRepository : RepositoryBase<Manga, long, MyDbContext>, IMangaRepository
     {
         private readonly ErrorCode _errorCodes;
-        //private readonly IMangaGenreRepository _mangaGenreRepository;
+        private readonly IMangaGenreRepository _mangaGenreRepository;
         private readonly ISasTokenGenerator _sasTokenGenerator;
         //private readonly IMangaInteractionService _mangaInteractionService;
         //private readonly IMangaReactionRepository _mangaInteractionRepository;
         public MangaRepository(MyDbContext dbContext, IUnitOfWork<MyDbContext> unitOfWork, IOptions<ErrorCode> errorCode,
-            ISasTokenGenerator sasTokenGenerator) : base(dbContext, unitOfWork)
+            ISasTokenGenerator sasTokenGenerator,
+            IMangaGenreRepository mangaGenreRepository) : base(dbContext, unitOfWork)
         {
             _errorCodes = errorCode.Value;
-            //_mangaGenreRepository = mangaGenreRepository;
+            _mangaGenreRepository = mangaGenreRepository;
             _sasTokenGenerator = sasTokenGenerator;
             //_mangaInteractionService = mangaInteractionService;
             //_mangaInteractionRepository = mangaInteractionRepository;
@@ -51,6 +52,12 @@ namespace Infrastructure.Repositories
                 Translator = model.Translator
             };
             await CreateAsync(manga);
+
+            if (model.GenreIds != null && model.GenreIds.Any())
+            {
+                await _mangaGenreRepository.CreateMangaGenresAsync(manga.Id, model.GenreIds);
+            }
+
             return manga;
         }
 
@@ -61,6 +68,7 @@ namespace Infrastructure.Repositories
             {
                 manga.IsDeleted = true;
                 await UpdateAsync(manga);
+                await _mangaGenreRepository.DeleteMangaGenresAsync(id);
             }
             return manga;
         }

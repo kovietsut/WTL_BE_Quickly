@@ -26,11 +26,24 @@ namespace Application.Features.Manga.Create
         public long? Publishor { get; set; }
         public long? Artist { get; set; }
         public long? Translator { get; set; }
+        public List<long>? GenreIds { get; set; }
     }
 
-    public class CreateMangaCommmandHandler(IMangaRepository repository, IOptions<ErrorCode> errorCodes) : IRequestHandler<CreateMangaCommand, IActionResult>
+    public class CreateMangaCommmandHandler : IRequestHandler<CreateMangaCommand, IActionResult>
     {
-        private readonly ErrorCode _errorCodes = errorCodes.Value;
+        private readonly IMangaRepository _repository;
+        private readonly IMangaGenreRepository _mangaGenreRepository;
+        private readonly ErrorCode _errorCodes;
+
+        public CreateMangaCommmandHandler(
+            IMangaRepository repository,
+            IMangaGenreRepository mangaGenreRepository,
+            IOptions<ErrorCode> errorCodes)
+        {
+            _repository = repository;
+            _mangaGenreRepository = mangaGenreRepository;
+            _errorCodes = errorCodes.Value;
+        }
 
         public async Task<IActionResult> Handle(CreateMangaCommand query, CancellationToken cancellationToken)
         {
@@ -60,8 +73,14 @@ namespace Application.Features.Manga.Create
                     return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", check.Errors);
                 }
                 
-                var user = await repository.CreateMangaAsync(createMangaDto);
-                return JsonUtil.Success(user.Id);
+                var manga = await _repository.CreateMangaAsync(createMangaDto);
+                
+                if (query.GenreIds != null && query.GenreIds.Any())
+                {
+                    await _mangaGenreRepository.CreateMangaGenresAsync(manga.Id, query.GenreIds);
+                }
+
+                return JsonUtil.Success(manga.Id);
             }
             catch (Exception ex)
             {

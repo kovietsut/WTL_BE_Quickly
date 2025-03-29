@@ -60,7 +60,8 @@ namespace WebAPI.Controllers
                 SubAuthor = model.SubAuthor,
                 Publishor = model.Publishor,
                 Artist = model.Artist,
-                Translator = model.Translator
+                Translator = model.Translator,
+                GenreIds = model.GenreIds
             };
             var result = await _mediator.Send(query);
             return result;
