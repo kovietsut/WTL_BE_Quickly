@@ -34,8 +34,8 @@ namespace WebAPI.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("get-list")]
-        public async Task<IActionResult> GetList([FromQuery] MangaFilterDto filter)
+        [HttpPost("get-list")]
+        public async Task<IActionResult> GetList([FromBody] MangaFilterDto filter)
         {
             var query = new GetListMangaQuery { Filter = filter };
             var result = await _mediator.Send(query);
