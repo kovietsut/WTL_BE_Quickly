@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.Utils;
 using Domain.Configurations;
+using Domain.Mappers;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -37,21 +38,25 @@ namespace Application.Features.Manga.GetById
                 manga.IsDeleted,
                 manga.Title,
                 manga.PublishedDate,
-                manga.Format,
-                manga.Season,
+                Format = MangaMapper.ToDtoFormat(manga.Format),
+                Season = MangaMapper.ToDtoSeason(manga.Season),
+                Region = MangaMapper.ToDtoRegion(manga.Region),
+                ReleaseStatus = MangaMapper.ToDtoReleaseStatus(manga.ReleaseStatus),
                 manga.Preface,
                 manga.CoverImage,
                 manga.CreatedBy,
-                manga.SubAuthor,
-                manga.Publishor,
-                manga.Artist,
-                manga.Translator
-                //list genres
-                //list chapters
-                //list comments
+                SubAuthorId = manga.SubAuthor,
+                PublishorId = manga.Publishor,
+                ArtistId = manga.Artist,
+                TranslatorId = manga.Translator,
+                Genres = manga.MangaGenres.Where(mg => mg.IsDeleted != true && mg.Genre.IsDeleted != true)
+                    .Select(mg => new { mg.Genre.Id, mg.Genre.Name }),
+                Author = manga.SubAuthorNavigation != null ? new { manga.SubAuthorNavigation.Id, manga.SubAuthorNavigation.FullName } : null,
+                Artist = manga.ArtistNavigation != null ? new { manga.ArtistNavigation.Id, manga.ArtistNavigation.FullName } : null,
+                Translator = manga.TranslatorNavigation != null ? new { manga.TranslatorNavigation.Id, manga.TranslatorNavigation.FullName } : null,
+                Publisher = manga.PublishorNavigation != null ? new { manga.PublishorNavigation.Id, manga.PublishorNavigation.FullName } : null
             };
             return JsonUtil.Success(result);
         }
     }
-
 }

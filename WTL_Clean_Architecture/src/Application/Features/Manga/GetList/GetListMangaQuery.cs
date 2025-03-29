@@ -44,7 +44,8 @@ namespace Application.Features.Manga.GetList
                 x.HasAdult,
                 x.CreatedAt,
                 x.UpdatedAt,
-                Genres = x.MangaGenres.Select(mg => new { mg.Genre.Id, mg.Genre.Name }),
+                Genres = x.MangaGenres.Where(mg => mg.IsDeleted != true && mg.Genre.IsDeleted != true)
+                    .Select(mg => new { mg.Genre.Id, mg.Genre.Name }),
                 Author = x.SubAuthorNavigation != null ? new { x.SubAuthorNavigation.Id, x.SubAuthorNavigation.FullName } : null,
                 Artist = x.ArtistNavigation != null ? new { x.ArtistNavigation.Id, x.ArtistNavigation.FullName } : null,
                 Translator = x.TranslatorNavigation != null ? new { x.TranslatorNavigation.Id, x.TranslatorNavigation.FullName } : null,
