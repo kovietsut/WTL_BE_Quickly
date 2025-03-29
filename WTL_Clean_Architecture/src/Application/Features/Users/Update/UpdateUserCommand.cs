@@ -55,16 +55,19 @@ namespace Application.Features.Users.Update
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes.Status404?.NotFound, "User does not exist");
                 }
+
                 var userByEmail = await _repository.GetUserByEmail(query.Email);
-                if (userByEmail != null && userByEmail.Email != null)
+                if (userByEmail != null && userByEmail.Id != query.Id)
                 {
-                    return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Email existed");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", "Email already exists for another user");
                 }
+
                 var userByPhoneNumber = await _repository.GetUserByPhoneNumber(query.PhoneNumber);
-                if (userByPhoneNumber != null && userByPhoneNumber.PhoneNumber != null)
+                if (userByPhoneNumber != null && userByPhoneNumber.Id != query.Id)
                 {
-                    return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Phone number existed");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", "Phone number already exists for another user");
                 }
+                
                 var user = await _repository.UpdateUserAsync(query.Id, updateUserDto);
                 return JsonUtil.Success(user.Id);
             }
