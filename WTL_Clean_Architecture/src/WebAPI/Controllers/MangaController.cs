@@ -81,10 +81,12 @@ namespace WebAPI.Controllers
                 ReleaseStatus = (Domain.Enums.MangaReleaseStatus?)model.ReleaseStatus,
                 Preface = model.Preface,
                 HasAdult = model.HasAdult,
+                CoverImage = model.CoverImage,
                 SubAuthor = model.SubAuthor,
                 Publishor = model.Publishor,
                 Artist = model.Artist,
-                Translator = model.Translator
+                Translator = model.Translator,
+                GenreIds = model.GenreIds
             };
             var result = await _mediator.Send(query);
             return result;
