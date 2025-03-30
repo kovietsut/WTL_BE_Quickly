@@ -251,8 +251,6 @@ public partial class MyDbContext : DbContext
             // Configure enum properties
             entity.Property(e => e.Format)
                 .HasConversion<int>();
-            entity.Property(e => e.Season)
-                .HasConversion<int>();
             entity.Property(e => e.Region)
                 .HasConversion<int>();
             entity.Property(e => e.ReleaseStatus)

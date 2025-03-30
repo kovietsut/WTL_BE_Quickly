@@ -36,7 +36,6 @@ namespace Application.Features.Manga.GetList
                 x.Title,
                 x.CoverImage,
                 Format = MangaMapper.ToDtoFormat(x.Format),
-                Season = MangaMapper.ToDtoSeason(x.Season),
                 Region = MangaMapper.ToDtoRegion(x.Region),
                 ReleaseStatus = MangaMapper.ToDtoReleaseStatus(x.ReleaseStatus),
                 x.PublishedDate,

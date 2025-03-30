@@ -19,8 +19,6 @@ namespace Application.Features.Manga.Update
 
         public MangaFormat? Format { get; set; }
 
-        public MangaSeason? Season { get; set; }
-
         public MangaRegion? Region { get; set; }
 
         public MangaReleaseStatus? ReleaseStatus { get; set; }
@@ -106,10 +104,9 @@ namespace Application.Features.Manga.Update
                 {
                     Title = query.Title,
                     PublishedDate = query.PublishedDate,
-                    Format = (MangaFormatDto?)query.Format,
-                    Season = (MangaSeasonDto?)query.Season,
-                    Region = (MangaRegionDto?)query.Region,
-                    ReleaseStatus = (MangaReleaseStatusDto?)query.ReleaseStatus,
+                    Format = (MangaFormat?)query.Format,
+                    Region = (MangaRegion?)query.Region,
+                    ReleaseStatus = (MangaReleaseStatus?)query.ReleaseStatus,
                     Preface = query.Preface,
                     HasAdult = query.HasAdult,
                     CoverImage = query.CoverImage,

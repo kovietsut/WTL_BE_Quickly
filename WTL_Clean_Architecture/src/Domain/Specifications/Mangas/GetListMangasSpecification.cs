@@ -10,7 +10,6 @@ namespace Domain.Specifications.Mangas
             base(manga => manga.IsDeleted != true &&
             (string.IsNullOrEmpty(filter.SearchTerm) || (manga.Title != null && manga.Title.Contains(filter.SearchTerm.Trim()))) &&
             (!filter.Format.HasValue || manga.Format == MangaMapper.ToDomainFormat(filter.Format)) &&
-            (!filter.Season.HasValue || manga.Season == MangaMapper.ToDomainSeason(filter.Season)) &&
             (!filter.Region.HasValue || manga.Region == MangaMapper.ToDomainRegion(filter.Region)) &&
             (!filter.ReleaseStatus.HasValue || manga.ReleaseStatus == MangaMapper.ToDomainReleaseStatus(filter.ReleaseStatus)) &&
             (filter.GenreIds == null || !filter.GenreIds.Any() || manga.MangaGenres.Any(mg => filter.GenreIds.Contains(mg.GenreId) && mg.IsDeleted != true)))

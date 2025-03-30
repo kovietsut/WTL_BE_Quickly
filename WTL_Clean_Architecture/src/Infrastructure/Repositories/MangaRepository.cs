@@ -38,10 +38,9 @@ namespace Infrastructure.Repositories
                 CreatedAt = DateTimeOffset.UtcNow,
                 Title = model.Title.Trim(),
                 PublishedDate = model.PublishedDate,
-                Format = MangaMapper.ToDomainFormat(model.Format),
-                Season = MangaMapper.ToDomainSeason(model.Season),
-                Region = MangaMapper.ToDomainRegion(model.Region),
-                ReleaseStatus = MangaMapper.ToDomainReleaseStatus(model.ReleaseStatus),
+                Format = MangaMapper.ToDomainFormat((Domain.Enums.MangaFormatDto?)model.Format),
+                Region = MangaMapper.ToDomainRegion((Domain.Enums.MangaRegionDto?)model.Region),
+                ReleaseStatus = MangaMapper.ToDomainReleaseStatus((Domain.Enums.MangaReleaseStatusDto?)model.ReleaseStatus),
                 Preface = model.Preface.Trim(),
                 HasAdult = model.HasAdult,
                 CoverImage = _sasTokenGenerator.GenerateCoverImageUriWithSas(model.CoverImage),
@@ -100,10 +99,9 @@ namespace Infrastructure.Repositories
             currentManga.UpdatedAt = DateTimeOffset.UtcNow;
             currentManga.Title = model.Title.Trim();
             currentManga.PublishedDate = model.PublishedDate ?? currentManga.PublishedDate;
-            currentManga.Format = model.Format.HasValue ? MangaMapper.ToDomainFormat(model.Format) : currentManga.Format;
-            currentManga.Season = model.Season.HasValue ? MangaMapper.ToDomainSeason(model.Season) : currentManga.Season;
-            currentManga.Region = model.Region.HasValue ? MangaMapper.ToDomainRegion(model.Region) : currentManga.Region;
-            currentManga.ReleaseStatus = model.ReleaseStatus.HasValue ? MangaMapper.ToDomainReleaseStatus(model.ReleaseStatus) : currentManga.ReleaseStatus;
+            currentManga.Format = model.Format.HasValue ? MangaMapper.ToDomainFormat((Domain.Enums.MangaFormatDto?)model.Format) : currentManga.Format;
+            currentManga.Region = model.Region.HasValue ? MangaMapper.ToDomainRegion((Domain.Enums.MangaRegionDto?)model.Region) : currentManga.Region;
+            currentManga.ReleaseStatus = model.ReleaseStatus.HasValue ? MangaMapper.ToDomainReleaseStatus((Domain.Enums.MangaReleaseStatusDto?)model.ReleaseStatus) : currentManga.ReleaseStatus;
             currentManga.Preface = model.Preface.Trim() ?? currentManga.Preface.Trim();
             currentManga.HasAdult = model.HasAdult ?? currentManga.HasAdult;
             currentManga.CoverImage = model.CoverImage.Trim() ?? currentManga.CoverImage.Trim();

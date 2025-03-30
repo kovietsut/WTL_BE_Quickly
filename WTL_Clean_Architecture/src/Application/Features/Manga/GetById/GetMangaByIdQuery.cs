@@ -39,7 +39,6 @@ namespace Application.Features.Manga.GetById
                 manga.Title,
                 manga.PublishedDate,
                 Format = MangaMapper.ToDtoFormat(manga.Format),
-                Season = MangaMapper.ToDtoSeason(manga.Season),
                 Region = MangaMapper.ToDtoRegion(manga.Region),
                 ReleaseStatus = MangaMapper.ToDtoReleaseStatus(manga.ReleaseStatus),
                 manga.Preface,
