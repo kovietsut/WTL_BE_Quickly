@@ -335,6 +335,9 @@ public partial class MyDbContext : DbContext
         });
 
         OnModelCreatingPartial(modelBuilder);
+        
+        // Add seed data
+        SeedData.Seed(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
