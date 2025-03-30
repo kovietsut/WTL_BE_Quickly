@@ -144,6 +144,129 @@ public static class SeedData
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
+            },
+            // Publishers
+            new User
+            {
+                Id = 4,
+                FullName = "Shueisha Publisher",
+                Email = "shueisha.publisher@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new User
+            {
+                Id = 5,
+                FullName = "Kodansha Publisher",
+                Email = "kodansha.publisher@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new User
+            {
+                Id = 6,
+                FullName = "Kakao Publisher",
+                Email = "kakao.publisher@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Artists
+            new User
+            {
+                Id = 7,
+                FullName = "Eiichiro Oda",
+                Email = "eiichiro.oda@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new User
+            {
+                Id = 8,
+                FullName = "Hajime Isayama",
+                Email = "hajime.isayama@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new User
+            {
+                Id = 9,
+                FullName = "Chugong",
+                Email = "chugong.artist@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new User
+            {
+                Id = 10,
+                FullName = "Koyoharu Gotouge",
+                Email = "koyoharu.gotouge@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Translators
+            new User
+            {
+                Id = 11,
+                FullName = "Stephen Paul",
+                Email = "stephen.paul@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new User
+            {
+                Id = 12,
+                FullName = "Kohei Horikoshi",
+                Email = "kohei.horikoshi@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new User
+            {
+                Id = 13,
+                FullName = "Yoon Ha Lee",
+                Email = "yoon.ha.lee@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             }
         );
 
@@ -178,6 +301,109 @@ public static class SeedData
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
+            },
+            // Publishers AuthMethods
+            new AuthMethod
+            {
+                Id = 4,
+                UserId = 4,
+                AuthType = "Email",
+                AuthId = "shueisha.publisher@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new AuthMethod
+            {
+                Id = 5,
+                UserId = 5,
+                AuthType = "Email",
+                AuthId = "kodansha.publisher@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new AuthMethod
+            {
+                Id = 6,
+                UserId = 6,
+                AuthType = "Email",
+                AuthId = "kakao.publisher@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Artists AuthMethods
+            new AuthMethod
+            {
+                Id = 7,
+                UserId = 7,
+                AuthType = "Email",
+                AuthId = "eiichiro.oda@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new AuthMethod
+            {
+                Id = 8,
+                UserId = 8,
+                AuthType = "Email",
+                AuthId = "hajime.isayama@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new AuthMethod
+            {
+                Id = 9,
+                UserId = 9,
+                AuthType = "Email",
+                AuthId = "chugong.artist@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new AuthMethod
+            {
+                Id = 10,
+                UserId = 10,
+                AuthType = "Email",
+                AuthId = "koyoharu.gotouge@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Translators AuthMethods
+            new AuthMethod
+            {
+                Id = 11,
+                UserId = 11,
+                AuthType = "Email",
+                AuthId = "stephen.paul@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new AuthMethod
+            {
+                Id = 12,
+                UserId = 12,
+                AuthType = "Email",
+                AuthId = "kohei.horikoshi@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new AuthMethod
+            {
+                Id = 13,
+                UserId = 13,
+                AuthType = "Email",
+                AuthId = "yoon.ha.lee@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             }
         );
 
@@ -198,7 +424,11 @@ public static class SeedData
                 HasAdult = false,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 1,
+                Artist = 1,
+                Translator = 1,
+                SubAuthor = 1
             },
             new Manga
             {
@@ -215,7 +445,11 @@ public static class SeedData
                 HasAdult = true,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 2,
+                Artist = 2,
+                Translator = 2,
+                SubAuthor = 2
             },
             new Manga
             {
@@ -232,7 +466,11 @@ public static class SeedData
                 HasAdult = false,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 3,
+                Artist = 3,
+                Translator = 3,
+                SubAuthor = 3
             },
             new Manga
             {
@@ -249,7 +487,11 @@ public static class SeedData
                 HasAdult = true,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 2,
+                Artist = 4,
+                Translator = 1,
+                SubAuthor = 1
             },
             new Manga
             {
@@ -266,7 +508,11 @@ public static class SeedData
                 HasAdult = false,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 3,
+                Artist = 3,
+                Translator = 3,
+                SubAuthor = 3
             },
             new Manga
             {
@@ -283,7 +529,11 @@ public static class SeedData
                 HasAdult = false,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 2,
+                Artist = 1,
+                Translator = 2,
+                SubAuthor = 2
             },
             new Manga
             {
@@ -300,7 +550,11 @@ public static class SeedData
                 HasAdult = false,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 3,
+                Artist = 3,
+                Translator = 3,
+                SubAuthor = 3
             },
             new Manga
             {
@@ -317,7 +571,11 @@ public static class SeedData
                 HasAdult = true,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 2,
+                Artist = 2,
+                Translator = 2,
+                SubAuthor = 2
             },
             new Manga
             {
@@ -334,7 +592,11 @@ public static class SeedData
                 HasAdult = false,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 3,
+                Artist = 3,
+                Translator = 3,
+                SubAuthor = 3
             },
             new Manga
             {
@@ -351,7 +613,11 @@ public static class SeedData
                 HasAdult = true,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 2,
+                Artist = 4,
+                Translator = 1,
+                SubAuthor = 1
             },
             new Manga
             {
@@ -368,7 +634,11 @@ public static class SeedData
                 HasAdult = false,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Publishor = 3,
+                Artist = 3,
+                Translator = 3,
+                SubAuthor = 3
             }
         );
 

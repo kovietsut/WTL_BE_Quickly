@@ -44,6 +44,9 @@ using (var scope = app.Services.CreateScope())
     try
     {
         var context = services.GetRequiredService<MyDbContext>();
+        // Ensure database is created
+        context.Database.EnsureCreated();
+        // Apply any pending migrations
         context.Database.Migrate();
         // Seed Data is already configured in OnModelCreating
     }
