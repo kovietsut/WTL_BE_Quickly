@@ -22,6 +22,7 @@ namespace WebAPI.Controllers
             _mediator = mediator;
         }
 
+        [AllowAnonymous]
         [HttpGet("{genreId}")]
         public async Task<IActionResult> Get(int genreId)
         {
@@ -30,6 +31,7 @@ namespace WebAPI.Controllers
             return result;
         }
 
+        [AllowAnonymous]
         [HttpGet("get-list")]
         public async Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText)
         {
