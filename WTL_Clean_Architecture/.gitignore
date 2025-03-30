@@ -98,3 +98,8 @@ appsettings.json
 appsettings.Development.json
 appsettings.Production.json
 
+# Entity Framework Core Migrations
+**/Migrations/
+**/Migrations/*.cs
+!**/Migrations/*.Designer.cs
+
