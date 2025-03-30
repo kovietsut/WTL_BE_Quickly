@@ -7,6 +7,6 @@ namespace Application.Interfaces
     {
         Task<FeaturedCollectionPermission?> GetFeaturedCollectionPermissionById(long collectionId, long permissionId);
         Task<List<long>> CreateListFeaturedCollectionPermissionAsync(CreateFeaturedCollectionPermissionDto model);
-        Task<FeaturedCollectionPermission?> DeleteFeaturedCollectionPermissionAsync(long collectionId, long mangaId);
+        Task<bool> DeleteListFeaturedCollectionPermissionAsync(long collectionId, List<long> userIds);
     }
 }

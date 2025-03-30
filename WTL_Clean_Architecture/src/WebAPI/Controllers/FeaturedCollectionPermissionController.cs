@@ -1,4 +1,5 @@
 ﻿using Application.Features.FeaturedCollectionPermissions.Create;
+using Application.Features.FeaturedCollectionPermissions.Delete;
 using Application.Models;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -27,6 +28,14 @@ namespace WebAPI.Controllers
                 FeaturedCollectionId = model.FeaturedCollectionId,
                 PermissionType = model.PermissionType
             };
+            var result = await _mediator.Send(query);
+            return result;
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteFeaturedCollectionMangaAsync(long collectionId, List<long> userIds)
+        {
+            var query = new DeleteFeaturedCollectionPermissionCommand(collectionId, userIds);
             var result = await _mediator.Send(query);
             return result;
         }

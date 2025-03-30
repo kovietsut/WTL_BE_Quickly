@@ -2,6 +2,9 @@
 using Application.Models;
 using Domain.Entities;
 using Domain.Persistence;
+using Domain.Specifications;
+using Domain.Specifications.FeaturedCollectionPermissions;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
@@ -44,14 +47,30 @@ namespace Infrastructure.Repositories
             return result.ToList();
         }
 
-        public async Task<FeaturedCollectionPermission?> GetFeaturedCollectionPermissionById(long collectionId, long permissionId)
+        public async Task<FeaturedCollectionPermission?> GetFeaturedCollectionPermissionById(long collectionId, long userId)
         {
-            throw new NotImplementedException();
+            var query = FindByCondition(x => x.FeaturedCollectionId == collectionId && x.UserId == userId);
+            var specification = new GetFeaturedCollectionPermissionByIdSpecification(collectionId, userId);
+            var result = await SpecificationQueryBuilder.GetQuery(query, specification).FirstOrDefaultAsync();
+            return result;
         }
 
-        public async Task<FeaturedCollectionPermission?> DeleteFeaturedCollectionPermissionAsync(long collectionId, long mangaId)
+        public async Task<bool> DeleteListFeaturedCollectionPermissionAsync(long collectionId, List<long> userIds)
         {
-            throw new NotImplementedException(); 
+            List<FeaturedCollectionPermission> permissions = new List<FeaturedCollectionPermission>();
+            foreach (var userId in userIds)
+            {
+                var collectionPermission = await GetFeaturedCollectionPermissionById(collectionId, userId);
+                if (collectionPermission != null)
+                {
+                    collectionPermission.IsDeleted = true;
+                    permissions.Add(collectionPermission);
+                }
+                else 
+                    return false;
+            }
+            await UpdateListAsync(permissions);
+            return true;
         }
     }
 }
