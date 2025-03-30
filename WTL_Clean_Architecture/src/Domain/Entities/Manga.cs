@@ -44,8 +44,6 @@ public partial class Manga : EntityBase<long>
 
     public virtual ICollection<FeaturedCollectionManga> FeaturedCollectionMangas { get; set; } = new List<FeaturedCollectionManga>();
 
-    public virtual ICollection<FeaturedCollectionPermission> FeaturedCollectionPermissions { get; set; } = new List<FeaturedCollectionPermission>();
-
     public virtual ICollection<MangaGenre> MangaGenres { get; set; } = new List<MangaGenre>();
 
     public virtual ICollection<MangaInteraction> MangaInteractions { get; set; } = new List<MangaInteraction>();

@@ -1,6 +1,5 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using ActionEntity = Domain.Entities.Action;
 using Domain.Enums;
 
 namespace Domain.Persistence;
@@ -15,8 +14,6 @@ public partial class MyDbContext : DbContext
         : base(options)
     {
     }
-
-    public virtual DbSet<ActionEntity> Actions { get; set; }
 
     public virtual DbSet<AuthMethod> AuthMethods { get; set; }
 
@@ -50,21 +47,12 @@ public partial class MyDbContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer("ConnectionString");
+            optionsBuilder.UseSqlServer("Server=.;Database=WebTruyenLo;Trusted_Connection=True;TrustServerCertificate=True;User ID=sa;Password=123456");
         }
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<ActionEntity>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Actions__3214EC0701FE5DAF");
-
-            entity.Property(e => e.CreatedAt).HasDefaultValueSql("(getdate())");
-            entity.Property(e => e.Name).HasMaxLength(255);
-            entity.Property(e => e.UpdatedAt).HasDefaultValueSql("(getdate())");
-        });
-
         modelBuilder.Entity<AuthMethod>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__AuthMeth__3214EC078CF7B1CD");
@@ -207,22 +195,19 @@ public partial class MyDbContext : DbContext
 
             entity.Property(e => e.CreatedAt).HasDefaultValueSql("(getdate())");
             entity.Property(e => e.UpdatedAt).HasDefaultValueSql("(getdate())");
-
-            entity.HasOne(d => d.Action).WithMany(p => p.FeaturedCollectionPermissions)
-                .HasForeignKey(d => d.ActionId)
-                .HasConstraintName("FK__FeaturedC__Actio__7E37BEF6");
+            entity.Property(e => e.PermissionType)
+                .HasConversion<int>()
+                .IsRequired();
 
             entity.HasOne(d => d.FeaturedCollection).WithMany(p => p.FeaturedCollectionPermissions)
                 .HasForeignKey(d => d.FeaturedCollectionId)
-                .HasConstraintName("FK__FeaturedC__Featu__7C4F7684");
-
-            entity.HasOne(d => d.Manga).WithMany(p => p.FeaturedCollectionPermissions)
-                .HasForeignKey(d => d.MangaId)
-                .HasConstraintName("FK__FeaturedC__Manga__7B5B524B");
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK__FeaturedC__Featu__6D0D32F4");
 
             entity.HasOne(d => d.User).WithMany(p => p.FeaturedCollectionPermissions)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__FeaturedC__UserI__7D439ABD");
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK__FeaturedC__UserI__6C190EBB");
         });
 
         modelBuilder.Entity<Genere>(entity =>

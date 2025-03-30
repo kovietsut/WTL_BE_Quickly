@@ -4,6 +4,7 @@ using Domain.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Domain.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    partial class MyDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250330133202_RemoveMangaIdFromFeaturedCollectionPermission")]
+    partial class RemoveMangaIdFromFeaturedCollectionPermission
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -835,7 +838,6 @@ namespace Domain.Migrations
                     b.HasOne("Domain.Entities.FeaturedCollection", "FeaturedCollection")
                         .WithMany("FeaturedCollectionPermissions")
                         .HasForeignKey("FeaturedCollectionId")
-                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("FK__FeaturedC__Featu__6D0D32F4");
 
                     b.HasOne("Domain.Entities.Manga", null)
@@ -845,7 +847,6 @@ namespace Domain.Migrations
                     b.HasOne("Domain.Entities.User", "User")
                         .WithMany("FeaturedCollectionPermissions")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("FK__FeaturedC__UserI__6C190EBB");
 
                     b.Navigation("FeaturedCollection");

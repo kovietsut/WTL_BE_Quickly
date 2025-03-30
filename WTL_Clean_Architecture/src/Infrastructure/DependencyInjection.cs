@@ -33,6 +33,7 @@ namespace Infrastructure
            .AddScoped<IFeaturedCollectionRepository, FeaturedCollectionRepository>()
            .AddScoped<IFeaturedCollectionMangaRepository, FeaturedCollectionMangaRepository>()
            .AddScoped<IMangaGenreRepository, MangaGenreRepository>()
+           .AddScoped<IFeaturedCollectionPermissionRepository, FeaturedCollectionPermissionRepository>()
            ;
             return services;
         }
