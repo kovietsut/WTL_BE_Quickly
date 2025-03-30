@@ -14,8 +14,6 @@ public partial class Manga : EntityBase<long>
 
     public MangaFormat? Format { get; set; }
 
-    public MangaSeason? Season { get; set; }
-
     public MangaRegion? Region { get; set; }
 
     public MangaReleaseStatus? ReleaseStatus { get; set; }
