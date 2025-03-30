@@ -11,7 +11,7 @@ namespace Domain.Specifications.FeaturedCollections
             if (pageNumber.HasValue && pageSize.HasValue)
             {
                 ApplyPaging((pageNumber.Value - 1) * pageSize.Value, pageSize.Value);
-                AddOrderByDescending(u => u.CreatedAt);
+                AddOrderByDescending(u => u.Id);
             }
         }
     }

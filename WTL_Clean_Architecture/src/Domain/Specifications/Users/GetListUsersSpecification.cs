@@ -12,7 +12,7 @@ namespace Domain.Specifications.Users
             (user.Email != null && user.Email.Contains(searchText.Trim()))))
         {
             ApplyPaging((pageNumber - 1) * pageSize, pageSize);
-            AddOrderByDescending(u => u.CreatedAt);
+            AddOrderByDescending(u => u.Id);
             IsSplitQuery = true;
         }
     }

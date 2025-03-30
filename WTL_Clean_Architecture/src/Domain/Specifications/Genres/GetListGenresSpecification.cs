@@ -9,7 +9,7 @@ namespace Domain.Specifications.Genres
             (string.IsNullOrEmpty(searchText) || (genre.Name != null && genre.Name.Contains(searchText.Trim()))))
         {
             ApplyPaging((pageNumber - 1) * pageSize, pageSize);
-            AddOrderByDescending(u => u.CreatedAt);
+            AddOrderByDescending(u => u.Id);
             IsSplitQuery = true;
         }
     }

@@ -16,9 +16,9 @@ namespace Domain.Specifications.Mangas
         {
             if (includePaging)
             {
-                ApplyPaging((filter.Page - 1) * filter.PageSize, filter.PageSize);
+                ApplyPaging((filter.PageNumber - 1) * filter.PageSize, filter.PageSize);
             }
-            AddOrderByDescending(u => u.CreatedAt);
+            AddOrderByDescending(u => u.Id);
 
             AddInclude("MangaGenres.Genre");
             AddInclude(m => m.SubAuthorNavigation);
