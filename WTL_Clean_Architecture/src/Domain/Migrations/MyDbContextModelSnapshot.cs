@@ -623,7 +623,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 1L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -640,7 +640,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 2L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -657,7 +657,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 3L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -674,7 +674,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 4L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -691,7 +691,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 5L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -708,7 +708,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 6L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -725,7 +725,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 7L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -742,7 +742,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 8L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -759,7 +759,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 9L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -776,7 +776,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 10L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -793,7 +793,7 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 11L,
-                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=ELsnGOzTXn508ogExJ6f4mQ79dwOxeEcTPi3elR4v4s%3D",
+                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
