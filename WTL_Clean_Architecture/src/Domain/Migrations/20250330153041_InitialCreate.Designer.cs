@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Domain.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20250330111128_UpdateMangaModelChanges")]
-    partial class UpdateMangaModelChanges
+    [Migration("20250330153041_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,38 +24,6 @@ namespace Domain.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("Domain.Entities.Action", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<DateTimeOffset>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("(getdate())");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<DateTimeOffset?>("UpdatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetimeoffset")
-                        .HasDefaultValueSql("(getdate())");
-
-                    b.HasKey("Id")
-                        .HasName("PK__Actions__3214EC0701FE5DAF");
-
-                    b.ToTable("Actions");
-                });
 
             modelBuilder.Entity("Domain.Entities.AuthMethod", b =>
                 {
@@ -404,9 +372,6 @@ namespace Domain.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<long?>("ActionId")
-                        .HasColumnType("bigint");
-
                     b.Property<DateTimeOffset>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetimeoffset")
@@ -417,9 +382,6 @@ namespace Domain.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
-
-                    b.Property<long?>("MangaId")
-                        .HasColumnType("bigint");
 
                     b.Property<int>("PermissionType")
                         .HasColumnType("int");
@@ -435,11 +397,7 @@ namespace Domain.Migrations
                     b.HasKey("Id")
                         .HasName("PK__Featured__3214EC07DA4FFC3C");
 
-                    b.HasIndex("ActionId");
-
                     b.HasIndex("FeaturedCollectionId");
-
-                    b.HasIndex("MangaId");
 
                     b.HasIndex("UserId");
 
@@ -872,31 +830,19 @@ namespace Domain.Migrations
 
             modelBuilder.Entity("Domain.Entities.FeaturedCollectionPermission", b =>
                 {
-                    b.HasOne("Domain.Entities.Action", "Action")
-                        .WithMany("FeaturedCollectionPermissions")
-                        .HasForeignKey("ActionId")
-                        .HasConstraintName("FK__FeaturedC__Actio__7E37BEF6");
-
                     b.HasOne("Domain.Entities.FeaturedCollection", "FeaturedCollection")
                         .WithMany("FeaturedCollectionPermissions")
                         .HasForeignKey("FeaturedCollectionId")
-                        .HasConstraintName("FK__FeaturedC__Featu__7C4F7684");
-
-                    b.HasOne("Domain.Entities.Manga", "Manga")
-                        .WithMany("FeaturedCollectionPermissions")
-                        .HasForeignKey("MangaId")
-                        .HasConstraintName("FK__FeaturedC__Manga__7B5B524B");
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasConstraintName("FK__FeaturedC__Featu__6D0D32F4");
 
                     b.HasOne("Domain.Entities.User", "User")
                         .WithMany("FeaturedCollectionPermissions")
                         .HasForeignKey("UserId")
-                        .HasConstraintName("FK__FeaturedC__UserI__7D439ABD");
-
-                    b.Navigation("Action");
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasConstraintName("FK__FeaturedC__UserI__6C190EBB");
 
                     b.Navigation("FeaturedCollection");
-
-                    b.Navigation("Manga");
 
                     b.Navigation("User");
                 });
@@ -1001,11 +947,6 @@ namespace Domain.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Action", b =>
-                {
-                    b.Navigation("FeaturedCollectionPermissions");
-                });
-
             modelBuilder.Entity("Domain.Entities.Chapter", b =>
                 {
                     b.Navigation("ChapterImages");
@@ -1039,8 +980,6 @@ namespace Domain.Migrations
                     b.Navigation("Comments");
 
                     b.Navigation("FeaturedCollectionMangas");
-
-                    b.Navigation("FeaturedCollectionPermissions");
 
                     b.Navigation("MangaGenres");
 

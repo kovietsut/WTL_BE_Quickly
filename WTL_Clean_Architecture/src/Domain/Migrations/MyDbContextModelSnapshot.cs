@@ -17,7 +17,7 @@ namespace Domain.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.3")
+                .HasAnnotation("ProductVersion", "9.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -380,9 +380,6 @@ namespace Domain.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<long?>("MangaId")
-                        .HasColumnType("bigint");
-
                     b.Property<int>("PermissionType")
                         .HasColumnType("int");
 
@@ -398,8 +395,6 @@ namespace Domain.Migrations
                         .HasName("PK__Featured__3214EC07DA4FFC3C");
 
                     b.HasIndex("FeaturedCollectionId");
-
-                    b.HasIndex("MangaId");
 
                     b.HasIndex("UserId");
 
@@ -838,10 +833,6 @@ namespace Domain.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("FK__FeaturedC__Featu__6D0D32F4");
 
-                    b.HasOne("Domain.Entities.Manga", null)
-                        .WithMany("FeaturedCollectionPermissions")
-                        .HasForeignKey("MangaId");
-
                     b.HasOne("Domain.Entities.User", "User")
                         .WithMany("FeaturedCollectionPermissions")
                         .HasForeignKey("UserId")
@@ -986,8 +977,6 @@ namespace Domain.Migrations
                     b.Navigation("Comments");
 
                     b.Navigation("FeaturedCollectionMangas");
-
-                    b.Navigation("FeaturedCollectionPermissions");
 
                     b.Navigation("MangaGenres");
 
