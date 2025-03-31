@@ -25,6 +25,7 @@ namespace Domain.Specifications.Mangas
             AddInclude(m => m.ArtistNavigation);
             AddInclude(m => m.TranslatorNavigation);
             AddInclude(m => m.PublishorNavigation);
+            AddInclude(m => m.Chapters.OrderByDescending(c => c.CreatedAt).Take(1));
 
             IsSplitQuery = true;
         }

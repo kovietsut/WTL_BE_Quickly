@@ -1055,6 +1055,171 @@ public static class SeedData
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
+            },
+            // The Beginning After The End Chapters
+            new Chapter
+            {
+                Id = 19,
+                Name = "The King's Return",
+                NovelContent = "King Grey has unrivaled strength, wealth, and prestige in a world governed by martial ability...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 7,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Chapter
+            {
+                Id = 20,
+                Name = "The New World",
+                NovelContent = "King Grey finds himself in a new world, one where magic and martial arts coexist...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 7,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Jujutsu Kaisen Chapters
+            new Chapter
+            {
+                Id = 11,
+                Name = "The Origin of Obedience",
+                NovelContent = "Yuji Itadori is a boy with tremendous physical strength, though living a normal life...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 8,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Chapter
+            {
+                Id = 12,
+                Name = "For Myself",
+                NovelContent = "Yuji begins his training as a Jujutsu Sorcerer...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 8,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // The God of High School Chapters
+            new Chapter
+            {
+                Id = 13,
+                Name = "The Tournament Begins",
+                NovelContent = "Jin Mori is a 17-year-old high school student who participates in a fighting tournament...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 9,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Chapter
+            {
+                Id = 14,
+                Name = "The First Match",
+                NovelContent = "Jin faces his first opponent in the tournament...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 9,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Chainsaw Man Chapters
+            new Chapter
+            {
+                Id = 15,
+                Name = "Dog & Chainsaw",
+                NovelContent = "Denji's life of poverty changes forever when he merges with his pet chainsaw devil...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 10,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Chapter
+            {
+                Id = 16,
+                Name = "Chainsaw vs. Bat",
+                NovelContent = "Denji faces his first major battle as a devil hunter...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 10,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Omniscient Reader Chapters
+            new Chapter
+            {
+                Id = 17,
+                Name = "The Beginning of the End",
+                NovelContent = "Kim Dokja is the only person who knows the ending of a novel called 'Three Ways to Survive the Apocalypse'...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 11,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Chapter
+            {
+                Id = 18,
+                Name = "The First Scenario",
+                NovelContent = "The world begins to change as the scenarios from the novel become reality...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 11,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             }
         );
 
@@ -1221,6 +1386,181 @@ public static class SeedData
                 MimeType = "image/jpeg",
                 FilePath = "chapters/my-hero-academia/chapter-2/page-1.jpg",
                 ChapterId = 10,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // The Beginning After The End Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 27,
+                Name = "The Beginning After The End Chapter 1 Page 1",
+                FileSize = "2.5MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/the-beginning-after-the-end/chapter-1/page-1.jpg",
+                ChapterId = 19,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            new ChapterImage
+            {
+                Id = 28,
+                Name = "The Beginning After The End Chapter 1 Page 2",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/the-beginning-after-the-end/chapter-1/page-2.jpg",
+                ChapterId = 19,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // The Beginning After The End Chapter 2 Images
+            new ChapterImage
+            {
+                Id = 29,
+                Name = "The Beginning After The End Chapter 2 Page 1",
+                FileSize = "2.6MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/the-beginning-after-the-end/chapter-2/page-1.jpg",
+                ChapterId = 20,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Jujutsu Kaisen Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 15,
+                Name = "Jujutsu Kaisen Chapter 1 Page 1",
+                FileSize = "2.5MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/jujutsu-kaisen/chapter-1/page-1.jpg",
+                ChapterId = 11,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            new ChapterImage
+            {
+                Id = 16,
+                Name = "Jujutsu Kaisen Chapter 1 Page 2",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/jujutsu-kaisen/chapter-1/page-2.jpg",
+                ChapterId = 11,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Jujutsu Kaisen Chapter 2 Images
+            new ChapterImage
+            {
+                Id = 17,
+                Name = "Jujutsu Kaisen Chapter 2 Page 1",
+                FileSize = "2.6MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/jujutsu-kaisen/chapter-2/page-1.jpg",
+                ChapterId = 12,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // The God of High School Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 18,
+                Name = "The God of High School Chapter 1 Page 1",
+                FileSize = "2.3MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/the-god-of-high-school/chapter-1/page-1.jpg",
+                ChapterId = 13,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            new ChapterImage
+            {
+                Id = 19,
+                Name = "The God of High School Chapter 1 Page 2",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/the-god-of-high-school/chapter-1/page-2.jpg",
+                ChapterId = 13,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // The God of High School Chapter 2 Images
+            new ChapterImage
+            {
+                Id = 20,
+                Name = "The God of High School Chapter 2 Page 1",
+                FileSize = "2.5MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/the-god-of-high-school/chapter-2/page-1.jpg",
+                ChapterId = 14,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Chainsaw Man Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 21,
+                Name = "Chainsaw Man Chapter 1 Page 1",
+                FileSize = "2.6MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/chainsaw-man/chapter-1/page-1.jpg",
+                ChapterId = 15,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            new ChapterImage
+            {
+                Id = 22,
+                Name = "Chainsaw Man Chapter 1 Page 2",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/chainsaw-man/chapter-1/page-2.jpg",
+                ChapterId = 15,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Chainsaw Man Chapter 2 Images
+            new ChapterImage
+            {
+                Id = 23,
+                Name = "Chainsaw Man Chapter 2 Page 1",
+                FileSize = "2.5MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/chainsaw-man/chapter-2/page-1.jpg",
+                ChapterId = 16,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Omniscient Reader Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 24,
+                Name = "Omniscient Reader Chapter 1 Page 1",
+                FileSize = "2.3MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/omniscient-reader/chapter-1/page-1.jpg",
+                ChapterId = 17,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            new ChapterImage
+            {
+                Id = 25,
+                Name = "Omniscient Reader Chapter 1 Page 2",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/omniscient-reader/chapter-1/page-2.jpg",
+                ChapterId = 17,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Omniscient Reader Chapter 2 Images
+            new ChapterImage
+            {
+                Id = 26,
+                Name = "Omniscient Reader Chapter 2 Page 1",
+                FileSize = "2.5MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/omniscient-reader/chapter-2/page-1.jpg",
+                ChapterId = 18,
                 CreatedBy = 1,
                 ModifiedBy = 1
             }

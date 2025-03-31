@@ -29,26 +29,36 @@ namespace Application.Features.Manga.GetList
         public async Task<IActionResult> Handle(GetListMangaQuery query, CancellationToken cancellationToken)
         {
             var (items, totalCount) = await _repository.GetList(query.Filter);
-            var listData = items.Select(x => new
-            {
-                x.Id,
-                x.IsDeleted,
-                x.Title,
-                x.CoverImage,
-                Format = MangaMapper.ToDtoFormat(x.Format),
-                Region = MangaMapper.ToDtoRegion(x.Region),
-                ReleaseStatus = MangaMapper.ToDtoReleaseStatus(x.ReleaseStatus),
-                x.PublishedDate,
-                x.Preface,
-                x.HasAdult,
-                x.CreatedAt,
-                x.UpdatedAt,
-                Genres = x.MangaGenres.Where(mg => mg.IsDeleted != true && mg.Genre.IsDeleted != true)
-                    .Select(mg => new { mg.Genre.Id, mg.Genre.Name }),
-                Author = x.SubAuthorNavigation != null ? new { x.SubAuthorNavigation.Id, x.SubAuthorNavigation.FullName } : null,
-                Artist = x.ArtistNavigation != null ? new { x.ArtistNavigation.Id, x.ArtistNavigation.FullName } : null,
-                Translator = x.TranslatorNavigation != null ? new { x.TranslatorNavigation.Id, x.TranslatorNavigation.FullName } : null,
-                Publisher = x.PublishorNavigation != null ? new { x.PublishorNavigation.Id, x.PublishorNavigation.FullName } : null
+            var listData = items.Select(x => {
+                var latestChapter = x.Chapters.OrderByDescending(c => c.CreatedAt).FirstOrDefault();
+                return new
+                {
+                    x.Id,
+                    x.IsDeleted,
+                    x.Title,
+                    x.CoverImage,
+                    Format = MangaMapper.ToDtoFormat(x.Format),
+                    Region = MangaMapper.ToDtoRegion(x.Region),
+                    ReleaseStatus = MangaMapper.ToDtoReleaseStatus(x.ReleaseStatus),
+                    x.PublishedDate,
+                    x.Preface,
+                    x.HasAdult,
+                    x.CreatedAt,
+                    x.UpdatedAt,
+                    Genres = x.MangaGenres.Where(mg => mg.IsDeleted != true && mg.Genre.IsDeleted != true)
+                        .Select(mg => new { mg.Genre.Id, mg.Genre.Name }),
+                    Author = x.SubAuthorNavigation != null ? new { x.SubAuthorNavigation.Id, x.SubAuthorNavigation.FullName } : null,
+                    Artist = x.ArtistNavigation != null ? new { x.ArtistNavigation.Id, x.ArtistNavigation.FullName } : null,
+                    Translator = x.TranslatorNavigation != null ? new { x.TranslatorNavigation.Id, x.TranslatorNavigation.FullName } : null,
+                    Publisher = x.PublishorNavigation != null ? new { x.PublishorNavigation.Id, x.PublishorNavigation.FullName } : null,
+                    LatestChapter = latestChapter != null ? new
+                    {
+                        latestChapter.Id,
+                        latestChapter.Name,
+                        latestChapter.PublishedDate,
+                        latestChapter.CreatedAt
+                    } : null
+                };
             });
 
             if (listData != null)
