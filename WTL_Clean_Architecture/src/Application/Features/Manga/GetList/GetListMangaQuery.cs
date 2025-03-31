@@ -30,7 +30,7 @@ namespace Application.Features.Manga.GetList
         {
             var (items, totalCount) = await _repository.GetList(query.Filter);
             var listData = items.Select(x => {
-                var latestChapter = x.Chapters.OrderByDescending(c => c.CreatedAt).FirstOrDefault();
+                var latestChapter = x.Chapters.OrderByDescending(c => c.Id).FirstOrDefault();
                 return new
                 {
                     x.Id,
