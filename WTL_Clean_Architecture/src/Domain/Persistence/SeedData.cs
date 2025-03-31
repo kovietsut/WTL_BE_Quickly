@@ -602,7 +602,7 @@ public static class SeedData
             {
                 Id = 10,
                 Title = "Chainsaw Man",
-                Preface = "Denji's life of poverty changes forever when he merges with his pet chainsaw devil to become a hybrid devil-human.",
+                Preface = "Denji's life of poverty changes forever when he merges with his pet chainsaw devil.",
                 Format = MangaFormat.Novel,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.Completed,
@@ -905,7 +905,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             new Chapter
             {
@@ -921,7 +922,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 2
             },
             // Attack on Titan Chapters
             new Chapter
@@ -938,7 +940,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             // Solo Leveling Chapters
             new Chapter
@@ -955,7 +958,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             // Demon Slayer Chapters
             new Chapter
@@ -972,7 +976,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             new Chapter
             {
@@ -988,7 +993,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 2
             },
             // Tower of God Chapters
             new Chapter
@@ -1005,7 +1011,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             new Chapter
             {
@@ -1021,7 +1028,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 2
             },
             // My Hero Academia Chapters
             new Chapter
@@ -1038,7 +1046,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             new Chapter
             {
@@ -1054,7 +1063,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 2
             },
             // The Beginning After The End Chapters
             new Chapter
@@ -1071,7 +1081,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             new Chapter
             {
@@ -1087,7 +1098,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 2
             },
             // Jujutsu Kaisen Chapters
             new Chapter
@@ -1104,7 +1116,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             new Chapter
             {
@@ -1120,7 +1133,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 2
             },
             // The God of High School Chapters
             new Chapter
@@ -1137,7 +1151,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             new Chapter
             {
@@ -1153,7 +1168,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 2
             },
             // Chainsaw Man Chapters
             new Chapter
@@ -1170,7 +1186,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             new Chapter
             {
@@ -1186,7 +1203,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 2
             },
             // Omniscient Reader Chapters
             new Chapter
@@ -1203,7 +1221,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 1
             },
             new Chapter
             {
@@ -1219,7 +1238,8 @@ public static class SeedData
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                ChapterNumber = 2
             }
         );
 

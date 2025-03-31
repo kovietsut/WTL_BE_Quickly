@@ -236,6 +236,9 @@ namespace Domain.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<int>("ChapterNumber")
+                        .HasColumnType("int");
+
                     b.Property<DateTimeOffset>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetimeoffset")
@@ -292,6 +295,368 @@ namespace Domain.Migrations
                     b.HasIndex("ModifiedBy");
 
                     b.ToTable("Chapters");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 1L,
+                            ModifiedBy = 1L,
+                            Name = "Romance Dawn",
+                            NovelContent = "In a world of pirates and adventure, Monkey D. Luffy begins his journey to become the Pirate King...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 1L,
+                            ModifiedBy = 1L,
+                            Name = "Enter the Great Swordsman",
+                            NovelContent = "Luffy meets Roronoa Zoro, a skilled swordsman who becomes his first crew member...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 2L,
+                            ModifiedBy = 1L,
+                            Name = "To You, 2000 Years From Now",
+                            NovelContent = "The story begins with the fall of Wall Maria and the beginning of humanity's struggle...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 3L,
+                            ModifiedBy = 1L,
+                            Name = "The Weakest Hunter",
+                            NovelContent = "Sung Jin-Woo is known as the weakest hunter of all mankind...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 4L,
+                            ModifiedBy = 1L,
+                            Name = "Cruelty",
+                            NovelContent = "Tanjiro Kamado's peaceful life is shattered when his family is slaughtered by demons...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 4L,
+                            ModifiedBy = 1L,
+                            Name = "The Demon Slayer Corps",
+                            NovelContent = "Tanjiro begins his training to become a Demon Slayer...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 5L,
+                            ModifiedBy = 1L,
+                            Name = "The Tower",
+                            NovelContent = "Twenty-Fifth Bam has spent most of his life trapped beneath a mysterious tower...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 5L,
+                            ModifiedBy = 1L,
+                            Name = "The Regulars",
+                            NovelContent = "Bam meets other Regulars who are also climbing the tower...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 6L,
+                            ModifiedBy = 1L,
+                            Name = "Izuku Midoriya: Origin",
+                            NovelContent = "In a world where 80% of the population has some kind of super-powered Quirk...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 6L,
+                            ModifiedBy = 1L,
+                            Name = "What It Takes to Be a Hero",
+                            NovelContent = "All Might begins training Izuku to inherit his power...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 19L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 7L,
+                            ModifiedBy = 1L,
+                            Name = "The King's Return",
+                            NovelContent = "King Grey has unrivaled strength, wealth, and prestige in a world governed by martial ability...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 20L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 7L,
+                            ModifiedBy = 1L,
+                            Name = "The New World",
+                            NovelContent = "King Grey finds himself in a new world, one where magic and martial arts coexist...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 11L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 8L,
+                            ModifiedBy = 1L,
+                            Name = "The Origin of Obedience",
+                            NovelContent = "Yuji Itadori is a boy with tremendous physical strength, though living a normal life...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 12L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 8L,
+                            ModifiedBy = 1L,
+                            Name = "For Myself",
+                            NovelContent = "Yuji begins his training as a Jujutsu Sorcerer...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 13L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 9L,
+                            ModifiedBy = 1L,
+                            Name = "The Tournament Begins",
+                            NovelContent = "Jin Mori is a 17-year-old high school student who participates in a fighting tournament...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 14L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 9L,
+                            ModifiedBy = 1L,
+                            Name = "The First Match",
+                            NovelContent = "Jin faces his first opponent in the tournament...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 15L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 10L,
+                            ModifiedBy = 1L,
+                            Name = "Dog & Chainsaw",
+                            NovelContent = "Denji's life of poverty changes forever when he merges with his pet chainsaw devil...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 16L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 10L,
+                            ModifiedBy = 1L,
+                            Name = "Chainsaw vs. Bat",
+                            NovelContent = "Denji faces his first major battle as a devil hunter...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 17L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 11L,
+                            ModifiedBy = 1L,
+                            Name = "The Beginning of the End",
+                            NovelContent = "Kim Dokja is the only person who knows the ending of a novel called 'Three Ways to Survive the Apocalypse'...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 18L,
+                            ChapterNumber = 0,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            CreatedBy = 1L,
+                            HasComment = true,
+                            HasDraft = false,
+                            IsDeleted = false,
+                            MangaId = 11L,
+                            ModifiedBy = 1L,
+                            Name = "The First Scenario",
+                            NovelContent = "The world begins to change as the scenarios from the novel become reality...",
+                            PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            StatusChapter = 1,
+                            ThumbnailImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.ChapterImage", b =>
@@ -343,6 +708,356 @@ namespace Domain.Migrations
                     b.HasIndex("ModifiedBy");
 
                     b.ToTable("ChapterImages");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            ChapterId = 1L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/one-piece/chapter-1/page-1.jpg",
+                            FileSize = "2.5MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "One Piece Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            ChapterId = 1L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/one-piece/chapter-1/page-2.jpg",
+                            FileSize = "2.3MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "One Piece Chapter 1 Page 2"
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            ChapterId = 2L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/one-piece/chapter-2/page-1.jpg",
+                            FileSize = "2.4MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "One Piece Chapter 2 Page 1"
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            ChapterId = 3L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/attack-on-titan/chapter-1/page-1.jpg",
+                            FileSize = "2.6MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Attack on Titan Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            ChapterId = 4L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/solo-leveling/chapter-1/page-1.jpg",
+                            FileSize = "2.2MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Solo Leveling Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            ChapterId = 5L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/demon-slayer/chapter-1/page-1.jpg",
+                            FileSize = "2.7MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Demon Slayer Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            ChapterId = 5L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/demon-slayer/chapter-1/page-2.jpg",
+                            FileSize = "2.4MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Demon Slayer Chapter 1 Page 2"
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            ChapterId = 6L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/demon-slayer/chapter-2/page-1.jpg",
+                            FileSize = "2.5MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Demon Slayer Chapter 2 Page 1"
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            ChapterId = 7L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/tower-of-god/chapter-1/page-1.jpg",
+                            FileSize = "2.3MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Tower of God Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            ChapterId = 7L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/tower-of-god/chapter-1/page-2.jpg",
+                            FileSize = "2.4MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Tower of God Chapter 1 Page 2"
+                        },
+                        new
+                        {
+                            Id = 11L,
+                            ChapterId = 8L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/tower-of-god/chapter-2/page-1.jpg",
+                            FileSize = "2.5MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Tower of God Chapter 2 Page 1"
+                        },
+                        new
+                        {
+                            Id = 12L,
+                            ChapterId = 9L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/my-hero-academia/chapter-1/page-1.jpg",
+                            FileSize = "2.6MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "My Hero Academia Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 13L,
+                            ChapterId = 9L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/my-hero-academia/chapter-1/page-2.jpg",
+                            FileSize = "2.4MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "My Hero Academia Chapter 1 Page 2"
+                        },
+                        new
+                        {
+                            Id = 14L,
+                            ChapterId = 10L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/my-hero-academia/chapter-2/page-1.jpg",
+                            FileSize = "2.5MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "My Hero Academia Chapter 2 Page 1"
+                        },
+                        new
+                        {
+                            Id = 27L,
+                            ChapterId = 19L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/the-beginning-after-the-end/chapter-1/page-1.jpg",
+                            FileSize = "2.5MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "The Beginning After The End Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 28L,
+                            ChapterId = 19L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/the-beginning-after-the-end/chapter-1/page-2.jpg",
+                            FileSize = "2.4MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "The Beginning After The End Chapter 1 Page 2"
+                        },
+                        new
+                        {
+                            Id = 29L,
+                            ChapterId = 20L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/the-beginning-after-the-end/chapter-2/page-1.jpg",
+                            FileSize = "2.6MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "The Beginning After The End Chapter 2 Page 1"
+                        },
+                        new
+                        {
+                            Id = 15L,
+                            ChapterId = 11L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/jujutsu-kaisen/chapter-1/page-1.jpg",
+                            FileSize = "2.5MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Jujutsu Kaisen Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 16L,
+                            ChapterId = 11L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/jujutsu-kaisen/chapter-1/page-2.jpg",
+                            FileSize = "2.4MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Jujutsu Kaisen Chapter 1 Page 2"
+                        },
+                        new
+                        {
+                            Id = 17L,
+                            ChapterId = 12L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/jujutsu-kaisen/chapter-2/page-1.jpg",
+                            FileSize = "2.6MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Jujutsu Kaisen Chapter 2 Page 1"
+                        },
+                        new
+                        {
+                            Id = 18L,
+                            ChapterId = 13L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/the-god-of-high-school/chapter-1/page-1.jpg",
+                            FileSize = "2.3MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "The God of High School Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 19L,
+                            ChapterId = 13L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/the-god-of-high-school/chapter-1/page-2.jpg",
+                            FileSize = "2.4MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "The God of High School Chapter 1 Page 2"
+                        },
+                        new
+                        {
+                            Id = 20L,
+                            ChapterId = 14L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/the-god-of-high-school/chapter-2/page-1.jpg",
+                            FileSize = "2.5MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "The God of High School Chapter 2 Page 1"
+                        },
+                        new
+                        {
+                            Id = 21L,
+                            ChapterId = 15L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/chainsaw-man/chapter-1/page-1.jpg",
+                            FileSize = "2.6MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Chainsaw Man Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 22L,
+                            ChapterId = 15L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/chainsaw-man/chapter-1/page-2.jpg",
+                            FileSize = "2.4MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Chainsaw Man Chapter 1 Page 2"
+                        },
+                        new
+                        {
+                            Id = 23L,
+                            ChapterId = 16L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/chainsaw-man/chapter-2/page-1.jpg",
+                            FileSize = "2.5MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Chainsaw Man Chapter 2 Page 1"
+                        },
+                        new
+                        {
+                            Id = 24L,
+                            ChapterId = 17L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/omniscient-reader/chapter-1/page-1.jpg",
+                            FileSize = "2.3MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Omniscient Reader Chapter 1 Page 1"
+                        },
+                        new
+                        {
+                            Id = 25L,
+                            ChapterId = 17L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/omniscient-reader/chapter-1/page-2.jpg",
+                            FileSize = "2.4MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Omniscient Reader Chapter 1 Page 2"
+                        },
+                        new
+                        {
+                            Id = 26L,
+                            ChapterId = 18L,
+                            CreatedBy = 1L,
+                            FilePath = "chapters/omniscient-reader/chapter-2/page-1.jpg",
+                            FileSize = "2.5MB",
+                            IsDeleted = false,
+                            MimeType = "image/jpeg",
+                            ModifiedBy = 1L,
+                            Name = "Omniscient Reader Chapter 2 Page 1"
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Comment", b =>

@@ -26,6 +26,8 @@ public partial class Chapter : EntityBase<long>
 
     public long MangaId { get; set; }
 
+    public int ChapterNumber { get; set; }
+
     public virtual ICollection<ChapterImage> ChapterImages { get; set; } = new List<ChapterImage>();
 
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();

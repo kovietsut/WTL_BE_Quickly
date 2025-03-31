@@ -54,6 +54,7 @@ namespace Application.Features.Manga.GetList
                     LatestChapter = latestChapter != null ? new
                     {
                         latestChapter.Id,
+                        latestChapter.ChapterNumber,
                         latestChapter.Name,
                         latestChapter.PublishedDate,
                         latestChapter.CreatedAt

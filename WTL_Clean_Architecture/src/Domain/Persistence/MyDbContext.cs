@@ -85,6 +85,7 @@ public partial class MyDbContext : DbContext
             entity.Property(e => e.PublishedDate).HasColumnType("datetime");
             entity.Property(e => e.ThumbnailImage).IsUnicode(false);
             entity.Property(e => e.UpdatedAt).HasDefaultValueSql("(getdate())");
+            entity.Property(e => e.ChapterNumber).IsRequired();
 
             entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.ChapterCreatedByNavigations)
                 .HasForeignKey(d => d.CreatedBy)
