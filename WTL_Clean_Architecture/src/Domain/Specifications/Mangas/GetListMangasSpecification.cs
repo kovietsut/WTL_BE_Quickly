@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Mappers;
 using Domain.SpecificationModels;
+using Domain.Enums;
 
 namespace Domain.Specifications.Mangas
 {
@@ -18,7 +19,20 @@ namespace Domain.Specifications.Mangas
             {
                 ApplyPaging((filter.PageNumber - 1) * filter.PageSize, filter.PageSize);
             }
-            AddOrderByDescending(u => u.Id);
+
+            // Apply sorting based on filter
+            switch (filter.SortOrder)
+            {
+                case MangaSortOrder.Oldest:
+                    AddOrderBy(m => m.PublishedDate ?? DateTime.MinValue);
+                    break;
+                case MangaSortOrder.Latest:
+                    AddOrderByDescending(m => m.PublishedDate ?? DateTime.MinValue);
+                    break;
+                default:
+                    AddOrderByDescending(m => m.Id);
+                    break;
+            }
 
             AddInclude("MangaGenres.Genre");
             AddInclude(m => m.SubAuthorNavigation);
