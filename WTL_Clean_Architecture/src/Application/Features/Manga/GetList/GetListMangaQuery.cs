@@ -19,11 +19,13 @@ namespace Application.Features.Manga.GetList
     {
         private readonly IMangaRepository _repository;
         private readonly ErrorCode _errorCodes;
+        private readonly ISasTokenGenerator _sasTokenGenerator;
 
-        public GetListMangaQueryHandler(IMangaRepository repository, IOptions<ErrorCode> errorCodes)
+        public GetListMangaQueryHandler(IMangaRepository repository, IOptions<ErrorCode> errorCodes, ISasTokenGenerator sasTokenGenerator)
         {
             _repository = repository;
             _errorCodes = errorCodes.Value;
+            _sasTokenGenerator = sasTokenGenerator ?? throw new ArgumentNullException(nameof(sasTokenGenerator));
         }
 
         public async Task<IActionResult> Handle(GetListMangaQuery query, CancellationToken cancellationToken)
@@ -36,7 +38,7 @@ namespace Application.Features.Manga.GetList
                     x.Id,
                     x.IsDeleted,
                     x.Title,
-                    x.CoverImage,
+                    CoverImage = _sasTokenGenerator.GenerateCoverImageUriWithSas(x.CoverImage),
                     Format = MangaMapper.ToDtoFormat(x.Format),
                     Region = MangaMapper.ToDtoRegion(x.Region),
                     ReleaseStatus = MangaMapper.ToDtoReleaseStatus(x.ReleaseStatus),

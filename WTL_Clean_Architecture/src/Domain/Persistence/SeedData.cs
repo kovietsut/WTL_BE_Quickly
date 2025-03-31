@@ -6,7 +6,7 @@ namespace Domain.Persistence;
 
 public static class SeedData
 {
-    private static readonly string COVER_IMAGE_URL = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}";
+    private static readonly string COVER_IMAGE_URL = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg";
     private static readonly DateTime SEED_DATE = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
     public static void Seed(ModelBuilder modelBuilder)
