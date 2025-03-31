@@ -1,6 +1,7 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Domain.Enums;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace Domain.Persistence;
 
@@ -49,6 +50,9 @@ public partial class MyDbContext : DbContext
         {
             optionsBuilder.UseSqlServer("Server=.;Database=WebTruyenLo;Trusted_Connection=True;TrustServerCertificate=True;User ID=sa;Password=123456");
         }
+
+        optionsBuilder.ConfigureWarnings(warnings =>
+            warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -89,6 +93,11 @@ public partial class MyDbContext : DbContext
             entity.HasOne(d => d.ModifiedByNavigation).WithMany(p => p.ChapterModifiedByNavigations)
                 .HasForeignKey(d => d.ModifiedBy)
                 .HasConstraintName("FK__Chapters__Modifi__236943A5");
+
+            entity.HasOne(d => d.Manga).WithMany(p => p.Chapters)
+                .HasForeignKey(d => d.MangaId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_Chapters_Manga");
         });
 
         modelBuilder.Entity<ChapterImage>(entity =>

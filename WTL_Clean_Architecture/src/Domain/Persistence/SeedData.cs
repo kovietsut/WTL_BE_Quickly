@@ -887,5 +887,343 @@ public static class SeedData
                 IsDeleted = false,
             }
         );
+
+        // Seed Chapters
+        modelBuilder.Entity<Chapter>().HasData(
+            // One Piece Chapters
+            new Chapter
+            {
+                Id = 1,
+                Name = "Romance Dawn",
+                NovelContent = "In a world of pirates and adventure, Monkey D. Luffy begins his journey to become the Pirate King...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 1,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Chapter
+            {
+                Id = 2,
+                Name = "Enter the Great Swordsman",
+                NovelContent = "Luffy meets Roronoa Zoro, a skilled swordsman who becomes his first crew member...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 1,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Attack on Titan Chapters
+            new Chapter
+            {
+                Id = 3,
+                Name = "To You, 2000 Years From Now",
+                NovelContent = "The story begins with the fall of Wall Maria and the beginning of humanity's struggle...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 2,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Solo Leveling Chapters
+            new Chapter
+            {
+                Id = 4,
+                Name = "The Weakest Hunter",
+                NovelContent = "Sung Jin-Woo is known as the weakest hunter of all mankind...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 3,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Demon Slayer Chapters
+            new Chapter
+            {
+                Id = 5,
+                Name = "Cruelty",
+                NovelContent = "Tanjiro Kamado's peaceful life is shattered when his family is slaughtered by demons...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 4,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Chapter
+            {
+                Id = 6,
+                Name = "The Demon Slayer Corps",
+                NovelContent = "Tanjiro begins his training to become a Demon Slayer...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 4,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Tower of God Chapters
+            new Chapter
+            {
+                Id = 7,
+                Name = "The Tower",
+                NovelContent = "Twenty-Fifth Bam has spent most of his life trapped beneath a mysterious tower...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 5,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Chapter
+            {
+                Id = 8,
+                Name = "The Regulars",
+                NovelContent = "Bam meets other Regulars who are also climbing the tower...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 5,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // My Hero Academia Chapters
+            new Chapter
+            {
+                Id = 9,
+                Name = "Izuku Midoriya: Origin",
+                NovelContent = "In a world where 80% of the population has some kind of super-powered Quirk...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 6,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Chapter
+            {
+                Id = 10,
+                Name = "What It Takes to Be a Hero",
+                NovelContent = "All Might begins training Izuku to inherit his power...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                MangaId = 6,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            }
+        );
+
+        // Seed ChapterImages
+        modelBuilder.Entity<ChapterImage>().HasData(
+            // One Piece Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 1,
+                Name = "One Piece Chapter 1 Page 1",
+                FileSize = "2.5MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/one-piece/chapter-1/page-1.jpg",
+                ChapterId = 1,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            new ChapterImage
+            {
+                Id = 2,
+                Name = "One Piece Chapter 1 Page 2",
+                FileSize = "2.3MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/one-piece/chapter-1/page-2.jpg",
+                ChapterId = 1,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // One Piece Chapter 2 Images
+            new ChapterImage
+            {
+                Id = 3,
+                Name = "One Piece Chapter 2 Page 1",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/one-piece/chapter-2/page-1.jpg",
+                ChapterId = 2,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Attack on Titan Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 4,
+                Name = "Attack on Titan Chapter 1 Page 1",
+                FileSize = "2.6MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/attack-on-titan/chapter-1/page-1.jpg",
+                ChapterId = 3,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Solo Leveling Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 5,
+                Name = "Solo Leveling Chapter 1 Page 1",
+                FileSize = "2.2MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/solo-leveling/chapter-1/page-1.jpg",
+                ChapterId = 4,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Demon Slayer Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 6,
+                Name = "Demon Slayer Chapter 1 Page 1",
+                FileSize = "2.7MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/demon-slayer/chapter-1/page-1.jpg",
+                ChapterId = 5,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            new ChapterImage
+            {
+                Id = 7,
+                Name = "Demon Slayer Chapter 1 Page 2",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/demon-slayer/chapter-1/page-2.jpg",
+                ChapterId = 5,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Demon Slayer Chapter 2 Images
+            new ChapterImage
+            {
+                Id = 8,
+                Name = "Demon Slayer Chapter 2 Page 1",
+                FileSize = "2.5MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/demon-slayer/chapter-2/page-1.jpg",
+                ChapterId = 6,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Tower of God Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 9,
+                Name = "Tower of God Chapter 1 Page 1",
+                FileSize = "2.3MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/tower-of-god/chapter-1/page-1.jpg",
+                ChapterId = 7,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            new ChapterImage
+            {
+                Id = 10,
+                Name = "Tower of God Chapter 1 Page 2",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/tower-of-god/chapter-1/page-2.jpg",
+                ChapterId = 7,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // Tower of God Chapter 2 Images
+            new ChapterImage
+            {
+                Id = 11,
+                Name = "Tower of God Chapter 2 Page 1",
+                FileSize = "2.5MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/tower-of-god/chapter-2/page-1.jpg",
+                ChapterId = 8,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // My Hero Academia Chapter 1 Images
+            new ChapterImage
+            {
+                Id = 12,
+                Name = "My Hero Academia Chapter 1 Page 1",
+                FileSize = "2.6MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/my-hero-academia/chapter-1/page-1.jpg",
+                ChapterId = 9,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            new ChapterImage
+            {
+                Id = 13,
+                Name = "My Hero Academia Chapter 1 Page 2",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/my-hero-academia/chapter-1/page-2.jpg",
+                ChapterId = 9,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            },
+            // My Hero Academia Chapter 2 Images
+            new ChapterImage
+            {
+                Id = 14,
+                Name = "My Hero Academia Chapter 2 Page 1",
+                FileSize = "2.5MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/my-hero-academia/chapter-2/page-1.jpg",
+                ChapterId = 10,
+                CreatedBy = 1,
+                ModifiedBy = 1
+            }
+        );
     }
 } 

@@ -55,4 +55,6 @@ public partial class Manga : EntityBase<long>
     public virtual User? SubAuthorNavigation { get; set; }
 
     public virtual User? TranslatorNavigation { get; set; }
+
+    public virtual ICollection<Chapter> Chapters { get; set; } = new List<Chapter>();
 }

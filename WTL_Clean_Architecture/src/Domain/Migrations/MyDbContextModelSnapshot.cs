@@ -17,7 +17,7 @@ namespace Domain.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.3")
+                .HasAnnotation("ProductVersion", "9.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -115,6 +115,116 @@ namespace Domain.Migrations
                             IsRevoked = false,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             UserId = 3L
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            AuthId = "shueisha.publisher@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 4L
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            AuthId = "kodansha.publisher@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 5L
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            AuthId = "kakao.publisher@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 6L
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            AuthId = "eiichiro.oda@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 7L
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            AuthId = "hajime.isayama@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 8L
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            AuthId = "chugong.artist@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 9L
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            AuthId = "koyoharu.gotouge@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 10L
+                        },
+                        new
+                        {
+                            Id = 11L,
+                            AuthId = "stephen.paul@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 11L
+                        },
+                        new
+                        {
+                            Id = 12L,
+                            AuthId = "kohei.horikoshi@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 12L
+                        },
+                        new
+                        {
+                            Id = 13L,
+                            AuthId = "yoon.ha.lee@gmail.com",
+                            AuthType = "Email",
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            IsDeleted = false,
+                            IsRevoked = false,
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            UserId = 13L
                         });
                 });
 
@@ -142,6 +252,9 @@ namespace Domain.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<long>("MangaId")
+                        .HasColumnType("bigint");
 
                     b.Property<long?>("ModifiedBy")
                         .HasColumnType("bigint");
@@ -173,6 +286,8 @@ namespace Domain.Migrations
                         .HasName("PK__Chapters__3214EC07F52585A5");
 
                     b.HasIndex("CreatedBy");
+
+                    b.HasIndex("MangaId");
 
                     b.HasIndex("ModifiedBy");
 
@@ -623,7 +738,8 @@ namespace Domain.Migrations
                         new
                         {
                             Id = 1L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 1L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -632,15 +748,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "Follow Monkey D. Luffy and his pirate crew in their search for the ultimate treasure, the One Piece.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 1L,
                             Region = 3,
                             ReleaseStatus = 2,
+                            SubAuthor = 1L,
                             Title = "One Piece",
+                            Translator = 1L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 2L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 2L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -649,15 +769,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "Humanity lives inside cities surrounded by enormous walls due to the Titans, gigantic humanoid creatures who devour humans seemingly without reason.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 2L,
                             Region = 3,
                             ReleaseStatus = 1,
+                            SubAuthor = 2L,
                             Title = "Attack on Titan",
+                            Translator = 2L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 3L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 3L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -666,15 +790,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "In a world where hunters must battle deadly monsters to protect the human race from certain annihilation, Sung Jin-Woo is the weakest hunter of all mankind.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 3L,
                             Region = 4,
                             ReleaseStatus = 1,
+                            SubAuthor = 3L,
                             Title = "Solo Leveling",
+                            Translator = 3L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 4L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 4L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -683,15 +811,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "Tanjiro Kamado's peaceful life is shattered when his family is slaughtered by demons. His sister Nezuko is turned into a demon, but still shows signs of human emotion and thought.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 2L,
                             Region = 3,
                             ReleaseStatus = 1,
+                            SubAuthor = 1L,
                             Title = "Demon Slayer",
+                            Translator = 1L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 5L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 3L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -700,15 +832,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "The story follows Twenty-Fifth Bam, who has spent most of his life trapped beneath a mysterious tower, with only his close friend Rachel to keep him company.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 3L,
                             Region = 4,
                             ReleaseStatus = 1,
+                            SubAuthor = 3L,
                             Title = "Tower of God",
+                            Translator = 3L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 6L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 1L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -717,15 +853,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "In a world where 80% of the population has some kind of super-powered Quirk, Izuku Midoriya was unlucky to be born completely normal.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 2L,
                             Region = 3,
                             ReleaseStatus = 2,
+                            SubAuthor = 2L,
                             Title = "My Hero Academia",
+                            Translator = 2L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 7L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 3L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -734,15 +874,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "King Grey has unrivaled strength, wealth, and prestige in a world governed by martial ability. However, solitude lingers closely behind those with great power.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 3L,
                             Region = 4,
                             ReleaseStatus = 2,
+                            SubAuthor = 3L,
                             Title = "The Beginning After The End",
+                            Translator = 3L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 8L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 2L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -751,15 +895,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "Yuji Itadori is a boy with tremendous physical strength, though living a normal life. One day, to save a friend who has been attacked by curses, he eats a finger of Ryomen Sukuna.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 2L,
                             Region = 3,
                             ReleaseStatus = 2,
+                            SubAuthor = 2L,
                             Title = "Jujutsu Kaisen",
+                            Translator = 2L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 9L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 3L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -768,15 +916,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "Jin Mori is a 17-year-old high school student who participates in a fighting tournament called 'The God of High School' to grant his grandfather's wish.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 3L,
                             Region = 4,
                             ReleaseStatus = 2,
+                            SubAuthor = 3L,
                             Title = "The God of High School",
+                            Translator = 3L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 10L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 4L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 2,
@@ -785,15 +937,19 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "Denji's life of poverty changes forever when he merges with his pet chainsaw devil to become a hybrid devil-human.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 2L,
                             Region = 3,
                             ReleaseStatus = 1,
+                            SubAuthor = 1L,
                             Title = "Chainsaw Man",
+                            Translator = 1L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         },
                         new
                         {
                             Id = 11L,
-                            CoverImage = $"https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig={Environment.GetEnvironmentVariable("AZURE_STORAGE_KEY")}",
+                            Artist = 3L,
+                            CoverImage = "https://webtruyenloofficial.blob.core.windows.net/test/876c1396-4246-466d-8b40-1d1da0011d299999aapple.jpg?sv=2025-01-05&st=2025-03-29T17%3A11%3A10Z&se=2025-03-29T17%3A41%3A10Z&sr=b&sp=r&sig=yBk1Ibs33lD2Ut5akXDCwXcMmgZpSBz0Nu+1CwtTaaTOA5bG+drqeAGi3b0bsYV+heZO9YQncuQK+ASt7bKMmQ==",
                             CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
                             CreatedBy = 1L,
                             Format = 1,
@@ -802,9 +958,12 @@ namespace Domain.Migrations
                             ModifiedBy = 1L,
                             Preface = "Kim Dokja is the only person who knows the ending of a novel called 'Three Ways to Survive the Apocalypse'. When the novel becomes reality, he must use his knowledge to survive.",
                             PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Publishor = 3L,
                             Region = 4,
                             ReleaseStatus = 2,
+                            SubAuthor = 3L,
                             Title = "Omniscient Reader",
+                            Translator = 3L,
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
@@ -1275,6 +1434,126 @@ namespace Domain.Migrations
                             RoleId = 3L,
                             SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
                             UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "shueisha.publisher@gmail.com",
+                            FullName = "Shueisha Publisher",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "kodansha.publisher@gmail.com",
+                            FullName = "Kodansha Publisher",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "kakao.publisher@gmail.com",
+                            FullName = "Kakao Publisher",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "eiichiro.oda@gmail.com",
+                            FullName = "Eiichiro Oda",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "hajime.isayama@gmail.com",
+                            FullName = "Hajime Isayama",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "chugong.artist@gmail.com",
+                            FullName = "Chugong",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "koyoharu.gotouge@gmail.com",
+                            FullName = "Koyoharu Gotouge",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 11L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "stephen.paul@gmail.com",
+                            FullName = "Stephen Paul",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 12L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "kohei.horikoshi@gmail.com",
+                            FullName = "Kohei Horikoshi",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
+                        },
+                        new
+                        {
+                            Id = 13L,
+                            CreatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0)),
+                            Email = "yoon.ha.lee@gmail.com",
+                            FullName = "Yoon Ha Lee",
+                            IsDeleted = false,
+                            PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                            RoleId = 3L,
+                            SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                            UpdatedAt = new DateTimeOffset(new DateTime(2024, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 0, 0, 0, 0))
                         });
                 });
 
@@ -1297,12 +1576,21 @@ namespace Domain.Migrations
                         .HasForeignKey("CreatedBy")
                         .HasConstraintName("FK__Chapters__Create__22751F6C");
 
+                    b.HasOne("Domain.Entities.Manga", "Manga")
+                        .WithMany("Chapters")
+                        .HasForeignKey("MangaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_Chapters_Manga");
+
                     b.HasOne("Domain.Entities.User", "ModifiedByNavigation")
                         .WithMany("ChapterModifiedByNavigations")
                         .HasForeignKey("ModifiedBy")
                         .HasConstraintName("FK__Chapters__Modifi__236943A5");
 
                     b.Navigation("CreatedByNavigation");
+
+                    b.Navigation("Manga");
 
                     b.Navigation("ModifiedByNavigation");
                 });
@@ -1561,6 +1849,8 @@ namespace Domain.Migrations
 
             modelBuilder.Entity("Domain.Entities.Manga", b =>
                 {
+                    b.Navigation("Chapters");
+
                     b.Navigation("Comments");
 
                     b.Navigation("FeaturedCollectionMangas");
