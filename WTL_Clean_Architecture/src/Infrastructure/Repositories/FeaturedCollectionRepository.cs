@@ -62,7 +62,8 @@ namespace Infrastructure.Repositories
 
         public async Task<List<FeaturedCollection>> GetList(int? pageNumber, int? pageSize, string? searchText)
         {
-            var specification = new GetListFeaturedCollectionsSpecification(pageNumber, pageSize, searchText);
+            var currentUserId = _authenticationRepository.GetUserId();
+            var specification = new GetListFeaturedCollectionsSpecification(pageNumber, pageSize, searchText, currentUserId);
             var query = FindBySpecification(specification);
             var result = await query.ToListAsync();
             return result;
