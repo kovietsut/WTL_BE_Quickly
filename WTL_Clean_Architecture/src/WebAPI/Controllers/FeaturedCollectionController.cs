@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/featured-collection")]
     [ApiController]
     [Authorize]
     public class FeaturedCollectionController : ControllerBase
@@ -30,7 +30,7 @@ namespace WebAPI.Controllers
             return result;
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get(long id)
         {
             var query = new GetFeaturedCollectionByIdQuery(id);
