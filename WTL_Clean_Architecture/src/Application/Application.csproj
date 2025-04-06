@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Chapter\Create\" />
+    <Folder Include="Features\MangaInteractions\Get\" />
   </ItemGroup>
 
 </Project>
