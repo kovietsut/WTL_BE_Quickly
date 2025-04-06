@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities;
+﻿using Domain.Enums;
+
+namespace Domain.Entities;
 
 public partial class MangaInteraction : EntityBase<long>
 {
@@ -12,7 +14,7 @@ public partial class MangaInteraction : EntityBase<long>
 
     public DateTimeOffset? UpdatedAt { get; set; }
 
-    public int? InteractionType { get; set; }
+    public MangaInteractionType? InteractionType { get; set; }
 
     public virtual Chapter? Chapter { get; set; }
 

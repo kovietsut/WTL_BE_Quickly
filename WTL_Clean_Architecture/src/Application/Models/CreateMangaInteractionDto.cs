@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using Domain.Enums;
 
 namespace Application.Models
 {
@@ -13,6 +14,6 @@ namespace Application.Models
 
         public long? ChapterId { get; set; }
 
-        public int? InteractionType { get; set; }
+        public MangaInteractionType? InteractionType { get; set; }
     }
 }

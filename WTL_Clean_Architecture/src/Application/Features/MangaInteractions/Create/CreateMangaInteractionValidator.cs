@@ -1,4 +1,5 @@
 ﻿using Application.Models;
+using Domain.Enums;
 using FluentValidation;
 
 namespace Application.Features.MangaInteractions.Create
@@ -19,7 +20,9 @@ namespace Application.Features.MangaInteractions.Create
 
             RuleFor(x => x.InteractionType)
                 .NotEmpty()
-                .WithMessage("InteractionType is required");
+                .WithMessage("InteractionType is required")
+                .IsInEnum()
+                .WithMessage("Invalid InteractionType value");
         }
     }
 }

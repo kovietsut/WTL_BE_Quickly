@@ -2,6 +2,7 @@
 using Application.Models;
 using Application.Utils;
 using Domain.Configurations;
+using Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +14,7 @@ namespace Application.Features.MangaInteractions.Create
     {
         public long? MangaId { get; set; }
         public long? ChapterId { get; set; }
-        public int? InteractionType { get; set; }
+        public MangaInteractionType? InteractionType { get; set; }
     }
 
     public class CreateMangaInteractionCommandHandler : IRequestHandler<CreateMangaInteractionCommand, IActionResult>
