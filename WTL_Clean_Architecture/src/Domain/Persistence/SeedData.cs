@@ -1585,5 +1585,140 @@ public static class SeedData
                 ModifiedBy = 1
             }
         );
+
+        // Seed MangaInteractions
+        modelBuilder.Entity<MangaInteraction>().HasData(
+            // One Piece interactions
+            new MangaInteraction
+            {
+                Id = 1,
+                UserId = 2, // John Reader
+                MangaId = 1, // One Piece
+                ChapterId = null,
+                InteractionType = MangaInteractionType.Like,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new MangaInteraction
+            {
+                Id = 2,
+                UserId = 2, // John Reader
+                MangaId = null,
+                ChapterId = 1, // One Piece Chapter 1
+                InteractionType = MangaInteractionType.Read,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Attack on Titan interactions
+            new MangaInteraction
+            {
+                Id = 3,
+                UserId = 2, // John Reader
+                MangaId = 2, // Attack on Titan
+                ChapterId = null,
+                InteractionType = MangaInteractionType.Bookmark,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Solo Leveling interactions
+            new MangaInteraction
+            {
+                Id = 4,
+                UserId = 2, // John Reader
+                MangaId = null,
+                ChapterId = 4, // Solo Leveling Chapter 1
+                InteractionType = MangaInteractionType.Read,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Demon Slayer interactions
+            new MangaInteraction
+            {
+                Id = 5,
+                UserId = 2, // John Reader
+                MangaId = 4, // Demon Slayer
+                ChapterId = null,
+                InteractionType = MangaInteractionType.Share,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Tower of God interactions
+            new MangaInteraction
+            {
+                Id = 6,
+                UserId = 2, // John Reader
+                MangaId = null,
+                ChapterId = 7, // Tower of God Chapter 1
+                InteractionType = MangaInteractionType.Read,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // My Hero Academia interactions
+            new MangaInteraction
+            {
+                Id = 7,
+                UserId = 2, // John Reader
+                MangaId = 6, // My Hero Academia
+                ChapterId = null,
+                InteractionType = MangaInteractionType.Like,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // The Beginning After The End interactions
+            new MangaInteraction
+            {
+                Id = 8,
+                UserId = 2, // John Reader
+                MangaId = null,
+                ChapterId = 13, // The Beginning After The End Chapter 1
+                InteractionType = MangaInteractionType.Read,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Jujutsu Kaisen interactions
+            new MangaInteraction
+            {
+                Id = 9,
+                UserId = 2, // John Reader
+                MangaId = 8, // Jujutsu Kaisen
+                ChapterId = null,
+                InteractionType = MangaInteractionType.Bookmark,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // The God of High School interactions
+            new MangaInteraction
+            {
+                Id = 10,
+                UserId = 2, // John Reader
+                MangaId = null,
+                ChapterId = 15, // The God of High School Chapter 1
+                InteractionType = MangaInteractionType.Read,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Chainsaw Man interactions
+            new MangaInteraction
+            {
+                Id = 11,
+                UserId = 2, // John Reader
+                MangaId = 10, // Chainsaw Man
+                ChapterId = null,
+                InteractionType = MangaInteractionType.Share,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Omniscient Reader interactions
+            new MangaInteraction
+            {
+                Id = 12,
+                UserId = 2, // John Reader
+                MangaId = null,
+                ChapterId = 17, // Omniscient Reader Chapter 1
+                InteractionType = MangaInteractionType.Read,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            }
+        );
     }
 } 
