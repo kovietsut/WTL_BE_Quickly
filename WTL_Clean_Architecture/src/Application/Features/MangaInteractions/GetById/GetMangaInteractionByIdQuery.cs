@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Application.Interfaces;
 using Application.Utils;
 using Domain.Configurations;
+using Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +19,7 @@ namespace Application.Features.MangaInteractions.GetById
         public long UserId { get; set; }
         public long? MangaId { get; set; }
         public long? ChapterId { get; set; }
+        public MangaInteractionType? InteractionType { get; set; }
     }
 
     public class GetMangaInteractionByIdQueryHandler : IRequestHandler<GetMangaInteractionByIdQuery, IActionResult>
@@ -40,7 +42,8 @@ namespace Application.Features.MangaInteractions.GetById
                 var mangaInteraction = await _repository.GetMangaInteractionByUserAndContentAsync(
                     query.UserId,
                     query.MangaId,
-                    query.ChapterId);
+                    query.ChapterId,
+                    query.InteractionType);
 
                 if (mangaInteraction == null)
                 {

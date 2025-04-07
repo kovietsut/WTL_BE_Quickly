@@ -3,6 +3,7 @@ using Application.Features.MangaInteractions.Delete;
 using Application.Features.MangaInteractions.Get;
 using Application.Features.MangaInteractions.GetById;
 using Application.Models;
+using Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -22,26 +23,28 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("by-id")]
-        public async Task<IActionResult> GetMangaInteractionById([FromQuery] long userId, [FromQuery] long? mangaId, [FromQuery] long? chapterId)
+        public async Task<IActionResult> GetMangaInteractionById([FromQuery] long userId, [FromQuery] long? mangaId, [FromQuery] long? chapterId, [FromQuery] MangaInteractionType? interactionType)
         {
             var query = new GetMangaInteractionByIdQuery
             {
                 UserId = userId,
                 MangaId = mangaId,
-                ChapterId = chapterId
+                ChapterId = chapterId,
+                InteractionType = interactionType
             };
             var result = await _mediator.Send(query);
             return result;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMangaInteraction([FromQuery] long userId, [FromQuery] long? mangaId, [FromQuery] long? chapterId)
+        public async Task<IActionResult> GetMangaInteraction([FromQuery] long userId, [FromQuery] long? mangaId, [FromQuery] long? chapterId, [FromQuery] MangaInteractionType? interactionType)
         {
             var query = new GetMangaInteractionQuery
             {
                 UserId = userId,
                 MangaId = mangaId,
-                ChapterId = chapterId
+                ChapterId = chapterId,
+                InteractionType = interactionType
             };
             var result = await _mediator.Send(query);
             return result;

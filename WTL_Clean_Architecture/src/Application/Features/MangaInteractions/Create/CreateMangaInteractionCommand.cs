@@ -58,7 +58,8 @@ namespace Application.Features.MangaInteractions.Create
                 var existingInteraction = await _repository.GetMangaInteractionByUserAndContentAsync(
                     userId,
                     command.MangaId,
-                    command.ChapterId);
+                    command.ChapterId,
+                    command.InteractionType);
 
                 if (existingInteraction != null)
                 {
