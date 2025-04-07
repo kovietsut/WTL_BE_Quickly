@@ -76,7 +76,7 @@ namespace Infrastructure.Repositories
                     return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "Folder name is required");
                 }
                 var containerClient = _blobServiceClient.GetBlobContainerClient(folderName);
-                if (await containerClient.ExistsAsync() != true)
+                if (!await containerClient.ExistsAsync())
                 {
                     return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "Folder does not exist");
                 }

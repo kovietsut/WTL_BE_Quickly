@@ -1,5 +1,4 @@
-﻿using Application.Features.Chapter.Delete;
-using Application.Features.FeaturedCollectionMangas.Delete;
+﻿using Application.Features.FeaturedCollectionMangas.Delete;
 using Application.Features.FeaturedCollections.Create;
 using Application.Models;
 using MediatR;

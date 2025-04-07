@@ -19,7 +19,7 @@ namespace Application.Features.FeaturedCollectionPermissions.Create
         public CollectionPermissionType PermissionType { get; set; }
     }
 
-    public class CreateFeaturedCollectionPermissionCommandHandler(IFeaturedCollectionPermissionRepository repository, IUserRepository userRepository,
+    public class CreateFeaturedCollectionPermissionCommandHandler(IFeaturedCollectionPermissionRepository repository,
         IFeaturedCollectionRepository featuredCollectionRepository,
         IOptions<ErrorCode> errorCodes) : IRequestHandler<CreateFeaturedCollectionPermissionCommand, IActionResult>
     {

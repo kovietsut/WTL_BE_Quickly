@@ -4,7 +4,6 @@ using Domain.Entities;
 using Domain.Persistence;
 using Domain.Specifications;
 using Domain.Specifications.Genres;
-using Domain.Specifications.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
