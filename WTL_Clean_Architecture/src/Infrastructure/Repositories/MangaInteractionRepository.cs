@@ -4,6 +4,7 @@ using Domain.Entities;
 using Domain.Persistence;
 using Domain.Specifications.MangaInteractions;
 using Microsoft.AspNetCore.Http;
+using Domain.Enums;
 
 namespace Infrastructure.Repositories
 {
@@ -37,7 +38,7 @@ namespace Infrastructure.Repositories
         public async Task<MangaInteraction?> DeleteMangaInteractionAsync(long? mangaId, long? chapterId)
         {
             var userId = long.Parse(_httpContextAccessor.HttpContext?.User?.FindFirst("Id")?.Value ?? "0");
-            var mangaInteraction = await GetMangaInteractionByUserAndContentAsync(userId, mangaId, chapterId);
+            var mangaInteraction = await GetMangaInteractionByUserAndContentAsync(userId, mangaId, chapterId, null);
             if (mangaInteraction != null)
             {
                 await DeleteAsync(mangaInteraction);
@@ -45,9 +46,9 @@ namespace Infrastructure.Repositories
             return mangaInteraction;
         }
 
-        public async Task<MangaInteraction?> GetMangaInteractionByUserAndContentAsync(long userId, long? mangaId, long? chapterId)
+        public async Task<MangaInteraction?> GetMangaInteractionByUserAndContentAsync(long userId, long? mangaId, long? chapterId, MangaInteractionType? interactionType)
         {
-            var specification = new GetMangaInteractionByUserAndContentSpecification(userId, mangaId, chapterId);
+            var specification = new GetMangaInteractionByUserAndContentSpecification(userId, mangaId, chapterId, interactionType);
             return await GetBySpecificationAsync(specification);
         }
     }
