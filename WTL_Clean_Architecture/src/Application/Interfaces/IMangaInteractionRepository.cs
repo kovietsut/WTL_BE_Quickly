@@ -9,5 +9,6 @@ namespace Application.Interfaces
         Task<MangaInteraction> CreateMangaInteractionAsync(CreateMangaInteractionDto mangaInteractionDto);
         Task<MangaInteraction?> DeleteMangaInteractionAsync(long? mangaId, long? chapterId);
         Task<MangaInteraction?> GetMangaInteractionByUserAndContentAsync(long userId, long? mangaId, long? chapterId, MangaInteractionType? interactionType);
+        Task<IEnumerable<MangaInteraction>> GetMangaInteractionListAsync(long userId, long? mangaId, long? chapterId, MangaInteractionType? interactionType, int? pageNumber, int? pageSize);
     }
 } 

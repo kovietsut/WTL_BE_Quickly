@@ -2,6 +2,7 @@
 using Application.Features.MangaInteractions.Delete;
 using Application.Features.MangaInteractions.Get;
 using Application.Features.MangaInteractions.GetById;
+using Application.Features.MangaInteractions.GetList;
 using Application.Models;
 using Domain.Enums;
 using MediatR;
@@ -46,6 +47,40 @@ namespace WebAPI.Controllers
                 ChapterId = chapterId,
                 InteractionType = interactionType
             };
+            var result = await _mediator.Send(query);
+            return result;
+        }
+
+        [HttpGet("list")]
+        public async Task<IActionResult> GetMangaInteractionList(
+            [FromQuery] long userId, 
+            [FromQuery] long? mangaId = null, 
+            [FromQuery] long? chapterId = null, 
+            [FromQuery] MangaInteractionType? interactionType = null, 
+            [FromQuery] int? pageNumber = 1, 
+            [FromQuery] int? pageSize = 10)
+        {
+            // Validate pagination parameters
+            if (pageNumber.HasValue && pageNumber.Value < 1)
+            {
+                pageNumber = 1;
+            }
+            
+            if (pageSize.HasValue && pageSize.Value < 1)
+            {
+                pageSize = 10;
+            }
+            
+            var query = new GetMangaInteractionListQuery
+            {
+                UserId = userId,
+                MangaId = mangaId,
+                ChapterId = chapterId,
+                InteractionType = interactionType,
+                PageNumber = pageNumber,
+                PageSize = pageSize
+            };
+            
             var result = await _mediator.Send(query);
             return result;
         }

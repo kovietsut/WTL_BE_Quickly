@@ -5,6 +5,7 @@ using Domain.Persistence;
 using Domain.Specifications.MangaInteractions;
 using Microsoft.AspNetCore.Http;
 using Domain.Enums;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
@@ -50,6 +51,23 @@ namespace Infrastructure.Repositories
         {
             var specification = new GetMangaInteractionByUserAndContentSpecification(userId, mangaId, chapterId, interactionType);
             return await GetBySpecificationAsync(specification);
+        }
+
+        public async Task<IEnumerable<MangaInteraction>> GetMangaInteractionListAsync(long userId, long? mangaId, long? chapterId, MangaInteractionType? interactionType, int? pageNumber, int? pageSize)
+        {
+            try
+            {
+                var specification = new GetMangaInteractionListSpecification(userId, mangaId, chapterId, interactionType, pageNumber, pageSize);
+                var query = FindBySpecification(specification);
+                var result = await query.ToListAsync();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception here if you have a logging mechanism
+                Console.WriteLine($"Error in GetMangaInteractionListAsync: {ex.Message}");
+                return new List<MangaInteraction>();
+            }
         }
     }
 }
