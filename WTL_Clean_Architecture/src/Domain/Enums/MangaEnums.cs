@@ -20,4 +20,4 @@ public enum MangaReleaseStatus
     OnGoing = 2,
     ComingSoon = 3,
     Cancelled = 4
-} 
+}

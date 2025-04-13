@@ -1,7 +1,8 @@
 ﻿using Domain.Entities;
+using Domain.Enums;
 using Domain.Mappers;
 using Domain.SpecificationModels;
-using Domain.Enums;
+using Microsoft.EntityFrameworkCore;
 
 namespace Domain.Specifications.Mangas
 {
@@ -13,7 +14,8 @@ namespace Domain.Specifications.Mangas
             (!filter.Format.HasValue || manga.Format == MangaMapper.ToDomainFormat(filter.Format)) &&
             (!filter.Region.HasValue || manga.Region == MangaMapper.ToDomainRegion(filter.Region)) &&
             (!filter.ReleaseStatus.HasValue || manga.ReleaseStatus == MangaMapper.ToDomainReleaseStatus(filter.ReleaseStatus)) &&
-            (filter.GenreIds == null || !filter.GenreIds.Any() || manga.MangaGenres.Any(mg => filter.GenreIds.Contains(mg.GenreId) && mg.IsDeleted != true)))
+            (!filter.PublishedDayOfWeek.HasValue || manga.PublishedDate.HasValue &&
+                (EF.Functions.DateDiffDay(DateTime.SpecifyKind(new DateTime(1900, 1, 1), DateTimeKind.Utc), manga.PublishedDate.Value) + 1) % 7 == (int)filter.PublishedDayOfWeek.Value))
         {
             if (includePaging)
             {
