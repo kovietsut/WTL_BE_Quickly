@@ -119,154 +119,220 @@ public static class SeedData
                 RoleId = 1,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "male",
+                PhoneNumber = "0912345678",
+                Address = "123 Le Duan Street, District 1, Ho Chi Minh City"
             },
             new User
             {
                 Id = 2,
-                FullName = "John Reader",
-                Email = "john.reader@gmail.com",
+                FullName = "Sarah Johnson",
+                Email = "sarah.johnson@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
                 RoleId = 2,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "female",
+                PhoneNumber = "0987654321",
+                Address = "45 Tran Hung Dao Street, Hai Ba Trung District, Hanoi"
             },
             new User
             {
                 Id = 3,
-                FullName = "Sarah Author",
-                Email = "sarah.author@gmail.com",
+                FullName = "Michael Chen",
+                Email = "michael.chen@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = 2,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "male",
+                PhoneNumber = "0978123456",
+                Address = "78 Nguyen Thi Minh Khai Street, Da Nang City"
             },
-            // Publishers
             new User
             {
                 Id = 4,
-                FullName = "Shueisha Publisher",
-                Email = "shueisha.publisher@gmail.com",
+                FullName = "Emma Wilson",
+                Email = "emma.wilson@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = 2,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "female",
+                PhoneNumber = "0965432109",
+                Address = "156 Le Loi Street, Hue City, Thua Thien Hue Province"
             },
             new User
             {
                 Id = 5,
-                FullName = "Kodansha Publisher",
-                Email = "kodansha.publisher@gmail.com",
+                FullName = "Alex Rivera",
+                Email = "alex.rivera@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = 2,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "others",
+                PhoneNumber = "0956789012",
+                Address = "234 Tran Phu Street, Nha Trang City, Khanh Hoa Province"
             },
             new User
             {
                 Id = 6,
-                FullName = "Kakao Publisher",
-                Email = "kakao.publisher@gmail.com",
+                FullName = "Hiroshi Tanaka",
+                Email = "hiroshi.tanaka@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
                 RoleId = 3,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "male",
+                PhoneNumber = "0945678901",
+                Address = "89 Ly Thai To Street, Can Tho City"
             },
-            // Artists
             new User
             {
                 Id = 7,
-                FullName = "Eiichiro Oda",
-                Email = "eiichiro.oda@gmail.com",
+                FullName = "Yuki Sato",
+                Email = "yuki.sato@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
                 RoleId = 3,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "female",
+                PhoneNumber = "0934567890",
+                Address = "67 Nguyen Van Linh Street, Vung Tau City, Ba Ria-Vung Tau Province"
             },
             new User
             {
                 Id = 8,
-                FullName = "Hajime Isayama",
-                Email = "hajime.isayama@gmail.com",
+                FullName = "David Kim",
+                Email = "david.kim@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
                 RoleId = 3,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "male",
+                PhoneNumber = "0923456789",
+                Address = "123 Quang Trung Street, Hai Phong City"
             },
             new User
             {
                 Id = 9,
-                FullName = "Chugong",
-                Email = "chugong.artist@gmail.com",
+                FullName = "Lisa Park",
+                Email = "lisa.park@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
                 RoleId = 3,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "female",
+                PhoneNumber = "0912345678",
+                Address = "45 Le Duan Street, Bien Hoa City, Dong Nai Province"
             },
             new User
             {
                 Id = 10,
-                FullName = "Koyoharu Gotouge",
-                Email = "koyoharu.gotouge@gmail.com",
+                FullName = "James Wilson",
+                Email = "james.wilson@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = 2,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "male",
+                PhoneNumber = "0901234567",
+                Address = "78 Tran Hung Dao Street, Thai Nguyen City, Thai Nguyen Province"
             },
-            // Translators
             new User
             {
                 Id = 11,
-                FullName = "Stephen Paul",
-                Email = "stephen.paul@gmail.com",
+                FullName = "Maria Garcia",
+                Email = "maria.garcia@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = 2,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "female",
+                PhoneNumber = "0890123456",
+                Address = "156 Nguyen Trai Street, Nam Dinh City, Nam Dinh Province"
             },
             new User
             {
                 Id = 12,
-                FullName = "Kohei Horikoshi",
-                Email = "kohei.horikoshi@gmail.com",
+                FullName = "Taylor Smith",
+                Email = "taylor.smith@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = 2,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "others",
+                PhoneNumber = "0889012345",
+                Address = "234 Le Hong Phong Street, Quy Nhon City, Binh Dinh Province"
             },
             new User
             {
                 Id = 13,
-                FullName = "Yoon Ha Lee",
-                Email = "yoon.ha.lee@gmail.com",
+                FullName = "Wei Chen",
+                Email = "wei.chen@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
                 RoleId = 3,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                Gender = "male",
+                PhoneNumber = "0878901234",
+                Address = "67 Phan Chu Trinh Street, Pleiku City, Gia Lai Province"
+            },
+            new User
+            {
+                Id = 14,
+                FullName = "Sofia Rodriguez",
+                Email = "sofia.rodriguez@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                Gender = "female",
+                PhoneNumber = "0867890123",
+                Address = "89 Nguyen Van Cu Street, Long Xuyen City, An Giang Province"
+            },
+            new User
+            {
+                Id = 15,
+                FullName = "Jordan Lee",
+                Email = "jordan.lee@gmail.com",
+                PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
+                SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
+                RoleId = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                Gender = "others",
+                PhoneNumber = "0856789012",
+                Address = "123 Ly Thuong Kiet Street, Rach Gia City, Kien Giang Province"
             }
         );
 
