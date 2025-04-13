@@ -17,7 +17,7 @@ namespace Application.Features.Users.Update
         public string? FullName { get; set; }
         public required string PhoneNumber { get; set; }
         public string? Address { get; set; }
-        public bool? Gender { get; set; }
+        public string? Gender { get; set; }
     }
 
     public class UpdateUserCommmandHandler : IRequestHandler<UpdateUserCommand, IActionResult>

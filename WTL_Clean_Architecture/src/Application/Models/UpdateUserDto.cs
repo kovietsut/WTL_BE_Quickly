@@ -12,6 +12,6 @@ namespace Application.Models
         [Required]
         public required string PhoneNumber { get; set; }
         public string? Address { get; set; }
-        public bool? Gender { get; set; }
+        public string? Gender { get; set; }
     }
 }

@@ -40,12 +40,12 @@ namespace Application.Features.Users.Create
                     .WithMessage("Address cannot be empty");
             });
 
-            When(x => x.Gender.HasValue, () =>
-            {
-                RuleFor(x => x.Gender)
-                    .Must((gender) => CheckValidationHelper.IsNullOrDefault(gender))
-                    .WithMessage("Gender cannot be empty");
-            });
+            //When(x => x.Gender.HasValue, () =>
+            //{
+            //    RuleFor(x => x.Gender)
+            //        .Must((gender) => CheckValidationHelper.IsNullOrDefault(gender))
+            //        .WithMessage("Gender cannot be empty");
+            //});
         }
     }
 }

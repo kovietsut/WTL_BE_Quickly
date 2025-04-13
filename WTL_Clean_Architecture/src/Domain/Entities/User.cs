@@ -19,7 +19,7 @@ public partial class User : EntityBase<long>
 
     public string? PhoneNumber { get; set; }
 
-    public bool? Gender { get; set; }
+    public string? Gender { get; set; }
 
     public string? PasswordHash { get; set; }
 

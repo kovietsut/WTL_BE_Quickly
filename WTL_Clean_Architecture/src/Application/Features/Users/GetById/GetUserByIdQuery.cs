@@ -1,7 +1,6 @@
 ﻿using Application.Interfaces;
 using Application.Utils;
 using Domain.Configurations;
-using Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
