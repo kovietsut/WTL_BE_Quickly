@@ -3084,6 +3084,127 @@ public static class SeedData
                 IsSpoiler = false,
                 CreatedAt = SEED_DATE.AddHours(29),
                 UpdatedAt = SEED_DATE.AddHours(29)
+            },
+            // New One Piece Comments with Replies
+            // First comment with 5 replies
+            new Comment
+            {
+                Id = 31,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 2,
+                Content = "The scene where Luffy first meets Shanks is iconic! What do you think about their relationship?",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(30),
+                UpdatedAt = SEED_DATE.AddHours(30)
+            },
+            new Comment
+            {
+                Id = 32,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 3,
+                Content = "Shanks really set the standard for what a true pirate should be!",
+                ParentCommentId = 31,
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(31),
+                UpdatedAt = SEED_DATE.AddHours(31)
+            },
+            new Comment
+            {
+                Id = 33,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 4,
+                Content = "The way he protected Luffy without using violence was amazing!",
+                ParentCommentId = 31,
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(32),
+                UpdatedAt = SEED_DATE.AddHours(32)
+            },
+            new Comment
+            {
+                Id = 34,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 5,
+                Content = "That scene where he gives Luffy the straw hat is so emotional!",
+                ParentCommentId = 31,
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(33),
+                UpdatedAt = SEED_DATE.AddHours(33)
+            },
+            new Comment
+            {
+                Id = 35,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 2,
+                Content = "Shanks' crew was so cool too! They didn't even need to fight to prove their strength.",
+                ParentCommentId = 31,
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(34),
+                UpdatedAt = SEED_DATE.AddHours(34)
+            },
+            new Comment
+            {
+                Id = 36,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 3,
+                Content = "The promise between them became the driving force of the entire series!",
+                ParentCommentId = 31,
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(35),
+                UpdatedAt = SEED_DATE.AddHours(35)
+            },
+
+            // Second comment with 2 replies
+            new Comment
+            {
+                Id = 37,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 4,
+                Content = "The scene where Luffy eats the Gomu Gomu fruit is hilarious! His reaction was priceless!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(36),
+                UpdatedAt = SEED_DATE.AddHours(36)
+            },
+            new Comment
+            {
+                Id = 38,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 5,
+                Content = "That's what started it all! Without that moment, we wouldn't have the future Pirate King!",
+                ParentCommentId = 37,
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(37),
+                UpdatedAt = SEED_DATE.AddHours(37)
+            },
+            new Comment
+            {
+                Id = 39,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 2,
+                Content = "The way he adapted to his powers so quickly was impressive!",
+                ParentCommentId = 37,
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(38),
+                UpdatedAt = SEED_DATE.AddHours(38)
+            },
+            new Comment
+            {
+                Id = 40,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 3,
+                Content = "This chapter really sets up Luffy's character perfectly - brave, determined, and a bit reckless!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(39),
+                UpdatedAt = SEED_DATE.AddHours(39)
             }
         );
     }
