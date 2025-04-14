@@ -1,8 +1,9 @@
-using Application.Features.Comments.Commands.Create;
 using Application.Interfaces;
 using Application.Models;
 using Domain.Entities;
 using Domain.Persistence;
+using Domain.Specifications.Comments;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
@@ -28,6 +29,45 @@ namespace Infrastructure.Repositories
 
             await CreateAsync(comment);
             return comment;
+        }
+
+        public Task<bool> DeleteCommentAsync(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<(IEnumerable<object> Items, int TotalCount)> GetListAsync(long? mangaId, long? chapterId, long? parentCommentId, int pageNumber, int pageSize)
+        {
+            // Get comments with pagination
+            var specification = new GetListCommentsSpecification(mangaId, chapterId, parentCommentId, pageNumber, pageSize);
+            var query = FindBySpecification(specification);
+            var comments = await query.ToListAsync();
+            
+            // Transform comments to DTOs
+            var listData = comments.Select(x => new
+            {
+                x.Id,
+                x.MangaId,
+                x.ChapterId,
+                x.ParentCommentId,
+                x.Content,
+                x.IsSpoiler,
+                x.UserId,
+                x.CreatedAt,
+                x.UpdatedAt
+            });
+
+            // Get total count with the same filters but without paging
+            var countSpecification = new GetListCommentsSpecification(mangaId, chapterId, parentCommentId, pageNumber, pageSize, includePaging: false);
+            var countQuery = FindBySpecification(countSpecification);
+            var totalCount = await countQuery.CountAsync();
+            
+            return (listData, totalCount);
+        }
+
+        public Task<Comment> UpdateCommentAsync(long id, UpdateCommentDto updateCommentDto)
+        {
+            throw new NotImplementedException();
         }
 
         // Add any specific comment repository methods here

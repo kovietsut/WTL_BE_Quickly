@@ -2737,5 +2737,354 @@ public static class SeedData
                 UpdatedAt = SEED_DATE
             }
         );
+
+        // Seed Comments
+        modelBuilder.Entity<Comment>().HasData(
+            // One Piece Chapter 1 Comments
+            new Comment
+            {
+                Id = 1,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 2,
+                Content = "This chapter was amazing! Luffy's determination is inspiring.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Comment
+            {
+                Id = 2,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 3,
+                Content = "The art style is so unique and expressive!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(1),
+                UpdatedAt = SEED_DATE.AddHours(1)
+            },
+            new Comment
+            {
+                Id = 3,
+                MangaId = 1,
+                ChapterId = 1,
+                UserId = 4,
+                Content = "I can't wait to see how Luffy's journey unfolds!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(2),
+                UpdatedAt = SEED_DATE.AddHours(2)
+            },
+            // Attack on Titan Chapter 1 Comments
+            new Comment
+            {
+                Id = 4,
+                MangaId = 2,
+                ChapterId = 3,
+                UserId = 2,
+                Content = "The tension in this chapter is incredible!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(3),
+                UpdatedAt = SEED_DATE.AddHours(3)
+            },
+            new Comment
+            {
+                Id = 5,
+                MangaId = 2,
+                ChapterId = 3,
+                UserId = 3,
+                Content = "Eren's determination reminds me of myself.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(4),
+                UpdatedAt = SEED_DATE.AddHours(4)
+            },
+            // Solo Leveling Chapter 1 Comments
+            new Comment
+            {
+                Id = 6,
+                MangaId = 3,
+                ChapterId = 4,
+                UserId = 4,
+                Content = "The world-building is fascinating!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(5),
+                UpdatedAt = SEED_DATE.AddHours(5)
+            },
+            new Comment
+            {
+                Id = 7,
+                MangaId = 3,
+                ChapterId = 4,
+                UserId = 5,
+                Content = "Sung Jin-Woo's character development is going to be interesting.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(6),
+                UpdatedAt = SEED_DATE.AddHours(6)
+            },
+            // Demon Slayer Chapter 1 Comments
+            new Comment
+            {
+                Id = 8,
+                MangaId = 4,
+                ChapterId = 5,
+                UserId = 2,
+                Content = "The emotional impact of this chapter is powerful.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(7),
+                UpdatedAt = SEED_DATE.AddHours(7)
+            },
+            new Comment
+            {
+                Id = 9,
+                MangaId = 4,
+                ChapterId = 5,
+                UserId = 3,
+                Content = "Tanjiro's dedication to his sister is touching.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(8),
+                UpdatedAt = SEED_DATE.AddHours(8)
+            },
+            // Tower of God Chapter 1 Comments
+            new Comment
+            {
+                Id = 10,
+                MangaId = 5,
+                ChapterId = 7,
+                UserId = 4,
+                Content = "The mystery of the Tower is intriguing!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(9),
+                UpdatedAt = SEED_DATE.AddHours(9)
+            },
+            new Comment
+            {
+                Id = 11,
+                MangaId = 5,
+                ChapterId = 7,
+                UserId = 5,
+                Content = "Bam's innocence is refreshing in this world.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(10),
+                UpdatedAt = SEED_DATE.AddHours(10)
+            },
+            // My Hero Academia Chapter 1 Comments
+            new Comment
+            {
+                Id = 12,
+                MangaId = 6,
+                ChapterId = 9,
+                UserId = 2,
+                Content = "All Might's influence on Izuku is inspiring!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(11),
+                UpdatedAt = SEED_DATE.AddHours(11)
+            },
+            new Comment
+            {
+                Id = 13,
+                MangaId = 6,
+                ChapterId = 9,
+                UserId = 3,
+                Content = "The concept of Quirks is so creative!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(12),
+                UpdatedAt = SEED_DATE.AddHours(12)
+            },
+            // The Beginning After The End Chapter 1 Comments
+            new Comment
+            {
+                Id = 14,
+                MangaId = 7,
+                ChapterId = 10,
+                UserId = 4,
+                Content = "The reincarnation trope is handled well here.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(13),
+                UpdatedAt = SEED_DATE.AddHours(13)
+            },
+            new Comment
+            {
+                Id = 15,
+                MangaId = 7,
+                ChapterId = 10,
+                UserId = 5,
+                Content = "Arthur's past life adds depth to the story.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(14),
+                UpdatedAt = SEED_DATE.AddHours(14)
+            },
+            // Jujutsu Kaisen Chapter 1 Comments
+            new Comment
+            {
+                Id = 16,
+                MangaId = 8,
+                ChapterId = 11,
+                UserId = 2,
+                Content = "The supernatural elements are well integrated.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(15),
+                UpdatedAt = SEED_DATE.AddHours(15)
+            },
+            new Comment
+            {
+                Id = 17,
+                MangaId = 8,
+                ChapterId = 11,
+                UserId = 3,
+                Content = "Yuji's character design is striking!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(16),
+                UpdatedAt = SEED_DATE.AddHours(16)
+            },
+            // The God of High School Chapter 1 Comments
+            new Comment
+            {
+                Id = 18,
+                MangaId = 9,
+                ChapterId = 12,
+                UserId = 4,
+                Content = "The martial arts scenes are dynamic!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(17),
+                UpdatedAt = SEED_DATE.AddHours(17)
+            },
+            new Comment
+            {
+                Id = 19,
+                MangaId = 9,
+                ChapterId = 12,
+                UserId = 5,
+                Content = "Jin Mori's fighting style is unique.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(18),
+                UpdatedAt = SEED_DATE.AddHours(18)
+            },
+            // Chainsaw Man Chapter 1 Comments
+            new Comment
+            {
+                Id = 20,
+                MangaId = 10,
+                ChapterId = 13,
+                UserId = 2,
+                Content = "The dark humor is perfectly balanced.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(19),
+                UpdatedAt = SEED_DATE.AddHours(19)
+            },
+            new Comment
+            {
+                Id = 21,
+                MangaId = 10,
+                ChapterId = 13,
+                UserId = 3,
+                Content = "Denji's motivation is surprisingly deep.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(20),
+                UpdatedAt = SEED_DATE.AddHours(20)
+            },
+            // Omniscient Reader Chapter 1 Comments
+            new Comment
+            {
+                Id = 22,
+                MangaId = 11,
+                ChapterId = 14,
+                UserId = 4,
+                Content = "The meta-narrative is fascinating!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(21),
+                UpdatedAt = SEED_DATE.AddHours(21)
+            },
+            new Comment
+            {
+                Id = 23,
+                MangaId = 11,
+                ChapterId = 14,
+                UserId = 5,
+                Content = "Kim Dokja's knowledge adds an interesting twist.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(22),
+                UpdatedAt = SEED_DATE.AddHours(22)
+            },
+            // Dragon Ball Super Chapter 1 Comments
+            new Comment
+            {
+                Id = 24,
+                MangaId = 12,
+                ChapterId = 15,
+                UserId = 2,
+                Content = "The action scenes are as epic as ever!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(23),
+                UpdatedAt = SEED_DATE.AddHours(23)
+            },
+            new Comment
+            {
+                Id = 25,
+                MangaId = 12,
+                ChapterId = 15,
+                UserId = 3,
+                Content = "Goku's personality never changes, and I love it!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(24),
+                UpdatedAt = SEED_DATE.AddHours(24)
+            },
+            // The Promised Neverland Chapter 1 Comments
+            new Comment
+            {
+                Id = 26,
+                MangaId = 13,
+                ChapterId = 16,
+                UserId = 4,
+                Content = "The psychological thriller elements are masterful.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(25),
+                UpdatedAt = SEED_DATE.AddHours(25)
+            },
+            new Comment
+            {
+                Id = 27,
+                MangaId = 13,
+                ChapterId = 16,
+                UserId = 5,
+                Content = "Emma's innocence makes the story more impactful.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(26),
+                UpdatedAt = SEED_DATE.AddHours(26)
+            },
+            // Black Clover Chapter 1 Comments
+            new Comment
+            {
+                Id = 28,
+                MangaId = 15,
+                ChapterId = 17,
+                UserId = 2,
+                Content = "Asta's determination despite having no magic is inspiring!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(27),
+                UpdatedAt = SEED_DATE.AddHours(27)
+            },
+            new Comment
+            {
+                Id = 29,
+                MangaId = 15,
+                ChapterId = 17,
+                UserId = 3,
+                Content = "The magic system is well thought out.",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(28),
+                UpdatedAt = SEED_DATE.AddHours(28)
+            },
+            // Dr. Stone Chapter 1 Comments
+            new Comment
+            {
+                Id = 30,
+                MangaId = 17,
+                ChapterId = 18,
+                UserId = 4,
+                Content = "The scientific approach to rebuilding civilization is unique!",
+                IsSpoiler = false,
+                CreatedAt = SEED_DATE.AddHours(29),
+                UpdatedAt = SEED_DATE.AddHours(29)
+            }
+        );
     }
 } 
