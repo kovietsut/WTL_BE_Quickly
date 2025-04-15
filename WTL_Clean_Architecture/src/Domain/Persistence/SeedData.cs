@@ -3454,6 +3454,68 @@ public static class SeedData
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
+            },
+            
+            // Additional collections created by other users
+            new FeaturedCollection
+            {
+                Id = 21,
+                Name = "Top Rated Mystery Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 2,
+                ModifiedBy = 2,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 22,
+                Name = "Best Sci-Fi Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 3,
+                ModifiedBy = 3,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 23,
+                Name = "Popular Supernatural Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 4,
+                ModifiedBy = 4,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 24,
+                Name = "Award-Winning Historical Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 5,
+                ModifiedBy = 5,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 25,
+                Name = "Trending Comedy Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 6,
+                ModifiedBy = 6,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             }
         );
 
@@ -3660,6 +3722,120 @@ public static class SeedData
                 FeaturedCollectionId = 20,
                 UserId = 1,
                 PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            
+            // Additional permissions for other collections
+            new FeaturedCollectionPermission
+            {
+                Id = 21,
+                FeaturedCollectionId = 21,
+                UserId = 2,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 22,
+                FeaturedCollectionId = 22,
+                UserId = 3,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 23,
+                FeaturedCollectionId = 23,
+                UserId = 4,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 24,
+                FeaturedCollectionId = 24,
+                UserId = 5,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 25,
+                FeaturedCollectionId = 25,
+                UserId = 6,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 30,
+                FeaturedCollectionId = 20,
+                UserId = 14,
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+
+            // Permissions for new collections (IDs 21-25)
+            new FeaturedCollectionPermission
+            {
+                Id = 31,
+                FeaturedCollectionId = 21,
+                UserId = 7,
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 32,
+                FeaturedCollectionId = 22,
+                UserId = 8,
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 33,
+                FeaturedCollectionId = 23,
+                UserId = 9,
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 34,
+                FeaturedCollectionId = 24,
+                UserId = 10,
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 35,
+                FeaturedCollectionId = 25,
+                UserId = 11,
+                PermissionType = CollectionPermissionType.Read,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE

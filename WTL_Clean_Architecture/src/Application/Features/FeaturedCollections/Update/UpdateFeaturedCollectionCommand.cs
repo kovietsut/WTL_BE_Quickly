@@ -2,6 +2,7 @@
 using Application.Models;
 using Application.Utils;
 using Domain.Configurations;
+using Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,11 +20,19 @@ namespace Application.Features.FeaturedCollections.Update
     public class UpdateFeaturedCollectionCommandHandler : IRequestHandler<UpdateFeaturedCollectionCommand, IActionResult>
     {
         private readonly IFeaturedCollectionRepository _repository;
+        private readonly IFeaturedCollectionPermissionRepository _permissionRepository;
+        private readonly IAuthenticationRepository _authenticationRepository;
         private readonly ErrorCode _errorCodes;
 
-        public UpdateFeaturedCollectionCommandHandler(IFeaturedCollectionRepository repository, IOptions<ErrorCode> errorCodes)
+        public UpdateFeaturedCollectionCommandHandler(
+            IFeaturedCollectionRepository repository, 
+            IFeaturedCollectionPermissionRepository permissionRepository,
+            IAuthenticationRepository authenticationRepository,
+            IOptions<ErrorCode> errorCodes)
         {
             _repository = repository;
+            _permissionRepository = permissionRepository;
+            _authenticationRepository = authenticationRepository;
             _errorCodes = errorCodes.Value;
         }
 
@@ -31,6 +40,23 @@ namespace Application.Features.FeaturedCollections.Update
         {
             try
             {
+                // Get current user ID
+                var currentUserId = _authenticationRepository.GetUserId();
+
+                // Check if collection exists
+                var currentCollection = await _repository.GetByIdAsync(query.Id);
+                if (currentCollection == null)
+                {
+                    return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes.Status404?.NotFound, "Collection does not exist");
+                }
+
+                // Check if user has permission to update this collection
+                var permission = await _permissionRepository.GetFeaturedCollectionPermissionById(query.Id, currentUserId);
+                if (permission == null || permission.PermissionType != CollectionPermissionType.Write)
+                {
+                    return JsonUtil.Error(StatusCodes.Status403Forbidden, _errorCodes?.Status403?.Forbidden ?? "Forbidden", "User does not have permission to update this collection");
+                }
+
                 var updateCollectionDto = new UpdateFeaturedCollectionDto
                 {
                     Name = query.Name,
@@ -43,11 +69,7 @@ namespace Application.Features.FeaturedCollections.Update
                 {
                     return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", check.Errors);
                 }
-                var currentChapter = await _repository.GetByIdAsync(query.Id);
-                if (currentChapter == null)
-                {
-                    return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes.Status404?.NotFound, "Collection does not exist");
-                }
+
                 var chapter = await _repository.UpdateFeaturedCollectionAsync(query.Id, updateCollectionDto);
                 return JsonUtil.Success(chapter.Id);
             }
