@@ -3207,5 +3207,463 @@ public static class SeedData
                 UpdatedAt = SEED_DATE.AddHours(39)
             }
         );
+
+        // Seed FeaturedCollections
+        modelBuilder.Entity<FeaturedCollection>().HasData(
+            // Comics Collections
+            new FeaturedCollection
+            {
+                Id = 1,
+                Name = "The Best Action Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 2,
+                Name = "The Best Martial Arts Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 3,
+                Name = "The Best School Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 4,
+                Name = "The Best Sports Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 5,
+                Name = "The Best Horror Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 6,
+                Name = "The Best Fantasy Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 7,
+                Name = "The Best Dramatic Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 8,
+                Name = "The Best Romantic Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 9,
+                Name = "The Best Adventure Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+
+            // Novels Collections
+            new FeaturedCollection
+            {
+                Id = 10,
+                Name = "The Best Action Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 11,
+                Name = "The Best Martial Arts Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 12,
+                Name = "The Best School Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 13,
+                Name = "The Best Sports Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 14,
+                Name = "The Best Horror Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 15,
+                Name = "The Best Fantasy Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 16,
+                Name = "The Best Dramatic Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 17,
+                Name = "The Best Romantic Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 18,
+                Name = "The Best Adventure Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+
+            // New Releases Collections
+            new FeaturedCollection
+            {
+                Id = 19,
+                Name = "New Released Comics",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollection
+            {
+                Id = 20,
+                Name = "New Released Novels",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                CreatedBy = 1,
+                ModifiedBy = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            }
+        );
+
+        // Seed FeaturedCollectionPermissions for admin (user 1)
+        modelBuilder.Entity<FeaturedCollectionPermission>().HasData(
+            // Comics Collections Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = 1,
+                FeaturedCollectionId = 1,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 2,
+                FeaturedCollectionId = 2,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 3,
+                FeaturedCollectionId = 3,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 4,
+                FeaturedCollectionId = 4,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 5,
+                FeaturedCollectionId = 5,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 6,
+                FeaturedCollectionId = 6,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 7,
+                FeaturedCollectionId = 7,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 8,
+                FeaturedCollectionId = 8,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 9,
+                FeaturedCollectionId = 9,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+
+            // Novels Collections Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = 10,
+                FeaturedCollectionId = 10,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 11,
+                FeaturedCollectionId = 11,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 12,
+                FeaturedCollectionId = 12,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 13,
+                FeaturedCollectionId = 13,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 14,
+                FeaturedCollectionId = 14,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 15,
+                FeaturedCollectionId = 15,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 16,
+                FeaturedCollectionId = 16,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 17,
+                FeaturedCollectionId = 17,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 18,
+                FeaturedCollectionId = 18,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+
+            // New Releases Collections Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = 19,
+                FeaturedCollectionId = 19,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = 20,
+                FeaturedCollectionId = 20,
+                UserId = 1,
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            }
+        );
     }
 } 
