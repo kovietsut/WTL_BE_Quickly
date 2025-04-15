@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces;
 using Application.Utils;
 using Domain.Configurations;
+using Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -37,40 +38,50 @@ namespace Application.Features.FeaturedCollections.GetById
 
         public async Task<IActionResult> Handle(GetFeaturedCollectionByIdQuery query, CancellationToken cancellationToken)
         {
-            var collection = await _repository.GetFeaturedCollectionById(query.Id);
-            if (collection == null)
+            try
             {
-                return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Collection does not exist");
-            }
+                // Get current user ID
+                var currentUserId = _authenticationRepository.GetUserId();
 
-            // Get current user ID from authentication context
-            var currentUserId = _authenticationRepository.GetUserId();
-            
-            // Check if user is the creator or has permission
-            bool hasAccess = collection.CreatedBy == currentUserId;
-            if (!hasAccess)
-            {
-                var permission = await _permissionRepository.GetFeaturedCollectionPermissionById(collection.Id, currentUserId);
-                hasAccess = permission != null && !permission.IsDeleted;
-            }
+                // Check if collection exists
+                var collection = await _repository.GetFeaturedCollectionById(query.Id);
+                if (collection == null)
+                {
+                    return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Collection does not exist");
+                }
 
-            if (!hasAccess)
-            {
-                return JsonUtil.Error(StatusCodes.Status403Forbidden, _errorCodes?.Status403?.Forbidden, "User does not have permission to view this collection");
-            }
+                // Check if user is the creator or has permission
+                bool hasAccess = collection.CreatedBy == currentUserId;
+                if (!hasAccess)
+                {
+                    var permission = await _permissionRepository.GetFeaturedCollectionPermissionById(collection.Id, currentUserId);
+                    hasAccess = permission != null && !permission.IsDeleted && 
+                               (permission.PermissionType == CollectionPermissionType.Read || 
+                                permission.PermissionType == CollectionPermissionType.Write);
+                }
 
-            var result = new
+                if (!hasAccess)
+                {
+                    return JsonUtil.Error(StatusCodes.Status403Forbidden, _errorCodes?.Status403?.Forbidden, "User does not have permission to view this collection");
+                }
+
+                var result = new
+                {
+                    collection.Id,
+                    collection.IsDeleted,
+                    collection.Name,
+                    collection.CreatedAt,
+                    collection.UpdatedAt,
+                    //mangas
+                    //owner
+                    //number of novel, webtoon, saves
+                };
+                return JsonUtil.Success(result);
+            }
+            catch (Exception ex)
             {
-                collection.Id,
-                collection.IsDeleted,
-                collection.Name,
-                collection.CreatedAt,
-                collection.UpdatedAt,
-                //mangas
-                //owner
-                //number of novel, webtoon, saves
-            };
-            return JsonUtil.Success(result);
+                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes?.Status500?.APIServerError, ex.Message);
+            }
         }
     }
 }
