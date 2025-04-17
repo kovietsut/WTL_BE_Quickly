@@ -49,11 +49,18 @@ namespace Application.Features.Comments.Delete
                     return JsonUtil.Error(StatusCodes.Status403Forbidden, _errorCodes?.Status403?.Forbidden, "You do not have permission to delete this comment");
                 }
                 
+                // Delete the parent comment
                 var result = await _repository.DeleteCommentAsync(request.Id);
                 
                 if (!result)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Comment not found");
+                }
+                
+                // If this is a parent comment, also delete all child comments
+                if (comment.ParentCommentId == null)
+                {
+                    await _repository.DeleteChildCommentsAsync(request.Id);
                 }
                 
                 return JsonUtil.Success(new { Id = request.Id });

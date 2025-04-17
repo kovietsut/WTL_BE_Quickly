@@ -10,5 +10,6 @@ namespace Application.Interfaces
         Task<Comment> CreateCommentAsync(CreateCommentDto createCommentDto);
         Task<Comment> UpdateCommentAsync(long id, UpdateCommentDto updateCommentDto);
         Task<bool> DeleteCommentAsync(long id);
+        Task<bool> DeleteChildCommentsAsync(long parentCommentId);
     }
 } 

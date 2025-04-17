@@ -46,6 +46,29 @@ namespace Infrastructure.Repositories
             return true;
         }
 
+        public async Task<bool> DeleteChildCommentsAsync(long parentCommentId)
+        {
+            // Get all child comments using the specification
+            var specification = new GetChildCommentsSpecification(parentCommentId);
+            var childCommentsQuery = FindBySpecification(specification);
+            var childComments = await childCommentsQuery.ToListAsync();
+
+            if (!childComments.Any())
+            {
+                return true; // No child comments to delete
+            }
+
+            // Mark all child comments as deleted
+            foreach (var childComment in childComments)
+            {
+                childComment.IsDeleted = true;
+                childComment.UpdatedAt = DateTimeOffset.UtcNow;
+                await UpdateAsync(childComment);
+            }
+
+            return true;
+        }
+
         public async Task<Comment?> GetByIdAsync(long id)
         {
             var specification = new GetCommentByIdSpecification(id);
