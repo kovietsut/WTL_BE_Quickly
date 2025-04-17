@@ -20,13 +20,16 @@ namespace Application.Features.Comments.Update
     public class UpdateCommentCommandHandler : IRequestHandler<UpdateCommentCommand, IActionResult>
     {
         private readonly ICommentRepository _repository;
+        private readonly IAuthenticationRepository _authRepository;
         private readonly ErrorCode _errorCodes;
 
         public UpdateCommentCommandHandler(
             ICommentRepository repository,
+            IAuthenticationRepository authRepository,
             IOptions<ErrorCode> errorCodes)
         {
             _repository = repository;
+            _authRepository = authRepository;
             _errorCodes = errorCodes.Value;
         }
 
@@ -34,6 +37,22 @@ namespace Application.Features.Comments.Update
         {
             try
             {
+                // Get the comment to check ownership
+                var comment = await _repository.GetByIdAsync(request.Id);
+                if (comment == null)
+                {
+                    return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Comment not found");
+                }
+
+                // Get the current user ID from the authentication repository
+                var currentUserId = _authRepository.GetUserId();
+
+                // Check if the current user is the creator of the comment
+                if (comment.UserId != currentUserId)
+                {
+                    return JsonUtil.Error(StatusCodes.Status403Forbidden, _errorCodes?.Status403?.Forbidden, "You do not have permission to update this comment");
+                }
+
                 var updateCommentDto = new UpdateCommentDto
                 {
                     Content = request.Content,
@@ -48,8 +67,8 @@ namespace Application.Features.Comments.Update
                     return JsonUtil.Errors(StatusCodes.Status400BadRequest, "ValidationError", validationResult.Errors);
                 }
 
-                var comment = await _repository.UpdateCommentAsync(request.Id, updateCommentDto);
-                return JsonUtil.Success(new { Id = comment.Id });
+                var updatedComment = await _repository.UpdateCommentAsync(request.Id, updateCommentDto);
+                return JsonUtil.Success(new { Id = updatedComment.Id });
             }
             catch (ArgumentNullException)
             {
