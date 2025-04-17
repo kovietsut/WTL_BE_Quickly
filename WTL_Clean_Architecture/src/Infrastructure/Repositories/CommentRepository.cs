@@ -36,6 +36,12 @@ namespace Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
+        public async Task<Comment?> GetByIdAsync(long id)
+        {
+            var specification = new GetCommentByIdSpecification(id);
+            return await GetBySpecificationAsync(specification);
+        }
+
         public async Task<(IEnumerable<object> Items, int TotalCount)> GetListAsync(long? mangaId, long? chapterId, long? parentCommentId, int pageNumber, int pageSize)
         {
             // Get comments with pagination
@@ -65,9 +71,20 @@ namespace Infrastructure.Repositories
             return (listData, totalCount);
         }
 
-        public Task<Comment> UpdateCommentAsync(long id, UpdateCommentDto updateCommentDto)
+        public async Task<Comment> UpdateCommentAsync(long id, UpdateCommentDto updateCommentDto)
         {
-            throw new NotImplementedException();
+            var comment = await GetByIdAsync(id) ?? throw new ArgumentNullException(nameof(id), "Comment not found");
+            
+            // Keep old content if new content is null
+            if (updateCommentDto.Content != null)
+            {
+                comment.Content = updateCommentDto.Content;
+            }
+            comment.IsSpoiler = updateCommentDto.IsSpoiler;
+            comment.UpdatedAt = DateTimeOffset.UtcNow;
+
+            await UpdateAsync(comment);
+            return comment;
         }
 
         // Add any specific comment repository methods here

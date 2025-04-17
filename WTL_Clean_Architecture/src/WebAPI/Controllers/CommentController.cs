@@ -1,5 +1,6 @@
 using Application.Features.Comments.Commands.Create;
 using Application.Features.Comments.GetList;
+using Application.Features.Comments.Update;
 using Application.Models;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -51,6 +52,20 @@ namespace WebAPI.Controllers
                 Content = model.Content,
                 IsSpoiler = model.IsSpoiler,
                 ChapterId = model.ChapterId
+            };
+            
+            var result = await _mediator.Send(command);
+            return result;
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateComment(long id, [FromBody] UpdateCommentDto model)
+        {
+            var command = new UpdateCommentCommand
+            {
+                Id = id,
+                Content = model.Content,
+                IsSpoiler = model.IsSpoiler
             };
             
             var result = await _mediator.Send(command);
