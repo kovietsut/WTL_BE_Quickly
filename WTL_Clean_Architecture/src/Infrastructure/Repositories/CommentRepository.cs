@@ -31,9 +31,19 @@ namespace Infrastructure.Repositories
             return comment;
         }
 
-        public Task<bool> DeleteCommentAsync(long id)
+        public async Task<bool> DeleteCommentAsync(long id)
         {
-            throw new NotImplementedException();
+            var comment = await GetByIdAsync(id);
+            if (comment == null)
+            {
+                return false;
+            }
+
+            comment.IsDeleted = true;
+            comment.UpdatedAt = DateTimeOffset.UtcNow;
+            
+            await UpdateAsync(comment);
+            return true;
         }
 
         public async Task<Comment?> GetByIdAsync(long id)

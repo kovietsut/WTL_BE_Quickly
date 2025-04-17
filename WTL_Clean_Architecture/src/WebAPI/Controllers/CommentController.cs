@@ -1,4 +1,5 @@
 using Application.Features.Comments.Commands.Create;
+using Application.Features.Comments.Delete;
 using Application.Features.Comments.GetList;
 using Application.Features.Comments.Update;
 using Application.Models;
@@ -66,6 +67,18 @@ namespace WebAPI.Controllers
                 Id = id,
                 Content = model.Content,
                 IsSpoiler = model.IsSpoiler
+            };
+            
+            var result = await _mediator.Send(command);
+            return result;
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteComment(long id)
+        {
+            var command = new DeleteCommentCommand
+            {
+                Id = id
             };
             
             var result = await _mediator.Send(command);
