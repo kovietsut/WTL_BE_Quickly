@@ -1,8 +1,7 @@
+using Application.Features.Comments.Create;
 using Application.Interfaces;
 using Application.Models;
 using Application.Utils;
-using Domain.Entities;
-using FluentValidation.Results;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -39,7 +38,7 @@ namespace Application.Features.Comments.Commands.Create
                 IsSpoiler = request.IsSpoiler,
                 ChapterId = request.ChapterId
             };
-
+                
             var validator = new CreateCommentValidator();
             var validationResult = await validator.ValidateAsync(createCommentDto, cancellationToken);
 

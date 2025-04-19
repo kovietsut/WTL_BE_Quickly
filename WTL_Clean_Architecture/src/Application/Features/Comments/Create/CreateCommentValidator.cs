@@ -1,7 +1,7 @@
 using Application.Models;
 using FluentValidation;
 
-namespace Application.Features.Comments.Commands.Create
+namespace Application.Features.Comments.Create
 {
     public class CreateCommentValidator : AbstractValidator<CreateCommentDto>
     {

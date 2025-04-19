@@ -1,5 +1,6 @@
 using Application.Interfaces;
 using Domain.Entities;
+using Domain.Enums;
 using Domain.Persistence;
 using Domain.Specifications.CommentReactions;
 using Microsoft.AspNetCore.Http;
@@ -38,7 +39,7 @@ namespace Infrastructure.Repositories
             return await GetBySpecificationAsync(specification);
         }
 
-        public async Task<CommentReaction> CreateAsync(long commentId, int reactionType, string? reason = null)
+        public async Task<CommentReaction> CreateAsync(long commentId, CommentReactionType reactionType, string? reason = null)
         {
             var userId = long.Parse(_httpContextAccessor.HttpContext?.User?.FindFirst("Id")?.Value ?? "0");
             
@@ -52,6 +53,21 @@ namespace Infrastructure.Repositories
             };
 
             await CreateAsync(reaction);
+            return reaction;
+        }
+
+        public async Task<CommentReaction> UpdateAsync(long id, CommentReactionType reactionType, string? reason = null)
+        {
+            var reaction = await GetByIdAsync(id);
+            if (reaction == null)
+            {
+                throw new ArgumentNullException(nameof(reaction), "Comment reaction not found");
+            }
+
+            reaction.ReactionType = reactionType;
+            reaction.Reason = reason;
+
+            await UpdateAsync(reaction);
             return reaction;
         }
 

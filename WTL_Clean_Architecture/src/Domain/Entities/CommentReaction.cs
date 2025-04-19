@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities;
+﻿using Domain.Enums;
+
+namespace Domain.Entities;
 
 public partial class CommentReaction : EntityBase<long>
 {
@@ -6,7 +8,7 @@ public partial class CommentReaction : EntityBase<long>
 
     public long UserId { get; set; }
 
-    public int ReactionType { get; set; }
+    public CommentReactionType ReactionType { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
