@@ -2,9 +2,7 @@
 using Application.Models;
 using Domain.Entities;
 using Domain.Persistence;
-using Domain.Specifications.Chapter;
 using Domain.Specifications;
-using Microsoft.AspNetCore.Http;
 using Domain.Specifications.ChapterImages;
 using Microsoft.EntityFrameworkCore;
 
