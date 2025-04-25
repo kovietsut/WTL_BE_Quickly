@@ -1,4 +1,6 @@
 ﻿using Domain.Enums;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities;
 
@@ -22,6 +24,10 @@ public partial class Manga : EntityBase<long>
 
     public bool? HasAdult { get; set; }
 
+    /// <summary>
+    /// Stores the manga cover image as a base64 encoded string
+    /// </summary>
+    [Column(TypeName = "nvarchar(max)")]
     public string? CoverImage { get; set; }
 
     public long? CreatedBy { get; set; }

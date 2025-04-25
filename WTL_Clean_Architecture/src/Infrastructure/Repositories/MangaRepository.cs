@@ -9,6 +9,8 @@ using Microsoft.Extensions.Options;
 using Domain.Specifications.Mangas;
 using Domain.Mappers;
 using Domain.SpecificationModels;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Infrastructure.Repositories
 {
@@ -17,15 +19,20 @@ namespace Infrastructure.Repositories
         private readonly ErrorCode _errorCodes;
         private readonly IMangaGenreRepository _mangaGenreRepository;
         private readonly ISasTokenGenerator _sasTokenGenerator;
+        private readonly IImageRepository _imageRepository;
+        private readonly IAzureBlobRepository _azureBlobRepository;
         //private readonly IMangaInteractionService _mangaInteractionService;
         //private readonly IMangaReactionRepository _mangaInteractionRepository;
         public MangaRepository(MyDbContext dbContext, IUnitOfWork<MyDbContext> unitOfWork, IOptions<ErrorCode> errorCode,
             ISasTokenGenerator sasTokenGenerator,
-            IMangaGenreRepository mangaGenreRepository) : base(dbContext, unitOfWork)
+            IMangaGenreRepository mangaGenreRepository, IImageRepository imageRepository,
+            IAzureBlobRepository azureBlobRepository) : base(dbContext, unitOfWork)
         {
             _errorCodes = errorCode.Value;
             _mangaGenreRepository = mangaGenreRepository;
             _sasTokenGenerator = sasTokenGenerator;
+            _azureBlobRepository = azureBlobRepository;
+            _imageRepository = imageRepository;
             //_mangaInteractionService = mangaInteractionService;
             //_mangaInteractionRepository = mangaInteractionRepository;
         }
@@ -41,9 +48,8 @@ namespace Infrastructure.Repositories
                 Format = MangaMapper.ToDomainFormat((Domain.Enums.MangaFormatDto?)model.Format),
                 Region = MangaMapper.ToDomainRegion((Domain.Enums.MangaRegionDto?)model.Region),
                 ReleaseStatus = MangaMapper.ToDomainReleaseStatus((Domain.Enums.MangaReleaseStatusDto?)model.ReleaseStatus),
-                Preface = model.Preface.Trim(),
+                Preface = model.Preface?.Trim(),
                 HasAdult = model.HasAdult,
-                CoverImage = _sasTokenGenerator.GenerateCoverImageUriWithSas(model.CoverImage),
                 CreatedBy = model.CreatedBy,
                 SubAuthor = model.SubAuthor,
                 Publishor = model.Publishor,
@@ -96,21 +102,36 @@ namespace Infrastructure.Repositories
         public async Task<Manga> UpdateMangaAsync(long mangaId, UpdateMangaDto model)
         {
             var currentManga = await GetByIdAsync(mangaId) ?? throw new ArgumentNullException(nameof(mangaId), "Manga not found");
+            
             currentManga.UpdatedAt = DateTimeOffset.UtcNow;
             currentManga.Title = model.Title.Trim();
             currentManga.PublishedDate = model.PublishedDate ?? currentManga.PublishedDate;
             currentManga.Format = model.Format.HasValue ? MangaMapper.ToDomainFormat((Domain.Enums.MangaFormatDto?)model.Format) : currentManga.Format;
             currentManga.Region = model.Region.HasValue ? MangaMapper.ToDomainRegion((Domain.Enums.MangaRegionDto?)model.Region) : currentManga.Region;
             currentManga.ReleaseStatus = model.ReleaseStatus.HasValue ? MangaMapper.ToDomainReleaseStatus((Domain.Enums.MangaReleaseStatusDto?)model.ReleaseStatus) : currentManga.ReleaseStatus;
-            currentManga.Preface = model.Preface.Trim() ?? currentManga.Preface.Trim();
+            currentManga.Preface = model.Preface?.Trim() ?? currentManga.Preface?.Trim();
             currentManga.HasAdult = model.HasAdult ?? currentManga.HasAdult;
-            currentManga.CoverImage = model.CoverImage.Trim() ?? currentManga.CoverImage.Trim();
             currentManga.SubAuthor = model.SubAuthor ?? currentManga.SubAuthor;
             currentManga.Publishor = model.Publishor ?? currentManga.Publishor;
             currentManga.Artist = model.Artist ?? currentManga.Artist;
             currentManga.Translator = model.Translator ?? currentManga.Translator;
             await UpdateAsync(currentManga);
             return currentManga;
+        }
+
+        public async Task<string> UploadCoverImageAsync(long mangaId, IFormFile coverImageFile)
+        {
+            var manga = await GetByIdAsync(mangaId) ?? throw new ArgumentNullException(nameof(mangaId), "Manga not found");
+
+            if (coverImageFile == null)
+            {
+                throw new ArgumentNullException(nameof(coverImageFile), "Cover image file is required");
+            }
+
+            manga.CoverImage = await _imageRepository.ConvertImageToBase64Async(coverImageFile);
+            await UpdateAsync(manga);
+
+            return coverImageFile.Name;
         }
     }
 }

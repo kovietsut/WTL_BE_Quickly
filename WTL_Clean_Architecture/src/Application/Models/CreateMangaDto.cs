@@ -1,5 +1,6 @@
 ﻿using Domain.Enums;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
 namespace Application.Models
 {
@@ -19,8 +20,6 @@ namespace Application.Models
         public string? Preface { get; set; }
 
         public bool? HasAdult { get; set; }
-
-        public string? CoverImage { get; set; }
 
         public long? CreatedBy { get; set; }
 

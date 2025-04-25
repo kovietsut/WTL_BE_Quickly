@@ -1,4 +1,5 @@
 ﻿using Domain.Enums;
+using Microsoft.AspNetCore.Http;
 
 namespace Application.Models
 {
@@ -18,7 +19,7 @@ namespace Application.Models
 
         public bool? HasAdult { get; set; }
 
-        public string? CoverImage { get; set; }
+        public IFormFile? CoverImageFile { get; set; }
 
         public long? SubAuthor { get; set; }
 

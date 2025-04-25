@@ -3,6 +3,7 @@ using Application.Features.Manga.Delete;
 using Application.Features.Manga.GetById;
 using Application.Features.Manga.GetList;
 using Application.Features.Manga.Update;
+using Application.Features.Manga.UploadCover;
 using Application.Models;
 using Domain.SpecificationModels;
 using MediatR;
@@ -54,7 +55,6 @@ namespace WebAPI.Controllers
                 ReleaseStatus = (Domain.Enums.MangaReleaseStatus?)model.ReleaseStatus,
                 Preface = model.Preface,
                 HasAdult = model.HasAdult,
-                CoverImage = model.CoverImage,
                 CreatedBy = model.CreatedBy,
                 SubAuthor = model.SubAuthor,
                 Publishor = model.Publishor,
@@ -79,7 +79,6 @@ namespace WebAPI.Controllers
                 ReleaseStatus = (Domain.Enums.MangaReleaseStatus?)model.ReleaseStatus,
                 Preface = model.Preface,
                 HasAdult = model.HasAdult,
-                CoverImage = model.CoverImage,
                 SubAuthor = model.SubAuthor,
                 Publishor = model.Publishor,
                 Artist = model.Artist,
@@ -95,6 +94,18 @@ namespace WebAPI.Controllers
         {
             var query = new DeleteMangaCommand(mangaId);
             var result = await _mediator.Send(query);
+            return result;
+        }
+
+        [HttpPost("{mangaId}/cover")]
+        public async Task<IActionResult> UploadCover(long mangaId, IFormFile coverImageFile)
+        {
+            var command = new UploadMangaCoverCommand
+            {
+                MangaId = mangaId,
+                CoverImageFile = coverImageFile
+            };
+            var result = await _mediator.Send(command);
             return result;
         }
     }

@@ -36,7 +36,8 @@ namespace Infrastructure
            .AddScoped<IFeaturedCollectionPermissionRepository, FeaturedCollectionPermissionRepository>()
            .AddScoped<IMangaInteractionRepository, MangaInteractionRepository>()
            .AddScoped<ICommentRepository, CommentRepository>()
-           .AddScoped<ICommentReactionRepository, CommentReactionRepository>();
+           .AddScoped<ICommentReactionRepository, CommentReactionRepository>()
+           .AddScoped<IImageRepository, ImageRepository>();
             ;
             return services;
         }

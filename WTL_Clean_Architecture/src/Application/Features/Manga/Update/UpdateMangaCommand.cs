@@ -27,8 +27,6 @@ namespace Application.Features.Manga.Update
 
         public bool? HasAdult { get; set; }
 
-        public string? CoverImage { get; set; }
-
         public long? SubAuthor { get; set; }
 
         public long? Publishor { get; set; }
@@ -63,16 +61,6 @@ namespace Application.Features.Manga.Update
         {
             try
             {
-                // Validate user existence if IDs are provided
-                if (query.Artist.HasValue)
-                {
-                    var artist = await _userRepository.GetByIdAsync(query.Artist.Value);
-                    if (artist == null)
-                    {
-                        return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", "Artist user does not exist");
-                    }
-                }
-
                 if (query.SubAuthor.HasValue)
                 {
                     var subAuthor = await _userRepository.GetByIdAsync(query.SubAuthor.Value);
@@ -88,6 +76,15 @@ namespace Application.Features.Manga.Update
                     if (publishor == null)
                     {
                         return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", "Publishor user does not exist");
+                    }
+                }
+
+                if (query.Artist.HasValue)
+                {
+                    var artist = await _userRepository.GetByIdAsync(query.Artist.Value);
+                    if (artist == null)
+                    {
+                        return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", "Artist user does not exist");
                     }
                 }
 
@@ -109,7 +106,6 @@ namespace Application.Features.Manga.Update
                     ReleaseStatus = (MangaReleaseStatus?)query.ReleaseStatus,
                     Preface = query.Preface,
                     HasAdult = query.HasAdult,
-                    CoverImage = query.CoverImage,
                     SubAuthor = query.SubAuthor,
                     Publishor = query.Publishor,
                     Artist = query.Artist,

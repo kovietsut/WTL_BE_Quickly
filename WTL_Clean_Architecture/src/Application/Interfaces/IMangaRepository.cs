@@ -1,6 +1,7 @@
 ﻿using Application.Models;
 using Domain.Entities;
 using Domain.SpecificationModels;
+using Microsoft.AspNetCore.Http;
 
 namespace Application.Interfaces
 {
@@ -11,5 +12,6 @@ namespace Application.Interfaces
         Task<Manga> CreateMangaAsync(CreateMangaDto model);
         Task<Manga> UpdateMangaAsync(long mangaId, UpdateMangaDto model);
         Task<Manga?> DeleteMangaAsync(long id);
+        Task<string> UploadCoverImageAsync(long mangaId, IFormFile coverImageFile);
     }
 }

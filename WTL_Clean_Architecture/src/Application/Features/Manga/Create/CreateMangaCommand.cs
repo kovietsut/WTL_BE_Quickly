@@ -19,7 +19,6 @@ namespace Application.Features.Manga.Create
         public MangaReleaseStatus? ReleaseStatus { get; set; }
         public string? Preface { get; set; }
         public bool? HasAdult { get; set; }
-        public string? CoverImage { get; set; }
         public long? CreatedBy { get; set; }
         public long? SubAuthor { get; set; }
         public long? Publishor { get; set; }
@@ -57,20 +56,20 @@ namespace Application.Features.Manga.Create
                     ReleaseStatus = (MangaReleaseStatus?)query.ReleaseStatus,
                     Preface = query.Preface,
                     HasAdult = query.HasAdult,
-                    CoverImage = query.CoverImage,
                     CreatedBy = query.CreatedBy,
                     SubAuthor = query.SubAuthor,
                     Publishor = query.Publishor,
                     Artist = query.Artist,
-                    Translator = query.Translator
+                    Translator = query.Translator,
+                    GenreIds = query.GenreIds
                 };
-                var validator = new CreateMangaValidator(); 
+                var validator = new CreateMangaValidator();
                 var check = await validator.ValidateAsync(createMangaDto, cancellationToken);
                 if (!check.IsValid)
                 {
                     return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", check.Errors);
                 }
-                
+
                 var manga = await _repository.CreateMangaAsync(createMangaDto);
                 
                 if (query.GenreIds != null && query.GenreIds.Any())
