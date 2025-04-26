@@ -1260,7 +1260,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 7, 1, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 6, 25, 0, 0, 0, DateTimeKind.Utc), // Tuesday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1281,7 +1281,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 7, 8, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 6, 26, 0, 0, 0, DateTimeKind.Utc), // Wednesday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1302,7 +1302,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 7, 15, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 6, 27, 0, 0, 0, DateTimeKind.Utc), // Thursday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1323,7 +1323,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 7, 22, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 6, 28, 0, 0, 0, DateTimeKind.Utc), // Friday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1344,7 +1344,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 7, 29, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 6, 29, 0, 0, 0, DateTimeKind.Utc), // Saturday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1365,7 +1365,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 8, 5, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 6, 30, 0, 0, 0, DateTimeKind.Utc), // Sunday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1381,12 +1381,12 @@ public static class SeedData
             new Manga
             {
                 Id = 44,
-                Title = "Solo Leveling",
-                Preface = "The story of Sung Jin-Woo, the weakest of all hunters.",
+                Title = "Black Clover",
+                Preface = "A young boy born without magic strives to become the Wizard King.",
                 Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 8, 12, 0, 0, 0, DateTimeKind.Utc), // Monday
+                Region = MangaRegion.Japan,
+                ReleaseStatus = MangaReleaseStatus.OnGoing,
+                PublishedDate = new DateTime(2024, 7, 1, 0, 0, 0, DateTimeKind.Utc), // Monday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1402,12 +1402,12 @@ public static class SeedData
             new Manga
             {
                 Id = 45,
-                Title = "Demon Slayer",
-                Preface = "A young boy fights demons to save his sister.",
+                Title = "Tokyo Ghoul",
+                Preface = "A college student becomes a half-ghoul after a chance encounter.",
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 8, 19, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 7, 2, 0, 0, 0, DateTimeKind.Utc), // Tuesday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1416,7 +1416,7 @@ public static class SeedData
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
                 Publishor = 2,
-                Artist = 1,
+                Artist = 2,
                 Translator = 2,
                 SubAuthor = 2
             },
@@ -1428,7 +1428,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 8, 26, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 7, 3, 0, 0, 0, DateTimeKind.Utc), // Wednesday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1449,7 +1449,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 9, 2, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 7, 4, 0, 0, 0, DateTimeKind.Utc), // Thursday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1470,7 +1470,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 9, 9, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 7, 5, 0, 0, 0, DateTimeKind.Utc), // Friday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1491,7 +1491,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 9, 16, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 7, 6, 0, 0, 0, DateTimeKind.Utc), // Saturday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
@@ -1512,7 +1512,7 @@ public static class SeedData
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 9, 23, 0, 0, 0, DateTimeKind.Utc), // Monday
+                PublishedDate = new DateTime(2024, 7, 7, 0, 0, 0, DateTimeKind.Utc), // Sunday
                 CreatedBy = 1,
                 ModifiedBy = 1,
                 CoverImage = COVER_IMAGE_URL,
