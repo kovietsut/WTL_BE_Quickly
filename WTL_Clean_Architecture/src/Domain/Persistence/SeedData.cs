@@ -104,6 +104,102 @@ public static class SeedData
                 IsDeleted = false, 
                 CreatedAt = SEED_DATE, 
                 UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 9, 
+                Name = "Mystery", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 10, 
+                Name = "Thriller", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 11, 
+                Name = "Slice of Life", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 12, 
+                Name = "Sports", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 13, 
+                Name = "Supernatural", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 14, 
+                Name = "Psychological", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 15, 
+                Name = "Martial Arts", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 16, 
+                Name = "School Life", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 17, 
+                Name = "Music", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 18, 
+                Name = "Cooking", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 19, 
+                Name = "Historical", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
+            },
+            new Genere 
+            { 
+                Id = 20, 
+                Name = "Military", 
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
             }
         );
 
@@ -1535,14 +1631,14 @@ public static class SeedData
                 Id = 1, 
                 MangaId = 1, 
                 GenreId = 1, 
-                IsDeleted = false,
+                IsDeleted = false, 
             },
             new MangaGenre 
             { 
                 Id = 2, 
                 MangaId = 1, 
                 GenreId = 2, 
-                IsDeleted = false,
+                IsDeleted = false, 
             },
             new MangaGenre 
             { 
@@ -1557,7 +1653,7 @@ public static class SeedData
                 Id = 4, 
                 MangaId = 2, 
                 GenreId = 1, 
-                IsDeleted = false,
+                IsDeleted = false, 
             },
             new MangaGenre 
             { 
@@ -2481,8 +2577,8 @@ public static class SeedData
                 MangaId = 1, // One Piece
                 ChapterId = null,
                 InteractionType = MangaInteractionType.Like,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
             },
             new MangaInteraction
             {
@@ -2776,9 +2872,9 @@ public static class SeedData
             },
             // Attack on Titan Chapter 1 Comments
             new Comment
-            {
-                Id = 4,
-                MangaId = 2,
+            { 
+                Id = 4, 
+                MangaId = 2, 
                 ChapterId = 3,
                 UserId = 2,
                 Content = "The tension in this chapter is incredible!",
@@ -3219,9 +3315,9 @@ public static class SeedData
                 IsPublish = true,
                 CreatedBy = 1,
                 ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
             },
             new FeaturedCollection
             {
@@ -3260,52 +3356,52 @@ public static class SeedData
                 UpdatedAt = SEED_DATE
             },
             new FeaturedCollection
-            {
-                Id = 5,
+            { 
+                Id = 5, 
                 Name = "The Best Horror Comics",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
                 CreatedBy = 1,
                 ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
             },
             new FeaturedCollection
-            {
-                Id = 6,
+            { 
+                Id = 6, 
                 Name = "The Best Fantasy Comics",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
                 CreatedBy = 1,
                 ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
             },
             new FeaturedCollection
-            {
-                Id = 7,
+            { 
+                Id = 7, 
                 Name = "The Best Dramatic Comics",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
                 CreatedBy = 1,
                 ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
             },
             new FeaturedCollection
-            {
-                Id = 8,
+            { 
+                Id = 8, 
                 Name = "The Best Romantic Comics",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
                 CreatedBy = 1,
                 ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false, 
+                CreatedAt = SEED_DATE, 
+                UpdatedAt = SEED_DATE 
             },
             new FeaturedCollection
             {
