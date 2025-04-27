@@ -1625,248 +1625,205 @@ public static class SeedData
 
         // Seed MangaGenres
         modelBuilder.Entity<MangaGenre>().HasData(
-            // One Piece genres
-            new MangaGenre 
-            { 
-                Id = 1, 
-                MangaId = 1, 
-                GenreId = 1, 
-                IsDeleted = false, 
-            },
-            new MangaGenre 
-            { 
-                Id = 2, 
-                MangaId = 1, 
-                GenreId = 2, 
-                IsDeleted = false, 
-            },
-            new MangaGenre 
-            { 
-                Id = 3, 
-                MangaId = 1, 
-                GenreId = 3, 
-                IsDeleted = false,
-            },
-            // Attack on Titan genres
-            new MangaGenre 
-            { 
-                Id = 4, 
-                MangaId = 2, 
-                GenreId = 1, 
-                IsDeleted = false, 
-            },
-            new MangaGenre 
-            { 
-                Id = 5, 
-                MangaId = 2, 
-                GenreId = 4, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 6, 
-                MangaId = 2, 
-                GenreId = 6, 
-                IsDeleted = false,
-            },
-            // Solo Leveling genres
-            new MangaGenre 
-            { 
-                Id = 7, 
-                MangaId = 3, 
-                GenreId = 1, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 8, 
-                MangaId = 3, 
-                GenreId = 5, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 9, 
-                MangaId = 3, 
-                GenreId = 8, 
-                IsDeleted = false,
-            },
-            // Demon Slayer genres
-            new MangaGenre 
-            { 
-                Id = 10, 
-                MangaId = 4, 
-                GenreId = 1, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 11, 
-                MangaId = 4, 
-                GenreId = 5, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 12, 
-                MangaId = 4, 
-                GenreId = 6, 
-                IsDeleted = false,
-            },
-            // Tower of God genres
-            new MangaGenre 
-            { 
-                Id = 13, 
-                MangaId = 5, 
-                GenreId = 1, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 14, 
-                MangaId = 5, 
-                GenreId = 2, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 15, 
-                MangaId = 5, 
-                GenreId = 5, 
-                IsDeleted = false,
-            },
-            // My Hero Academia genres
-            new MangaGenre 
-            { 
-                Id = 16, 
-                MangaId = 6, 
-                GenreId = 1, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 17, 
-                MangaId = 6, 
-                GenreId = 3, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 18, 
-                MangaId = 6, 
-                GenreId = 8, 
-                IsDeleted = false,
-            },
-            // The Beginning After The End genres
-            new MangaGenre 
-            { 
-                Id = 19, 
-                MangaId = 7, 
-                GenreId = 1, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 20, 
-                MangaId = 7, 
-                GenreId = 5, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 21, 
-                MangaId = 7, 
-                GenreId = 7, 
-                IsDeleted = false,
-            },
-            // Jujutsu Kaisen genres
-            new MangaGenre 
-            { 
-                Id = 22, 
-                MangaId = 8, 
-                GenreId = 1, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 23, 
-                MangaId = 8, 
-                GenreId = 5, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 24, 
-                MangaId = 8, 
-                GenreId = 6, 
-                IsDeleted = false,
-            },
-            // The God of High School genres
-            new MangaGenre 
-            { 
-                Id = 25, 
-                MangaId = 9, 
-                GenreId = 1, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 26, 
-                MangaId = 9, 
-                GenreId = 2, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 27, 
-                MangaId = 9, 
-                GenreId = 3, 
-                IsDeleted = false,
-            },
-            // Chainsaw Man genres
-            new MangaGenre 
-            { 
-                Id = 28, 
-                MangaId = 10, 
-                GenreId = 1, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 29, 
-                MangaId = 10, 
-                GenreId = 6, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 30, 
-                MangaId = 10, 
-                GenreId = 8, 
-                IsDeleted = false,
-            },
-            // Omniscient Reader genres
-            new MangaGenre 
-            { 
-                Id = 31, 
-                MangaId = 11, 
-                GenreId = 1, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 32, 
-                MangaId = 11, 
-                GenreId = 4, 
-                IsDeleted = false,
-            },
-            new MangaGenre 
-            { 
-                Id = 33, 
-                MangaId = 11, 
-                GenreId = 8, 
-                IsDeleted = false,
-            }
+            // One Piece (ID: 1) genres
+            new MangaGenre { Id = 1, MangaId = 1, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 2, MangaId = 1, GenreId = 2, IsDeleted = false }, // Adventure
+
+            // Attack on Titan (ID: 2) genres
+            new MangaGenre { Id = 3, MangaId = 2, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 4, MangaId = 2, GenreId = 4, IsDeleted = false }, // Drama
+
+            // Solo Leveling (ID: 3) genres
+            new MangaGenre { Id = 5, MangaId = 3, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 6, MangaId = 3, GenreId = 5, IsDeleted = false }, // Fantasy
+
+            // Demon Slayer (ID: 4) genres
+            new MangaGenre { Id = 7, MangaId = 4, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 8, MangaId = 4, GenreId = 6, IsDeleted = false }, // Horror
+
+            // Tower of God (ID: 5) genres
+            new MangaGenre { Id = 9, MangaId = 5, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 10, MangaId = 5, GenreId = 7, IsDeleted = false }, // Mystery
+
+            // My Hero Academia (ID: 6) genres
+            new MangaGenre { Id = 11, MangaId = 6, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 12, MangaId = 6, GenreId = 8, IsDeleted = false }, // Supernatural
+
+            // The Beginning After The End (ID: 7) genres
+            new MangaGenre { Id = 13, MangaId = 7, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 14, MangaId = 7, GenreId = 9, IsDeleted = false }, // Romance
+
+            // Jujutsu Kaisen (ID: 8) genres
+            new MangaGenre { Id = 15, MangaId = 8, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 16, MangaId = 8, GenreId = 10, IsDeleted = false }, // School
+
+            // The God of High School (ID: 9) genres
+            new MangaGenre { Id = 17, MangaId = 9, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 18, MangaId = 9, GenreId = 11, IsDeleted = false }, // Martial Arts
+
+            // Chainsaw Man (ID: 10) genres
+            new MangaGenre { Id = 19, MangaId = 10, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 20, MangaId = 10, GenreId = 12, IsDeleted = false }, // Psychological
+
+            // Omniscient Reader (ID: 11) genres
+            new MangaGenre { Id = 21, MangaId = 11, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 22, MangaId = 11, GenreId = 13, IsDeleted = false }, // Sci-Fi
+
+            // Dragon Ball Super (ID: 12) genres
+            new MangaGenre { Id = 23, MangaId = 12, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 24, MangaId = 12, GenreId = 14, IsDeleted = false }, // Sports
+
+            // The Promised Neverland (ID: 13) genres
+            new MangaGenre { Id = 25, MangaId = 13, GenreId = 4, IsDeleted = false }, // Drama
+            new MangaGenre { Id = 26, MangaId = 13, GenreId = 15, IsDeleted = false }, // Thriller
+
+            // Tower of God (ID: 14) genres
+            new MangaGenre { Id = 27, MangaId = 14, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 28, MangaId = 14, GenreId = 16, IsDeleted = false }, // Game
+
+            // Black Clover (ID: 15) genres
+            new MangaGenre { Id = 29, MangaId = 15, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 30, MangaId = 15, GenreId = 17, IsDeleted = false }, // Magic
+
+            // Solo Leveling (ID: 16) genres
+            new MangaGenre { Id = 31, MangaId = 16, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 32, MangaId = 16, GenreId = 18, IsDeleted = false }, // Virtual Reality
+
+            // Dr. Stone (ID: 17) genres
+            new MangaGenre { Id = 33, MangaId = 17, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 34, MangaId = 17, GenreId = 19, IsDeleted = false }, // Historical
+
+            // The Beginning After The End (ID: 18) genres
+            new MangaGenre { Id = 35, MangaId = 18, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 36, MangaId = 18, GenreId = 20, IsDeleted = false }, // Isekai
+
+            // Tokyo Ghoul (ID: 19) genres
+            new MangaGenre { Id = 37, MangaId = 19, GenreId = 4, IsDeleted = false }, // Drama
+            new MangaGenre { Id = 38, MangaId = 19, GenreId = 6, IsDeleted = false }, // Horror
+
+            // The God of High School (ID: 20) genres
+            new MangaGenre { Id = 39, MangaId = 20, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 40, MangaId = 20, GenreId = 11, IsDeleted = false }, // Martial Arts
+
+            // Hunter x Hunter (ID: 21) genres
+            new MangaGenre { Id = 41, MangaId = 21, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 42, MangaId = 21, GenreId = 7, IsDeleted = false }, // Mystery
+
+            // Death Note (ID: 22) genres
+            new MangaGenre { Id = 43, MangaId = 22, GenreId = 4, IsDeleted = false }, // Drama
+            new MangaGenre { Id = 44, MangaId = 22, GenreId = 12, IsDeleted = false }, // Psychological
+
+            // Hunter x Hunter (ID: 23) genres
+            new MangaGenre { Id = 45, MangaId = 23, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 46, MangaId = 23, GenreId = 8, IsDeleted = false }, // Supernatural
+
+            // Tales of Demons and Gods (ID: 24) genres
+            new MangaGenre { Id = 47, MangaId = 24, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 48, MangaId = 24, GenreId = 17, IsDeleted = false }, // Magic
+
+            // Bleach (ID: 25) genres
+            new MangaGenre { Id = 49, MangaId = 25, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 50, MangaId = 25, GenreId = 8, IsDeleted = false }, // Supernatural
+
+            // The Legendary Moonlight Sculptor (ID: 26) genres
+            new MangaGenre { Id = 51, MangaId = 26, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 52, MangaId = 26, GenreId = 18, IsDeleted = false }, // Virtual Reality
+
+            // Naruto (ID: 27) genres
+            new MangaGenre { Id = 53, MangaId = 27, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 54, MangaId = 27, GenreId = 10, IsDeleted = false }, // School
+
+            // The Gamer (ID: 28) genres
+            new MangaGenre { Id = 55, MangaId = 28, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 56, MangaId = 28, GenreId = 16, IsDeleted = false }, // Game
+
+            // Fullmetal Alchemist (ID: 29) genres
+            new MangaGenre { Id = 57, MangaId = 29, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 58, MangaId = 29, GenreId = 13, IsDeleted = false }, // Sci-Fi
+
+            // Tower of God (ID: 30) genres
+            new MangaGenre { Id = 59, MangaId = 30, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 60, MangaId = 30, GenreId = 7, IsDeleted = false }, // Mystery
+
+            // Attack on Titan (ID: 31) genres
+            new MangaGenre { Id = 61, MangaId = 31, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 62, MangaId = 31, GenreId = 15, IsDeleted = false }, // Thriller
+
+            // The Beginning After The End (ID: 32) genres
+            new MangaGenre { Id = 63, MangaId = 32, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 64, MangaId = 32, GenreId = 9, IsDeleted = false }, // Romance
+
+            // One Punch Man (ID: 33) genres
+            new MangaGenre { Id = 65, MangaId = 33, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 66, MangaId = 33, GenreId = 3, IsDeleted = false }, // Comedy
+
+            // Solo Leveling (ID: 34) genres
+            new MangaGenre { Id = 67, MangaId = 34, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 68, MangaId = 34, GenreId = 18, IsDeleted = false }, // Virtual Reality
+
+            // Demon Slayer (ID: 35) genres
+            new MangaGenre { Id = 69, MangaId = 35, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 70, MangaId = 35, GenreId = 6, IsDeleted = false }, // Horror
+
+            // The God of High School (ID: 36) genres
+            new MangaGenre { Id = 71, MangaId = 36, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 72, MangaId = 36, GenreId = 11, IsDeleted = false }, // Martial Arts
+
+            // Jujutsu Kaisen (ID: 37) genres
+            new MangaGenre { Id = 73, MangaId = 37, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 74, MangaId = 37, GenreId = 8, IsDeleted = false }, // Supernatural
+
+            // Death Note (ID: 38) genres
+            new MangaGenre { Id = 75, MangaId = 38, GenreId = 4, IsDeleted = false }, // Drama
+            new MangaGenre { Id = 76, MangaId = 38, GenreId = 12, IsDeleted = false }, // Psychological
+
+            // Hunter x Hunter (ID: 39) genres
+            new MangaGenre { Id = 77, MangaId = 39, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 78, MangaId = 39, GenreId = 7, IsDeleted = false }, // Mystery
+
+            // Tales of Demons and Gods (ID: 40) genres
+            new MangaGenre { Id = 79, MangaId = 40, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 80, MangaId = 40, GenreId = 17, IsDeleted = false }, // Magic
+
+            // Chainsaw Man (ID: 41) genres
+            new MangaGenre { Id = 81, MangaId = 41, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 82, MangaId = 41, GenreId = 12, IsDeleted = false }, // Psychological
+
+            // Bleach (ID: 42) genres
+            new MangaGenre { Id = 83, MangaId = 42, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 84, MangaId = 42, GenreId = 8, IsDeleted = false }, // Supernatural
+
+            // Naruto (ID: 43) genres
+            new MangaGenre { Id = 85, MangaId = 43, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 86, MangaId = 43, GenreId = 10, IsDeleted = false }, // School
+
+            // The Gamer (ID: 44) genres
+            new MangaGenre { Id = 87, MangaId = 44, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 88, MangaId = 44, GenreId = 16, IsDeleted = false }, // Game
+
+            // Fullmetal Alchemist (ID: 45) genres
+            new MangaGenre { Id = 89, MangaId = 45, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 90, MangaId = 45, GenreId = 13, IsDeleted = false }, // Sci-Fi
+
+            // The God of High School (ID: 46) genres
+            new MangaGenre { Id = 91, MangaId = 46, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 92, MangaId = 46, GenreId = 11, IsDeleted = false }, // Martial Arts
+
+            // Hunter x Hunter (ID: 47) genres
+            new MangaGenre { Id = 93, MangaId = 47, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 94, MangaId = 47, GenreId = 7, IsDeleted = false }, // Mystery
+
+            // Death Note (ID: 48) genres
+            new MangaGenre { Id = 95, MangaId = 48, GenreId = 4, IsDeleted = false }, // Drama
+            new MangaGenre { Id = 96, MangaId = 48, GenreId = 12, IsDeleted = false }, // Psychological
+
+            // Hunter x Hunter (ID: 49) genres
+            new MangaGenre { Id = 97, MangaId = 49, GenreId = 1, IsDeleted = false }, // Action
+            new MangaGenre { Id = 98, MangaId = 49, GenreId = 8, IsDeleted = false }, // Supernatural
+
+            // Tales of Demons and Gods (ID: 50) genres
+            new MangaGenre { Id = 99, MangaId = 50, GenreId = 2, IsDeleted = false }, // Adventure
+            new MangaGenre { Id = 100, MangaId = 50, GenreId = 17, IsDeleted = false } // Magic
         );
 
         // Seed Chapters
