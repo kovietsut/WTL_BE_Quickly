@@ -9,9 +9,9 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.FeaturedCollections.GetById
 {
-    public class GetFeaturedCollectionByIdQuery(long id) : IRequest<IActionResult>
+    public class GetFeaturedCollectionByIdQuery(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class GetFeaturedCollectionByIdQueryHandler : IRequestHandler<GetFeaturedCollectionByIdQuery, IActionResult>
@@ -23,7 +23,7 @@ namespace Application.Features.FeaturedCollections.GetById
         private readonly IAuthenticationRepository _authenticationRepository;
 
         public GetFeaturedCollectionByIdQueryHandler(
-            IFeaturedCollectionRepository repository, 
+            IFeaturedCollectionRepository repository,
             IOptions<ErrorCode> errorCodes,
             IUserRepository userRepository,
             IFeaturedCollectionPermissionRepository permissionRepository,
@@ -55,8 +55,8 @@ namespace Application.Features.FeaturedCollections.GetById
                 if (!hasAccess)
                 {
                     var permission = await _permissionRepository.GetFeaturedCollectionPermissionById(collection.Id, currentUserId);
-                    hasAccess = permission != null && !permission.IsDeleted && 
-                               (permission.PermissionType == CollectionPermissionType.Read || 
+                    hasAccess = permission != null && !permission.IsDeleted &&
+                               (permission.PermissionType == CollectionPermissionType.Read ||
                                 permission.PermissionType == CollectionPermissionType.Write);
                 }
 

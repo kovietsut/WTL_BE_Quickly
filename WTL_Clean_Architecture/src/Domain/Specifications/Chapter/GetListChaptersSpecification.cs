@@ -2,7 +2,7 @@
 
 namespace Domain.Specifications.Chapter
 {
-    public class GetListChaptersSpecification : Specification<ChapterEntity, long>
+    public class GetListChaptersSpecification : Specification<ChapterEntity, string>
     {
         public GetListChaptersSpecification(int? pageNumber, int? pageSize, string? searchText)
             : base(chapter => chapter.IsDeleted != true &&

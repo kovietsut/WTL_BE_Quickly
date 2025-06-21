@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class CommentRepository : RepositoryBase<Comment, long, MyDbContext>, ICommentRepository
+    public class CommentRepository : RepositoryBase<Comment, string, MyDbContext>, ICommentRepository
     {
         public CommentRepository(MyDbContext dbContext, IUnitOfWork<MyDbContext> unitOfWork) 
             : base(dbContext, unitOfWork)
@@ -18,6 +18,7 @@ namespace Infrastructure.Repositories
         {
             var comment = new Comment
             {
+                Id = Guid.NewGuid().ToString(),
                 MangaId = model.MangaId,
                 UserId = model.UserId,
                 ParentCommentId = model.ParentCommentId,
@@ -31,9 +32,9 @@ namespace Infrastructure.Repositories
             return comment;
         }
 
-        public async Task<bool> DeleteCommentAsync(long id)
+        public async Task<bool> DeleteCommentAsync(string id)
         {
-            var comment = await GetByIdAsync(id);
+            var comment = await GetCommendByIdAsync(id);
             if (comment == null)
             {
                 return false;
@@ -46,7 +47,7 @@ namespace Infrastructure.Repositories
             return true;
         }
 
-        public async Task<bool> DeleteChildCommentsAsync(long parentCommentId)
+        public async Task<bool> DeleteChildCommentsAsync(string parentCommentId)
         {
             // Get all child comments using the specification
             var specification = new GetChildCommentsSpecification(parentCommentId);
@@ -69,13 +70,13 @@ namespace Infrastructure.Repositories
             return true;
         }
 
-        public async Task<Comment?> GetByIdAsync(long id)
+        public async Task<Comment> GetCommendByIdAsync(string id)
         {
             var specification = new GetCommentByIdSpecification(id);
-            return await GetBySpecificationAsync(specification);
+            return await GetBySpecificationAsync(specification) ?? throw new ArgumentNullException(nameof(id), "Comment not found");
         }
 
-        public async Task<(IEnumerable<object> Items, int TotalCount)> GetListAsync(long? mangaId, long? chapterId, long? parentCommentId, int pageNumber, int pageSize)
+        public async Task<(IEnumerable<object> Items, int TotalCount)> GetListAsync(string? mangaId, string? chapterId, string? parentCommentId, int pageNumber, int pageSize)
         {
             // Get comments with pagination
             var specification = new GetListCommentsSpecification(mangaId, chapterId, parentCommentId, pageNumber, pageSize);
@@ -104,9 +105,9 @@ namespace Infrastructure.Repositories
             return (listData, totalCount);
         }
 
-        public async Task<Comment> UpdateCommentAsync(long id, UpdateCommentDto updateCommentDto)
+        public async Task<Comment> UpdateCommentAsync(string id, UpdateCommentDto updateCommentDto)
         {
-            var comment = await GetByIdAsync(id) ?? throw new ArgumentNullException(nameof(id), "Comment not found");
+            var comment = await GetCommendByIdAsync(id) ?? throw new ArgumentNullException(nameof(id), "Comment not found");
             
             // Keep old content if new content is null
             if (updateCommentDto.Content != null)

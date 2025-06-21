@@ -11,9 +11,9 @@ namespace Application.Features.MangaInteractions.GetList
 {
     public class GetMangaInteractionListQuery : IRequest<IActionResult>
     {
-        public long UserId { get; set; }
-        public long? MangaId { get; set; }
-        public long? ChapterId { get; set; }
+        public required string UserId { get; set; }
+        public string? MangaId { get; set; }
+        public string? ChapterId { get; set; }
         public MangaInteractionType? InteractionType { get; set; }
         public int? PageNumber { get; set; }
         public int? PageSize { get; set; }
@@ -37,7 +37,7 @@ namespace Application.Features.MangaInteractions.GetList
             try
             {
                 // Validate input parameters
-                if (query.UserId <= 0)
+                if (query.UserId == null)
                 {
                     return JsonUtil.Error(StatusCodes.Status400BadRequest, 
                         _errorCodes?.Status400?.BadRequest, 

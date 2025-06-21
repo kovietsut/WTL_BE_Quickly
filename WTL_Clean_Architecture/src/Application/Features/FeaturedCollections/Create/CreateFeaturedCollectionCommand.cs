@@ -11,7 +11,7 @@ namespace Application.Features.FeaturedCollections.Create
 {
     public class CreateFeaturedCollectionCommand : IRequest<IActionResult>
     {
-        public string Name { get; set; }
+        public required string Name { get; set; }
         public string? CoverImage { get; set; }
         public bool? IsPublish { get; set; }
     }

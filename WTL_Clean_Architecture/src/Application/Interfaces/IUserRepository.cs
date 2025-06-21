@@ -3,14 +3,14 @@ using Domain.Entities;
 
 namespace Application.Interfaces
 {
-    public interface IUserRepository : IRepositoryBase<User, long>
+    public interface IUserRepository : IRepositoryBase<User, string>
     {
-        Task<User?> GetUserById(long id);
+        Task<User?> GetUserById(string id);
         Task<User?> GetUserByEmail(string email);
-        Task<User?> GetUserByPhoneNumber(string phoneNumber);
-        Task<List<User>> GetList(int? pageNumber, int? pageSize, string? searchText, int? roleId);
+        Task<User?> GetUserByPhoneNumber(string? phoneNumber);
+        Task<List<User>> GetList(int? pageNumber, int? pageSize, string? searchText, string? roleId);
         Task<User> CreateUserAsync(CreateUserDto model);
-        Task<User> UpdateUserAsync(long userId, UpdateUserDto model);
-        Task<User?> DeleteUserAsync(long id);
+        Task<User> UpdateUserAsync(string userId, UpdateUserDto model);
+        Task<User?> DeleteUserAsync(string id);
     }
 }

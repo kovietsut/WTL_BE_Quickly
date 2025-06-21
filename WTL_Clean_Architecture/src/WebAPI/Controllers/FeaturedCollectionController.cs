@@ -31,7 +31,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(long id)
+        public async Task<IActionResult> Get(string id)
         {
             var query = new GetFeaturedCollectionByIdQuery(id);
             var result = await _mediator.Send(query);
@@ -52,7 +52,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{chapterId}")]
-        public async Task<IActionResult> UpdateFeaturedCollectionAsync(long chapterId, [FromBody] UpdateFeaturedCollectionDto model)
+        public async Task<IActionResult> UpdateFeaturedCollectionAsync(string chapterId, [FromBody] UpdateFeaturedCollectionDto model)
         {
             var query = new UpdateFeaturedCollectionCommand()
             {
@@ -66,7 +66,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{collectionId}")]
-        public async Task<IActionResult> DeleteFeaturedCollectionAsync(long collectionId)
+        public async Task<IActionResult> DeleteFeaturedCollectionAsync(string collectionId)
         {
             var query = new DeleteFeaturedCollectionCommand(collectionId);
             var result = await _mediator.Send(query);

@@ -63,7 +63,7 @@ namespace WebAPI.Controllers
 
 
         [HttpPut("{userId}/profile")]
-        public async Task<IActionResult> UpdateEmail(int userId, [FromBody] UpdateUserDto model)
+        public async Task<IActionResult> UpdateEmail(string userId, [FromBody] UpdateUserDto model)
         {
             var query = new UpdateUserCommand()
             {
@@ -80,7 +80,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{userId}/change-password")]
-        public async Task<IActionResult> ChangePassword(int userId, [FromBody] PasswordDto model)
+        public async Task<IActionResult> ChangePassword(string userId, [FromBody] PasswordDto model)
         {
             var query = new ChangePasswordCommand()
             {

@@ -13,8 +13,8 @@ namespace Application.Features.FeaturedCollections.Create
 {
     public class CreateFeaturedCollectionMangaCommand : IRequest<IActionResult>
     {
-        public long MangaId { get; set; }
-        public long FeaturedCollectionId { get; set; }
+        public required string MangaId { get; set; }
+        public required string FeaturedCollectionId { get; set; }
     }
 
     public class CreateFeaturedCollectionMangaCommandHandler(IFeaturedCollectionMangaRepository repository, IMangaRepository mangaRepository,

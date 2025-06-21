@@ -38,11 +38,11 @@ namespace Infrastructure.Repositories
             {
                 if (string.IsNullOrEmpty(folderName))
                 {
-                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "Folder name is required");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.Notfound, "Folder name is required");
                 }
                 if (string.IsNullOrEmpty(fileName))
                 {
-                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "File name is required");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.Notfound, "File name is required");
                 }
                 var file = _blobServiceClient.GetBlobContainerClient(folderName).GetBlobClient(fileName);
                 if (await file.ExistsAsync())
@@ -51,7 +51,7 @@ namespace Infrastructure.Repositories
                     var blobUriWithSas = new Uri(file.Uri + "?" + sasToken).ToString();
                     var data = await file.OpenReadAsync();
                     var content = await file.DownloadContentAsync();
-                    var contentType = content?.Value?.Details?.ContentType;
+                    var contentType = content?.Value?.Details?.ContentType ?? "application/octet-stream";
                     return JsonUtil.Success(new
                     {
                         FilePath = blobUriWithSas,
@@ -59,11 +59,11 @@ namespace Infrastructure.Repositories
                         ContentType = contentType
                     });
                 }
-                return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "File does not exist");
+                return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.Notfound, "File does not exist");
             }
             catch (Exception e)
             {
-                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500.ServerError, e.Message);
+                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500?.ServerError, e.Message);
             }
         }
 
@@ -73,12 +73,12 @@ namespace Infrastructure.Repositories
             {
                 if (string.IsNullOrEmpty(folderName))
                 {
-                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "Folder name is required");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.Notfound, "Folder name is required");
                 }
                 var containerClient = _blobServiceClient.GetBlobContainerClient(folderName);
                 if (!await containerClient.ExistsAsync())
                 {
-                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.Notfound, "Folder does not exist");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.Notfound, "Folder does not exist");
                 }
                 var blobs = new List<BlobItemResponse>();
                 var uri = _blobServiceClient.Uri.ToString();
@@ -90,14 +90,14 @@ namespace Infrastructure.Repositories
                     {
                         FilePath = blobUriWithSas,
                         Name = blobItem.Name,
-                        ContentType = blobItem.Properties?.ContentType
+                        ContentType = blobItem.Properties?.ContentType ?? "application/octet-stream"
                     });
                 }
                 return JsonUtil.Success(blobs);
             }
             catch (Exception e)
             {
-                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500.ServerError, e.Message);
+                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500?.ServerError, e.Message);
             }
         }
 
@@ -119,11 +119,11 @@ namespace Infrastructure.Repositories
                 var quality = 75;
                 if (string.IsNullOrEmpty(folderName))
                 {
-                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.BadRequest, "Folder name cannot be null");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.BadRequest, "Folder name cannot be null");
                 }
                 if (attachment == null)
                 {
-                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.BadRequest, "Attachment cannot be null");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.BadRequest, "Attachment cannot be null");
                 }
                 // Create temporary file and Compress file
                 var tempFilePath = Path.GetTempFileName();
@@ -153,7 +153,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception e)
             {
-                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500.ServerError, e.Message);
+                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500?.ServerError, e.Message);
             }
         }
 
@@ -164,11 +164,11 @@ namespace Infrastructure.Repositories
                 var quality = 75;
                 if (string.IsNullOrEmpty(folderName))
                 {
-                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.BadRequest, "Folder name cannot be null");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.BadRequest, "Folder name cannot be null");
                 }
                 if (attachments == null || !attachments.Any())
                 {
-                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.BadRequest, "Please select at least 1 attachment");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.BadRequest, "Please select at least 1 attachment");
                 }
                 // Create temporary file and Compress file
                 foreach (var attachment in attachments)
@@ -189,7 +189,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception e)
             {
-                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500.ServerError, e.Message);
+                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500?.ServerError, e.Message);
             }
         }
 
@@ -199,7 +199,7 @@ namespace Infrastructure.Repositories
             {
                 if (string.IsNullOrEmpty(fileName) || string.IsNullOrEmpty(folderName))
                 {
-                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400.BadRequest, "File name and folder name are required");
+                    return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes.Status400?.BadRequest, "File name and folder name are required");
                 }
                 var file = _blobServiceClient.GetBlobContainerClient(folderName).GetBlobClient(fileName);
                 await file.DeleteAsync();
@@ -207,7 +207,7 @@ namespace Infrastructure.Repositories
             }
             catch (Exception e)
             {
-                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500.ServerError, e.Message);
+                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes.Status500?.ServerError, e.Message);
             }
         }
     }

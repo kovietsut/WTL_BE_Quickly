@@ -6,17 +6,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class MangaGenreRepository : RepositoryBase<MangaGenre, long, MyDbContext>, IMangaGenreRepository
+    public class MangaGenreRepository : RepositoryBase<MangaGenre, string, MyDbContext>, IMangaGenreRepository
     {
         public MangaGenreRepository(MyDbContext dbContext, IUnitOfWork<MyDbContext> unitOfWork) 
             : base(dbContext, unitOfWork)
         {
         }
 
-        public async Task CreateMangaGenresAsync(long mangaId, List<long> genreIds)
+        public async Task CreateMangaGenresAsync(string mangaId, List<string> genreIds)
         {
             var mangaGenres = genreIds.Select(genreId => new MangaGenre
             {
+                Id = Guid.NewGuid().ToString(),
                 MangaId = mangaId,
                 GenreId = genreId,
                 IsDeleted = false,
@@ -25,7 +26,7 @@ namespace Infrastructure.Repositories
             await CreateListAsync(mangaGenres);
         }
 
-        public async Task DeleteMangaGenresAsync(long mangaId)
+        public async Task DeleteMangaGenresAsync(string mangaId)
         {
             var specification = new GetMangaGenresByMangaIdSpecification(mangaId);
             var query = FindBySpecification(specification);

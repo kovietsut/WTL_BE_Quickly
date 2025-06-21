@@ -12,8 +12,8 @@ namespace Application.Features.Comments.Update
 {
     public class UpdateCommentCommand : IRequest<IActionResult>
     {
-        public required long Id { get; set; }
-        public string Content { get; set; }
+        public required string Id { get; set; }
+        public string? Content { get; set; }
         public bool IsSpoiler { get; set; }
     }
 
@@ -38,7 +38,7 @@ namespace Application.Features.Comments.Update
             try
             {
                 // Get the comment to check ownership
-                var comment = await _repository.GetByIdAsync(request.Id);
+                var comment = await _repository.GetCommendByIdAsync(request.Id);
                 if (comment == null)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Comment not found");

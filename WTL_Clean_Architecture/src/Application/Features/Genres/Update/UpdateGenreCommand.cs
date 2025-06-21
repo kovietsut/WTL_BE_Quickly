@@ -18,7 +18,7 @@ namespace Application.Features.Genres.Update
 {
     public class UpdateGenreCommand : IRequest<IActionResult>
     {
-        public required long Id { get; set; }
+        public required string Id { get; set; }
         public required string Name { get; set; }
 
         public class UpdateGenreCommmandHandler(IGenreRepository repository, IOptions<ErrorCode> errorCodes) : IRequestHandler<UpdateGenreCommand, IActionResult>

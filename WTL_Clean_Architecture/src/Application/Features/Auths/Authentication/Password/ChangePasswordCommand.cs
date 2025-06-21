@@ -11,7 +11,7 @@ namespace Application.Features.Auths.Authentication.Password
 {
     public class ChangePasswordCommand : IRequest<IActionResult>
     {
-        public required long UserId { get; set; }
+        public required string UserId { get; set; }
         public required string CurrentPassword { get; set; }
         public required string NewPassword { get; set; }
         public required string ConfirmPassword { get; set; }

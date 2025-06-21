@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Domain.Specifications.Mangas
 {
-    public class GetListMangasSpecification : Specification<Manga, long>
+    public class GetListMangasSpecification : Specification<Manga, string>
     {
         public GetListMangasSpecification(MangaFilterDto filter, bool includePaging = true) :
             base(manga => manga.IsDeleted != true &&

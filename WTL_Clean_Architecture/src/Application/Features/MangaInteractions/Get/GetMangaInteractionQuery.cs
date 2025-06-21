@@ -11,9 +11,9 @@ namespace Application.Features.MangaInteractions.Get
 {
     public class GetMangaInteractionQuery : IRequest<IActionResult>
     {
-        public long UserId { get; set; }
-        public long? MangaId { get; set; }
-        public long? ChapterId { get; set; }
+        public required string UserId { get; set; }
+        public string? MangaId { get; set; }
+        public string? ChapterId { get; set; }
         public MangaInteractionType? InteractionType { get; set; }
     }
 

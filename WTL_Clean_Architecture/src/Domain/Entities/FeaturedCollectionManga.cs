@@ -1,10 +1,10 @@
 ﻿namespace Domain.Entities;
 
-public partial class FeaturedCollectionManga : EntityBase<long>
+public partial class FeaturedCollectionManga : EntityBase<string>
 {
-    public long MangaId { get; set; }
+    public required string MangaId { get; set; }
 
-    public long FeaturedCollectionId { get; set; }
+    public required string FeaturedCollectionId { get; set; }
 
     public virtual FeaturedCollection FeaturedCollection { get; set; } = null!;
 

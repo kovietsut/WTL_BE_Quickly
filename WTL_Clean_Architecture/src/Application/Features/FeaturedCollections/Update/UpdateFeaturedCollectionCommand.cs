@@ -12,8 +12,8 @@ namespace Application.Features.FeaturedCollections.Update
 {
     public class UpdateFeaturedCollectionCommand : IRequest<IActionResult>
     {
-        public required long Id { get; set; }
-        public string Name { get; set; }
+        public required string Id { get; set; }
+        public required string Name { get; set; }
         public string? CoverImage { get; set; }
         public bool? IsPublish { get; set; }
     }

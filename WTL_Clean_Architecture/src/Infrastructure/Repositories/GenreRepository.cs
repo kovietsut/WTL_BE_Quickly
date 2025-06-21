@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class GenreRepository : RepositoryBase<Genere, long, MyDbContext>, IGenreRepository
+    public class GenreRepository : RepositoryBase<Genere, string, MyDbContext>, IGenreRepository
     {
         private readonly IEncryptionRepository _iEncryptionRepository;
         public GenreRepository(MyDbContext dbContext, IUnitOfWork<MyDbContext> unitOfWork, IEncryptionRepository iEncryptionRepository)
@@ -20,6 +20,7 @@ namespace Infrastructure.Repositories
         {
             var genre = new Genere()
             {
+                Id = Guid.NewGuid().ToString(),
                 IsDeleted = false,
                 CreatedAt = DateTimeOffset.UtcNow,
                 Name = model.Name.Trim()
@@ -28,7 +29,7 @@ namespace Infrastructure.Repositories
             return genre;
         }
 
-        public async Task<Genere?> GetGenreById(long id)
+        public async Task<Genere?> GetGenreById(string id)
         {
             var query = FindByCondition(x => x.Id == id);
             var specification = new GetGenreByIdSpecification(id);
@@ -43,7 +44,7 @@ namespace Infrastructure.Repositories
             return result;
         }
 
-        public async Task<Genere> UpdateGenreAsync(long genreId, UpdateGenreDto model)
+        public async Task<Genere> UpdateGenreAsync(string genreId, UpdateGenreDto model)
         {
             var currentGenre = await GetByIdAsync(genreId) ?? throw new ArgumentNullException(nameof(genreId), "Genre not found");
             currentGenre.UpdatedAt = DateTimeOffset.UtcNow;
@@ -52,7 +53,7 @@ namespace Infrastructure.Repositories
             return currentGenre;
         }
 
-        public async Task<Genere?> DeleteGenreAsync(long id)
+        public async Task<Genere?> DeleteGenreAsync(string id)
         {
             var genre = await GetGenreById(id);
             if (genre != null)

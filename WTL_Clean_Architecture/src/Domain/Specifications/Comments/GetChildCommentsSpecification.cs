@@ -2,9 +2,9 @@ using Domain.Entities;
 
 namespace Domain.Specifications.Comments
 {
-    public class GetChildCommentsSpecification : Specification<Comment, long>
+    public class GetChildCommentsSpecification : Specification<Comment, string>
     {
-        public GetChildCommentsSpecification(long parentCommentId) : base(comment => 
+        public GetChildCommentsSpecification(string parentCommentId) : base(comment => 
             comment.ParentCommentId == parentCommentId && !comment.IsDeleted)
         {
             // Include related entities

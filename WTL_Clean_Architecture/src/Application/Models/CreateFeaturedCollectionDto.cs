@@ -2,7 +2,7 @@
 {
     public class CreateFeaturedCollectionDto
     {
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         public string? CoverImage { get; set; }
 

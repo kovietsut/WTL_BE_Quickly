@@ -15,7 +15,7 @@ using System.Text;
 namespace Infrastructure.Repositories
 {
     public class TokenRepository(MyDbContext dbContext, IUnitOfWork<MyDbContext> unitOfWork, IConfiguration configuration,
-        IUserRepository iUserRepository) : RepositoryBase<AuthMethod, long, MyDbContext>(dbContext, unitOfWork), ITokenRepository
+        IUserRepository iUserRepository) : RepositoryBase<AuthMethod, string, MyDbContext>(dbContext, unitOfWork), ITokenRepository
     {
         private SigningCredentials GetSigningCredentials()
         {
@@ -48,7 +48,7 @@ namespace Infrastructure.Repositories
             return token;
         }
 
-        private async Task<List<Claim>> GetClaims(int userId)
+        private async Task<List<Claim>> GetClaims(string userId)
         {
             var currentUser = await iUserRepository.GetUserById(userId) ?? throw new Exception("User not found");
             var role = currentUser.RoleId;
@@ -70,7 +70,7 @@ namespace Infrastructure.Repositories
             return await SpecificationQueryBuilder.GetQuery(query, specification).SingleOrDefaultAsync();
         }
 
-        public async Task<string> CreateToken(int userId)
+        public async Task<string> CreateToken(string userId)
         {
             var signingCredentials = GetSigningCredentials();
             var claims = await GetClaims(userId);
@@ -78,10 +78,10 @@ namespace Infrastructure.Repositories
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public DateTime ConvertUnixTimeToDateTime(long utcExpireDate)
+        public DateTime ConvertUnixTimeToDateTime(string utcExpireDate)
         {
             var dateTimeInterval = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-            dateTimeInterval.AddSeconds(utcExpireDate).ToUniversalTime();
+            dateTimeInterval.AddSeconds(long.Parse(utcExpireDate)).ToUniversalTime();
 
             return dateTimeInterval;
         }
@@ -117,6 +117,7 @@ namespace Infrastructure.Repositories
             var refreshToken = GenerateRefreshToken();
             var tokenEntity = new AuthMethod
             {
+                Id = Guid.NewGuid().ToString(),
                 IsDeleted = false,
                 JwtId = token.Id,
                 UserId = model.UserId,

@@ -2,9 +2,9 @@
 
 namespace Domain.Specifications.Mangas
 {
-    public class GetMangaByIdSpecification : Specification<Manga, long>
+    public class GetMangaByIdSpecification : Specification<Manga, string>
     {
-        public GetMangaByIdSpecification(long id) : base(manga => manga.Id == id)
+        public GetMangaByIdSpecification(string id) : base(manga => manga.Id == id)
         {
             AddInclude("MangaGenres.Genre");
             AddInclude(m => m.SubAuthorNavigation);

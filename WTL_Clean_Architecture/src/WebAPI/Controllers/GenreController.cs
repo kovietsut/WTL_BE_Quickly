@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
 
         [AllowAnonymous]
         [HttpGet("{genreId}")]
-        public async Task<IActionResult> Get(int genreId)
+        public async Task<IActionResult> Get(string genreId)
         {
             var query = new GetGenreByIdQuery(genreId);
             var result = await _mediator.Send(query);
@@ -52,7 +52,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{genreId}")]
-        public async Task<IActionResult> UpdateGenreAsync(long genreId, [FromBody] UpdateGenreDto model)
+        public async Task<IActionResult> UpdateGenreAsync(string genreId, [FromBody] UpdateGenreDto model)
         {
             var query = new UpdateGenreCommand()
             {
@@ -64,7 +64,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{genreId}")]
-        public async Task<IActionResult> DeleteUserAsync(long genreId)
+        public async Task<IActionResult> DeleteUserAsync(string genreId)
         {
             var query = new DeleteGenreCommand(genreId);
             var result = await _mediator.Send(query);

@@ -12,9 +12,9 @@ namespace Application.Features.FeaturedCollectionPermissions.Create
 {
     public class CreateFeaturedCollectionPermissionCommand : IRequest<IActionResult>
     {
-        public List<long> UserIds { get; set; } = new();
+        public List<string> UserIds { get; set; } = new();
 
-        public long FeaturedCollectionId { get; set; }
+        public required string FeaturedCollectionId { get; set; }
 
         public CollectionPermissionType PermissionType { get; set; }
     }

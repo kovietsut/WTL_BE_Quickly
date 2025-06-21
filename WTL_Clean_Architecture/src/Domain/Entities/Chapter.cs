@@ -1,14 +1,14 @@
 ﻿namespace Domain.Entities;
 
-public partial class Chapter : EntityBase<long>
+public partial class Chapter : EntityBase<string>
 {
     public DateTimeOffset CreatedAt { get; set; }
 
     public DateTimeOffset? UpdatedAt { get; set; }
 
-    public long? CreatedBy { get; set; }
+    public string? CreatedBy { get; set; }
 
-    public long? ModifiedBy { get; set; }
+    public string? ModifiedBy { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -24,9 +24,9 @@ public partial class Chapter : EntityBase<long>
 
     public int? StatusChapter { get; set; }
 
-    public long MangaId { get; set; }
+    public required string MangaId { get; set; }
 
-    public int ChapterNumber { get; set; }
+    public int? ChapterNumber { get; set; }
 
     public virtual ICollection<ChapterImage> ChapterImages { get; set; } = new List<ChapterImage>();
 

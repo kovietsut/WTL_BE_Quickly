@@ -12,8 +12,8 @@ namespace Application.Features.MangaInteractions.Create
 {
     public class CreateMangaInteractionCommand : IRequest<IActionResult>
     {
-        public long? MangaId { get; set; }
-        public long? ChapterId { get; set; }
+        public string? MangaId { get; set; }
+        public string? ChapterId { get; set; }
         public MangaInteractionType? InteractionType { get; set; }
     }
 

@@ -23,9 +23,9 @@ namespace WebAPI.Controllers
 
         [HttpGet("list")]
         public async Task<IActionResult> GetList(
-            [FromQuery] long? mangaId = null,
-            [FromQuery] long? chapterId = null,
-            [FromQuery] long? parentCommentId = null,
+            [FromQuery] string? mangaId = null,
+            [FromQuery] string? chapterId = null,
+            [FromQuery] string? parentCommentId = null,
             [FromQuery] int pageNumber = 1,
             [FromQuery] int pageSize = 10)
         {
@@ -60,7 +60,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateComment(long id, [FromBody] UpdateCommentDto model)
+        public async Task<IActionResult> UpdateComment(string id, [FromBody] UpdateCommentDto model)
         {
             var command = new UpdateCommentCommand
             {
@@ -74,7 +74,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteComment(long id)
+        public async Task<IActionResult> DeleteComment(string id)
         {
             var command = new DeleteCommentCommand
             {

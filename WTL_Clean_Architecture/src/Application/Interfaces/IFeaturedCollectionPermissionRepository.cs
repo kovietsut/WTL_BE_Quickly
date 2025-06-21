@@ -3,10 +3,10 @@ using Domain.Entities;
 
 namespace Application.Interfaces
 {
-    public interface IFeaturedCollectionPermissionRepository : IRepositoryBase<FeaturedCollectionPermission, long>
+    public interface IFeaturedCollectionPermissionRepository : IRepositoryBase<FeaturedCollectionPermission, string>
     {
-        Task<FeaturedCollectionPermission?> GetFeaturedCollectionPermissionById(long collectionId, long permissionId);
-        Task<List<long>> CreateListFeaturedCollectionPermissionAsync(CreateFeaturedCollectionPermissionDto model);
-        Task<bool> DeleteListFeaturedCollectionPermissionAsync(long collectionId, List<long> userIds);
+        Task<FeaturedCollectionPermission?> GetFeaturedCollectionPermissionById(string collectionId, string permissionId);
+        Task<List<string>> CreateListFeaturedCollectionPermissionAsync(CreateFeaturedCollectionPermissionDto model);
+        Task<bool> DeleteListFeaturedCollectionPermissionAsync(string collectionId, List<string> userIds);
     }
 }

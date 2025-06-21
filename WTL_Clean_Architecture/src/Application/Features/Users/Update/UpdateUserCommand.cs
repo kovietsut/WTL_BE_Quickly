@@ -11,9 +11,9 @@ namespace Application.Features.Users.Update
 {
     public class UpdateUserCommand : IRequest<IActionResult>
     {
-        public required long Id { get; set; }
+        public required string Id { get; set; }
         public required string Email { get; set; }
-        public long RoleId { get; set; }
+        public required string RoleId { get; set; }
         public string? FullName { get; set; }
         public required string PhoneNumber { get; set; }
         public string? Address { get; set; }

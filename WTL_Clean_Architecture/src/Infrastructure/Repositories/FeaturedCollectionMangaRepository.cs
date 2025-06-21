@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class FeaturedCollectionMangaRepository : RepositoryBase<FeaturedCollectionManga, long, MyDbContext>, IFeaturedCollectionMangaRepository
+    public class FeaturedCollectionMangaRepository : RepositoryBase<FeaturedCollectionManga, string, MyDbContext>, IFeaturedCollectionMangaRepository
     {
         private readonly ISasTokenGenerator _sasTokenGenerator;
         private readonly IAuthenticationRepository _authenticationRepository;
@@ -29,6 +29,7 @@ namespace Infrastructure.Repositories
         {
             var collection = new FeaturedCollectionManga
             {
+                Id = Guid.NewGuid().ToString(),
                 IsDeleted = false,
                 MangaId = model.MangaId,
                 FeaturedCollectionId = model.FeaturedCollectionId
@@ -38,7 +39,7 @@ namespace Infrastructure.Repositories
             return collection;
         }
 
-        public async Task<FeaturedCollectionManga?> GetFeaturedCollectionMangaById(long collectionId, long mangaId)
+        public async Task<FeaturedCollectionManga?> GetFeaturedCollectionMangaById(string collectionId, string mangaId)
         {
             var query = FindByCondition(x => x.FeaturedCollectionId == collectionId && x.MangaId == mangaId);
             var specification = new GetFeaturedCollectionMangaByIdSpecification(collectionId, mangaId);
@@ -47,7 +48,7 @@ namespace Infrastructure.Repositories
         }
 
         //Remove manga from collection
-        public async Task<FeaturedCollectionManga?> DeleteFeaturedCollectionMangaAsync(long collectionId, long mangaId)
+        public async Task<FeaturedCollectionManga?> DeleteFeaturedCollectionMangaAsync(string collectionId, string mangaId)
         {
             var collectionManga = await GetFeaturedCollectionMangaById(collectionId, mangaId);
             if (collectionManga != null)

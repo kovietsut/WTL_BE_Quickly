@@ -12,7 +12,7 @@ namespace Application.Features.Manga.GetList
 {
     public class GetListMangaQuery : IRequest<IActionResult>
     {
-        public MangaFilterDto Filter { get; set; }
+        public required MangaFilterDto Filter { get; set; }
     }
 
     public class GetListMangaQueryHandler : IRequestHandler<GetListMangaQuery, IActionResult>

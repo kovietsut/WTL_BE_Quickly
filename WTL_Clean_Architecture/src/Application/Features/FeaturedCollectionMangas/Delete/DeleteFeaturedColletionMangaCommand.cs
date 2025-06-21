@@ -8,10 +8,10 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.FeaturedCollectionMangas.Delete
 {
-    public class DeleteFeaturedColletionMangaCommand(long collectionId, long mangaId) : IRequest<IActionResult>
+    public class DeleteFeaturedColletionMangaCommand(string collectionId, string mangaId) : IRequest<IActionResult>
     {
-        public long CollectionId { get; private set; } = collectionId;
-        public long MangaId { get; private set; } = mangaId;
+        public string CollectionId { get; private set; } = collectionId;
+        public string MangaId { get; private set; } = mangaId;
     }
 
     public class DeleteFeaturedColletionMangaCommandHandler : IRequestHandler<DeleteFeaturedColletionMangaCommand, IActionResult>

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class CommentReactionRepository : RepositoryBase<CommentReaction, long, MyDbContext>, ICommentReactionRepository
+    public class CommentReactionRepository : RepositoryBase<CommentReaction, string, MyDbContext>, ICommentReactionRepository
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
 
@@ -18,7 +18,7 @@ namespace Infrastructure.Repositories
             _httpContextAccessor = httpContextAccessor;
         }
 
-        public async Task<(IEnumerable<CommentReaction> Items, int TotalCount)> GetListByCommentIdAsync(long commentId, int? pageNumber = null, int? pageSize = null)
+        public async Task<(IEnumerable<CommentReaction> Items, int TotalCount)> GetListByCommentIdAsync(string commentId, int? pageNumber = null, int? pageSize = null)
         {
             // Get reactions with pagination
             var specification = new GetCommentReactionsByCommentIdSpecification(commentId, pageNumber, pageSize);
@@ -33,18 +33,19 @@ namespace Infrastructure.Repositories
             return (reactions, totalCount);
         }
 
-        public async Task<CommentReaction?> GetByCommentAndUserAsync(long commentId, long userId)
+        public async Task<CommentReaction?> GetByCommentAndUserAsync(string commentId, string userId)
         {
             var specification = new GetCommentReactionByCommentAndUserSpecification(commentId, userId);
             return await GetBySpecificationAsync(specification);
         }
 
-        public async Task<CommentReaction> CreateAsync(long commentId, CommentReactionType reactionType, string? reason = null)
+        public async Task<CommentReaction> CreateAsync(string commentId, CommentReactionType reactionType, string? reason = null)
         {
-            var userId = long.Parse(_httpContextAccessor.HttpContext?.User?.FindFirst("Id")?.Value ?? "0");
+            var userId = _httpContextAccessor.HttpContext?.User?.FindFirst("Id")?.Value ?? "0";
             
             var reaction = new CommentReaction
             {
+                Id = Guid.NewGuid().ToString(),
                 CommentId = commentId,
                 UserId = userId,
                 ReactionType = reactionType,
@@ -56,7 +57,7 @@ namespace Infrastructure.Repositories
             return reaction;
         }
 
-        public async Task<CommentReaction> UpdateAsync(long id, CommentReactionType reactionType, string? reason = null)
+        public async Task<CommentReaction> UpdateAsync(string id, CommentReactionType reactionType, string? reason = null)
         {
             var reaction = await GetByIdAsync(id);
             if (reaction == null)
@@ -71,7 +72,7 @@ namespace Infrastructure.Repositories
             return reaction;
         }
 
-        public async Task<bool> DeleteAsync(long id)
+        public async Task<bool> DeleteAsync(string id)
         {
             var reaction = await GetByIdAsync(id);
             if (reaction == null)

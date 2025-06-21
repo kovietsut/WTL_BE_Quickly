@@ -12,30 +12,19 @@ namespace Application.Features.Manga.Update
 {
     public class UpdateMangaCommand : IRequest<IActionResult>
     {
-        public required long Id { get; set; }
-        public string Title { get; set; }
-
+        public required string Id { get; set; }
+        public required string Title { get; set; }
         public DateTime? PublishedDate { get; set; }
-
         public MangaFormat? Format { get; set; }
-
         public MangaRegion? Region { get; set; }
-
         public MangaReleaseStatus? ReleaseStatus { get; set; }
-
         public string? Preface { get; set; }
-
         public bool? HasAdult { get; set; }
-
-        public long? SubAuthor { get; set; }
-
-        public long? Publishor { get; set; }
-
-        public long? Artist { get; set; }
-
-        public long? Translator { get; set; }
-
-        public List<long>? GenreIds { get; set; }
+        public string? SubAuthor { get; set; }
+        public string? Publishor { get; set; }
+        public string? Artist { get; set; }
+        public string? Translator { get; set; }
+        public List<string>? GenreIds { get; set; }
     }
 
     public class UpdateMangaCommmandHandler : IRequestHandler<UpdateMangaCommand, IActionResult>
@@ -61,36 +50,36 @@ namespace Application.Features.Manga.Update
         {
             try
             {
-                if (query.SubAuthor.HasValue)
+                if (!string.IsNullOrEmpty(query.SubAuthor))
                 {
-                    var subAuthor = await _userRepository.GetByIdAsync(query.SubAuthor.Value);
+                    var subAuthor = await _userRepository.GetByIdAsync(query.SubAuthor);
                     if (subAuthor == null)
                     {
                         return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", "SubAuthor user does not exist");
                     }
                 }
 
-                if (query.Publishor.HasValue)
+                if (!string.IsNullOrEmpty(query.Publishor))
                 {
-                    var publishor = await _userRepository.GetByIdAsync(query.Publishor.Value);
+                    var publishor = await _userRepository.GetByIdAsync(query.Publishor);
                     if (publishor == null)
                     {
                         return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", "Publishor user does not exist");
                     }
                 }
 
-                if (query.Artist.HasValue)
+                if (!string.IsNullOrEmpty(query.Artist))
                 {
-                    var artist = await _userRepository.GetByIdAsync(query.Artist.Value);
+                    var artist = await _userRepository.GetByIdAsync(query.Artist);
                     if (artist == null)
                     {
                         return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", "Artist user does not exist");
                     }
                 }
 
-                if (query.Translator.HasValue)
+                if (!string.IsNullOrEmpty(query.Translator))
                 {
-                    var translator = await _userRepository.GetByIdAsync(query.Translator.Value);
+                    var translator = await _userRepository.GetByIdAsync(query.Translator);
                     if (translator == null)
                     {
                         return JsonUtil.Error(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", "Translator user does not exist");

@@ -2,10 +2,9 @@ using Domain.Entities;
 
 namespace Domain.Specifications.MangaGenres
 {
-    public class GetMangaGenresByMangaIdSpecification : Specification<MangaGenre, long>
+    public class GetMangaGenresByMangaIdSpecification : Specification<MangaGenre, string>
     {
-        public GetMangaGenresByMangaIdSpecification(long mangaId) : 
-            base(mg => mg.MangaId == mangaId && !mg.IsDeleted)
+        public GetMangaGenresByMangaIdSpecification(string mangaId) : base(x => x.MangaId == mangaId)
         {
         }
     }

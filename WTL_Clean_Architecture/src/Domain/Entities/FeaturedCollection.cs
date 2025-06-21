@@ -1,10 +1,10 @@
 ﻿namespace Domain.Entities;
 
-public partial class FeaturedCollection : EntityBase<long>
+public partial class FeaturedCollection : EntityBase<string>
 {
-    public long? CreatedBy { get; set; }
+    public string? CreatedBy { get; set; }
 
-    public long? ModifiedBy { get; set; }
+    public string? ModifiedBy { get; set; }
 
     public DateTimeOffset CreatedAt { get; set; }
 

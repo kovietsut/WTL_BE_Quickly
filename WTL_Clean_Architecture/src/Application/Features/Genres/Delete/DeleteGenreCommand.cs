@@ -14,9 +14,9 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Genres.Delete
 {
-    public class DeleteGenreCommand(long id) : IRequest<IActionResult>
+    public class DeleteGenreCommand(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class DeleteGenreCommandHandler : IRequestHandler<DeleteGenreCommand, IActionResult>

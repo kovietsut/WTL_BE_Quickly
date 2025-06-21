@@ -10,9 +10,9 @@ namespace Application.Features.Comments.GetList
 {
     public class GetListCommentQuery : IRequest<IActionResult>
     {
-        public long? MangaId { get; set; }
-        public long? ChapterId { get; set; }
-        public long? ParentCommentId { get; set; }
+        public string? MangaId { get; set; }
+        public string? ChapterId { get; set; }
+        public string? ParentCommentId { get; set; }
         public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 10;
     }

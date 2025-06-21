@@ -1,12 +1,10 @@
-﻿using ChapterImagesEntity = Domain.Entities.ChapterImage;
+﻿using ChapterImageEntity = Domain.Entities.ChapterImage;
 
 namespace Domain.Specifications.ChapterImages
 {
-    public class GetListChapterImagesByChapterIdSpecification : Specification<ChapterImagesEntity, long>
+    public class GetListChapterImagesByChapterIdSpecification : Specification<ChapterImageEntity, string>
     {
-        public GetListChapterImagesByChapterIdSpecification(long chapterId) :
-            base(chapterImages => chapterImages.IsDeleted != true &&
-            chapterImages.ChapterId == chapterId)
+        public GetListChapterImagesByChapterIdSpecification(string chapterId) : base(chapterImage => chapterImage.ChapterId == chapterId)
         {
             //ApplyPaging((pageNumber - 1) * pageSize, pageSize);
             //AddOrderByDescending(u => u.CreatedDate);

@@ -2,8 +2,8 @@
 {
     public class CreateFeaturedCollectionMangaDto
     {
-        public long FeaturedCollectionId { get; set; }  
-        public long MangaId { get; set; }
+        public required string FeaturedCollectionId { get; set; }  
+        public required string MangaId { get; set; }
         
     }
 }

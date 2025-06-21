@@ -8,9 +8,9 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.Genres.GetById
 {
-    public class GetGenreByIdQuery(long id) : IRequest<IActionResult>
+    public class GetGenreByIdQuery(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class GetGenreByIdQueryHandler : IRequestHandler<GetGenreByIdQuery, IActionResult>

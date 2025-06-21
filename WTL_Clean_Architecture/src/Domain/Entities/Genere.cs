@@ -1,6 +1,6 @@
 ﻿namespace Domain.Entities;
 
-public partial class Genere : EntityBase<long>
+public partial class Genere : EntityBase<string>
 {
     public DateTimeOffset CreatedAt { get; set; }
 

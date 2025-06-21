@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities;
 
-public partial class Manga : EntityBase<long>
+public partial class Manga : EntityBase<string>
 {
     public DateTimeOffset CreatedAt { get; set; }
 
@@ -30,17 +30,17 @@ public partial class Manga : EntityBase<long>
     [Column(TypeName = "nvarchar(max)")]
     public string? CoverImage { get; set; }
 
-    public long? CreatedBy { get; set; }
+    public string? CreatedBy { get; set; }
 
-    public long? ModifiedBy { get; set; }
+    public string? ModifiedBy { get; set; }
 
-    public long? SubAuthor { get; set; }
+    public string? SubAuthor { get; set; }
 
-    public long? Publishor { get; set; }
+    public string? Publishor { get; set; }
 
-    public long? Artist { get; set; }
+    public string? Artist { get; set; }
 
-    public long? Translator { get; set; }
+    public string? Translator { get; set; }
 
     public virtual User? ArtistNavigation { get; set; }
 

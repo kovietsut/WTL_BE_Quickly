@@ -2,11 +2,11 @@
 
 namespace Domain.Entities;
 
-public partial class CommentReaction : EntityBase<long>
+public partial class CommentReaction : EntityBase<string>
 {
-    public long CommentId { get; set; }
+    public required string CommentId { get; set; }
 
-    public long UserId { get; set; }
+    public required string UserId { get; set; }
 
     public CommentReactionType ReactionType { get; set; }
 

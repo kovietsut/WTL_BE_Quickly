@@ -3,13 +3,13 @@ using Domain.Enums;
 
 namespace Domain.Specifications.MangaInteractions
 {
-    public class GetMangaInteractionListSpecification : Specification<MangaInteraction, long>
+    public class GetMangaInteractionListSpecification : Specification<MangaInteraction, string>
     {
-        public GetMangaInteractionListSpecification(long userId, long? mangaId, long? chapterId, MangaInteractionType? interactionType, int? pageNumber, int? pageSize)
+        public GetMangaInteractionListSpecification(string userId, string? mangaId, string? chapterId, MangaInteractionType? interactionType, int? pageNumber, int? pageSize)
             : base(interaction =>
                 interaction.UserId == userId &&
-                (!mangaId.HasValue || interaction.MangaId == mangaId) &&
-                (!chapterId.HasValue || interaction.ChapterId == chapterId) &&
+                (mangaId == null || interaction.MangaId == mangaId) &&
+                (chapterId == null || interaction.ChapterId == chapterId) &&
                 (!interactionType.HasValue || interaction.InteractionType == interactionType))
         {
             

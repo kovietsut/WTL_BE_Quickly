@@ -23,7 +23,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{chapterId}")]
-        public async Task<IActionResult> Get(int chapterId)
+        public async Task<IActionResult> Get(string chapterId)
         {
             var query = new GetChapterByIdQuery(chapterId);
             var result = await _mediator.Send(query);
@@ -43,6 +43,7 @@ namespace WebAPI.Controllers
         {
             var query = new CreateChapterCommand()
             {
+                MangaId = model.MangaId,
                 Name = model.Name,
                 NovelContent = model.NovelContent,
                 HasDraft = model.HasDraft,
@@ -57,7 +58,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{chapterId}")]
-        public async Task<IActionResult> UpdateChapterAsync(long chapterId, [FromBody] UpdateChapterDto model)
+        public async Task<IActionResult> UpdateChapterAsync(string chapterId, [FromBody] UpdateChapterDto model)
         {
             var query = new UpdateChapterCommand()
             {
@@ -76,7 +77,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{chapterId}")]
-        public async Task<IActionResult> DeleteChapterAsync(long chapterId)
+        public async Task<IActionResult> DeleteChapterAsync(string chapterId)
         {
             var query = new DeleteChapterCommand(chapterId);
             var result = await _mediator.Send(query);

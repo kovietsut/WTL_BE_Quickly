@@ -2,13 +2,13 @@
 
 namespace Domain.Specifications.Comments
 {
-    public class GetListCommentsSpecification : Specification<Comment, long>
+    public class GetListCommentsSpecification : Specification<Comment, string>
     {
-        public GetListCommentsSpecification(long? mangaId, long? chapterId, long? parentCommentId, int pageNumber, int pageSize, bool includePaging = true)
+        public GetListCommentsSpecification(string? mangaId, string? chapterId, string? parentCommentId, int pageNumber, int pageSize, bool includePaging = true)
             : base(comment => 
-                (!mangaId.HasValue || comment.MangaId == mangaId) &&
-                (!chapterId.HasValue || comment.ChapterId == chapterId) &&
-                (!parentCommentId.HasValue || comment.ParentCommentId == parentCommentId))
+                (string.IsNullOrEmpty(mangaId) || comment.MangaId == mangaId) &&
+                (string.IsNullOrEmpty(chapterId) || comment.ChapterId == chapterId) &&
+                (string.IsNullOrEmpty(parentCommentId) || comment.ParentCommentId == parentCommentId))
         {
             if (includePaging)
             {

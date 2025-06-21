@@ -3,12 +3,12 @@ using Domain.Entities;
 
 namespace Application.Interfaces
 {
-    public interface IFeaturedCollectionRepository : IRepositoryBase<FeaturedCollection, long>
+    public interface IFeaturedCollectionRepository : IRepositoryBase<FeaturedCollection, string>
     {
-        Task<FeaturedCollection?> GetFeaturedCollectionById(long id);
+        Task<FeaturedCollection?> GetFeaturedCollectionById(string id);
         Task<List<FeaturedCollection>> GetList(int? pageNumber, int? pageSize, string? searchText);
         Task<FeaturedCollection> CreateFeaturedCollectionAsync(CreateFeaturedCollectionDto model);
-        Task<FeaturedCollection> UpdateFeaturedCollectionAsync(long featuredCollectionId, UpdateFeaturedCollectionDto model);
-        Task<FeaturedCollection?> DeleteFeaturedCollectionAsync(long id);
+        Task<FeaturedCollection> UpdateFeaturedCollectionAsync(string featuredCollectionId, UpdateFeaturedCollectionDto model);
+        Task<FeaturedCollection> DeleteFeaturedCollectionAsync(string id);
     }
 }

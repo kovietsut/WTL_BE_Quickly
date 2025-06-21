@@ -2,13 +2,11 @@
 
 namespace Domain.Specifications.FeaturedCollectionMangas
 {
-    public class GetFeaturedCollectionMangaByIdSpecification : Specification<FeaturedCollectionManga, long>
+    public class GetFeaturedCollectionMangaByIdSpecification : Specification<FeaturedCollectionManga, string>
     {
-        public GetFeaturedCollectionMangaByIdSpecification(long collectionId, long mangaId) : base(x =>
-        x.IsDeleted == false &&
-        x.FeaturedCollectionId == collectionId &&
-        x.MangaId == mangaId
-        )
+        public GetFeaturedCollectionMangaByIdSpecification(string collectionId, string mangaId) : base(x =>
+            x.FeaturedCollectionId == collectionId &&
+            x.MangaId == mangaId)
         {
 
         }

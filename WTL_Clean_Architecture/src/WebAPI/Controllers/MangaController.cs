@@ -27,7 +27,7 @@ namespace WebAPI.Controllers
 
         [AllowAnonymous]
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(long id)
+        public async Task<IActionResult> GetById(string id)
         {
             var query = new GetMangaByIdQuery(id);
             var result = await _mediator.Send(query);
@@ -67,7 +67,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{mangaId}")]
-        public async Task<IActionResult> Update(int mangaId, [FromBody] UpdateMangaDto model)
+        public async Task<IActionResult> Update(string mangaId, [FromBody] UpdateMangaDto model)
         {
             var query = new UpdateMangaCommand()
             {
@@ -90,7 +90,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{mangaId}")]
-        public async Task<IActionResult> Delete(long mangaId)
+        public async Task<IActionResult> Delete(string mangaId)
         {
             var query = new DeleteMangaCommand(mangaId);
             var result = await _mediator.Send(query);
@@ -98,7 +98,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("{mangaId}/cover")]
-        public async Task<IActionResult> UploadCover(long mangaId, IFormFile coverImageFile)
+        public async Task<IActionResult> UploadCover(string mangaId, IFormFile coverImageFile)
         {
             var command = new UploadMangaCoverCommand
             {

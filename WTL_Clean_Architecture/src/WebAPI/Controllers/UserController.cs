@@ -23,7 +23,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{userId}")]
-        public async Task<IActionResult> Get(int userId)
+        public async Task<IActionResult> Get(string userId)
         {
             var query = new GetUserByIdQuery(userId);
             var result = await _mediator.Send(query);
@@ -31,7 +31,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("get-list")]
-        public async Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText, int? roleId)
+        public async Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText, string? roleId)
         {
             var query = new GetListUserQuery(pageNumber, pageSize, searchText, roleId);
             var result = await _mediator.Send(query);
@@ -57,7 +57,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPut("{userId}")]
-        public async Task<IActionResult> UpdateUserAsync(long userId, [FromBody] UpdateUserDto model)
+        public async Task<IActionResult> UpdateUserAsync(string userId, [FromBody] UpdateUserDto model)
         {
             var query = new UpdateUserCommand()
             {
@@ -74,7 +74,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete("{userId}")]
-        public async Task<IActionResult> DeleteUserAsync(long userId)
+        public async Task<IActionResult> DeleteUserAsync(string userId)
         {
             var query = new DeleteUserCommand(userId);
             var result = await _mediator.Send(query);

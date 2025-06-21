@@ -7,7 +7,7 @@ namespace Application.Models
         [Required]
         public required string Email { get; set; }
         [Required]
-        public long RoleId { get; set; }
+        public required string RoleId { get; set; }
         public string? FullName { get; set; }
         [Required]
         public required string PhoneNumber { get; set; }

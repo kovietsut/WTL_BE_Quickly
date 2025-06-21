@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Http;
 
 namespace Application.Interfaces
 {
-    public interface IMangaRepository : IRepositoryBase<Manga, long>
+    public interface IMangaRepository : IRepositoryBase<Manga, string>
     {
-        Task<Manga?> GetMangaById(long id);
+        Task<Manga?> GetMangaById(string id);
         Task<(List<Manga> Items, int TotalCount)> GetList(MangaFilterDto filter);
         Task<Manga> CreateMangaAsync(CreateMangaDto model);
-        Task<Manga> UpdateMangaAsync(long mangaId, UpdateMangaDto model);
-        Task<Manga?> DeleteMangaAsync(long id);
-        Task<string> UploadCoverImageAsync(long mangaId, IFormFile coverImageFile);
+        Task<Manga> UpdateMangaAsync(string mangaId, UpdateMangaDto model);
+        Task<Manga?> DeleteMangaAsync(string id);
+        Task<string> UploadCoverImageAsync(string mangaId, IFormFile coverImageFile);
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class UserRepository : RepositoryBase<User, long, MyDbContext>, IUserRepository
+    public class UserRepository : RepositoryBase<User, string, MyDbContext>, IUserRepository
     {
         private readonly IEncryptionRepository _iEncryptionRepository;
 
@@ -18,7 +18,7 @@ namespace Infrastructure.Repositories
             _iEncryptionRepository = iEncryptionRepository;
         }
 
-        public async Task<User?> GetUserById(long id)
+        public async Task<User?> GetUserById(string id)
         {
             var query = FindByCondition(x => x.Id == id);
             var specification = new GetUserByIdSpecification(id);
@@ -32,14 +32,15 @@ namespace Infrastructure.Repositories
             return await SpecificationQueryBuilder.GetQuery(query, specification).SingleOrDefaultAsync();
         }
 
-        public async Task<User?> GetUserByPhoneNumber(string phoneNumber)
+        public async Task<User?> GetUserByPhoneNumber(string? phoneNumber)
         {
+            if (phoneNumber == null) return null;
             var query = FindByCondition(x => x.PhoneNumber == phoneNumber);
             var specification = new GetUserByPhoneNumberSpecification(phoneNumber);
             return await SpecificationQueryBuilder.GetQuery(query, specification).SingleOrDefaultAsync();
         }
 
-        public async Task<List<User>> GetList(int? pageNumber, int? pageSize, string? searchText, int? roleId)
+        public async Task<List<User>> GetList(int? pageNumber, int? pageSize, string? searchText, string? roleId)
         {
             var specification = new GetListUsersSpecification(pageNumber, pageSize, searchText, roleId);
             var query = FindBySpecification(specification);
@@ -51,6 +52,7 @@ namespace Infrastructure.Repositories
         {
             var user = new User()
             {
+                Id = Guid.NewGuid().ToString(),
                 IsDeleted = false,
                 RoleId = model.RoleId,
                 SecurityStamp = Guid.NewGuid().ToString(),
@@ -66,7 +68,7 @@ namespace Infrastructure.Repositories
             return user;
         }
 
-        public async Task<User> UpdateUserAsync(long userId, UpdateUserDto model)
+        public async Task<User> UpdateUserAsync(string userId, UpdateUserDto model)
         {
             var currentUser = await GetByIdAsync(userId) ?? throw new ArgumentNullException(nameof(userId), "User not found");
             currentUser.UpdatedAt = DateTimeOffset.UtcNow;
@@ -79,7 +81,7 @@ namespace Infrastructure.Repositories
             return currentUser;
         }
 
-        public async Task<User?> DeleteUserAsync(long id)
+        public async Task<User?> DeleteUserAsync(string id)
         {
             var user = await GetUserById(id);
             if (user != null)

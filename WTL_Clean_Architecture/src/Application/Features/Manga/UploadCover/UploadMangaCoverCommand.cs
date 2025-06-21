@@ -11,7 +11,7 @@ namespace Application.Features.Manga.UploadCover
 {
     public class UploadMangaCoverCommand : IRequest<IActionResult>
     {
-        public required long MangaId { get; set; }
+        public required string MangaId { get; set; }
         public required IFormFile CoverImageFile { get; set; }
     }
 

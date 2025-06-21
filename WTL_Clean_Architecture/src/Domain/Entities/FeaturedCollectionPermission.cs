@@ -2,15 +2,15 @@
 
 namespace Domain.Entities;
 
-public partial class FeaturedCollectionPermission : EntityBase<long>
+public partial class FeaturedCollectionPermission : EntityBase<string>
 {
     public DateTimeOffset CreatedAt { get; set; }
 
     public DateTimeOffset? UpdatedAt { get; set; }
 
-    public long? UserId { get; set; }
+    public string? UserId { get; set; }
 
-    public long? FeaturedCollectionId { get; set; }
+    public string? FeaturedCollectionId { get; set; }
 
     public CollectionPermissionType PermissionType { get; set; }
 

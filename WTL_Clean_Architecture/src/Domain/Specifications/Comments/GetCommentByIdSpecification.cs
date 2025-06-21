@@ -2,9 +2,9 @@
 
 namespace Domain.Specifications.Comments
 {
-    public class GetCommentByIdSpecification : Specification<Comment, long>
+    public class GetCommentByIdSpecification : Specification<Comment, string>
     {
-        public GetCommentByIdSpecification(long id) : base(comment => 
+        public GetCommentByIdSpecification(string id) : base(comment => 
             comment.Id == id && !comment.IsDeleted)
         {
             // Include related entities

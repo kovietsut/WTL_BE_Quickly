@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class FeaturedCollectionRepository : RepositoryBase<FeaturedCollection, long, MyDbContext>, IFeaturedCollectionRepository
+    public class FeaturedCollectionRepository : RepositoryBase<FeaturedCollection, string, MyDbContext>, IFeaturedCollectionRepository
     {
         private readonly ISasTokenGenerator _sasTokenGenerator;
         private readonly IAuthenticationRepository _authenticationRepository;
@@ -29,11 +29,12 @@ namespace Infrastructure.Repositories
             var currentUserId = _authenticationRepository.GetUserId();
             var collection = new FeaturedCollection
             {
+                Id = Guid.NewGuid().ToString(),
                 IsDeleted = false,
                 CreatedAt = DateTimeOffset.UtcNow,
                 CreatedBy = currentUserId,
                 Name = model.Name.Trim(),
-                CoverImage = _sasTokenGenerator.GenerateCoverImageUriWithSas(model.CoverImage),
+                CoverImage = model.CoverImage != null ? _sasTokenGenerator.GenerateCoverImageUriWithSas(model.CoverImage) : null,
                 IsPublish = model.IsPublish
             };
             //Create new chapter
@@ -41,7 +42,7 @@ namespace Infrastructure.Repositories
             return collection;
         }
 
-        public async Task<FeaturedCollection?> DeleteFeaturedCollectionAsync(long id)
+        public async Task<FeaturedCollection?> DeleteFeaturedCollectionAsync(string id)
         {
             var collection = await GetFeaturedCollectionById(id);
             if (collection != null)
@@ -52,7 +53,7 @@ namespace Infrastructure.Repositories
             return collection;
         }
 
-        public async Task<FeaturedCollection?> GetFeaturedCollectionById(long id)
+        public async Task<FeaturedCollection?> GetFeaturedCollectionById(string id)
         {
             var query = FindByCondition(x => x.Id == id);
             var specification = new GetFeaturedCollectionByIdSpecification(id);
@@ -69,7 +70,7 @@ namespace Infrastructure.Repositories
             return result;
         }
 
-        public async Task<FeaturedCollection> UpdateFeaturedCollectionAsync(long featuredCollectionId, UpdateFeaturedCollectionDto model)
+        public async Task<FeaturedCollection> UpdateFeaturedCollectionAsync(string featuredCollectionId, UpdateFeaturedCollectionDto model)
         {
             var currentCollection = await GetByIdAsync(featuredCollectionId) ?? throw new ArgumentNullException(nameof(featuredCollectionId), "Collection not found");
             currentCollection.UpdatedAt = DateTimeOffset.UtcNow;

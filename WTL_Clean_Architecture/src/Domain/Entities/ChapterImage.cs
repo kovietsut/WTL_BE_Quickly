@@ -1,10 +1,10 @@
 ﻿namespace Domain.Entities;
 
-public partial class ChapterImage : EntityBase<long>
+public partial class ChapterImage : EntityBase<string>
 {
-    public long? CreatedBy { get; set; }
+    public string? CreatedBy { get; set; }
 
-    public long? ModifiedBy { get; set; }
+    public string? ModifiedBy { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -14,7 +14,7 @@ public partial class ChapterImage : EntityBase<long>
 
     public string? FilePath { get; set; }
 
-    public long? ChapterId { get; set; }
+    public string? ChapterId { get; set; }
 
     public virtual Chapter? Chapter { get; set; }
 

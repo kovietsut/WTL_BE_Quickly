@@ -10,7 +10,7 @@ namespace Application.Features.CommentReactions.GetList
 {
     public class GetCommentReactionsQuery : IRequest<IActionResult>
     {
-        public required long CommentId { get; set; }
+        public required string CommentId { get; set; }
         public int? PageNumber { get; set; }
         public int? PageSize { get; set; }
     }
@@ -36,7 +36,7 @@ namespace Application.Features.CommentReactions.GetList
             try
             {
                 // Check if comment exists
-                var comment = await _commentRepository.GetByIdAsync(query.CommentId);
+                var comment = await _commentRepository.GetCommendByIdAsync(query.CommentId);
                 if (comment == null)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Comment not found");

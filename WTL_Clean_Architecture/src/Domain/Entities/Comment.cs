@@ -1,12 +1,12 @@
 ﻿namespace Domain.Entities;
 
-public partial class Comment : EntityBase<long>
+public partial class Comment : EntityBase<string>
 {
-    public long? MangaId { get; set; }
+    public string? MangaId { get; set; }
 
-    public long UserId { get; set; }
+    public required string UserId { get; set; }
 
-    public long? ParentCommentId { get; set; }
+    public string? ParentCommentId { get; set; }
 
     public string Content { get; set; } = null!;
 
@@ -16,7 +16,7 @@ public partial class Comment : EntityBase<long>
 
     public bool IsSpoiler { get; set; }
 
-    public long? ChapterId { get; set; }
+    public string? ChapterId { get; set; }
 
     public virtual Chapter? Chapter { get; set; }
 

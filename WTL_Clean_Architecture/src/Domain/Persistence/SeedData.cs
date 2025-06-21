@@ -13,193 +13,193 @@ public static class SeedData
     {
         // Seed Roles
         modelBuilder.Entity<Role>().HasData(
-            new Role 
-            { 
-                Id = 1, 
-                Name = "Admin", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Role
+            {
+                Id = "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
+                Name = "Admin",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Role 
-            { 
-                Id = 2, 
-                Name = "Reader", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Role
+            {
+                Id = "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
+                Name = "Reader",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Role 
-            { 
-                Id = 3, 
-                Name = "Author", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Role
+            {
+                Id = "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
+                Name = "Author",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             }
         );
 
         // Seed Genres
         modelBuilder.Entity<Genere>().HasData(
-            new Genere 
-            { 
-                Id = 1, 
-                Name = "Action", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s",
+                Name = "Action",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 2, 
-                Name = "Adventure", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t",
+                Name = "Adventure",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 3, 
-                Name = "Comedy", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u",
+                Name = "Comedy",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 4, 
-                Name = "Drama", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v",
+                Name = "Drama",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 5, 
-                Name = "Fantasy", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w",
+                Name = "Fantasy",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 6, 
-                Name = "Horror", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x",
+                Name = "Horror",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 7, 
-                Name = "Romance", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y",
+                Name = "Romance",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 8, 
-                Name = "Sci-Fi", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "1k2l3m4n-5o6p-7q8r-9s0t-1u2v3w4x5y6z",
+                Name = "Sci-Fi",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 9, 
-                Name = "Mystery", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "2l3m4n5o-6p7q-8r9s-0t1u-2v3w4x5y6z7a8b",
+                Name = "Mystery",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 10, 
-                Name = "Thriller", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "3m4n5o6p-7q8r-9s0t-1u2v-3w4x5y6z7a8b9c",
+                Name = "Thriller",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 11, 
-                Name = "Slice of Life", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "4n5o6p7q-8r9s-0t1u-2v3w-4x5y6z7a8b9c0d",
+                Name = "Slice of Life",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 12, 
-                Name = "Sports", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "5o6p7q8r-9s0t-1u2v-3w4x-5y6z7a8b9c0d1e",
+                Name = "Sports",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 13, 
-                Name = "Supernatural", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "6p7q8r9s-0t1u-2v3w-4x5y-6z7a8b9c0d1e2f",
+                Name = "Supernatural",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 14, 
-                Name = "Psychological", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "7q8r9s0t-1u2v-3w4x-5y6z-7a8b9c0d1e2f3g",
+                Name = "Psychological",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 15, 
-                Name = "Martial Arts", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "8r9s0t1u-2v3w-4x5y-6z7a-8b9c0d1e2f3g4h",
+                Name = "Martial Arts",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 16, 
-                Name = "School Life", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "9s0t1u2v-3w4x-5y6z-7a8b-9c0d1e2f3g4h5i",
+                Name = "School Life",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 17, 
-                Name = "Music", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "0t1u2v3w-4x5y-6z7a-8b9c-0d1e2f3g4h5i6j",
+                Name = "Music",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 18, 
-                Name = "Cooking", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "1u2v3w4x-5y6z-7a8b-9c0d-1e2f3g4h5i6j7k",
+                Name = "Cooking",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 19, 
-                Name = "Historical", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "2v3w4x5y-6z7a-8b9c-0d1e-2f3g4h5i6j7k8l",
+                Name = "Historical",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             },
-            new Genere 
-            { 
-                Id = 20, 
-                Name = "Military", 
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+            new Genere
+            {
+                Id = "3w4x5y6z-7a8b-9c0d-1e2f-3g4h5i6j7k8l9m",
+                Name = "Military",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
             }
         );
 
@@ -207,12 +207,12 @@ public static class SeedData
         modelBuilder.Entity<User>().HasData(
             new User
             {
-                Id = 1,
+                Id = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n",
                 FullName = "Phuc Lo",
                 Email = "phuc123@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 1,
+                RoleId = "1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -222,12 +222,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 2,
+                Id = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o",
                 FullName = "Sarah Johnson",
                 Email = "sarah.johnson@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 2,
+                RoleId = "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -237,12 +237,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 3,
+                Id = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p",
                 FullName = "Michael Chen",
                 Email = "michael.chen@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 2,
+                RoleId = "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -252,12 +252,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 4,
+                Id = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q",
                 FullName = "Emma Wilson",
                 Email = "emma.wilson@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 2,
+                RoleId = "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -267,12 +267,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 5,
+                Id = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r",
                 FullName = "Alex Rivera",
                 Email = "alex.rivera@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 2,
+                RoleId = "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -282,12 +282,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 6,
+                Id = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s",
                 FullName = "Hiroshi Tanaka",
                 Email = "hiroshi.tanaka@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -297,12 +297,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 7,
+                Id = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t",
                 FullName = "Yuki Sato",
                 Email = "yuki.sato@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -312,12 +312,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 8,
+                Id = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u",
                 FullName = "David Kim",
                 Email = "david.kim@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -327,12 +327,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 9,
+                Id = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v",
                 FullName = "Lisa Park",
                 Email = "lisa.park@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -342,12 +342,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 10,
+                Id = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w",
                 FullName = "James Wilson",
                 Email = "james.wilson@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 2,
+                RoleId = "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -357,12 +357,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 11,
+                Id = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x",
                 FullName = "Maria Garcia",
                 Email = "maria.garcia@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 2,
+                RoleId = "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -372,12 +372,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 12,
+                Id = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y",
                 FullName = "Taylor Smith",
                 Email = "taylor.smith@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 2,
+                RoleId = "2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -387,12 +387,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 13,
+                Id = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z",
                 FullName = "Wei Chen",
                 Email = "wei.chen@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -402,12 +402,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 14,
+                Id = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a",
                 FullName = "Sofia Rodriguez",
                 Email = "sofia.rodriguez@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -417,12 +417,12 @@ public static class SeedData
             },
             new User
             {
-                Id = 15,
+                Id = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b",
                 FullName = "Jordan Lee",
                 Email = "jordan.lee@gmail.com",
                 PasswordHash = "nld7cvF70f2JNhIOie8Wy1/VZza04zDXmZ8BtGjFBBE=",
                 SecurityStamp = "d6a69959-ab31-4653-a52d-299e0174503e",
-                RoleId = 3,
+                RoleId = "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
@@ -434,3465 +434,3180 @@ public static class SeedData
 
         // Seed AuthMethods for Users
         modelBuilder.Entity<AuthMethod>().HasData(
+            // Admin User Auth Methods
             new AuthMethod
             {
-                Id = 1,
-                UserId = 1,
+                Id = "a1b2c3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p",
+                UserId = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Admin User
                 AuthType = "Email",
-                AuthId = "phuc123@gmail.com",
+                AuthId = "admin@webtruyenlo.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             },
             new AuthMethod
             {
-                Id = 2,
-                UserId = 2,
+                Id = "b2c3d4e5-f6g7-8h9i-0j1k-2l3m4n5o6p7q",
+                UserId = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Admin User
+                AuthType = "Google",
+                AuthId = "admin.webtruyenlo@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+
+            // Editor User Auth Methods
+            new AuthMethod
+            {
+                Id = "c3d4e5f6-g7h8-9i0j-1k2l-3m4n5o6p7q8r",
+                UserId = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Editor User
                 AuthType = "Email",
-                AuthId = "john.reader@gmail.com",
+                AuthId = "editor@webtruyenlo.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             },
             new AuthMethod
             {
-                Id = 3,
-                UserId = 3,
-                AuthType = "Email",
-                AuthId = "sarah.author@gmail.com",
+                Id = "d4e5f6g7-h8i9-0j1k-2l3m-4n5o6p7q8r9s",
+                UserId = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Editor User
+                AuthType = "Google",
+                AuthId = "editor.webtruyenlo@gmail.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             },
-            // Publishers AuthMethods
+
+            // Translator User Auth Methods
             new AuthMethod
             {
-                Id = 4,
-                UserId = 4,
+                Id = "e5f6g7h8-i9j0-1k2l-3m4n-5o6p7q8r9s0t",
+                UserId = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Translator User
                 AuthType = "Email",
-                AuthId = "shueisha.publisher@gmail.com",
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new AuthMethod
-            {
-                Id = 5,
-                UserId = 5,
-                AuthType = "Email",
-                AuthId = "kodansha.publisher@gmail.com",
+                AuthId = "translator@webtruyenlo.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             },
             new AuthMethod
             {
-                Id = 6,
-                UserId = 6,
-                AuthType = "Email",
-                AuthId = "kakao.publisher@gmail.com",
+                Id = "f6g7h8i9-j0k1-2l3m-4n5o-6p7q8r9s0t1u",
+                UserId = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Translator User
+                AuthType = "Google",
+                AuthId = "translator.webtruyenlo@gmail.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             },
-            // Artists AuthMethods
+
+            // Artist User Auth Methods
             new AuthMethod
             {
-                Id = 7,
-                UserId = 7,
+                Id = "g7h8i9j0-k1l2-3m4n-5o6p-7q8r9s0t1u2v",
+                UserId = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Artist User
                 AuthType = "Email",
-                AuthId = "eiichiro.oda@gmail.com",
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new AuthMethod
-            {
-                Id = 8,
-                UserId = 8,
-                AuthType = "Email",
-                AuthId = "hajime.isayama@gmail.com",
+                AuthId = "artist@webtruyenlo.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             },
             new AuthMethod
             {
-                Id = 9,
-                UserId = 9,
+                Id = "h8i9j0k1-l2m3-4n5o-6p7q-8r9s0t1u2v3w",
+                UserId = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Artist User
+                AuthType = "Google",
+                AuthId = "artist.webtruyenlo@gmail.com",
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+
+            // Publisher User Auth Methods
+            new AuthMethod
+            {
+                Id = "i9j0k1l2-m3n4-5o6p-7q8r-9s0t1u2v3w4x",
+                UserId = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Publisher User
                 AuthType = "Email",
-                AuthId = "chugong.artist@gmail.com",
+                AuthId = "publisher@webtruyenlo.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             },
             new AuthMethod
             {
-                Id = 10,
-                UserId = 10,
-                AuthType = "Email",
-                AuthId = "koyoharu.gotouge@gmail.com",
+                Id = "j0k1l2m3-n4o5-6p7q-8r9s-0t1u2v3w4x5y",
+                UserId = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Publisher User
+                AuthType = "Google",
+                AuthId = "publisher.webtruyenlo@gmail.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             },
-            // Translators AuthMethods
+
+            // Reader User Auth Methods
             new AuthMethod
             {
-                Id = 11,
-                UserId = 11,
+                Id = "k1l2m3n4-o5p6-7q8r-9s0t-1u2v3w4x5y6z",
+                UserId = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Reader User
                 AuthType = "Email",
-                AuthId = "stephen.paul@gmail.com",
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new AuthMethod
-            {
-                Id = 12,
-                UserId = 12,
-                AuthType = "Email",
-                AuthId = "kohei.horikoshi@gmail.com",
+                AuthId = "reader@webtruyenlo.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             },
             new AuthMethod
             {
-                Id = 13,
-                UserId = 13,
-                AuthType = "Email",
-                AuthId = "yoon.ha.lee@gmail.com",
+                Id = "l2m3n4o5-p6q7-8r9s-0t1u-2v3w4x5y6z7a",
+                UserId = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Reader User
+                AuthType = "Google",
+                AuthId = "reader.webtruyenlo@gmail.com",
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             }
         );
 
-        // Seed Sample Manga
+        // Seed Manga
         modelBuilder.Entity<Manga>().HasData(
+            // Week 1 - Monday
             new Manga
             {
-                Id = 1,
-                Title = "One Piece",
-                Preface = "Follow Monkey D. Luffy and his pirate crew in their search for the ultimate treasure, the One Piece.",
+                Id = "m1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                Title = "The Last Samurai's Legacy",
+                PublishedDate = new DateTime(2024, 1, 1, 9, 0, 0, DateTimeKind.Utc), // Monday
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2010, 1, 1, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                Preface = "A tale of honor and tradition",
                 HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 1,
-                Artist = 1,
-                Translator = 1,
-                SubAuthor = 1
+                UpdatedAt = SEED_DATE
             },
+            // Week 1 - Tuesday
             new Manga
             {
-                Id = 2,
-                Title = "Attack on Titan",
-                Preface = "Humanity lives inside cities surrounded by enormous walls due to the Titans, gigantic humanoid creatures who devour humans seemingly without reason.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2012, 3, 15, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 2,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 3,
-                Title = "Solo Leveling",
-                Preface = "In a world where hunters must battle deadly monsters to protect the human race from certain annihilation, Sung Jin-Woo is the weakest hunter of all mankind.",
+                Id = "m2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                Title = "Cyberpunk Dreams",
+                PublishedDate = new DateTime(2024, 1, 2, 9, 0, 0, DateTimeKind.Utc), // Tuesday
                 Format = MangaFormat.Novel,
                 Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2014, 7, 20, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "A futuristic tale of technology and humanity",
                 HasAdult = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                SubAuthor = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                Publishor = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                Artist = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                Translator = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
+                UpdatedAt = SEED_DATE
             },
+            // Week 1 - Wednesday
             new Manga
             {
-                Id = 4,
-                Title = "Demon Slayer",
-                Preface = "Tanjiro Kamado's peaceful life is shattered when his family is slaughtered by demons. His sister Nezuko is turned into a demon, but still shows signs of human emotion and thought.",
+                Id = "m3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                Title = "Magical Academy",
+                PublishedDate = new DateTime(2024, 1, 3, 9, 0, 0, DateTimeKind.Utc), // Wednesday
                 Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2016, 2, 10, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 4,
-                Translator = 1,
-                SubAuthor = 1
-            },
-            new Manga
-            {
-                Id = 5,
-                Title = "Tower of God",
-                Preface = "The story follows Twenty-Fifth Bam, who has spent most of his life trapped beneath a mysterious tower, with only his close friend Rachel to keep him company.",
-                Format = MangaFormat.Novel,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2017, 5, 25, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 6,
-                Title = "My Hero Academia",
-                Preface = "In a world where 80% of the population has some kind of super-powered Quirk, Izuku Midoriya was unlucky to be born completely normal.",
-                Format = MangaFormat.Novel,
-                Region = MangaRegion.Japan,
+                Region = MangaRegion.Vietnam,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2018, 8, 30, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                Preface = "A school for young wizards and witches",
                 HasAdult = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                SubAuthor = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                Publishor = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                Artist = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                Translator = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 1,
-                Translator = 2,
-                SubAuthor = 2
+                UpdatedAt = SEED_DATE
             },
+            // Week 1 - Thursday
             new Manga
             {
-                Id = 7,
-                Title = "The Beginning After The End",
-                Preface = "King Grey has unrivaled strength, wealth, and prestige in a world governed by martial ability. However, solitude lingers closely behind those with great power.",
+                Id = "m4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                Title = "The Detective's Case",
+                PublishedDate = new DateTime(2024, 1, 4, 9, 0, 0, DateTimeKind.Utc), // Thursday
+                Format = MangaFormat.Novel,
+                Region = MangaRegion.China,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "Solving mysteries in the city",
+                HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 1 - Friday
+            new Manga
+            {
+                Id = "m5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                Title = "The Sports Star",
+                PublishedDate = new DateTime(2024, 1, 5, 9, 0, 0, DateTimeKind.Utc), // Friday
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2019, 12, 15, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                Preface = "A journey to become a professional athlete",
                 HasAdult = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                SubAuthor = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                Publishor = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                Artist = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                Translator = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
+                UpdatedAt = SEED_DATE
             },
+            // Week 1 - Saturday
             new Manga
             {
-                Id = 8,
-                Title = "Jujutsu Kaisen",
-                Preface = "Yuji Itadori is a boy with tremendous physical strength, though living a normal life. One day, to save a friend who has been attacked by curses, he eats a finger of Ryomen Sukuna.",
-                Format = MangaFormat.Novel,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2020, 4, 20, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 2,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 9,
-                Title = "The God of High School",
-                Preface = "Jin Mori is a 17-year-old high school student who participates in a fighting tournament called 'The God of High School' to grant his grandfather's wish.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2021, 6, 10, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 10,
-                Title = "Chainsaw Man",
-                Preface = "Denji's life of poverty changes forever when he merges with his pet chainsaw devil.",
+                Id = "m6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                Title = "The Cooking Master",
+                PublishedDate = new DateTime(2024, 1, 6, 9, 0, 0, DateTimeKind.Utc), // Saturday
                 Format = MangaFormat.Novel,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2022, 9, 5, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
+                Preface = "A culinary journey through Japan",
+                HasAdult = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                SubAuthor = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                Publishor = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                Artist = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                Translator = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 4,
-                Translator = 1,
-                SubAuthor = 1
+                UpdatedAt = SEED_DATE
             },
+            // Week 1 - Sunday
             new Manga
             {
-                Id = 11,
-                Title = "Omniscient Reader",
-                Preface = "Kim Dokja is the only person who knows the ending of a novel called 'Three Ways to Survive the Apocalypse'. When the novel becomes reality, he must use his knowledge to survive.",
+                Id = "m7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                Title = "Starlight Academy",
+                PublishedDate = new DateTime(2024, 1, 7, 9, 0, 0, DateTimeKind.Utc), // Sunday
                 Format = MangaFormat.WebToon,
+                Region = MangaRegion.Vietnam,
+                ReleaseStatus = MangaReleaseStatus.OnGoing,
+                Preface = "A magical school life story",
+                HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 2 - Monday
+            new Manga
+            {
+                Id = "m8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                Title = "The Last Hero",
+                PublishedDate = new DateTime(2024, 1, 8, 9, 0, 0, DateTimeKind.Utc), // Monday
+                Format = MangaFormat.Novel,
+                Region = MangaRegion.China,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "A superhero story with a twist",
+                HasAdult = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                SubAuthor = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                Publishor = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                Artist = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                Translator = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 2 - Tuesday
+            new Manga
+            {
+                Id = "m9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                Title = "The Cooking Master",
+                PublishedDate = new DateTime(2024, 1, 9, 9, 0, 0, DateTimeKind.Utc), // Tuesday
+                Format = MangaFormat.WebToon,
+                Region = MangaRegion.Japan,
+                ReleaseStatus = MangaReleaseStatus.OnGoing,
+                Preface = "A culinary journey through Japan",
+                HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 2 - Wednesday
+            new Manga
+            {
+                Id = "m0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                Title = "The Music Prodigy",
+                PublishedDate = new DateTime(2024, 1, 10, 9, 0, 0, DateTimeKind.Utc), // Wednesday
+                Format = MangaFormat.Novel,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                Preface = "A young musician's journey to stardom",
                 HasAdult = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                SubAuthor = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                Publishor = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                Artist = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                Translator = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
+                UpdatedAt = SEED_DATE
             },
+            // Week 2 - Thursday
             new Manga
             {
-                Id = 12,
-                Title = "Dragon Ball Super",
-                Preface = "The story of Goku and his friends' continued adventures after the defeat of Majin Buu.",
+                Id = "m1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                Title = "The Martial Arts Master",
+                PublishedDate = new DateTime(2024, 1, 11, 9, 0, 0, DateTimeKind.Utc), // Thursday
                 Format = MangaFormat.WebToon,
+                Region = MangaRegion.China,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "A journey through ancient martial arts",
+                HasAdult = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                SubAuthor = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                Publishor = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                Artist = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                Translator = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 2 - Friday
+            new Manga
+            {
+                Id = "m2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                Title = "The Psychological Thriller",
+                PublishedDate = new DateTime(2024, 1, 12, 9, 0, 0, DateTimeKind.Utc), // Friday
+                Format = MangaFormat.Novel,
                 Region = MangaRegion.Japan,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                Preface = "A mind-bending psychological journey",
                 HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 1,
-                Artist = 1,
-                Translator = 1,
-                SubAuthor = 1
+                UpdatedAt = SEED_DATE
             },
+            // Week 2 - Saturday
             new Manga
             {
-                Id = 13,
-                Title = "The Promised Neverland",
-                Preface = "A group of orphans discover the dark truth about their idyllic orphanage.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 1, 8, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 2,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 14,
-                Title = "Tower of God",
-                Preface = "Follow Bam as he climbs the mysterious Tower to find Rachel.",
+                Id = "m3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                Title = "The Military Academy",
+                PublishedDate = new DateTime(2024, 1, 13, 9, 0, 0, DateTimeKind.Utc), // Saturday
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 1, 15, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "Life in a prestigious military academy",
                 HasAdult = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                SubAuthor = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                Publishor = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                Artist = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                Translator = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
+                UpdatedAt = SEED_DATE
             },
+            // Week 2 - Sunday
             new Manga
             {
-                Id = 15,
-                Title = "Black Clover",
-                Preface = "A young boy born without magic strives to become the Wizard King.",
+                Id = "m4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                Title = "The Supernatural Detective",
+                PublishedDate = new DateTime(2024, 1, 14, 9, 0, 0, DateTimeKind.Utc), // Sunday
+                Format = MangaFormat.Novel,
+                Region = MangaRegion.Vietnam,
+                ReleaseStatus = MangaReleaseStatus.OnGoing,
+                Preface = "Solving supernatural mysteries",
+                HasAdult = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                SubAuthor = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                Publishor = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                Artist = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                Translator = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 3 - Monday
+            new Manga
+            {
+                Id = "m5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                Title = "The Historical Romance",
+                PublishedDate = new DateTime(2024, 1, 15, 9, 0, 0, DateTimeKind.Utc), // Monday
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 1, 22, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "A love story set in ancient times",
                 HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 4,
-                Translator = 1,
-                SubAuthor = 1
+                UpdatedAt = SEED_DATE
             },
+            // Week 3 - Tuesday
             new Manga
             {
-                Id = 16,
-                Title = "Solo Leveling",
-                Preface = "The story of Sung Jin-Woo, the weakest of all hunters.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 1, 29, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 17,
-                Title = "Dr. Stone",
-                Preface = "A scientific genius rebuilds civilization after humanity is turned to stone.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 2, 5, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 1,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 18,
-                Title = "The Beginning After The End",
-                Preface = "A king is reborn in a new world of magic and monsters.",
-                Format = MangaFormat.WebToon,
+                Id = "m6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                Title = "The Horror Mansion",
+                PublishedDate = new DateTime(2024, 1, 16, 9, 0, 0, DateTimeKind.Utc), // Tuesday
+                Format = MangaFormat.Novel,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 2, 12, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                Preface = "A terrifying journey through a haunted mansion",
                 HasAdult = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                SubAuthor = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                Publishor = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                Artist = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                Translator = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
+                UpdatedAt = SEED_DATE
             },
+            // Week 3 - Wednesday
             new Manga
             {
-                Id = 19,
-                Title = "Tokyo Ghoul",
-                Preface = "A college student becomes a half-ghoul after a chance encounter.",
+                Id = "m7q8r9s0-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                Title = "The Adventure Quest",
+                PublishedDate = new DateTime(2024, 1, 17, 9, 0, 0, DateTimeKind.Utc), // Wednesday
+                Format = MangaFormat.WebToon,
+                Region = MangaRegion.China,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "An epic adventure in a fantasy world",
+                HasAdult = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                SubAuthor = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                Publishor = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                Artist = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                Translator = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 3 - Thursday
+            new Manga
+            {
+                Id = "m8r9s0t1-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                Title = "The Comedy Club",
+                PublishedDate = new DateTime(2024, 1, 18, 9, 0, 0, DateTimeKind.Utc), // Thursday
+                Format = MangaFormat.Novel,
+                Region = MangaRegion.Vietnam,
+                ReleaseStatus = MangaReleaseStatus.OnGoing,
+                Preface = "Laughs and life lessons in a comedy club",
+                HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 3 - Friday
+            new Manga
+            {
+                Id = "m9s0t1u2-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                Title = "The Drama Queen",
+                PublishedDate = new DateTime(2024, 1, 19, 9, 0, 0, DateTimeKind.Utc), // Friday
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 2, 19, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "A story of love, betrayal, and redemption",
+                HasAdult = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                SubAuthor = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                Publishor = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                Artist = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                Translator = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 2,
-                Translator = 2,
-                SubAuthor = 2
+                UpdatedAt = SEED_DATE
             },
+            // Week 3 - Saturday
             new Manga
             {
-                Id = 20,
-                Title = "The God of High School",
-                Preface = "A martial arts tournament reveals supernatural powers.",
-                Format = MangaFormat.WebToon,
+                Id = "m0t1u2v3-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                Title = "The Sports Tournament",
+                PublishedDate = new DateTime(2024, 1, 20, 9, 0, 0, DateTimeKind.Utc), // Saturday
+                Format = MangaFormat.Novel,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 2, 26, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                Preface = "A high-stakes sports competition story",
                 HasAdult = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                SubAuthor = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                Publishor = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                Artist = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                Translator = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
+                UpdatedAt = SEED_DATE
             },
+            // Week 3 - Sunday
             new Manga
             {
-                Id = 21,
-                Title = "Hunter x Hunter",
-                Preface = "A young boy seeks to become a Hunter and find his father.",
+                Id = "m1u2v3w4-x5y6-7z8a-9b0c-1d2e3f4g5h6i",
+                Title = "The Mystery Box",
+                PublishedDate = new DateTime(2024, 1, 21, 9, 0, 0, DateTimeKind.Utc), // Sunday
                 Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
+                Region = MangaRegion.China,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "Unraveling the secrets of a mysterious box",
+                HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 4 - Monday
+            new Manga
+            {
+                Id = "m2v3w4x5-y6z7-8a9b-0c1d-2e3f4g5h6i7j",
+                Title = "The Fantasy Kingdom",
+                PublishedDate = new DateTime(2024, 1, 22, 9, 0, 0, DateTimeKind.Utc), // Monday
+                Format = MangaFormat.Novel,
+                Region = MangaRegion.Vietnam,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 3, 4, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                Preface = "A magical kingdom's rise and fall",
                 HasAdult = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                SubAuthor = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                Publishor = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                Artist = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                Translator = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 4,
-                Translator = 1,
-                SubAuthor = 1
+                UpdatedAt = SEED_DATE
             },
+            // Week 4 - Tuesday
             new Manga
             {
-                Id = 22,
-                Title = "Noblesse",
-                Preface = "A powerful vampire awakens in modern times.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 3, 11, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 23,
-                Title = "Death Note",
-                Preface = "A high school student discovers a notebook that can kill anyone.",
+                Id = "m3w4x5y6-z7a8-9b0c-1d2e-3f4g5h6i7j8k",
+                Title = "The School Festival",
+                PublishedDate = new DateTime(2024, 1, 23, 9, 0, 0, DateTimeKind.Utc), // Tuesday
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 3, 18, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "A memorable school festival experience",
+                HasAdult = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                SubAuthor = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                Publishor = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                Artist = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                Translator = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 1,
-                Translator = 2,
-                SubAuthor = 2
+                UpdatedAt = SEED_DATE
             },
+            // Week 4 - Wednesday
             new Manga
             {
-                Id = 24,
-                Title = "Tales of Demons and Gods",
-                Preface = "A powerful cultivator is reborn to change his fate.",
-                Format = MangaFormat.WebToon,
+                Id = "m4x5y6z7-a8b9-0c1d-2e3f-4g5h6i7j8k9l",
+                Title = "The Cooking Competition",
+                PublishedDate = new DateTime(2024, 1, 24, 9, 0, 0, DateTimeKind.Utc), // Wednesday
+                Format = MangaFormat.Novel,
                 Region = MangaRegion.Korea,
                 ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 3, 25, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                Preface = "A culinary battle of skills and passion",
                 HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
+                UpdatedAt = SEED_DATE
             },
+            // Week 4 - Thursday
             new Manga
             {
-                Id = 25,
-                Title = "Bleach",
-                Preface = "A teenager becomes a Soul Reaper to protect the living world.",
+                Id = "m5y6z7a8-b9c0-1d2e-3f4g-5h6i7j8k9l0m",
+                Title = "The Martial Arts Tournament",
+                PublishedDate = new DateTime(2024, 1, 25, 9, 0, 0, DateTimeKind.Utc), // Thursday
+                Format = MangaFormat.WebToon,
+                Region = MangaRegion.China,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "A tournament of martial arts masters",
+                HasAdult = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                SubAuthor = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                Publishor = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                Artist = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                Translator = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 4 - Friday
+            new Manga
+            {
+                Id = "m6z7a8b9-c0d1-2e3f-4g5h-6i7j8k9l0m1n",
+                Title = "The Psychological Game",
+                PublishedDate = new DateTime(2024, 1, 26, 9, 0, 0, DateTimeKind.Utc), // Friday
+                Format = MangaFormat.Novel,
+                Region = MangaRegion.Vietnam,
+                ReleaseStatus = MangaReleaseStatus.OnGoing,
+                Preface = "A mind-bending psychological battle",
+                HasAdult = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                SubAuthor = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                Publishor = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                Artist = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                Translator = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Week 4 - Saturday
+            new Manga
+            {
+                Id = "m7a8b9c0-d1e2-3f4g-5h6i-7j8k9l0m1n2o",
+                Title = "The Supernatural Academy",
+                PublishedDate = new DateTime(2024, 1, 27, 9, 0, 0, DateTimeKind.Utc), // Saturday
                 Format = MangaFormat.WebToon,
                 Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 4, 1, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
+                ReleaseStatus = MangaReleaseStatus.ComingSoon,
+                Preface = "A school for supernatural abilities",
                 HasAdult = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                SubAuthor = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                Publishor = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                Artist = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                Translator = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 2,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 26,
-                Title = "The Legendary Moonlight Sculptor",
-                Preface = "A skilled gamer becomes a legendary sculptor in a virtual world.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 4, 8, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 27,
-                Title = "Naruto",
-                Preface = "A young ninja seeks to become the strongest and gain recognition.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 4, 15, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 4,
-                Translator = 1,
-                SubAuthor = 1
-            },
-            new Manga
-            {
-                Id = 28,
-                Title = "The Gamer",
-                Preface = "A high school student gains the ability to live life like a video game.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 4, 22, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 29,
-                Title = "Fullmetal Alchemist",
-                Preface = "Two brothers seek to restore their bodies using alchemy.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 4, 29, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 1,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 30,
-                Title = "Tower of God",
-                Preface = "Follow Bam as he climbs the mysterious Tower to find Rachel.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 5, 6, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 31,
-                Title = "Attack on Titan",
-                Preface = "Humanity fights for survival against giant Titans.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 5, 13, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 2,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 32,
-                Title = "The Beginning After The End",
-                Preface = "A king is reborn in a new world of magic and monsters.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 5, 20, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 33,
-                Title = "One Punch Man",
-                Preface = "A hero who can defeat any opponent with a single punch.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 5, 27, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 4,
-                Translator = 1,
-                SubAuthor = 1
-            },
-            new Manga
-            {
-                Id = 34,
-                Title = "Solo Leveling",
-                Preface = "The story of Sung Jin-Woo, the weakest of all hunters.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 6, 3, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 35,
-                Title = "Demon Slayer",
-                Preface = "A young boy fights demons to save his sister.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 6, 10, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 1,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 36,
-                Title = "The God of High School",
-                Preface = "A martial arts tournament reveals supernatural powers.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 6, 17, 0, 0, 0, DateTimeKind.Utc),
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 37,
-                Title = "Jujutsu Kaisen",
-                Preface = "A boy fights against curses with the help of a powerful sorcerer.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 6, 24, 0, 0, 0, DateTimeKind.Utc), // Monday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 1,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 38,
-                Title = "The Legendary Moonlight Sculptor",
-                Preface = "A skilled gamer becomes a legendary sculptor in a virtual world.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 6, 25, 0, 0, 0, DateTimeKind.Utc), // Tuesday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 39,
-                Title = "My Hero Academia",
-                Preface = "A world where 80% of the population has superpowers, and a boy without powers dreams of becoming a hero.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 6, 26, 0, 0, 0, DateTimeKind.Utc), // Wednesday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 4,
-                Translator = 1,
-                SubAuthor = 1
-            },
-            new Manga
-            {
-                Id = 40,
-                Title = "Tales of Demons and Gods",
-                Preface = "A powerful cultivator is reborn to change his fate.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 6, 27, 0, 0, 0, DateTimeKind.Utc), // Thursday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 41,
-                Title = "Chainsaw Man",
-                Preface = "A young man becomes a devil hunter after merging with his pet chainsaw devil.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 6, 28, 0, 0, 0, DateTimeKind.Utc), // Friday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 2,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 42,
-                Title = "The Beginning After The End",
-                Preface = "A king is reborn in a new world of magic and monsters.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 6, 29, 0, 0, 0, DateTimeKind.Utc), // Saturday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 43,
-                Title = "One Punch Man",
-                Preface = "A hero who can defeat any opponent with a single punch.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 6, 30, 0, 0, 0, DateTimeKind.Utc), // Sunday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 4,
-                Translator = 1,
-                SubAuthor = 1
-            },
-            new Manga
-            {
-                Id = 44,
-                Title = "Black Clover",
-                Preface = "A young boy born without magic strives to become the Wizard King.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 7, 1, 0, 0, 0, DateTimeKind.Utc), // Monday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 45,
-                Title = "Tokyo Ghoul",
-                Preface = "A college student becomes a half-ghoul after a chance encounter.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 7, 2, 0, 0, 0, DateTimeKind.Utc), // Tuesday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 2,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 46,
-                Title = "The God of High School",
-                Preface = "A martial arts tournament reveals supernatural powers.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 7, 3, 0, 0, 0, DateTimeKind.Utc), // Wednesday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 47,
-                Title = "Hunter x Hunter",
-                Preface = "A young boy seeks to become a Hunter and find his father.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 7, 4, 0, 0, 0, DateTimeKind.Utc), // Thursday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 4,
-                Translator = 1,
-                SubAuthor = 1
-            },
-            new Manga
-            {
-                Id = 48,
-                Title = "Noblesse",
-                Preface = "A powerful vampire awakens in modern times.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 7, 5, 0, 0, 0, DateTimeKind.Utc), // Friday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
-            },
-            new Manga
-            {
-                Id = 49,
-                Title = "Death Note",
-                Preface = "A high school student discovers a notebook that can kill anyone.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Japan,
-                ReleaseStatus = MangaReleaseStatus.Completed,
-                PublishedDate = new DateTime(2024, 7, 6, 0, 0, 0, DateTimeKind.Utc), // Saturday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = true,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 2,
-                Artist = 2,
-                Translator = 2,
-                SubAuthor = 2
-            },
-            new Manga
-            {
-                Id = 50,
-                Title = "Tales of Demons and Gods",
-                Preface = "A powerful cultivator is reborn to change his fate.",
-                Format = MangaFormat.WebToon,
-                Region = MangaRegion.Korea,
-                ReleaseStatus = MangaReleaseStatus.OnGoing,
-                PublishedDate = new DateTime(2024, 7, 7, 0, 0, 0, DateTimeKind.Utc), // Sunday
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CoverImage = COVER_IMAGE_URL,
-                HasAdult = false,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                Publishor = 3,
-                Artist = 3,
-                Translator = 3,
-                SubAuthor = 3
+                UpdatedAt = SEED_DATE
             }
         );
 
-        // Seed MangaGenres
+        // Seed MangaGenre
         modelBuilder.Entity<MangaGenre>().HasData(
-            // One Piece (ID: 1) genres
-            new MangaGenre { Id = 1, MangaId = 1, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 2, MangaId = 1, GenreId = 2, IsDeleted = false }, // Adventure
+            // The Last Samurai's Legacy - Action, Historical
+            new MangaGenre
+            {
+                Id = "mg1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                MangaId = "m1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                GenreId = "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s", // Action
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                MangaId = "m1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                GenreId = "2v3w4x5y-6z7a-8b9c-0d1e-2f3g4h5i6j7k8l", // Historical
+                IsDeleted = false
+            },
 
-            // Attack on Titan (ID: 2) genres
-            new MangaGenre { Id = 3, MangaId = 2, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 4, MangaId = 2, GenreId = 4, IsDeleted = false }, // Drama
+            // Cyberpunk Dreams - Sci-Fi, Thriller
+            new MangaGenre
+            {
+                Id = "mg3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                MangaId = "m2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                GenreId = "1k2l3m4n-5o6p-7q8r-9s0t-1u2v3w4x5y6z", // Sci-Fi
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                MangaId = "m2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                GenreId = "3m4n5o6p-7q8r-9s0t-1u2v-3w4x5y6z7a8b9c", // Thriller
+                IsDeleted = false
+            },
 
-            // Solo Leveling (ID: 3) genres
-            new MangaGenre { Id = 5, MangaId = 3, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 6, MangaId = 3, GenreId = 5, IsDeleted = false }, // Fantasy
+            // Magical Academy - Fantasy, School Life
+            new MangaGenre
+            {
+                Id = "mg5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                MangaId = "m3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                GenreId = "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w", // Fantasy
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                MangaId = "m3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                GenreId = "9s0t1u2v-3w4x-5y6z-7a8b-9c0d1e2f3g4h5i", // School Life
+                IsDeleted = false
+            },
 
-            // Demon Slayer (ID: 4) genres
-            new MangaGenre { Id = 7, MangaId = 4, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 8, MangaId = 4, GenreId = 6, IsDeleted = false }, // Horror
+            // The Detective's Case - Mystery, Thriller
+            new MangaGenre
+            {
+                Id = "mg7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                MangaId = "m4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                GenreId = "2l3m4n5o-6p7q-8r9s-0t1u-2v3w4x5y6z7a8b", // Mystery
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                MangaId = "m4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                GenreId = "3m4n5o6p-7q8r-9s0t-1u2v-3w4x5y6z7a8b9c", // Thriller
+                IsDeleted = false
+            },
 
-            // Tower of God (ID: 5) genres
-            new MangaGenre { Id = 9, MangaId = 5, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 10, MangaId = 5, GenreId = 7, IsDeleted = false }, // Mystery
+            // The Sports Star - Sports, School Life
+            new MangaGenre
+            {
+                Id = "mg9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                MangaId = "m5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                GenreId = "5o6p7q8r-9s0t-1u2v-3w4x-5y6z7a8b9c0d1e", // Sports
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                MangaId = "m5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                GenreId = "9s0t1u2v-3w4x-5y6z-7a8b-9c0d1e2f3g4h5i", // School Life
+                IsDeleted = false
+            },
 
-            // My Hero Academia (ID: 6) genres
-            new MangaGenre { Id = 11, MangaId = 6, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 12, MangaId = 6, GenreId = 8, IsDeleted = false }, // Supernatural
+            // The Cooking Master - Cooking, Slice of Life
+            new MangaGenre
+            {
+                Id = "mg1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                MangaId = "m6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                GenreId = "1u2v3w4x-5y6z-7a8b-9c0d-1e2f3g4h5i6j7k", // Cooking
+                IsDeleted = false,
+            },
+            new MangaGenre
+            {
+                Id = "mg2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                MangaId = "m6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                GenreId = "4n5o6p7q-8r9s-0t1u-2v3w-4x5y6z7a8b9c0d", // Slice of Life
+                IsDeleted = false
+            },
 
-            // The Beginning After The End (ID: 7) genres
-            new MangaGenre { Id = 13, MangaId = 7, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 14, MangaId = 7, GenreId = 9, IsDeleted = false }, // Romance
+            // Starlight Academy - Fantasy, School Life
+            new MangaGenre
+            {
+                Id = "mg3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                MangaId = "m7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                GenreId = "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w", // Fantasy
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                MangaId = "m7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                GenreId = "9s0t1u2v-3w4x-5y6z-7a8b-9c0d1e2f3g4h5i", // School Life
+                IsDeleted = false
+            },
 
-            // Jujutsu Kaisen (ID: 8) genres
-            new MangaGenre { Id = 15, MangaId = 8, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 16, MangaId = 8, GenreId = 10, IsDeleted = false }, // School
+            // The Last Hero - Action, Sci-Fi
+            new MangaGenre
+            {
+                Id = "mg5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                MangaId = "m8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                GenreId = "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s", // Action
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                MangaId = "m8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                GenreId = "1k2l3m4n-5o6p-7q8r-9s0t-1u2v3w4x5y6z", // Sci-Fi
+                IsDeleted = false
+            },
 
-            // The God of High School (ID: 9) genres
-            new MangaGenre { Id = 17, MangaId = 9, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 18, MangaId = 9, GenreId = 11, IsDeleted = false }, // Martial Arts
-
-            // Chainsaw Man (ID: 10) genres
-            new MangaGenre { Id = 19, MangaId = 10, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 20, MangaId = 10, GenreId = 12, IsDeleted = false }, // Psychological
-
-            // Omniscient Reader (ID: 11) genres
-            new MangaGenre { Id = 21, MangaId = 11, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 22, MangaId = 11, GenreId = 13, IsDeleted = false }, // Sci-Fi
-
-            // Dragon Ball Super (ID: 12) genres
-            new MangaGenre { Id = 23, MangaId = 12, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 24, MangaId = 12, GenreId = 14, IsDeleted = false }, // Sports
-
-            // The Promised Neverland (ID: 13) genres
-            new MangaGenre { Id = 25, MangaId = 13, GenreId = 4, IsDeleted = false }, // Drama
-            new MangaGenre { Id = 26, MangaId = 13, GenreId = 15, IsDeleted = false }, // Thriller
-
-            // Tower of God (ID: 14) genres
-            new MangaGenre { Id = 27, MangaId = 14, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 28, MangaId = 14, GenreId = 16, IsDeleted = false }, // Game
-
-            // Black Clover (ID: 15) genres
-            new MangaGenre { Id = 29, MangaId = 15, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 30, MangaId = 15, GenreId = 17, IsDeleted = false }, // Magic
-
-            // Solo Leveling (ID: 16) genres
-            new MangaGenre { Id = 31, MangaId = 16, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 32, MangaId = 16, GenreId = 18, IsDeleted = false }, // Virtual Reality
-
-            // Dr. Stone (ID: 17) genres
-            new MangaGenre { Id = 33, MangaId = 17, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 34, MangaId = 17, GenreId = 19, IsDeleted = false }, // Historical
-
-            // The Beginning After The End (ID: 18) genres
-            new MangaGenre { Id = 35, MangaId = 18, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 36, MangaId = 18, GenreId = 20, IsDeleted = false }, // Isekai
-
-            // Tokyo Ghoul (ID: 19) genres
-            new MangaGenre { Id = 37, MangaId = 19, GenreId = 4, IsDeleted = false }, // Drama
-            new MangaGenre { Id = 38, MangaId = 19, GenreId = 6, IsDeleted = false }, // Horror
-
-            // The God of High School (ID: 20) genres
-            new MangaGenre { Id = 39, MangaId = 20, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 40, MangaId = 20, GenreId = 11, IsDeleted = false }, // Martial Arts
-
-            // Hunter x Hunter (ID: 21) genres
-            new MangaGenre { Id = 41, MangaId = 21, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 42, MangaId = 21, GenreId = 7, IsDeleted = false }, // Mystery
-
-            // Death Note (ID: 22) genres
-            new MangaGenre { Id = 43, MangaId = 22, GenreId = 4, IsDeleted = false }, // Drama
-            new MangaGenre { Id = 44, MangaId = 22, GenreId = 12, IsDeleted = false }, // Psychological
-
-            // Hunter x Hunter (ID: 23) genres
-            new MangaGenre { Id = 45, MangaId = 23, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 46, MangaId = 23, GenreId = 8, IsDeleted = false }, // Supernatural
-
-            // Tales of Demons and Gods (ID: 24) genres
-            new MangaGenre { Id = 47, MangaId = 24, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 48, MangaId = 24, GenreId = 17, IsDeleted = false }, // Magic
-
-            // Bleach (ID: 25) genres
-            new MangaGenre { Id = 49, MangaId = 25, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 50, MangaId = 25, GenreId = 8, IsDeleted = false }, // Supernatural
-
-            // The Legendary Moonlight Sculptor (ID: 26) genres
-            new MangaGenre { Id = 51, MangaId = 26, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 52, MangaId = 26, GenreId = 18, IsDeleted = false }, // Virtual Reality
-
-            // Naruto (ID: 27) genres
-            new MangaGenre { Id = 53, MangaId = 27, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 54, MangaId = 27, GenreId = 10, IsDeleted = false }, // School
-
-            // The Gamer (ID: 28) genres
-            new MangaGenre { Id = 55, MangaId = 28, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 56, MangaId = 28, GenreId = 16, IsDeleted = false }, // Game
-
-            // Fullmetal Alchemist (ID: 29) genres
-            new MangaGenre { Id = 57, MangaId = 29, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 58, MangaId = 29, GenreId = 13, IsDeleted = false }, // Sci-Fi
-
-            // Tower of God (ID: 30) genres
-            new MangaGenre { Id = 59, MangaId = 30, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 60, MangaId = 30, GenreId = 7, IsDeleted = false }, // Mystery
-
-            // Attack on Titan (ID: 31) genres
-            new MangaGenre { Id = 61, MangaId = 31, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 62, MangaId = 31, GenreId = 15, IsDeleted = false }, // Thriller
-
-            // The Beginning After The End (ID: 32) genres
-            new MangaGenre { Id = 63, MangaId = 32, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 64, MangaId = 32, GenreId = 9, IsDeleted = false }, // Romance
-
-            // One Punch Man (ID: 33) genres
-            new MangaGenre { Id = 65, MangaId = 33, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 66, MangaId = 33, GenreId = 3, IsDeleted = false }, // Comedy
-
-            // Solo Leveling (ID: 34) genres
-            new MangaGenre { Id = 67, MangaId = 34, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 68, MangaId = 34, GenreId = 18, IsDeleted = false }, // Virtual Reality
-
-            // Demon Slayer (ID: 35) genres
-            new MangaGenre { Id = 69, MangaId = 35, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 70, MangaId = 35, GenreId = 6, IsDeleted = false }, // Horror
-
-            // The God of High School (ID: 36) genres
-            new MangaGenre { Id = 71, MangaId = 36, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 72, MangaId = 36, GenreId = 11, IsDeleted = false }, // Martial Arts
-
-            // Jujutsu Kaisen (ID: 37) genres
-            new MangaGenre { Id = 73, MangaId = 37, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 74, MangaId = 37, GenreId = 8, IsDeleted = false }, // Supernatural
-
-            // Death Note (ID: 38) genres
-            new MangaGenre { Id = 75, MangaId = 38, GenreId = 4, IsDeleted = false }, // Drama
-            new MangaGenre { Id = 76, MangaId = 38, GenreId = 12, IsDeleted = false }, // Psychological
-
-            // Hunter x Hunter (ID: 39) genres
-            new MangaGenre { Id = 77, MangaId = 39, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 78, MangaId = 39, GenreId = 7, IsDeleted = false }, // Mystery
-
-            // Tales of Demons and Gods (ID: 40) genres
-            new MangaGenre { Id = 79, MangaId = 40, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 80, MangaId = 40, GenreId = 17, IsDeleted = false }, // Magic
-
-            // Chainsaw Man (ID: 41) genres
-            new MangaGenre { Id = 81, MangaId = 41, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 82, MangaId = 41, GenreId = 12, IsDeleted = false }, // Psychological
-
-            // Bleach (ID: 42) genres
-            new MangaGenre { Id = 83, MangaId = 42, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 84, MangaId = 42, GenreId = 8, IsDeleted = false }, // Supernatural
-
-            // Naruto (ID: 43) genres
-            new MangaGenre { Id = 85, MangaId = 43, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 86, MangaId = 43, GenreId = 10, IsDeleted = false }, // School
-
-            // The Gamer (ID: 44) genres
-            new MangaGenre { Id = 87, MangaId = 44, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 88, MangaId = 44, GenreId = 16, IsDeleted = false }, // Game
-
-            // Fullmetal Alchemist (ID: 45) genres
-            new MangaGenre { Id = 89, MangaId = 45, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 90, MangaId = 45, GenreId = 13, IsDeleted = false }, // Sci-Fi
-
-            // The God of High School (ID: 46) genres
-            new MangaGenre { Id = 91, MangaId = 46, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 92, MangaId = 46, GenreId = 11, IsDeleted = false }, // Martial Arts
-
-            // Hunter x Hunter (ID: 47) genres
-            new MangaGenre { Id = 93, MangaId = 47, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 94, MangaId = 47, GenreId = 7, IsDeleted = false }, // Mystery
-
-            // Death Note (ID: 48) genres
-            new MangaGenre { Id = 95, MangaId = 48, GenreId = 4, IsDeleted = false }, // Drama
-            new MangaGenre { Id = 96, MangaId = 48, GenreId = 12, IsDeleted = false }, // Psychological
-
-            // Hunter x Hunter (ID: 49) genres
-            new MangaGenre { Id = 97, MangaId = 49, GenreId = 1, IsDeleted = false }, // Action
-            new MangaGenre { Id = 98, MangaId = 49, GenreId = 8, IsDeleted = false }, // Supernatural
-
-            // Tales of Demons and Gods (ID: 50) genres
-            new MangaGenre { Id = 99, MangaId = 50, GenreId = 2, IsDeleted = false }, // Adventure
-            new MangaGenre { Id = 100, MangaId = 50, GenreId = 17, IsDeleted = false } // Magic
+            // The Cooking Master - Cooking, Slice of Life
+            new MangaGenre
+            {
+                Id = "mg7q8r9s0-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                MangaId = "m9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                GenreId = "1u2v3w4x-5y6z-7a8b-9c0d-1e2f3g4h5i6j7k", // Cooking
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg8r9s0t1-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                MangaId = "m9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                GenreId = "4n5o6p7q-8r9s-0t1u-2v3w-4x5y6z7a8b9c0d", // Slice of Life
+                IsDeleted = false
+            },
+            // The Music Prodigy - Music, Slice of Life
+            new MangaGenre
+            {
+                Id = "mg9s0t1u2-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                MangaId = "m0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                GenreId = "0t1u2v3w-4x5y-6z7a-8b9c-0d1e2f3g4h5i6j", // Music
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg0t1u2v3-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                MangaId = "m0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                GenreId = "4n5o6p7q-8r9s-0t1u-2v3w-4x5y6z7a8b9c0d", // Slice of Life
+                IsDeleted = false
+            },
+            // The Martial Arts Master - Martial Arts, Action
+            new MangaGenre
+            {
+                Id = "mg1u2v3w4-x5y6-7z8a-9b0c-1d2e3f4g5h6i",
+                MangaId = "m1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                GenreId = "8r9s0t1u-2v3w-4x5y-6z7a-8b9c0d1e2f3g4h", // Martial Arts
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg2v3w4x5-y6z7-8a9b-0c1d-2e3f4g5h6i7j",
+                MangaId = "m1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                GenreId = "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s", // Action
+                IsDeleted = false
+            },
+            // The Psychological Thriller - Psychological, Thriller
+            new MangaGenre
+            {
+                Id = "mg3w4x5y6-z7a8-9b0c-1d2e-3f4g5h6i7j8k",
+                MangaId = "m2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                GenreId = "7q8r9s0t-1u2v-3w4x-5y6z-7a8b9c0d1e2f3g", // Psychological
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg4x5y6z7-a8b9-0c1d-2e3f-4g5h6i7j8k9l",
+                MangaId = "m2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                GenreId = "3m4n5o6p-7q8r-9s0t-1u2v-3w4x5y6z7a8b9c", // Thriller
+                IsDeleted = false
+            },
+            // The Military Academy - Military, School Life
+            new MangaGenre
+            {
+                Id = "mg5y6z7a8-b9c0-1d2e-3f4g-5h6i7j8k9l0m",
+                MangaId = "m3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                GenreId = "3w4x5y6z-7a8b-9c0d-1e2f-3g4h5i6j7k8l9m", // Military
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg6z7a8b9-c0d1-2e3f-4g5h-6i7j8k9l0m1n",
+                MangaId = "m3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                GenreId = "9s0t1u2v-3w4x-5y6z-7a8b-9c0d1e2f3g4h5i", // School Life
+                IsDeleted = false
+            },
+            // The Supernatural Detective - Supernatural, Mystery
+            new MangaGenre
+            {
+                Id = "mg7a8b9c0-d1e2-3f4g-5h6i-7j8k9l0m1n2o",
+                MangaId = "m4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                GenreId = "6p7q8r9s-0t1u-2v3w-4x5y-6z7a8b9c0d1e2f", // Supernatural
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg8b9c0d1-e2f3-4g5h-6i7j-8k9l0m1n2o3p",
+                MangaId = "m4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                GenreId = "2l3m4n5o-6p7q-8r9s-0t1u-2v3w4x5y6z7a8b", // Mystery
+                IsDeleted = false
+            },
+            // The Historical Romance - Historical, Romance
+            new MangaGenre
+            {
+                Id = "mg9c0d1e2-f3g4-5h6i-7j8k-9l0m1n2o3p4q",
+                MangaId = "m5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                GenreId = "2v3w4x5y-6z7a-8b9c-0d1e-2f3g4h5i6j7k8l", // Historical
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg0d1e2f3-g4h5-6i7j-8k9l-0m1n2o3p4q5r",
+                MangaId = "m5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                GenreId = "0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y", // Romance
+                IsDeleted = false
+            },
+            // The Horror Mansion - Horror, Thriller
+            new MangaGenre
+            {
+                Id = "mg1e2f3g4-h5i6-7j8k-9l0m-1n2o3p4q5r6s",
+                MangaId = "m6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                GenreId = "9i0j1k2l-3m4n-5o6p-7q8r-9s0t1u2v3w4x", // Horror
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg2f3g4h5-i6j7-8k9l-0m1n-2o3p4q5r6s7t",
+                MangaId = "m6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                GenreId = "3m4n5o6p-7q8r-9s0t-1u2v-3w4x5y6z7a8b9c", // Thriller
+                IsDeleted = false
+            },
+            // The Adventure Quest - Adventure, Fantasy
+            new MangaGenre
+            {
+                Id = "mg3g4h5i6-j7k8-9l0m-1n2o-3p4q5r6s7t8u",
+                MangaId = "m7q8r9s0-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                GenreId = "5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t", // Adventure
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg4h5i6j7-k8l9-0m1n-2o3p-4q5r6s7t8u9v",
+                MangaId = "m7q8r9s0-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                GenreId = "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w", // Fantasy
+                IsDeleted = false
+            },
+            // The Comedy Club - Comedy, Slice of Life
+            new MangaGenre
+            {
+                Id = "mg5i6j7k8-l9m0-1n2o-3p4q-5r6s7t8u9v0w",
+                MangaId = "m8r9s0t1-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                GenreId = "6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u", // Comedy
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg6j7k8l9-m0n1-2o3p-4q5r-6s7t8u9v0w1x",
+                MangaId = "m8r9s0t1-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                GenreId = "4n5o6p7q-8r9s-0t1u-2v3w-4x5y6z7a8b9c0d", // Slice of Life
+                IsDeleted = false
+            },
+            // The Drama Queen - Drama, Romance
+            new MangaGenre
+            {
+                Id = "mg7k8l9m0-n1o2-3p4q-5r6s-7t8u9v0w1x2y",
+                MangaId = "m9s0t1u2-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                GenreId = "7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v", // Drama
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg8l9m0n1-o2p3-4q5r-6s7t-8u9v0w1x2y3z",
+                MangaId = "m9s0t1u2-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                GenreId = "0j1k2l3m-4n5o-6p7q-8r9s-0t1u2v3w4x5y", // Romance
+                IsDeleted = false
+            },
+            // The Sports Tournament - Sports, Action
+            new MangaGenre
+            {
+                Id = "mg9m0n1o2-p3q4-5r6s-7t8u-9v0w1x2y3z4a",
+                MangaId = "m0t1u2v3-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                GenreId = "5o6p7q8r-9s0t-1u2v-3w4x-5y6z7a8b9c0d1e", // Sports
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg0n1o2p3-q4r5-6s7t-8u9v-0w1x2y3z4a5b",
+                MangaId = "m0t1u2v3-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                GenreId = "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s", // Action
+                IsDeleted = false
+            },
+            // The Mystery Box - Mystery, Thriller
+            new MangaGenre
+            {
+                Id = "mg1o2p3q4-r5s6-7t8u-9v0w-1x2y3z4a5b6c",
+                MangaId = "m1u2v3w4-x5y6-7z8a-9b0c-1d2e3f4g5h6i",
+                GenreId = "2l3m4n5o-6p7q-8r9s-0t1u-2v3w4x5y6z7a8b", // Mystery
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg2p3q4r5-s6t7-8u9v-0w1x-2y3z4a5b6c7d",
+                MangaId = "m1u2v3w4-x5y6-7z8a-9b0c-1d2e3f4g5h6i",
+                GenreId = "3m4n5o6p-7q8r-9s0t-1u2v-3w4x5y6z7a8b9c", // Thriller
+                IsDeleted = false
+            },
+            // The Fantasy Kingdom - Fantasy, Adventure
+            new MangaGenre
+            {
+                Id = "mg3q4r5s6-t7u8-9v0w-1x2y-3z4a5b6c7d8e",
+                MangaId = "m2v3w4x5-y6z7-8a9b-0c1d-2e3f4g5h6i7j",
+                GenreId = "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w", // Fantasy
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg4r5s6t7-u8v9-0w1x-2y3z-4a5b6c7d8e9f",
+                MangaId = "m2v3w4x5-y6z7-8a9b-0c1d-2e3f4g5h6i7j",
+                GenreId = "5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t", // Adventure
+                IsDeleted = false
+            },
+            // The School Festival - Slice of Life, Comedy
+            new MangaGenre
+            {
+                Id = "mg5s6t7u8-v9w0-1x2y-3z4a-5b6c7d8e9f0g",
+                MangaId = "m3w4x5y6-z7a8-9b0c-1d2e-3f4g5h6i7j8k",
+                GenreId = "4n5o6p7q-8r9s-0t1u-2v3w-4x5y6z7a8b9c0d", // Slice of Life
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg6t7u8v9-w0x1-2y3z-4a5b-6c7d8e9f0g1h",
+                MangaId = "m3w4x5y6-z7a8-9b0c-1d2e-3f4g5h6i7j8k",
+                GenreId = "6f7g8h9i-0j1k-2l3m-4n5o-6p7q8r9s0t1u", // Comedy
+                IsDeleted = false
+            },
+            // The Cooking Competition - Slice of Life, Drama
+            new MangaGenre
+            {
+                Id = "mg7u8v9w0-x1y2-3z4a-5b6c-7d8e9f0g1h2i",
+                MangaId = "m4x5y6z7-a8b9-0c1d-2e3f-4g5h6i7j8k9l",
+                GenreId = "4n5o6p7q-8r9s-0t1u-2v3w-4x5y6z7a8b9c0d", // Slice of Life
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg8v9w0x1-y2z3-4a5b-6c7d-8e9f0g1h2i3j",
+                MangaId = "m4x5y6z7-a8b9-0c1d-2e3f-4g5h6i7j8k9l",
+                GenreId = "7g8h9i0j-1k2l-3m4n-5o6p-7q8r9s0t1u2v", // Drama
+                IsDeleted = false
+            },
+            // The Martial Arts Tournament - Action, Martial Arts
+            new MangaGenre
+            {
+                Id = "mg9w0x1y2-z3a4-5b6c-7d8e-9f0g1h2i3j4k",
+                MangaId = "m5y6z7a8-b9c0-1d2e-3f4g-5h6i7j8k9l0m",
+                GenreId = "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s", // Action
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg0x1y2z3-a4b5-6c7d-8e9f-0g1h2i3j4k5l",
+                MangaId = "m5y6z7a8-b9c0-1d2e-3f4g-5h6i7j8k9l0m",
+                GenreId = "8r9s0t1u-2v3w-4x5y-6z7a-8b9c0d1e2f3g4h", // Martial Arts
+                IsDeleted = false
+            },
+            // The Psychological Game - Psychological, Thriller
+            new MangaGenre
+            {
+                Id = "mg1y2z3a4-b5c6-7d8e-9f0g-1h2i3j4k5l6m",
+                MangaId = "m6z7a8b9-c0d1-2e3f-4g5h-6i7j8k9l0m1n",
+                GenreId = "7q8r9s0t-1u2v-3w4x-5y6z-7a8b9c0d1e2f3g", // Psychological
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg2z3a4b5-c6d7-8e9f-0g1h-2i3j4k5l6m7n",
+                MangaId = "m6z7a8b9-c0d1-2e3f-4g5h-6i7j8k9l0m1n",
+                GenreId = "3m4n5o6p-7q8r-9s0t-1u2v-3w4x5y6z7a8b9c", // Thriller
+                IsDeleted = false
+            },
+            // The Supernatural Academy - Supernatural, Fantasy
+            new MangaGenre
+            {
+                Id = "mg3a4b5c6-d7e8-9f0g-1h2i-3j4k5l6m7n8o",
+                MangaId = "m7a8b9c0-d1e2-3f4g-5h6i-7j8k9l0m1n2o",
+                GenreId = "6p7q8r9s-0t1u-2v3w-4x5y-6z7a8b9c0d1e2f", // Supernatural
+                IsDeleted = false
+            },
+            new MangaGenre
+            {
+                Id = "mg4b5c6d7-e8f9-0g1h-2i3j-4k5l6m7n8o9p",
+                MangaId = "m7a8b9c0-d1e2-3f4g-5h6i-7j8k9l0m1n2o",
+                GenreId = "8h9i0j1k-2l3m-4n5o-6p7q-8r9s0t1u2v3w", // Fantasy
+                IsDeleted = false
+            }
         );
 
         // Seed Chapters
         modelBuilder.Entity<Chapter>().HasData(
-            // One Piece Chapters
+            // The Last Samurai's Legacy - Chapter 1
             new Chapter
             {
-                Id = 1,
-                Name = "Romance Dawn",
-                NovelContent = "In a world of pirates and adventure, Monkey D. Luffy begins his journey to become the Pirate King...",
+                Id = "c1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                MangaId = "m1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o", // The Last Samurai's Legacy
+                Name = "The Beginning",
+                NovelContent = "The samurai's journey begins...",
                 HasDraft = false,
                 ThumbnailImage = COVER_IMAGE_URL,
                 PublishedDate = SEED_DATE,
                 HasComment = true,
                 StatusChapter = 1,
-                MangaId = 1,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
+            // Cyberpunk Dreams - Chapter 1
             new Chapter
             {
-                Id = 2,
-                Name = "Enter the Great Swordsman",
-                NovelContent = "Luffy meets Roronoa Zoro, a skilled swordsman who becomes his first crew member...",
+                Id = "c2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                MangaId = "m2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p", // Cyberpunk Dreams
+                Name = "First Contact",
+                NovelContent = "A new world of technology opens up...",
                 HasDraft = false,
                 ThumbnailImage = COVER_IMAGE_URL,
                 PublishedDate = SEED_DATE,
                 HasComment = true,
                 StatusChapter = 1,
-                MangaId = 1,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
-                ChapterNumber = 2
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
-            // Attack on Titan Chapters
+            // Magical Academy - Chapter 1
             new Chapter
             {
-                Id = 3,
-                Name = "To You, 2000 Years From Now",
-                NovelContent = "The story begins with the fall of Wall Maria and the beginning of humanity's struggle...",
+                Id = "c3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                MangaId = "m3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q", // Magical Academy
+                Name = "First Spell",
+                NovelContent = "Students learn their first spell at the academy...",
                 HasDraft = false,
                 ThumbnailImage = COVER_IMAGE_URL,
                 PublishedDate = SEED_DATE,
                 HasComment = true,
                 StatusChapter = 1,
-                MangaId = 2,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
             },
-            // Solo Leveling Chapters
+            // The Detective's Case - Chapter 1
             new Chapter
             {
-                Id = 4,
-                Name = "The Weakest Hunter",
-                NovelContent = "Sung Jin-Woo is known as the weakest hunter of all mankind...",
+                Id = "c4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                MangaId = "m4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r", // The Detective's Case
+                Name = "The Case Opens",
+                NovelContent = "A mysterious case arrives at the detective's desk...",
                 HasDraft = false,
                 ThumbnailImage = COVER_IMAGE_URL,
                 PublishedDate = SEED_DATE,
                 HasComment = true,
                 StatusChapter = 1,
-                MangaId = 3,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
-            // Demon Slayer Chapters
+            // The Sports Star - Chapter 1
             new Chapter
             {
-                Id = 5,
-                Name = "Cruelty",
-                NovelContent = "Tanjiro Kamado's peaceful life is shattered when his family is slaughtered by demons...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 4,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
-            },
-            new Chapter
-            {
-                Id = 6,
-                Name = "The Demon Slayer Corps",
-                NovelContent = "Tanjiro begins his training to become a Demon Slayer...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 4,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 2
-            },
-            // Tower of God Chapters
-            new Chapter
-            {
-                Id = 7,
-                Name = "The Tower",
-                NovelContent = "Twenty-Fifth Bam has spent most of his life trapped beneath a mysterious tower...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 5,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
-            },
-            new Chapter
-            {
-                Id = 8,
-                Name = "The Regulars",
-                NovelContent = "Bam meets other Regulars who are also climbing the tower...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 5,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 2
-            },
-            // My Hero Academia Chapters
-            new Chapter
-            {
-                Id = 9,
-                Name = "Izuku Midoriya: Origin",
-                NovelContent = "In a world where 80% of the population has some kind of super-powered Quirk...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 6,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
-            },
-            new Chapter
-            {
-                Id = 10,
-                Name = "What It Takes to Be a Hero",
-                NovelContent = "All Might begins training Izuku to inherit his power...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 6,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 2
-            },
-            // The Beginning After The End Chapters
-            new Chapter
-            {
-                Id = 19,
-                Name = "The King's Return",
-                NovelContent = "King Grey has unrivaled strength, wealth, and prestige in a world governed by martial ability...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 7,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
-            },
-            new Chapter
-            {
-                Id = 20,
-                Name = "The New World",
-                NovelContent = "King Grey finds himself in a new world, one where magic and martial arts coexist...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 7,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 2
-            },
-            // Jujutsu Kaisen Chapters
-            new Chapter
-            {
-                Id = 11,
-                Name = "The Origin of Obedience",
-                NovelContent = "Yuji Itadori is a boy with tremendous physical strength, though living a normal life...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 8,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
-            },
-            new Chapter
-            {
-                Id = 12,
-                Name = "For Myself",
-                NovelContent = "Yuji begins his training as a Jujutsu Sorcerer...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 8,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 2
-            },
-            // The God of High School Chapters
-            new Chapter
-            {
-                Id = 13,
-                Name = "The Tournament Begins",
-                NovelContent = "Jin Mori is a 17-year-old high school student who participates in a fighting tournament...",
-                HasDraft = false,
-                ThumbnailImage = COVER_IMAGE_URL,
-                PublishedDate = SEED_DATE,
-                HasComment = true,
-                StatusChapter = 1,
-                MangaId = 9,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
-            },
-            new Chapter
-            {
-                Id = 14,
+                Id = "c5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                MangaId = "m5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s", // The Sports Star
                 Name = "The First Match",
-                NovelContent = "Jin faces his first opponent in the tournament...",
+                NovelContent = "The protagonist enters their first big match...",
                 HasDraft = false,
                 ThumbnailImage = COVER_IMAGE_URL,
                 PublishedDate = SEED_DATE,
                 HasComment = true,
                 StatusChapter = 1,
-                MangaId = 9,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
-                ChapterNumber = 2
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
-            // Chainsaw Man Chapters
+            // The Cooking Master - Chapter 1
             new Chapter
             {
-                Id = 15,
-                Name = "Dog & Chainsaw",
-                NovelContent = "Denji's life of poverty changes forever when he merges with his pet chainsaw devil...",
+                Id = "c6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                MangaId = "m6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t", // The Cooking Master
+                Name = "The First Recipe",
+                NovelContent = "A young chef discovers their passion for cooking...",
                 HasDraft = false,
                 ThumbnailImage = COVER_IMAGE_URL,
                 PublishedDate = SEED_DATE,
                 HasComment = true,
                 StatusChapter = 1,
-                MangaId = 10,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
             },
+            // Starlight Academy - Chapter 1
             new Chapter
             {
-                Id = 16,
-                Name = "Chainsaw vs. Bat",
-                NovelContent = "Denji faces his first major battle as a devil hunter...",
+                Id = "c7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                MangaId = "m7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y", // Starlight Academy
+                Name = "Welcome to Starlight",
+                NovelContent = "New students arrive at the magical Starlight Academy...",
                 HasDraft = false,
                 ThumbnailImage = COVER_IMAGE_URL,
                 PublishedDate = SEED_DATE,
                 HasComment = true,
                 StatusChapter = 1,
-                MangaId = 10,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
-                ChapterNumber = 2
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
-            // Omniscient Reader Chapters
+            // The Last Hero - Chapter 1
             new Chapter
             {
-                Id = 17,
-                Name = "The Beginning of the End",
-                NovelContent = "Kim Dokja is the only person who knows the ending of a novel called 'Three Ways to Survive the Apocalypse'...",
+                Id = "c8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                MangaId = "m8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b", // The Last Hero
+                Name = "The Awakening",
+                NovelContent = "A hero awakens to their true power...",
                 HasDraft = false,
                 ThumbnailImage = COVER_IMAGE_URL,
                 PublishedDate = SEED_DATE,
                 HasComment = true,
                 StatusChapter = 1,
-                MangaId = 11,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
-                ChapterNumber = 1
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
+            // The Music Prodigy - Chapter 1
             new Chapter
             {
-                Id = 18,
-                Name = "The First Scenario",
-                NovelContent = "The world begins to change as the scenarios from the novel become reality...",
+                Id = "c9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                MangaId = "m0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x", // The Music Prodigy
+                Name = "First Note",
+                NovelContent = "A young musician discovers their extraordinary talent...",
                 HasDraft = false,
                 ThumbnailImage = COVER_IMAGE_URL,
                 PublishedDate = SEED_DATE,
                 HasComment = true,
                 StatusChapter = 1,
-                MangaId = 11,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE,
-                ChapterNumber = 2
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            // The Martial Arts Master - Chapter 1
+            new Chapter
+            {
+                Id = "c0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                MangaId = "m1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y", // The Martial Arts Master
+                Name = "The Training Begins",
+                NovelContent = "A student begins their journey in martial arts...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
+            },
+            // The Psychological Thriller - Chapter 1
+            new Chapter
+            {
+                Id = "c1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                MangaId = "m2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z", // The Psychological Thriller
+                Name = "The First Dream",
+                NovelContent = "A mysterious dream leads to a psychological journey...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
+            },
+            // The Military Academy - Chapter 1
+            new Chapter
+            {
+                Id = "c2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                MangaId = "m3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a", // The Military Academy
+                Name = "Enrollment Day",
+                NovelContent = "New cadets arrive at the prestigious military academy...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            // The Supernatural Detective - Chapter 1
+            new Chapter
+            {
+                Id = "c3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                MangaId = "m4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b", // The Supernatural Detective
+                Name = "The First Case",
+                NovelContent = "A detective encounters their first supernatural case...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
+            },
+            // The Historical Romance - Chapter 1
+            new Chapter
+            {
+                Id = "c4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                MangaId = "m5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c", // The Historical Romance
+                Name = "The Meeting",
+                NovelContent = "Two souls meet in a historical setting...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
+            },
+            // The Horror Mansion - Chapter 1
+            new Chapter
+            {
+                Id = "c5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                MangaId = "m6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d", // The Horror Mansion
+                Name = "The Arrival",
+                NovelContent = "A group enters the haunted mansion...",
+                HasDraft = false,
+                ThumbnailImage = COVER_IMAGE_URL,
+                PublishedDate = SEED_DATE,
+                HasComment = true,
+                StatusChapter = 1,
+                ChapterNumber = 1,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             }
         );
 
         // Seed ChapterImages
         modelBuilder.Entity<ChapterImage>().HasData(
-            // One Piece Chapter 1 Images
+            // Chapter 1 Images
             new ChapterImage
             {
-                Id = 1,
-                Name = "One Piece Chapter 1 Page 1",
+                Id = "ci1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                Name = "Chapter 1 Page 1",
                 FileSize = "2.5MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/one-piece/chapter-1/page-1.jpg",
-                ChapterId = 1,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/chapter-1/page-1.jpg",
+                ChapterId = "c1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
             new ChapterImage
             {
-                Id = 2,
-                Name = "One Piece Chapter 1 Page 2",
+                Id = "ci2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                Name = "Chapter 1 Page 2",
                 FileSize = "2.3MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/one-piece/chapter-1/page-2.jpg",
-                ChapterId = 1,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/chapter-1/page-2.jpg",
+                ChapterId = "c1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
-            // One Piece Chapter 2 Images
+            // The Cooking Master - Chapter 1 Images
             new ChapterImage
             {
-                Id = 3,
-                Name = "One Piece Chapter 2 Page 1",
-                FileSize = "2.4MB",
+                Id = "ci3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                Name = "The First Recipe Page 1",
+                FileSize = "2.8MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/one-piece/chapter-2/page-1.jpg",
-                ChapterId = 2,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/cooking-master-ch1/page-1.jpg",
+                ChapterId = "c6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
             },
-            // Attack on Titan Chapter 1 Images
             new ChapterImage
             {
-                Id = 4,
-                Name = "Attack on Titan Chapter 1 Page 1",
+                Id = "ci4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                Name = "The First Recipe Page 2",
                 FileSize = "2.6MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/attack-on-titan/chapter-1/page-1.jpg",
-                ChapterId = 3,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/cooking-master-ch1/page-2.jpg",
+                ChapterId = "c6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
             },
-            // Solo Leveling Chapter 1 Images
+            // Starlight Academy - Chapter 1 Images
             new ChapterImage
             {
-                Id = 5,
-                Name = "Solo Leveling Chapter 1 Page 1",
-                FileSize = "2.2MB",
+                Id = "ci5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                Name = "Welcome to Starlight Page 1",
+                FileSize = "3.1MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/solo-leveling/chapter-1/page-1.jpg",
-                ChapterId = 4,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/starlight-academy-ch1/page-1.jpg",
+                ChapterId = "c7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
-            // Demon Slayer Chapter 1 Images
             new ChapterImage
             {
-                Id = 6,
-                Name = "Demon Slayer Chapter 1 Page 1",
+                Id = "ci6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                Name = "Welcome to Starlight Page 2",
+                FileSize = "2.9MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/starlight-academy-ch1/page-2.jpg",
+                ChapterId = "c7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
+            },
+            // The Last Hero - Chapter 1 Images
+            new ChapterImage
+            {
+                Id = "ci7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                Name = "The Awakening Page 1",
                 FileSize = "2.7MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/demon-slayer/chapter-1/page-1.jpg",
-                ChapterId = 5,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/last-hero-ch1/page-1.jpg",
+                ChapterId = "c8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
             new ChapterImage
             {
-                Id = 7,
-                Name = "Demon Slayer Chapter 1 Page 2",
+                Id = "ci8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                Name = "The Awakening Page 2",
                 FileSize = "2.4MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/demon-slayer/chapter-1/page-2.jpg",
-                ChapterId = 5,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/last-hero-ch1/page-2.jpg",
+                ChapterId = "c8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
-            // Demon Slayer Chapter 2 Images
+            // The Music Prodigy - Chapter 1 Images
             new ChapterImage
             {
-                Id = 8,
-                Name = "Demon Slayer Chapter 2 Page 1",
-                FileSize = "2.5MB",
+                Id = "ci9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                Name = "First Note Page 1",
+                FileSize = "2.2MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/demon-slayer/chapter-2/page-1.jpg",
-                ChapterId = 6,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/music-prodigy-ch1/page-1.jpg",
+                ChapterId = "c9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
-            // Tower of God Chapter 1 Images
             new ChapterImage
             {
-                Id = 9,
-                Name = "Tower of God Chapter 1 Page 1",
+                Id = "ci0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                Name = "First Note Page 2",
+                FileSize = "2.0MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/music-prodigy-ch1/page-2.jpg",
+                ChapterId = "c9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            // The Martial Arts Master - Chapter 1 Images
+            new ChapterImage
+            {
+                Id = "ci1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                Name = "The Training Begins Page 1",
+                FileSize = "3.2MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/martial-arts-master-ch1/page-1.jpg",
+                ChapterId = "c0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
+            },
+            new ChapterImage
+            {
+                Id = "ci2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                Name = "The Training Begins Page 2",
+                FileSize = "2.8MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/martial-arts-master-ch1/page-2.jpg",
+                ChapterId = "c0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
+            },
+            // The Psychological Thriller - Chapter 1 Images
+            new ChapterImage
+            {
+                Id = "ci3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                Name = "The First Dream Page 1",
+                FileSize = "2.6MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/psychological-thriller-ch1/page-1.jpg",
+                ChapterId = "c1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
+            },
+            new ChapterImage
+            {
+                Id = "ci4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                Name = "The First Dream Page 2",
                 FileSize = "2.3MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/tower-of-god/chapter-1/page-1.jpg",
-                ChapterId = 7,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/psychological-thriller-ch1/page-2.jpg",
+                ChapterId = "c1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
+            // The Military Academy - Chapter 1 Images
             new ChapterImage
             {
-                Id = 10,
-                Name = "Tower of God Chapter 1 Page 2",
-                FileSize = "2.4MB",
+                Id = "ci5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                Name = "Enrollment Day Page 1",
+                FileSize = "3.0MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/tower-of-god/chapter-1/page-2.jpg",
-                ChapterId = 7,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/military-academy-ch1/page-1.jpg",
+                ChapterId = "c2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
-            // Tower of God Chapter 2 Images
             new ChapterImage
             {
-                Id = 11,
-                Name = "Tower of God Chapter 2 Page 1",
+                Id = "ci6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                Name = "Enrollment Day Page 2",
+                FileSize = "2.7MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/military-academy-ch1/page-2.jpg",
+                ChapterId = "c2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            // The Supernatural Detective - Chapter 1 Images
+            new ChapterImage
+            {
+                Id = "ci7q8r9s0-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                Name = "The First Case Page 1",
+                FileSize = "2.9MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/supernatural-detective-ch1/page-1.jpg",
+                ChapterId = "c3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
+            },
+            new ChapterImage
+            {
+                Id = "ci8r9s0t1-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                Name = "The First Case Page 2",
                 FileSize = "2.5MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/tower-of-god/chapter-2/page-1.jpg",
-                ChapterId = 8,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/supernatural-detective-ch1/page-2.jpg",
+                ChapterId = "c3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
             },
-            // My Hero Academia Chapter 1 Images
+            // The Historical Romance - Chapter 1 Images
             new ChapterImage
             {
-                Id = 12,
-                Name = "My Hero Academia Chapter 1 Page 1",
+                Id = "ci9s0t1u2-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                Name = "The Meeting Page 1",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/historical-romance-ch1/page-1.jpg",
+                ChapterId = "c4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
+            },
+            new ChapterImage
+            {
+                Id = "ci0t1u2v3-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                Name = "The Meeting Page 2",
+                FileSize = "2.1MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/historical-romance-ch1/page-2.jpg",
+                ChapterId = "c4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
+            },
+            // The Horror Mansion - Chapter 1 Images
+            new ChapterImage
+            {
+                Id = "ci1u2v3w4-x5y6-7z8a-9b0c-1d2e3f4g5h6i",
+                Name = "The Arrival Page 1",
+                FileSize = "3.3MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/horror-mansion-ch1/page-1.jpg",
+                ChapterId = "c5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            new ChapterImage
+            {
+                Id = "ci2v3w4x5-y6z7-8a9b-0c1d-2e3f4g5h6i7j",
+                Name = "The Arrival Page 2",
+                FileSize = "2.8MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/horror-mansion-ch1/page-2.jpg",
+                ChapterId = "c5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            // Additional Chapter Images for existing chapters
+            // The Last Samurai's Legacy - Additional Pages
+            new ChapterImage
+            {
+                Id = "ci3w4x5y6-z7a8-9b0c-1d2e-3f4g5h6i7j8k",
+                Name = "Chapter 1 Page 3",
+                FileSize = "2.4MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/chapter-1/page-3.jpg",
+                ChapterId = "c1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
+            },
+            new ChapterImage
+            {
+                Id = "ci4x5y6z7-a8b9-0c1d-2e3f-4g5h6i7j8k9l",
+                Name = "Chapter 1 Page 4",
                 FileSize = "2.6MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/my-hero-academia/chapter-1/page-1.jpg",
-                ChapterId = 9,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/chapter-1/page-4.jpg",
+                ChapterId = "c1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
+            // Cyberpunk Dreams - Additional Pages
             new ChapterImage
             {
-                Id = 13,
-                Name = "My Hero Academia Chapter 1 Page 2",
-                FileSize = "2.4MB",
+                Id = "ci5y6z7a8-b9c0-1d2e-3f4g-5h6i7j8k9l0m",
+                Name = "First Contact Page 3",
+                FileSize = "2.9MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/my-hero-academia/chapter-1/page-2.jpg",
-                ChapterId = 9,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/cyberpunk-dreams-ch1/page-3.jpg",
+                ChapterId = "c2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
-            // My Hero Academia Chapter 2 Images
             new ChapterImage
             {
-                Id = 14,
-                Name = "My Hero Academia Chapter 2 Page 1",
+                Id = "ci6z7a8b9-c0d1-2e3f-4g5h-6i7j8k9l0m1n",
+                Name = "First Contact Page 4",
+                FileSize = "2.7MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/cyberpunk-dreams-ch1/page-4.jpg",
+                ChapterId = "c2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            // Magical Academy - Additional Pages
+            new ChapterImage
+            {
+                Id = "ci7a8b9c0-d1e2-3f4g-5h6i-7j8k9l0m1n2o",
+                Name = "First Spell Page 3",
+                FileSize = "3.0MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/magical-academy-ch1/page-3.jpg",
+                ChapterId = "c3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
+            },
+            new ChapterImage
+            {
+                Id = "ci8b9c0d1-e2f3-4g5h-6i7j-8k9l0m1n2o3p",
+                Name = "First Spell Page 4",
+                FileSize = "2.8MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/magical-academy-ch1/page-4.jpg",
+                ChapterId = "c3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
+            },
+            // The Detective's Case - Additional Pages
+            new ChapterImage
+            {
+                Id = "ci9c0d1e2-f3g4-5h6i-7j8k-9l0m1n2o3p4q",
+                Name = "The Case Opens Page 3",
                 FileSize = "2.5MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/my-hero-academia/chapter-2/page-1.jpg",
-                ChapterId = 10,
-                CreatedBy = 1,
-                ModifiedBy = 1
-            },
-            // The Beginning After The End Chapter 1 Images
-            new ChapterImage
-            {
-                Id = 27,
-                Name = "The Beginning After The End Chapter 1 Page 1",
-                FileSize = "2.5MB",
-                MimeType = "image/jpeg",
-                FilePath = "chapters/the-beginning-after-the-end/chapter-1/page-1.jpg",
-                ChapterId = 19,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/detective-case-ch1/page-3.jpg",
+                ChapterId = "c4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
             new ChapterImage
             {
-                Id = 28,
-                Name = "The Beginning After The End Chapter 1 Page 2",
-                FileSize = "2.4MB",
-                MimeType = "image/jpeg",
-                FilePath = "chapters/the-beginning-after-the-end/chapter-1/page-2.jpg",
-                ChapterId = 19,
-                CreatedBy = 1,
-                ModifiedBy = 1
-            },
-            // The Beginning After The End Chapter 2 Images
-            new ChapterImage
-            {
-                Id = 29,
-                Name = "The Beginning After The End Chapter 2 Page 1",
-                FileSize = "2.6MB",
-                MimeType = "image/jpeg",
-                FilePath = "chapters/the-beginning-after-the-end/chapter-2/page-1.jpg",
-                ChapterId = 20,
-                CreatedBy = 1,
-                ModifiedBy = 1
-            },
-            // Jujutsu Kaisen Chapter 1 Images
-            new ChapterImage
-            {
-                Id = 15,
-                Name = "Jujutsu Kaisen Chapter 1 Page 1",
-                FileSize = "2.5MB",
-                MimeType = "image/jpeg",
-                FilePath = "chapters/jujutsu-kaisen/chapter-1/page-1.jpg",
-                ChapterId = 11,
-                CreatedBy = 1,
-                ModifiedBy = 1
-            },
-            new ChapterImage
-            {
-                Id = 16,
-                Name = "Jujutsu Kaisen Chapter 1 Page 2",
-                FileSize = "2.4MB",
-                MimeType = "image/jpeg",
-                FilePath = "chapters/jujutsu-kaisen/chapter-1/page-2.jpg",
-                ChapterId = 11,
-                CreatedBy = 1,
-                ModifiedBy = 1
-            },
-            // Jujutsu Kaisen Chapter 2 Images
-            new ChapterImage
-            {
-                Id = 17,
-                Name = "Jujutsu Kaisen Chapter 2 Page 1",
-                FileSize = "2.6MB",
-                MimeType = "image/jpeg",
-                FilePath = "chapters/jujutsu-kaisen/chapter-2/page-1.jpg",
-                ChapterId = 12,
-                CreatedBy = 1,
-                ModifiedBy = 1
-            },
-            // The God of High School Chapter 1 Images
-            new ChapterImage
-            {
-                Id = 18,
-                Name = "The God of High School Chapter 1 Page 1",
+                Id = "ci0d1e2f3-g4h5-6i7j-8k9l-0m1n2o3p4q5r",
+                Name = "The Case Opens Page 4",
                 FileSize = "2.3MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/the-god-of-high-school/chapter-1/page-1.jpg",
-                ChapterId = 13,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/detective-case-ch1/page-4.jpg",
+                ChapterId = "c4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
+            // The Sports Star - Additional Pages
             new ChapterImage
             {
-                Id = 19,
-                Name = "The God of High School Chapter 1 Page 2",
-                FileSize = "2.4MB",
+                Id = "ci1e2f3g4-h5i6-7j8k-9l0m-1n2o3p4q5r6s",
+                Name = "The First Match Page 3",
+                FileSize = "2.9MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/the-god-of-high-school/chapter-1/page-2.jpg",
-                ChapterId = 13,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/sports-star-ch1/page-3.jpg",
+                ChapterId = "c5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
-            // The God of High School Chapter 2 Images
             new ChapterImage
             {
-                Id = 20,
-                Name = "The God of High School Chapter 2 Page 1",
-                FileSize = "2.5MB",
-                MimeType = "image/jpeg",
-                FilePath = "chapters/the-god-of-high-school/chapter-2/page-1.jpg",
-                ChapterId = 14,
-                CreatedBy = 1,
-                ModifiedBy = 1
-            },
-            // Chainsaw Man Chapter 1 Images
-            new ChapterImage
-            {
-                Id = 21,
-                Name = "Chainsaw Man Chapter 1 Page 1",
+                Id = "ci2f3g4h5-i6j7-8k9l-0m1n-2o3p4q5r6s7t",
+                Name = "The First Match Page 4",
                 FileSize = "2.6MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/chainsaw-man/chapter-1/page-1.jpg",
-                ChapterId = 15,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/sports-star-ch1/page-4.jpg",
+                ChapterId = "c5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            // The Cooking Master - Additional Pages
+            new ChapterImage
+            {
+                Id = "ci3g4h5i6-j7k8-9l0m-1n2o-3p4q5r6s7t8u",
+                Name = "The First Recipe Page 3",
+                FileSize = "2.7MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/cooking-master-ch1/page-3.jpg",
+                ChapterId = "c6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
             },
             new ChapterImage
             {
-                Id = 22,
-                Name = "Chainsaw Man Chapter 1 Page 2",
+                Id = "ci4h5i6j7-k8l9-0m1n-2o3p-4q5r6s7t8u9v",
+                Name = "The First Recipe Page 4",
                 FileSize = "2.4MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/chainsaw-man/chapter-1/page-2.jpg",
-                ChapterId = 15,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/cooking-master-ch1/page-4.jpg",
+                ChapterId = "c6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
             },
-            // Chainsaw Man Chapter 2 Images
+            // Starlight Academy - Additional Pages
             new ChapterImage
             {
-                Id = 23,
-                Name = "Chainsaw Man Chapter 2 Page 1",
-                FileSize = "2.5MB",
+                Id = "ci5i6j7k8-l9m0-1n2o-3p4q-5r6s7t8u9v0w",
+                Name = "Welcome to Starlight Page 3",
+                FileSize = "3.2MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/chainsaw-man/chapter-2/page-1.jpg",
-                ChapterId = 16,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/starlight-academy-ch1/page-3.jpg",
+                ChapterId = "c7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
             },
-            // Omniscient Reader Chapter 1 Images
             new ChapterImage
             {
-                Id = 24,
-                Name = "Omniscient Reader Chapter 1 Page 1",
+                Id = "ci6j7k8l9-m0n1-2o3p-4q5r-6s7t8u9v0w1x",
+                Name = "Welcome to Starlight Page 4",
+                FileSize = "2.8MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/starlight-academy-ch1/page-4.jpg",
+                ChapterId = "c7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                IsDeleted = false,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n"
+            },
+            // The Last Hero - Additional Pages
+            new ChapterImage
+            {
+                Id = "ci7k8l9m0-n1o2-3p4q-5r6s-7t8u9v0w1x2y",
+                Name = "The Awakening Page 3",
+                FileSize = "2.6MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/last-hero-ch1/page-3.jpg",
+                ChapterId = "c8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            new ChapterImage
+            {
+                Id = "ci8l9m0n1-o2p3-4q5r-6s7t-8u9v0w1x2y3z",
+                Name = "The Awakening Page 4",
                 FileSize = "2.3MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/omniscient-reader/chapter-1/page-1.jpg",
-                ChapterId = 17,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/last-hero-ch1/page-4.jpg",
+                ChapterId = "c8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
+            },
+            // The Music Prodigy - Additional Pages
+            new ChapterImage
+            {
+                Id = "ci9m0n1o2-p3q4-5r6s-7t8u-9v0w1x2y3z4a",
+                Name = "First Note Page 3",
+                FileSize = "2.1MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/music-prodigy-ch1/page-3.jpg",
+                ChapterId = "c9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
             new ChapterImage
             {
-                Id = 25,
-                Name = "Omniscient Reader Chapter 1 Page 2",
-                FileSize = "2.4MB",
+                Id = "ci0n1o2p3-q4r5-6s7t-8u9v-0w1x2y3z4a5b",
+                Name = "First Note Page 4",
+                FileSize = "1.9MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/omniscient-reader/chapter-1/page-2.jpg",
-                ChapterId = 17,
-                CreatedBy = 1,
-                ModifiedBy = 1
+                FilePath = "chapters/music-prodigy-ch1/page-4.jpg",
+                ChapterId = "c9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                IsDeleted = false,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s"
             },
-            // Omniscient Reader Chapter 2 Images
+            // The Martial Arts Master - Additional Pages
             new ChapterImage
             {
-                Id = 26,
-                Name = "Omniscient Reader Chapter 2 Page 1",
-                FileSize = "2.5MB",
+                Id = "ci1o2p3q4-r5s6-7t8u-9v0w-1x2y3z4a5b6c",
+                Name = "The Training Begins Page 3",
+                FileSize = "3.4MB",
                 MimeType = "image/jpeg",
-                FilePath = "chapters/omniscient-reader/chapter-2/page-1.jpg",
-                ChapterId = 18,
-                CreatedBy = 1,
-                ModifiedBy = 1
-            }
-        );
-
-        // Seed MangaInteractions
-        modelBuilder.Entity<MangaInteraction>().HasData(
-            // User 1 interactions
-            new MangaInteraction
-            {
-                Id = 1,
-                UserId = 1, // Admin User
-                MangaId = 1, // One Piece
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Like,
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+                FilePath = "chapters/martial-arts-master-ch1/page-3.jpg",
+                ChapterId = "c0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
             },
-            new MangaInteraction
+            new ChapterImage
             {
-                Id = 2,
-                UserId = 1, // Admin User
-                MangaId = null,
-                ChapterId = 1, // One Piece Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 2 interactions
-            new MangaInteraction
-            {
-                Id = 3,
-                UserId = 2, // John Reader
-                MangaId = 2, // Attack on Titan
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Bookmark,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 4,
-                UserId = 2, // John Reader
-                MangaId = null,
-                ChapterId = 4, // Solo Leveling Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 3 interactions
-            new MangaInteraction
-            {
-                Id = 5,
-                UserId = 3, // Jane Editor
-                MangaId = 4, // Demon Slayer
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Share,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 6,
-                UserId = 3, // Jane Editor
-                MangaId = null,
-                ChapterId = 7, // Tower of God Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 4 interactions
-            new MangaInteraction
-            {
-                Id = 7,
-                UserId = 4, // Bob Publisher
-                MangaId = 6, // My Hero Academia
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Like,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 8,
-                UserId = 4, // Bob Publisher
-                MangaId = null,
-                ChapterId = 13, // The Beginning After The End Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 5 interactions
-            new MangaInteraction
-            {
-                Id = 9,
-                UserId = 5, // Alice Artist
-                MangaId = 8, // Jujutsu Kaisen
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Bookmark,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 10,
-                UserId = 5, // Alice Artist
-                MangaId = null,
-                ChapterId = 15, // The God of High School Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 6 interactions
-            new MangaInteraction
-            {
-                Id = 11,
-                UserId = 6, // Charlie Translator
-                MangaId = 10, // Chainsaw Man
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Share,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 12,
-                UserId = 6, // Charlie Translator
-                MangaId = null,
-                ChapterId = 17, // Omniscient Reader Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 7 interactions
-            new MangaInteraction
-            {
-                Id = 13,
-                UserId = 7, // David SubAuthor
-                MangaId = 3, // Solo Leveling
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Like,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 14,
-                UserId = 7, // David SubAuthor
-                MangaId = null,
-                ChapterId = 5, // Demon Slayer Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 8 interactions
-            new MangaInteraction
-            {
-                Id = 15,
-                UserId = 8, // Eve Reader
-                MangaId = 5, // Tower of God
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Bookmark,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 16,
-                UserId = 8, // Eve Reader
-                MangaId = null,
-                ChapterId = 9, // My Hero Academia Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 9 interactions
-            new MangaInteraction
-            {
-                Id = 17,
-                UserId = 9, // Frank Reader
-                MangaId = 7, // The Beginning After The End
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Share,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 18,
-                UserId = 9, // Frank Reader
-                MangaId = null,
-                ChapterId = 11, // Jujutsu Kaisen Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 10 interactions
-            new MangaInteraction
-            {
-                Id = 19,
-                UserId = 10, // Grace Reader
-                MangaId = 9, // The God of High School
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Like,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 20,
-                UserId = 10, // Grace Reader
-                MangaId = null,
-                ChapterId = 13, // The God of High School Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 11 interactions
-            new MangaInteraction
-            {
-                Id = 21,
-                UserId = 11, // Henry Reader
-                MangaId = 11, // Omniscient Reader
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Bookmark,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 22,
-                UserId = 11, // Henry Reader
-                MangaId = null,
-                ChapterId = 15, // Chainsaw Man Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // User 12 interactions
-            new MangaInteraction
-            {
-                Id = 23,
-                UserId = 12, // Irene Reader
-                MangaId = 1, // One Piece
-                ChapterId = null,
-                InteractionType = MangaInteractionType.Share,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new MangaInteraction
-            {
-                Id = 24,
-                UserId = 12, // Irene Reader
-                MangaId = null,
-                ChapterId = 3, // Attack on Titan Chapter 1
-                InteractionType = MangaInteractionType.Read,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            }
-        );
-
-        // Seed Comments
-        modelBuilder.Entity<Comment>().HasData(
-            // One Piece Chapter 1 Comments
-            new Comment
-            {
-                Id = 1,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 2,
-                Content = "This chapter was amazing! Luffy's determination is inspiring.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new Comment
-            {
-                Id = 2,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 3,
-                Content = "The art style is so unique and expressive!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(1),
-                UpdatedAt = SEED_DATE.AddHours(1)
-            },
-            new Comment
-            {
-                Id = 3,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 4,
-                Content = "I can't wait to see how Luffy's journey unfolds!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(2),
-                UpdatedAt = SEED_DATE.AddHours(2)
-            },
-            // Attack on Titan Chapter 1 Comments
-            new Comment
-            { 
-                Id = 4, 
-                MangaId = 2, 
-                ChapterId = 3,
-                UserId = 2,
-                Content = "The tension in this chapter is incredible!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(3),
-                UpdatedAt = SEED_DATE.AddHours(3)
-            },
-            new Comment
-            {
-                Id = 5,
-                MangaId = 2,
-                ChapterId = 3,
-                UserId = 3,
-                Content = "Eren's determination reminds me of myself.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(4),
-                UpdatedAt = SEED_DATE.AddHours(4)
-            },
-            // Solo Leveling Chapter 1 Comments
-            new Comment
-            {
-                Id = 6,
-                MangaId = 3,
-                ChapterId = 4,
-                UserId = 4,
-                Content = "The world-building is fascinating!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(5),
-                UpdatedAt = SEED_DATE.AddHours(5)
-            },
-            new Comment
-            {
-                Id = 7,
-                MangaId = 3,
-                ChapterId = 4,
-                UserId = 5,
-                Content = "Sung Jin-Woo's character development is going to be interesting.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(6),
-                UpdatedAt = SEED_DATE.AddHours(6)
-            },
-            // Demon Slayer Chapter 1 Comments
-            new Comment
-            {
-                Id = 8,
-                MangaId = 4,
-                ChapterId = 5,
-                UserId = 2,
-                Content = "The emotional impact of this chapter is powerful.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(7),
-                UpdatedAt = SEED_DATE.AddHours(7)
-            },
-            new Comment
-            {
-                Id = 9,
-                MangaId = 4,
-                ChapterId = 5,
-                UserId = 3,
-                Content = "Tanjiro's dedication to his sister is touching.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(8),
-                UpdatedAt = SEED_DATE.AddHours(8)
-            },
-            // Tower of God Chapter 1 Comments
-            new Comment
-            {
-                Id = 10,
-                MangaId = 5,
-                ChapterId = 7,
-                UserId = 4,
-                Content = "The mystery of the Tower is intriguing!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(9),
-                UpdatedAt = SEED_DATE.AddHours(9)
-            },
-            new Comment
-            {
-                Id = 11,
-                MangaId = 5,
-                ChapterId = 7,
-                UserId = 5,
-                Content = "Bam's innocence is refreshing in this world.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(10),
-                UpdatedAt = SEED_DATE.AddHours(10)
-            },
-            // My Hero Academia Chapter 1 Comments
-            new Comment
-            {
-                Id = 12,
-                MangaId = 6,
-                ChapterId = 9,
-                UserId = 2,
-                Content = "All Might's influence on Izuku is inspiring!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(11),
-                UpdatedAt = SEED_DATE.AddHours(11)
-            },
-            new Comment
-            {
-                Id = 13,
-                MangaId = 6,
-                ChapterId = 9,
-                UserId = 3,
-                Content = "The concept of Quirks is so creative!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(12),
-                UpdatedAt = SEED_DATE.AddHours(12)
-            },
-            // The Beginning After The End Chapter 1 Comments
-            new Comment
-            {
-                Id = 14,
-                MangaId = 7,
-                ChapterId = 10,
-                UserId = 4,
-                Content = "The reincarnation trope is handled well here.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(13),
-                UpdatedAt = SEED_DATE.AddHours(13)
-            },
-            new Comment
-            {
-                Id = 15,
-                MangaId = 7,
-                ChapterId = 10,
-                UserId = 5,
-                Content = "Arthur's past life adds depth to the story.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(14),
-                UpdatedAt = SEED_DATE.AddHours(14)
-            },
-            // Jujutsu Kaisen Chapter 1 Comments
-            new Comment
-            {
-                Id = 16,
-                MangaId = 8,
-                ChapterId = 11,
-                UserId = 2,
-                Content = "The supernatural elements are well integrated.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(15),
-                UpdatedAt = SEED_DATE.AddHours(15)
-            },
-            new Comment
-            {
-                Id = 17,
-                MangaId = 8,
-                ChapterId = 11,
-                UserId = 3,
-                Content = "Yuji's character design is striking!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(16),
-                UpdatedAt = SEED_DATE.AddHours(16)
-            },
-            // The God of High School Chapter 1 Comments
-            new Comment
-            {
-                Id = 18,
-                MangaId = 9,
-                ChapterId = 12,
-                UserId = 4,
-                Content = "The martial arts scenes are dynamic!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(17),
-                UpdatedAt = SEED_DATE.AddHours(17)
-            },
-            new Comment
-            {
-                Id = 19,
-                MangaId = 9,
-                ChapterId = 12,
-                UserId = 5,
-                Content = "Jin Mori's fighting style is unique.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(18),
-                UpdatedAt = SEED_DATE.AddHours(18)
-            },
-            // Chainsaw Man Chapter 1 Comments
-            new Comment
-            {
-                Id = 20,
-                MangaId = 10,
-                ChapterId = 13,
-                UserId = 2,
-                Content = "The dark humor is perfectly balanced.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(19),
-                UpdatedAt = SEED_DATE.AddHours(19)
-            },
-            new Comment
-            {
-                Id = 21,
-                MangaId = 10,
-                ChapterId = 13,
-                UserId = 3,
-                Content = "Denji's motivation is surprisingly deep.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(20),
-                UpdatedAt = SEED_DATE.AddHours(20)
-            },
-            // Omniscient Reader Chapter 1 Comments
-            new Comment
-            {
-                Id = 22,
-                MangaId = 11,
-                ChapterId = 14,
-                UserId = 4,
-                Content = "The meta-narrative is fascinating!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(21),
-                UpdatedAt = SEED_DATE.AddHours(21)
-            },
-            new Comment
-            {
-                Id = 23,
-                MangaId = 11,
-                ChapterId = 14,
-                UserId = 5,
-                Content = "Kim Dokja's knowledge adds an interesting twist.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(22),
-                UpdatedAt = SEED_DATE.AddHours(22)
-            },
-            // Dragon Ball Super Chapter 1 Comments
-            new Comment
-            {
-                Id = 24,
-                MangaId = 12,
-                ChapterId = 15,
-                UserId = 2,
-                Content = "The action scenes are as epic as ever!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(23),
-                UpdatedAt = SEED_DATE.AddHours(23)
-            },
-            new Comment
-            {
-                Id = 25,
-                MangaId = 12,
-                ChapterId = 15,
-                UserId = 3,
-                Content = "Goku's personality never changes, and I love it!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(24),
-                UpdatedAt = SEED_DATE.AddHours(24)
-            },
-            // The Promised Neverland Chapter 1 Comments
-            new Comment
-            {
-                Id = 26,
-                MangaId = 13,
-                ChapterId = 16,
-                UserId = 4,
-                Content = "The psychological thriller elements are masterful.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(25),
-                UpdatedAt = SEED_DATE.AddHours(25)
-            },
-            new Comment
-            {
-                Id = 27,
-                MangaId = 13,
-                ChapterId = 16,
-                UserId = 5,
-                Content = "Emma's innocence makes the story more impactful.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(26),
-                UpdatedAt = SEED_DATE.AddHours(26)
-            },
-            // Black Clover Chapter 1 Comments
-            new Comment
-            {
-                Id = 28,
-                MangaId = 15,
-                ChapterId = 17,
-                UserId = 2,
-                Content = "Asta's determination despite having no magic is inspiring!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(27),
-                UpdatedAt = SEED_DATE.AddHours(27)
-            },
-            new Comment
-            {
-                Id = 29,
-                MangaId = 15,
-                ChapterId = 17,
-                UserId = 3,
-                Content = "The magic system is well thought out.",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(28),
-                UpdatedAt = SEED_DATE.AddHours(28)
-            },
-            // Dr. Stone Chapter 1 Comments
-            new Comment
-            {
-                Id = 30,
-                MangaId = 17,
-                ChapterId = 18,
-                UserId = 4,
-                Content = "The scientific approach to rebuilding civilization is unique!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(29),
-                UpdatedAt = SEED_DATE.AddHours(29)
-            },
-            // New One Piece Comments with Replies
-            // First comment with 5 replies
-            new Comment
-            {
-                Id = 31,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 2,
-                Content = "The scene where Luffy first meets Shanks is iconic! What do you think about their relationship?",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(30),
-                UpdatedAt = SEED_DATE.AddHours(30)
-            },
-            new Comment
-            {
-                Id = 32,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 3,
-                Content = "Shanks really set the standard for what a true pirate should be!",
-                ParentCommentId = 31,
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(31),
-                UpdatedAt = SEED_DATE.AddHours(31)
-            },
-            new Comment
-            {
-                Id = 33,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 4,
-                Content = "The way he protected Luffy without using violence was amazing!",
-                ParentCommentId = 31,
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(32),
-                UpdatedAt = SEED_DATE.AddHours(32)
-            },
-            new Comment
-            {
-                Id = 34,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 5,
-                Content = "That scene where he gives Luffy the straw hat is so emotional!",
-                ParentCommentId = 31,
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(33),
-                UpdatedAt = SEED_DATE.AddHours(33)
-            },
-            new Comment
-            {
-                Id = 35,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 2,
-                Content = "Shanks' crew was so cool too! They didn't even need to fight to prove their strength.",
-                ParentCommentId = 31,
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(34),
-                UpdatedAt = SEED_DATE.AddHours(34)
-            },
-            new Comment
-            {
-                Id = 36,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 3,
-                Content = "The promise between them became the driving force of the entire series!",
-                ParentCommentId = 31,
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(35),
-                UpdatedAt = SEED_DATE.AddHours(35)
-            },
-
-            // Second comment with 2 replies
-            new Comment
-            {
-                Id = 37,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 4,
-                Content = "The scene where Luffy eats the Gomu Gomu fruit is hilarious! His reaction was priceless!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(36),
-                UpdatedAt = SEED_DATE.AddHours(36)
-            },
-            new Comment
-            {
-                Id = 38,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 5,
-                Content = "That's what started it all! Without that moment, we wouldn't have the future Pirate King!",
-                ParentCommentId = 37,
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(37),
-                UpdatedAt = SEED_DATE.AddHours(37)
-            },
-            new Comment
-            {
-                Id = 39,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 2,
-                Content = "The way he adapted to his powers so quickly was impressive!",
-                ParentCommentId = 37,
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(38),
-                UpdatedAt = SEED_DATE.AddHours(38)
-            },
-            new Comment
-            {
-                Id = 40,
-                MangaId = 1,
-                ChapterId = 1,
-                UserId = 3,
-                Content = "This chapter really sets up Luffy's character perfectly - brave, determined, and a bit reckless!",
-                IsSpoiler = false,
-                CreatedAt = SEED_DATE.AddHours(39),
-                UpdatedAt = SEED_DATE.AddHours(39)
+                Id = "ci2p3q4r5-s6t7-8u9v-0w1x-2y3z4a5b6c7d",
+                Name = "The Training Begins Page 4",
+                FileSize = "3.0MB",
+                MimeType = "image/jpeg",
+                FilePath = "chapters/martial-arts-master-ch1/page-4.jpg",
+                ChapterId = "c0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                IsDeleted = false,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x"
             }
         );
 
         // Seed FeaturedCollections
         modelBuilder.Entity<FeaturedCollection>().HasData(
-            // Comics Collections
             new FeaturedCollection
             {
-                Id = 1,
-                Name = "The Best Action Comics",
+                Id = "fc1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                Name = "Best Action Manga",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
-            },
-            new FeaturedCollection
-            {
-                Id = 2,
-                Name = "The Best Martial Arts Comics",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n" // Phuc Lo
             },
             new FeaturedCollection
             {
-                Id = 3,
-                Name = "The Best School Comics",
+                Id = "fc2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                Name = "Romance Collection",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o" // Sarah Johnson
             },
             new FeaturedCollection
             {
-                Id = 4,
-                Name = "The Best Sports Comics",
+                Id = "fc3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                Name = "Fantasy Adventures",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollection
-            { 
-                Id = 5, 
-                Name = "The Best Horror Comics",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
-            },
-            new FeaturedCollection
-            { 
-                Id = 6, 
-                Name = "The Best Fantasy Comics",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
-            },
-            new FeaturedCollection
-            { 
-                Id = 7, 
-                Name = "The Best Dramatic Comics",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
-            },
-            new FeaturedCollection
-            { 
-                Id = 8, 
-                Name = "The Best Romantic Comics",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false, 
-                CreatedAt = SEED_DATE, 
-                UpdatedAt = SEED_DATE 
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p" // Michael Chen
             },
             new FeaturedCollection
             {
-                Id = 9,
-                Name = "The Best Adventure Comics",
+                Id = "fc4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                Name = "School Life Stories",
                 CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                IsPublish = false,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-
-            // Novels Collections
-            new FeaturedCollection
-            {
-                Id = 10,
-                Name = "The Best Action Novels",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q" // Emma Wilson
             },
             new FeaturedCollection
             {
-                Id = 11,
-                Name = "The Best Martial Arts Novels",
+                Id = "fc5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                Name = "Mystery & Thriller",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r" // Alex Rivera
             },
             new FeaturedCollection
             {
-                Id = 12,
-                Name = "The Best School Novels",
+                Id = "fc6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                Name = "Sports & Competition",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s" // Hiroshi Tanaka
             },
             new FeaturedCollection
             {
-                Id = 13,
-                Name = "The Best Sports Novels",
+                Id = "fc7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                Name = "Cooking & Food",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t" // Yuki Sato
             },
             new FeaturedCollection
             {
-                Id = 14,
-                Name = "The Best Horror Novels",
+                Id = "fc8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                Name = "Historical Tales",
                 CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
+                IsPublish = false,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u" // David Kim
             },
             new FeaturedCollection
             {
-                Id = 15,
-                Name = "The Best Fantasy Novels",
+                Id = "fc9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                Name = "Supernatural & Horror",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v" // Lisa Park
             },
             new FeaturedCollection
             {
-                Id = 16,
-                Name = "The Best Dramatic Novels",
+                Id = "fc0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                Name = "Music & Arts",
                 CoverImage = COVER_IMAGE_URL,
                 IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
                 IsDeleted = false,
                 CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollection
-            {
-                Id = 17,
-                Name = "The Best Romantic Novels",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollection
-            {
-                Id = 18,
-                Name = "The Best Adventure Novels",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-
-            // New Releases Collections
-            new FeaturedCollection
-            {
-                Id = 19,
-                Name = "New Released Comics",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollection
-            {
-                Id = 20,
-                Name = "New Released Novels",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 1,
-                ModifiedBy = 1,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // Additional collections created by other users
-            new FeaturedCollection
-            {
-                Id = 21,
-                Name = "Top Rated Mystery Comics",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 2,
-                ModifiedBy = 2,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollection
-            {
-                Id = 22,
-                Name = "Best Sci-Fi Novels",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 3,
-                ModifiedBy = 3,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollection
-            {
-                Id = 23,
-                Name = "Popular Supernatural Comics",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 4,
-                ModifiedBy = 4,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollection
-            {
-                Id = 24,
-                Name = "Award-Winning Historical Novels",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 5,
-                ModifiedBy = 5,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollection
-            {
-                Id = 25,
-                Name = "Trending Comedy Comics",
-                CoverImage = COVER_IMAGE_URL,
-                IsPublish = true,
-                CreatedBy = 6,
-                ModifiedBy = 6,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w" // James Wilson
             }
         );
 
-        // Seed FeaturedCollectionPermissions for admin (user 1)
+        // Additional FeaturedCollections
+        modelBuilder.Entity<FeaturedCollection>().HasData(
+            new FeaturedCollection
+            {
+                Id = "fc1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                Name = "Adventure & Exploration",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y" // Taylor Smith
+            },
+            new FeaturedCollection
+            {
+                Id = "fc2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                Name = "Comedy & Humor",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z" // Wei Chen
+            },
+            new FeaturedCollection
+            {
+                Id = "fc3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                Name = "Drama & Emotion",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a" // Sofia Rodriguez
+            },
+            new FeaturedCollection
+            {
+                Id = "fc4n5o6p8-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                Name = "Military & Strategy",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = false,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b" // Jordan Lee
+            },
+            new FeaturedCollection
+            {
+                Id = "fc5o6p7q9-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                Name = "Psychological & Mind Games",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x" // Maria Garcia
+            },
+            new FeaturedCollection
+            {
+                Id = "fc6p7q8r0-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                Name = "Slice of Life & Daily Stories",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y" // Taylor Smith
+            },
+            new FeaturedCollection
+            {
+                Id = "fc7q8r9s1-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                Name = "Supernatural & Magic",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z" // Wei Chen
+            },
+            new FeaturedCollection
+            {
+                Id = "fc8r9s0t2-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                Name = "Martial Arts & Combat",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a" // Sofia Rodriguez
+            },
+            new FeaturedCollection
+            {
+                Id = "fc9s0t1u3-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                Name = "Sci-Fi & Technology",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = true,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b" // Jordan Lee
+            },
+            new FeaturedCollection
+            {
+                Id = "fc0t1u2v4-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                Name = "Horror & Suspense",
+                CoverImage = COVER_IMAGE_URL,
+                IsPublish = false,
+                IsDeleted = false,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                CreatedBy = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x" // Maria Garcia
+            }
+        );
+
+        // Seed FeaturedCollectionMangas
+        modelBuilder.Entity<FeaturedCollectionManga>().HasData(
+            // Best Action Manga Collection
+            new FeaturedCollectionManga
+            {
+                Id = "fcm1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                FeaturedCollectionId = "fc1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                MangaId = "m1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o", // The Last Samurai's Legacy
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                FeaturedCollectionId = "fc1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                MangaId = "m8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b", // The Last Hero
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                FeaturedCollectionId = "fc1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                MangaId = "m1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y", // The Martial Arts Master
+                IsDeleted = false
+            },
+
+            // Romance Collection
+            new FeaturedCollectionManga
+            {
+                Id = "fcm4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                FeaturedCollectionId = "fc2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                MangaId = "m5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c", // The Historical Romance
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                FeaturedCollectionId = "fc2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                MangaId = "m9s0t1u2-v3w4-5x6y-7z8a-9b0c1d2e3f4g", // The Drama Queen
+                IsDeleted = false
+            },
+
+            // Fantasy Adventures
+            new FeaturedCollectionManga
+            {
+                Id = "fcm6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                FeaturedCollectionId = "fc3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                MangaId = "m3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q", // Magical Academy
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                FeaturedCollectionId = "fc3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                MangaId = "m7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y", // Starlight Academy
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                FeaturedCollectionId = "fc3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                MangaId = "m2v3w4x5-y6z7-8a9b-0c1d-2e3f4g5h6i7j", // The Fantasy Kingdom
+                IsDeleted = false
+            },
+
+            // School Life Stories
+            new FeaturedCollectionManga
+            {
+                Id = "fcm9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                FeaturedCollectionId = "fc4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                MangaId = "m3w4x5y6-z7a8-9b0c-1d2e-3f4g5h6i7j8k", // The School Festival
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                FeaturedCollectionId = "fc4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                MangaId = "m7a8b9c0-d1e2-3f4g-5h6i-7j8k9l0m1n2o", // The Supernatural Academy
+                IsDeleted = false
+            },
+
+            // Mystery & Thriller
+            new FeaturedCollectionManga
+            {
+                Id = "fcm1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                FeaturedCollectionId = "fc5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                MangaId = "m4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r", // The Detective's Case
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                FeaturedCollectionId = "fc5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                MangaId = "m2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z", // The Psychological Thriller
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                FeaturedCollectionId = "fc5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                MangaId = "m1u2v3w4-x5y6-7z8a-9b0c-1d2e3f4g5h6i", // The Mystery Box
+                IsDeleted = false
+            },
+
+            // Sports & Competition
+            new FeaturedCollectionManga
+            {
+                Id = "fcm4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                FeaturedCollectionId = "fc6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                MangaId = "m5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s", // The Sports Star
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                FeaturedCollectionId = "fc6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                MangaId = "m0t1u2v3-w4x5-6y7z-8a9b-0c1d2e3f4g5h", // The Sports Tournament
+                IsDeleted = false
+            },
+
+            // Cooking & Food
+            new FeaturedCollectionManga
+            {
+                Id = "fcm6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                FeaturedCollectionId = "fc7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                MangaId = "m6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t", // The Cooking Master
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm7q8r9s0-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                FeaturedCollectionId = "fc7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                MangaId = "m4x5y6z7-a8b9-0c1d-2e3f-4g5h6i7j8k9l", // The Cooking Competition
+                IsDeleted = false
+            },
+
+            // Historical Tales
+            new FeaturedCollectionManga
+            {
+                Id = "fcm8r9s0t1-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                FeaturedCollectionId = "fc8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                MangaId = "m5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c", // The Historical Romance
+                IsDeleted = false
+            },
+
+            // Supernatural & Horror
+            new FeaturedCollectionManga
+            {
+                Id = "fcm9s0t1u2-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                FeaturedCollectionId = "fc9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                MangaId = "m6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d", // The Horror Mansion
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm0t1u2v3-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                FeaturedCollectionId = "fc9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                MangaId = "m4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b", // The Supernatural Detective
+                IsDeleted = false
+            },
+
+            // Music & Arts
+            new FeaturedCollectionManga
+            {
+                Id = "fcm1u2v3w4-x5y6-7z8a-9b0c-1d2e3f4g5h6i",
+                FeaturedCollectionId = "fc0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                MangaId = "m0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x", // The Music Prodigy
+                IsDeleted = false
+            },
+
+            // Additional FeaturedCollectionMangas for new collections
+            // Adventure & Exploration
+            new FeaturedCollectionManga
+            {
+                Id = "fcm2v3w4x5-y6z7-8a9b-0c1d-2e3f4g5h6i7j",
+                FeaturedCollectionId = "fc1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                MangaId = "m7q8r9s0-t1u2-3v4w-5x6y-7z8a9b0c1d2e", // The Adventure Quest
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm3w4x5y6-z7a8-9b0c-1d2e-3f4g5h6i7j8k",
+                FeaturedCollectionId = "fc1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                MangaId = "m2v3w4x5-y6z7-8a9b-0c1d-2e3f4g5h6i7j", // The Fantasy Kingdom
+                IsDeleted = false
+            },
+
+            // Comedy & Humor
+            new FeaturedCollectionManga
+            {
+                Id = "fcm4x5y6z7-a8b9-0c1d-2e3f-4g5h6i7j8k9l",
+                FeaturedCollectionId = "fc2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                MangaId = "m8r9s0t1-u2v3-4w5x-6y7z-8a9b0c1d2e3f", // The Comedy Club
+                IsDeleted = false
+            },
+
+            // Drama & Emotion
+            new FeaturedCollectionManga
+            {
+                Id = "fcm5y6z7a8-b9c0-1d2e-3f4g-5h6i7j8k9l0m",
+                FeaturedCollectionId = "fc3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                MangaId = "m9s0t1u2-v3w4-5x6y-7z8a-9b0c1d2e3f4g", // The Drama Queen
+                IsDeleted = false
+            },
+
+            // Military & Strategy
+            new FeaturedCollectionManga
+            {
+                Id = "fcm6z7a8b9-c0d1-2e3f-4g5h-6i7j8k9l0m1n",
+                FeaturedCollectionId = "fc4n5o6p8-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                MangaId = "m3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a", // The Military Academy
+                IsDeleted = false
+            },
+
+            // Psychological & Mind Games
+            new FeaturedCollectionManga
+            {
+                Id = "fcm7a8b9c0-d1e2-3f4g-5h6i-7j8k9l0m1n2o",
+                FeaturedCollectionId = "fc5o6p7q9-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                MangaId = "m2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z", // The Psychological Thriller
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm8b9c0d1-e2f3-4g5h-6i7j-8k9l0m1n2o3p",
+                FeaturedCollectionId = "fc5o6p7q9-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                MangaId = "m6z7a8b9-c0d1-2e3f-4g5h-6i7j8k9l0m1n", // The Psychological Game
+                IsDeleted = false
+            },
+
+            // Slice of Life & Daily Stories
+            new FeaturedCollectionManga
+            {
+                Id = "fcm9c0d1e2-f3g4-5h6i-7j8k-9l0m1n2o3p4q",
+                FeaturedCollectionId = "fc6p7q8r0-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                MangaId = "m6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t", // The Cooking Master
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm1e2f3g4-h5i6-7j8k-9l0m-1n2o3p4q5r6s",
+                FeaturedCollectionId = "fc7q8r9s1-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                MangaId = "m3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q", // Magical Academy
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm2f3g4h5-i6j7-8k9l-0m1n-2o3p4q5r6s7t",
+                FeaturedCollectionId = "fc7q8r9s1-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                MangaId = "m7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y", // Starlight Academy
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm3g4h5i6-j7k8-9l0m-1n2o-3p4q5r6s7t8u",
+                FeaturedCollectionId = "fc7q8r9s1-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                MangaId = "m7a8b9c0-d1e2-3f4g-5h6i-7j8k9l0m1n2o", // The Supernatural Academy
+                IsDeleted = false
+            },
+
+            // Martial Arts & Combat
+            new FeaturedCollectionManga
+            {
+                Id = "fcm4h5i6j7-k8l9-0m1n-2o3p-4q5r6s7t8u9v",
+                FeaturedCollectionId = "fc8r9s0t2-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                MangaId = "m1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y", // The Martial Arts Master
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm5i6j7k8-l9m0-1n2o-3p4q-5r6s7t8u9v0w",
+                FeaturedCollectionId = "fc8r9s0t2-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                MangaId = "m5y6z7a8-b9c0-1d2e-3f4g-5h6i7j8k9l0m", // The Martial Arts Tournament
+                IsDeleted = false
+            },
+
+            // Sci-Fi & Technology
+            new FeaturedCollectionManga
+            {
+                Id = "fcm6j7k8l9-m0n1-2o3p-4q5r-6s7t8u9v0w1x",
+                FeaturedCollectionId = "fc9s0t1u3-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                MangaId = "m2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p", // Cyberpunk Dreams
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm7k8l9m0-n1o2-3p4q-5r6s-7t8u9v0w1x2y",
+                FeaturedCollectionId = "fc9s0t1u3-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                MangaId = "m8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b", // The Last Hero
+                IsDeleted = false
+            },
+
+            // Horror & Suspense
+            new FeaturedCollectionManga
+            {
+                Id = "fcm8l9m0n1-o2p3-4q5r-6s7t-8u9v0w1x2y3z",
+                FeaturedCollectionId = "fc0t1u2v4-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                MangaId = "m6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d", // The Horror Mansion
+                IsDeleted = false
+            },
+            new FeaturedCollectionManga
+            {
+                Id = "fcm9m0n1o2-p3q4-5r6s-7t8u-9v0w1x2y3z4a",
+                FeaturedCollectionId = "fc0t1u2v4-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                MangaId = "m4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b", // The Supernatural Detective
+                IsDeleted = false
+            }
+        );
+
+        // Seed FeaturedCollectionPermissions
         modelBuilder.Entity<FeaturedCollectionPermission>().HasData(
-            // Comics Collections Permissions
+            // Best Action Manga Collection Permissions
             new FeaturedCollectionPermission
             {
-                Id = 1,
-                FeaturedCollectionId = 1,
-                UserId = 1,
+                Id = "fcp1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                FeaturedCollectionId = "fc1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                UserId = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
                 PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false
             },
             new FeaturedCollectionPermission
             {
-                Id = 2,
-                FeaturedCollectionId = 2,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 3,
-                FeaturedCollectionId = 3,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 4,
-                FeaturedCollectionId = 4,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 5,
-                FeaturedCollectionId = 5,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 6,
-                FeaturedCollectionId = 6,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 7,
-                FeaturedCollectionId = 7,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 8,
-                FeaturedCollectionId = 8,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 9,
-                FeaturedCollectionId = 9,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                Id = "fcp2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                FeaturedCollectionId = "fc1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                UserId = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
             },
 
-            // Novels Collections Permissions
+            // Romance Collection Permissions
             new FeaturedCollectionPermission
             {
-                Id = 10,
-                FeaturedCollectionId = 10,
-                UserId = 1,
+                Id = "fcp3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                FeaturedCollectionId = "fc2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                UserId = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
                 PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false
             },
             new FeaturedCollectionPermission
             {
-                Id = 11,
-                FeaturedCollectionId = 11,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 12,
-                FeaturedCollectionId = 12,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 13,
-                FeaturedCollectionId = 13,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 14,
-                FeaturedCollectionId = 14,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 15,
-                FeaturedCollectionId = 15,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 16,
-                FeaturedCollectionId = 16,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 17,
-                FeaturedCollectionId = 17,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 18,
-                FeaturedCollectionId = 18,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                Id = "fcp4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                FeaturedCollectionId = "fc2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                UserId = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
             },
 
-            // New Releases Collections Permissions
+            // Fantasy Adventures Permissions
             new FeaturedCollectionPermission
             {
-                Id = 19,
-                FeaturedCollectionId = 19,
-                UserId = 1,
+                Id = "fcp5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                FeaturedCollectionId = "fc3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                UserId = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
                 PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false
             },
             new FeaturedCollectionPermission
             {
-                Id = 20,
-                FeaturedCollectionId = 20,
-                UserId = 1,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            
-            // Additional permissions for other collections
-            new FeaturedCollectionPermission
-            {
-                Id = 21,
-                FeaturedCollectionId = 21,
-                UserId = 2,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 22,
-                FeaturedCollectionId = 22,
-                UserId = 3,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 23,
-                FeaturedCollectionId = 23,
-                UserId = 4,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 24,
-                FeaturedCollectionId = 24,
-                UserId = 5,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 25,
-                FeaturedCollectionId = 25,
-                UserId = 6,
-                PermissionType = CollectionPermissionType.Write,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
-            },
-            new FeaturedCollectionPermission
-            {
-                Id = 30,
-                FeaturedCollectionId = 20,
-                UserId = 14,
+                Id = "fcp6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                FeaturedCollectionId = "fc3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                UserId = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
                 PermissionType = CollectionPermissionType.Read,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false
             },
 
-            // Permissions for new collections (IDs 21-25)
+            // School Life Stories Permissions
             new FeaturedCollectionPermission
             {
-                Id = 31,
-                FeaturedCollectionId = 21,
-                UserId = 7,
-                PermissionType = CollectionPermissionType.Read,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                Id = "fcp7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                FeaturedCollectionId = "fc4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                UserId = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
             },
             new FeaturedCollectionPermission
             {
-                Id = 32,
-                FeaturedCollectionId = 22,
-                UserId = 8,
+                Id = "fcp8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                FeaturedCollectionId = "fc4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                UserId = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
                 PermissionType = CollectionPermissionType.Read,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false
+            },
+
+            // Mystery & Thriller Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                FeaturedCollectionId = "fc5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                UserId = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
             },
             new FeaturedCollectionPermission
             {
-                Id = 33,
-                FeaturedCollectionId = 23,
-                UserId = 9,
+                Id = "fcp0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                FeaturedCollectionId = "fc5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                UserId = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
                 PermissionType = CollectionPermissionType.Read,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false
+            },
+
+            // Sports & Competition Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                FeaturedCollectionId = "fc6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                UserId = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s", // Hiroshi Tanaka
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
             },
             new FeaturedCollectionPermission
             {
-                Id = 34,
-                FeaturedCollectionId = 24,
-                UserId = 10,
+                Id = "fcp2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                FeaturedCollectionId = "fc6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                UserId = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
                 PermissionType = CollectionPermissionType.Read,
-                IsDeleted = false,
-                CreatedAt = SEED_DATE,
-                UpdatedAt = SEED_DATE
+                IsDeleted = false
+            },
+
+            // Cooking & Food Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                FeaturedCollectionId = "fc7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                UserId = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t", // Yuki Sato
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
             },
             new FeaturedCollectionPermission
             {
-                Id = 35,
-                FeaturedCollectionId = 25,
-                UserId = 11,
+                Id = "fcp4n5o6p7-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                FeaturedCollectionId = "fc7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                UserId = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
                 PermissionType = CollectionPermissionType.Read,
-                IsDeleted = false,
+                IsDeleted = false
+            },
+
+            // Historical Tales Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp5o6p7q8-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                FeaturedCollectionId = "fc8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                UserId = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u", // David Kim
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp6p7q8r9-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                FeaturedCollectionId = "fc8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                UserId = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Supernatural & Horror Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp7q8r9s0-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                FeaturedCollectionId = "fc9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                UserId = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v", // Lisa Park
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp8r9s0t1-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                FeaturedCollectionId = "fc9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                UserId = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Music & Arts Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp9s0t1u2-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                FeaturedCollectionId = "fc0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                UserId = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w", // James Wilson
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp0t1u2v3-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                FeaturedCollectionId = "fc0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                UserId = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Additional FeaturedCollectionPermissions for new collections
+            // Adventure & Exploration Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp1u2v3w4-x5y6-7z8a-9b0c-1d2e3f4g5h6i",
+                FeaturedCollectionId = "fc1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                UserId = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp2v3w4x5-y6z7-8a9b-0c1d-2e3f4g5h6i7j",
+                FeaturedCollectionId = "fc1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                UserId = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Comedy & Humor Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp3w4x5y6-z7a8-9b0c-1d2e-3f4g5h6i7j8k",
+                FeaturedCollectionId = "fc2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                UserId = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp4x5y6z7-a8b9-0c1d-2e3f-4g5h6i7j8k9l",
+                FeaturedCollectionId = "fc2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                UserId = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Drama & Emotion Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp5y6z7a8-b9c0-1d2e-3f4g-5h6i7j8k9l0m",
+                FeaturedCollectionId = "fc3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                UserId = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp6z7a8b9-c0d1-2e3f-4g5h-6i7j8k9l0m1n",
+                FeaturedCollectionId = "fc3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                UserId = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Military & Strategy Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp7a8b9c0-d1e2-3f4g-5h6i-7j8k9l0m1n2o",
+                FeaturedCollectionId = "fc4n5o6p8-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                UserId = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp8b9c0d1-e2f3-4g5h-6i7j-8k9l0m1n2o3p",
+                FeaturedCollectionId = "fc4n5o6p8-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                UserId = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Psychological & Mind Games Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp9c0d1e2-f3g4-5h6i-7j8k-9l0m1n2o3p4q",
+                FeaturedCollectionId = "fc5o6p7q9-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                UserId = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp0d1e2f3-g4h5-6i7j-8k9l-0m1n2o3p4q5r",
+                FeaturedCollectionId = "fc5o6p7q9-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                UserId = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Slice of Life & Daily Stories Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp1e2f3g4-h5i6-7j8k-9l0m-1n2o3p4q5r6s",
+                FeaturedCollectionId = "fc6p7q8r0-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                UserId = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp2f3g4h5-i6j7-8k9l-0m1n-2o3p4q5r6s7t",
+                FeaturedCollectionId = "fc6p7q8r0-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                UserId = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Supernatural & Magic Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp3g4h5i6-j7k8-9l0m-1n2o-3p4q5r6s7t8u",
+                FeaturedCollectionId = "fc7q8r9s1-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                UserId = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z", // Wei Chen
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp4h5i6j7-k8l9-0m1n-2o3p-4q5r6s7t8u9v",
+                FeaturedCollectionId = "fc7q8r9s1-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                UserId = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Martial Arts & Combat Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp5i6j7k8-l9m0-1n2o-3p4q-5r6s7t8u9v0w",
+                FeaturedCollectionId = "fc8r9s0t2-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                UserId = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a", // Sofia Rodriguez
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp6j7k8l9-m0n1-2o3p-4q5r-6s7t8u9v0w1x",
+                FeaturedCollectionId = "fc8r9s0t2-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                UserId = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Sci-Fi & Technology Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp7k8l9m0-n1o2-3p4q-5r6s-7t8u9v0w1x2y",
+                FeaturedCollectionId = "fc9s0t1u3-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                UserId = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b", // Jordan Lee
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp8l9m0n1-o2p3-4q5r-6s7t-8u9v0w1x2y3z",
+                FeaturedCollectionId = "fc9s0t1u3-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                UserId = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            },
+
+            // Horror & Suspense Permissions
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp9m0n1o2-p3q4-5r6s-7t8u-9v0w1x2y3z4a",
+                FeaturedCollectionId = "fc0t1u2v4-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                UserId = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x", // Maria Garcia
+                PermissionType = CollectionPermissionType.Write,
+                IsDeleted = false
+            },
+            new FeaturedCollectionPermission
+            {
+                Id = "fcp0n1o2p3-q4r5-6s7t-8u9v-0w1x2y3z4a5b",
+                FeaturedCollectionId = "fc0t1u2v4-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                UserId = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y", // Taylor Smith
+                PermissionType = CollectionPermissionType.Read,
+                IsDeleted = false
+            }
+        );
+
+        // Seed MangaInteractions
+        modelBuilder.Entity<MangaInteraction>().HasData(
+            // User 1 - Phuc Lo interactions
+            new MangaInteraction
+            {
+                Id = "mi1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                UserId = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                MangaId = "m1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o", // The Last Samurai's Legacy
+                ChapterId = "c1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o", // Chapter 1
+                InteractionType = MangaInteractionType.Like,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            },
+            new MangaInteraction
+            {
+                Id = "mi2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                UserId = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n", // Phuc Lo
+                MangaId = "m2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p", // Cyberpunk Dreams
+                ChapterId = "c2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p", // Chapter 1
+                InteractionType = MangaInteractionType.Bookmark,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            },
+
+            // User 2 - Sarah Johnson interactions
+            new MangaInteraction
+            {
+                Id = "mi3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                UserId = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                MangaId = "m3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q", // Magical Academy
+                ChapterId = "c3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q", // Chapter 1
+                InteractionType = MangaInteractionType.Read,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            },
+            new MangaInteraction
+            {
+                Id = "mi4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                UserId = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                MangaId = "m4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r", // The Detective's Case
+                ChapterId = "c4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r", // Chapter 1
+                InteractionType = MangaInteractionType.Share,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            },
+
+            // User 3 - Michael Chen interactions
+            new MangaInteraction
+            {
+                Id = "mi5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                UserId = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                MangaId = "m5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s", // The Sports Star
+                ChapterId = "c5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s", // Chapter 1
+                InteractionType = MangaInteractionType.Like,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            },
+            new MangaInteraction
+            {
+                Id = "mi6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                UserId = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                MangaId = "m6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t", // The Cooking Master
+                ChapterId = "c6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t", // Chapter 1
+                InteractionType = MangaInteractionType.Bookmark,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            },
+
+            // User 4 - Emma Wilson interactions
+            new MangaInteraction
+            {
+                Id = "mi7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                UserId = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                MangaId = "m7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y", // Starlight Academy
+                ChapterId = "c7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y", // Chapter 1
+                InteractionType = MangaInteractionType.Report,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            },
+            new MangaInteraction
+            {
+                Id = "mi8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                UserId = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                MangaId = "m8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b", // The Last Hero
+                ChapterId = "c8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b", // Chapter 1
+                InteractionType = MangaInteractionType.Share,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            },
+
+            // User 5 - Alex Rivera interactions
+            new MangaInteraction
+            {
+                Id = "mi9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                UserId = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
+                MangaId = "m9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w", // The Music Prodigy
+                ChapterId = "c9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w", // Chapter 1
+                InteractionType = MangaInteractionType.Like,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            },
+            new MangaInteraction
+            {
+                Id = "mi0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                UserId = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r", // Alex Rivera
+                MangaId = "m0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x", // The Martial Arts Master
+                ChapterId = "c0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x", // Chapter 1
+                InteractionType = MangaInteractionType.Read,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE,
+                IsDeleted = false
+            }
+        );
+
+        // Seed Comments
+        modelBuilder.Entity<Comment>().HasData(
+            // Parent Comments (no ParentCommentId)
+            new Comment
+            {
+                Id = "cm1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                MangaId = "m1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o", // The Last Samurai's Legacy
+                UserId = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o", // Sarah Johnson
+                ParentCommentId = null,
+                Content = "This manga has such beautiful artwork! The samurai theme is really well executed.",
+                IsSpoiler = false,
+                ChapterId = "c1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o", // Chapter 1
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Comment
+            {
+                Id = "cm2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                MangaId = "m2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p", // Cyberpunk Dreams
+                UserId = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p", // Michael Chen
+                ParentCommentId = null,
+                Content = "The cyberpunk setting is amazing! Love the futuristic elements.",
+                IsSpoiler = false,
+                ChapterId = "c2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p", // Chapter 1
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Comment
+            {
+                Id = "cm3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                MangaId = "m3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q", // Magical Academy
+                UserId = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q", // Emma Wilson
+                ParentCommentId = null,
+                Content = "I wish I could go to a magical academy! The spells are so creative.",
+                IsSpoiler = false,
+                ChapterId = "c3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q", // Chapter 1
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Additional comments
+            new Comment
+            {
+                Id = "cm4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                MangaId = "m4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                UserId = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r",
+                ParentCommentId = null,
+                Content = "The detective's logic is so sharp! Love the suspense.",
+                IsSpoiler = false,
+                ChapterId = "c4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Comment
+            {
+                Id = "cm5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                MangaId = "m5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                UserId = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s",
+                ParentCommentId = null,
+                Content = "The main character's growth is inspiring!",
+                IsSpoiler = false,
+                ChapterId = "c5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Comment
+            {
+                Id = "cm6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                MangaId = "m6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                UserId = "0d1e2f3g-4h5i-6j7k-8l9m-0n1o2p3q4r5s6t",
+                ParentCommentId = null,
+                Content = "I tried the recipe from this chapter, it was delicious!",
+                IsSpoiler = false,
+                ChapterId = "c6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Comment
+            {
+                Id = "cm7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                MangaId = "m7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                UserId = "1e2f3g4h-5i6j-7k8l-9m0n-1o2p3q4r5s6t7u",
+                ParentCommentId = null,
+                Content = "The magical creatures are so cute!",
+                IsSpoiler = false,
+                ChapterId = "c7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Child comment (reply)
+            new Comment
+            {
+                Id = "cm8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                MangaId = "m8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                UserId = "2f3g4h5i-6j7k-8l9m-0n1o-2p3q4r5s6t7u8v",
+                ParentCommentId = "cm4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                Content = "I agree, the suspense is killing me!",
+                IsSpoiler = false,
+                ChapterId = "c8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Spoiler comment
+            new Comment
+            {
+                Id = "cm9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                MangaId = "m0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                UserId = "3g4h5i6j-7k8l-9m0n-1o2p-3q4r5s6t7u8v9w",
+                ParentCommentId = null,
+                Content = "Spoiler: The protagonist gets a new rival in the next chapter!",
+                IsSpoiler = true,
+                ChapterId = "c9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // General manga comment (no chapter)
+            new Comment
+            {
+                Id = "cm0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                MangaId = "m1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                UserId = "4h5i6j7k-8l9m-0n1o-2p3q-4r5s6t7u8v9w0x",
+                ParentCommentId = null,
+                Content = "This series is underrated!",
+                IsSpoiler = false,
+                ChapterId = null,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Another reply
+            new Comment
+            {
+                Id = "cm1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                MangaId = "m1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                UserId = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p",
+                ParentCommentId = "cm1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                Content = "Absolutely! The art is top-notch.",
+                IsSpoiler = false,
+                ChapterId = "c1a2b3c4-d5e6-7f8g-9h0i-1j2k3l4m5n6o",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // General comment, different user
+            new Comment
+            {
+                Id = "cm2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                MangaId = "m2b3c4d5-e6f7-8g9h-0i1j-2k3l4m5n6o7p",
+                UserId = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q",
+                ParentCommentId = null,
+                Content = "The world-building is so immersive!",
+                IsSpoiler = false,
+                ChapterId = null,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Another spoiler
+            new Comment
+            {
+                Id = "cm3m4n5o7-p7q8-9r0s-1t2u-3v4w5x6y7z8a",
+                MangaId = "m3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                UserId = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r",
+                ParentCommentId = null,
+                Content = "Spoiler: The headmaster is not who they seem!",
+                IsSpoiler = true,
+                ChapterId = "c3c4d5e6-f7g8-9h0i-1j2k-3l4m5n6o7p8q",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Additional comments
+            new Comment
+            {
+                Id = "cm4n5o6p8-q8r9-0s1t-2u3v-4w5x6y7z8a9b",
+                MangaId = "m4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                UserId = "5i6j7k8l-9m0n-1o2p-3q4r-5s6t7u8v9w0x1y",
+                ParentCommentId = null,
+                Content = "The character development is so well written!",
+                IsSpoiler = false,
+                ChapterId = "c4d5e6f7-g8h9-0i1j-2k3l-4m5n6o7p8q9r",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            new Comment
+            {
+                Id = "cm5o6p7q9-r9s0-1t2u-3v4w-5x6y7z8a9b0c",
+                MangaId = "m5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                UserId = "6j7k8l9m-0n1o-2p3q-4r5s-6t7u8v9w0x1y2z",
+                ParentCommentId = null,
+                Content = "The action scenes are so dynamic!",
+                IsSpoiler = false,
+                ChapterId = "c5e6f7g8-h9i0-1j2k-3l4m-5n6o7p8q9r0s",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Reply to a previous comment
+            new Comment
+            {
+                Id = "cm6p7q8r0-s0t1-2u3v-4w5x-6y7z8a9b0c1d",
+                MangaId = "m6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                UserId = "7k8l9m0n-1o2p-3q4r-5s6t-7u8v9w0x1y2z3a",
+                ParentCommentId = "cm6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                Content = "I tried it too! Which recipe did you make?",
+                IsSpoiler = false,
+                ChapterId = "c6f7g8h9-i0j1-2k3l-4m5n-6o7p8q9r0s1t",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Spoiler comment
+            new Comment
+            {
+                Id = "cm7q8r9s1-t1u2-3v4w-5x6y-7z8a9b0c1d2e",
+                MangaId = "m7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                UserId = "8l9m0n1o-2p3q-4r5s-6t7u-8v9w0x1y2z3a4b",
+                ParentCommentId = null,
+                Content = "Spoiler: The magical creatures are actually humans in disguise!",
+                IsSpoiler = true,
+                ChapterId = "c7g8h9i1-j1k2-3l4m-5n6o-7p8q9r0s1t2y",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // General manga comment (no chapter)
+            new Comment
+            {
+                Id = "cm8r9s0t2-u2v3-4w5x-6y7z-8a9b0c1d2e3f",
+                MangaId = "m8h9i0j2-k2l3-4m5n-6o7p-8q9r0s1t2u3b",
+                UserId = "4x5y6z7a-8b9c-0d1e-2f3g-4h5i6j7k8l9m0n",
+                ParentCommentId = null,
+                Content = "This is my favorite manga series!",
+                IsSpoiler = false,
+                ChapterId = null,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Another reply
+            new Comment
+            {
+                Id = "cm9s0t1u3-v3w4-5x6y-7z8a-9b0c1d2e3f4g",
+                MangaId = "m9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                UserId = "5y6z7a8b-9c0d-1e2f-3g4h-5i6j7k8l9m0n1o",
+                ParentCommentId = "cm9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                Content = "I can't wait to see how this rivalry develops!",
+                IsSpoiler = false,
+                ChapterId = "c9i0j1k3-l3m4-5n6o-7p8q-9r0s1t2u3v4w",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Parent comment
+            new Comment
+            {
+                Id = "cm0t1u2v4-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                MangaId = "m0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                UserId = "6z7a8b9c-0d1e-2f3g-4h5i-6j7k8l9m0n1o2p",
+                ParentCommentId = null,
+                Content = "The music scenes are so emotional!",
+                IsSpoiler = false,
+                ChapterId = "c0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Reply to music comment
+            new Comment
+            {
+                Id = "cm1u2v3w5-x5y6-7z8a-9b0c-1d2e3f4g5h6i",
+                MangaId = "m0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                UserId = "7a8b9c0d-1e2f-3g4h-5i6j-7k8l9m0n1o2p3q",
+                ParentCommentId = "cm0t1u2v4-w4x5-6y7z-8a9b-0c1d2e3f4g5h",
+                Content = "The soundtrack would be amazing!",
+                IsSpoiler = false,
+                ChapterId = "c0j1k2l4-m4n5-6o7p-8q9r-0s1t2u3v4w5x",
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // General comment
+            new Comment
+            {
+                Id = "cm2v3w4x6-y6z7-8a9b-0c1d-2e3f4g5h6i7j",
+                MangaId = "m1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
+                UserId = "8b9c0d1e-2f3g-4h5i-6j7k-8l9m0n1o2p3q4r",
+                ParentCommentId = null,
+                Content = "The art style is so unique and beautiful!",
+                IsSpoiler = false,
+                ChapterId = null,
+                CreatedAt = SEED_DATE,
+                UpdatedAt = SEED_DATE
+            },
+            // Final spoiler comment
+            new Comment
+            {
+                Id = "cm3w4x5y7-z7a8-9b0c-1d2e-3f4g5h6i7j8k",
+                MangaId = "m2l3m4n6-o6p7-8q9r-0s1t-2u3v4w5x6y7z",
+                UserId = "9c0d1e2f-3g4h-5i6j-7k8l-9m0n1o2p3q4r5s",
+                ParentCommentId = null,
+                Content = "Spoiler: The main character discovers their true identity!",
+                IsSpoiler = true,
+                ChapterId = "c1k2l3m5-n5o6-7p8q-9r0s-1t2u3v4w5x6y",
                 CreatedAt = SEED_DATE,
                 UpdatedAt = SEED_DATE
             }
         );
     }
-} 
+}

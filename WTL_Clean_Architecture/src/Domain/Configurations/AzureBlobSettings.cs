@@ -2,6 +2,6 @@
 {
     public class AzureBlobSettings
     {
-        public string AccountName { get; set; }
+        public required string AccountName { get; set; }
     }
 }

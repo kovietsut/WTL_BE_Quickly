@@ -12,7 +12,7 @@ namespace Application.Features.CommentReactions.Create
 {
     public class CreateCommentReactionCommand : IRequest<IActionResult>
     {
-        public required long CommentId { get; set; }
+        public required string CommentId { get; set; }
         public required CommentReactionType ReactionType { get; set; }
         public string? Reason { get; set; }
     }
@@ -56,7 +56,7 @@ namespace Application.Features.CommentReactions.Create
                 }
 
                 // Check if comment exists
-                var comment = await _commentRepository.GetByIdAsync(request.CommentId);
+                var comment = await _commentRepository.GetCommendByIdAsync(request.CommentId);
                 if (comment == null)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Comment not found");

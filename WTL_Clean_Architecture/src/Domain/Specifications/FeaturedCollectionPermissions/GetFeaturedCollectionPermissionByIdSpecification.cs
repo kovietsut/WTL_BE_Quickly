@@ -2,13 +2,14 @@
 
 namespace Domain.Specifications.FeaturedCollectionPermissions
 {
-    public class GetFeaturedCollectionPermissionByIdSpecification : Specification<FeaturedCollectionPermission, long>
+    public class GetFeaturedCollectionPermissionByIdSpecification : Specification<FeaturedCollectionPermission, string>
     {
-        public GetFeaturedCollectionPermissionByIdSpecification(long collectionId, long userId) : base(x =>
-        x.IsDeleted == false &&
-        x.FeaturedCollectionId == collectionId &&
-        x.UserId == userId
-        )
-        { }
+        public GetFeaturedCollectionPermissionByIdSpecification(string collectionId, string userId) : base(x =>
+            x.FeaturedCollectionId == collectionId &&
+            x.UserId == userId)
+        {
+            AddInclude(x => x.FeaturedCollection);
+            AddInclude(x => x.User);
+        }
     }
 }

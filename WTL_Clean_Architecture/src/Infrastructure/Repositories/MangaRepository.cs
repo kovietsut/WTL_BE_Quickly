@@ -14,7 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Infrastructure.Repositories
 {
-    public class MangaRepository : RepositoryBase<Manga, long, MyDbContext>, IMangaRepository
+    public class MangaRepository : RepositoryBase<Manga, string, MyDbContext>, IMangaRepository
     {
         private readonly ErrorCode _errorCodes;
         private readonly IMangaGenreRepository _mangaGenreRepository;
@@ -41,6 +41,7 @@ namespace Infrastructure.Repositories
         {
             var manga = new Manga()
             {
+                Id = Guid.NewGuid().ToString(),
                 IsDeleted = false,
                 CreatedAt = DateTimeOffset.UtcNow,
                 Title = model.Title.Trim(),
@@ -66,7 +67,7 @@ namespace Infrastructure.Repositories
             return manga;
         }
 
-        public async Task<Manga?> DeleteMangaAsync(long id)
+        public async Task<Manga?> DeleteMangaAsync(string id)
         {
             var manga = await GetMangaById(id);
             if (manga != null)
@@ -92,14 +93,14 @@ namespace Infrastructure.Repositories
             return (result, totalCount);
         }
 
-        public async Task<Manga?> GetMangaById(long id)
+        public async Task<Manga?> GetMangaById(string id)
         {
             var query = FindByCondition(x => x.Id == id);
             var specification = new GetMangaByIdSpecification(id);
             return await SpecificationQueryBuilder.GetQuery(query, specification).SingleOrDefaultAsync();
         }
 
-        public async Task<Manga> UpdateMangaAsync(long mangaId, UpdateMangaDto model)
+        public async Task<Manga> UpdateMangaAsync(string mangaId, UpdateMangaDto model)
         {
             var currentManga = await GetByIdAsync(mangaId) ?? throw new ArgumentNullException(nameof(mangaId), "Manga not found");
             
@@ -119,7 +120,7 @@ namespace Infrastructure.Repositories
             return currentManga;
         }
 
-        public async Task<string> UploadCoverImageAsync(long mangaId, IFormFile coverImageFile)
+        public async Task<string> UploadCoverImageAsync(string mangaId, IFormFile coverImageFile)
         {
             var manga = await GetByIdAsync(mangaId) ?? throw new ArgumentNullException(nameof(mangaId), "Manga not found");
 

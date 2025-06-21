@@ -8,9 +8,9 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.Users.Delete
 {
-    public class DeleteUserCommand(long id) : IRequest<IActionResult>
+    public class DeleteUserCommand(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand, IActionResult>

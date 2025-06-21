@@ -9,9 +9,9 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.FeaturedCollections.Delete
 {
-    public class DeleteFeaturedCollectionCommand(long id) : IRequest<IActionResult>
+    public class DeleteFeaturedCollectionCommand(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class DeleteFeaturedCollectionCommandHandler : IRequestHandler<DeleteFeaturedCollectionCommand, IActionResult>

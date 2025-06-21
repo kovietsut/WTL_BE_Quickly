@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("by-id")]
-        public async Task<IActionResult> GetMangaInteractionById([FromQuery] long userId, [FromQuery] long? mangaId, [FromQuery] long? chapterId, [FromQuery] MangaInteractionType? interactionType)
+        public async Task<IActionResult> GetMangaInteractionById([FromQuery] string userId, [FromQuery] string? mangaId, [FromQuery] string? chapterId, [FromQuery] MangaInteractionType? interactionType)
         {
             var query = new GetMangaInteractionByIdQuery
             {
@@ -38,7 +38,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetMangaInteraction([FromQuery] long userId, [FromQuery] long? mangaId, [FromQuery] long? chapterId, [FromQuery] MangaInteractionType? interactionType)
+        public async Task<IActionResult> GetMangaInteraction([FromQuery] string userId, [FromQuery] string? mangaId, [FromQuery] string? chapterId, [FromQuery] MangaInteractionType? interactionType)
         {
             var query = new GetMangaInteractionQuery
             {
@@ -53,9 +53,9 @@ namespace WebAPI.Controllers
 
         [HttpGet("list")]
         public async Task<IActionResult> GetMangaInteractionList(
-            [FromQuery] long userId, 
-            [FromQuery] long? mangaId = null, 
-            [FromQuery] long? chapterId = null, 
+            [FromQuery] string userId, 
+            [FromQuery] string? mangaId = null, 
+            [FromQuery] string? chapterId = null, 
             [FromQuery] MangaInteractionType? interactionType = null, 
             [FromQuery] int? pageNumber = 1, 
             [FromQuery] int? pageSize = 10)
@@ -99,7 +99,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteMangaInteraction([FromQuery] long? mangaId, [FromQuery] long? chapterId)
+        public async Task<IActionResult> DeleteMangaInteraction([FromQuery] string? mangaId, [FromQuery] string? chapterId)
         {
             var command = new DeleteMangaInteractionCommand
             {

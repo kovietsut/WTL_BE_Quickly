@@ -19,7 +19,7 @@ namespace WebAPI.Controllers
 
         [HttpGet("list")]
         public async Task<IActionResult> GetCommentReactions(
-            [FromQuery] long commentId,
+            [FromQuery] string commentId,
             [FromQuery] int? pageNumber = 1,
             [FromQuery] int? pageSize = 10)
         {

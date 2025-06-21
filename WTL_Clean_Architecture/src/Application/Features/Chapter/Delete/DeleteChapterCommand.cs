@@ -14,9 +14,9 @@ using System.Threading.Tasks;
 
 namespace Application.Features.Chapter.Delete
 {
-    public class DeleteChapterCommand(long id) : IRequest<IActionResult>
+    public class DeleteChapterCommand(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class DeleteChapterCommandHandler : IRequestHandler<DeleteChapterCommand, IActionResult>

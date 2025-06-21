@@ -1,8 +1,8 @@
 ﻿namespace Domain.Entities;
 
-public partial class User : EntityBase<long>
+public partial class User : EntityBase<string>
 {
-    public long RoleId { get; set; }
+    public required string RoleId { get; set; }
 
     public string? FullName { get; set; }
 
@@ -23,7 +23,7 @@ public partial class User : EntityBase<long>
 
     public string? PasswordHash { get; set; }
 
-    public string SecurityStamp { get; set; }
+    public required string SecurityStamp { get; set; }
 
     public virtual ICollection<AuthMethod> AuthMethods { get; set; } = new List<AuthMethod>();
 

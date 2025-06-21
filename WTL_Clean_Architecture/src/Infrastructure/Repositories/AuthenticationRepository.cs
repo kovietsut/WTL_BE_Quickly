@@ -8,7 +8,7 @@ namespace Infrastructure.Repositories
 {
     public class AuthenticationRepository(MyDbContext dbContext, IUnitOfWork<MyDbContext> unitOfWork, IEncryptionRepository iEncryptionRepository,
         IHttpContextAccessor httpContextAccessor
-        ) : RepositoryBase<User, long, MyDbContext>(dbContext, unitOfWork), IAuthenticationRepository
+        ) : RepositoryBase<User, string, MyDbContext>(dbContext, unitOfWork), IAuthenticationRepository
     {
         private readonly IEncryptionRepository _iEncryptionRepository = iEncryptionRepository;
         private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;
@@ -18,10 +18,10 @@ namespace Infrastructure.Repositories
             return _iEncryptionRepository.EncryptPassword(model.Password, securityStamp);
         }
 
-        public long GetUserId()
+        public string GetUserId()
         {
             var user = _httpContextAccessor.HttpContext?.User?.FindFirst("Id")?.Value;
-            return long.Parse(user);
+            return user ?? string.Empty;
         }
     }
 }

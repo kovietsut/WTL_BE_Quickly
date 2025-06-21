@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteFeaturedCollectionMangaAsync(long collectionId, List<long> userIds)
+        public async Task<IActionResult> DeleteFeaturedCollectionMangaAsync(string collectionId, List<string> userIds)
         {
             var query = new DeleteFeaturedCollectionPermissionCommand(collectionId, userIds);
             var result = await _mediator.Send(query);

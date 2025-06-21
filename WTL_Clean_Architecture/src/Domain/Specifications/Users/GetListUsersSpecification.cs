@@ -2,9 +2,9 @@
 
 namespace Domain.Specifications.Users
 {
-    public class GetListUsersSpecification : Specification<User, long>
+    public class GetListUsersSpecification : Specification<User, string>
     {
-        public GetListUsersSpecification(int? pageNumber, int? pageSize, string? searchText, int? roleId) :
+        public GetListUsersSpecification(int? pageNumber, int? pageSize, string? searchText, string? roleId) :
             base(user => user.IsDeleted != true && (user.RoleId == roleId || roleId == null) &&
             (string.IsNullOrEmpty(searchText) || (user.FullName != null && user.FullName.Contains(searchText.Trim())) ||
             (user.PhoneNumber != null && user.PhoneNumber.Contains(searchText.Trim())) ||

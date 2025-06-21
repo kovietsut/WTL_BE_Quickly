@@ -8,9 +8,9 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.Manga.Delete
 {
-    public class DeleteMangaCommand(long id) : IRequest<IActionResult>
+    public class DeleteMangaCommand(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class DeleteMangaCommandHandler : IRequestHandler<DeleteMangaCommand, IActionResult>

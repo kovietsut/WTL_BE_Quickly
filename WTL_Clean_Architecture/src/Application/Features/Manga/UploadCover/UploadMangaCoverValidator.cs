@@ -8,8 +8,8 @@ namespace Application.Features.Manga.UploadCover
         public UploadMangaCoverValidator()
         {
             RuleFor(x => x.MangaId)
-                .GreaterThan(0)
-                .WithMessage("MangaId must be greater than 0");
+                .NotEmpty()
+                .WithMessage("MangaId is required");
 
             RuleFor(x => x.CoverImageFile)
                 .NotNull()

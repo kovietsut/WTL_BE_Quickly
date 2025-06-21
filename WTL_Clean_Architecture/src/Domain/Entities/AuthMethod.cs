@@ -1,8 +1,8 @@
 ﻿namespace Domain.Entities;
 
-public partial class AuthMethod : EntityBase<long>
+public partial class AuthMethod : EntityBase<string>
 {
-    public long UserId { get; set; }
+    public required string UserId { get; set; }
 
     public string? AuthType { get; set; }
 

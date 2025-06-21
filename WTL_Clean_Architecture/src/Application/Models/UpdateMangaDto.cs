@@ -1,11 +1,13 @@
 ﻿using Domain.Enums;
 using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 
 namespace Application.Models
 {
     public class UpdateMangaDto
     {
-        public string Title { get; set; }
+        [Required]
+        public required string Title { get; set; }
 
         public DateTime? PublishedDate { get; set; }
 
@@ -21,14 +23,14 @@ namespace Application.Models
 
         public IFormFile? CoverImageFile { get; set; }
 
-        public long? SubAuthor { get; set; }
+        public string? SubAuthor { get; set; }
 
-        public long? Publishor { get; set; }
+        public string? Publishor { get; set; }
 
-        public long? Artist { get; set; }
+        public string? Artist { get; set; }
 
-        public long? Translator { get; set; }
+        public string? Translator { get; set; }
 
-        public List<long>? GenreIds { get; set; }
+        public List<string>? GenreIds { get; set; }
     }
 }

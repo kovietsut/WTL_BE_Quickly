@@ -9,8 +9,7 @@ namespace Application.Features.CommentReactions.Create
         public CreateCommentReactionValidator()
         {
             RuleFor(x => x.CommentId)
-                .NotNull().WithMessage("Comment ID is required")
-                .GreaterThan(0).WithMessage("Comment ID must be greater than 0");
+                .NotNull().WithMessage("Comment ID is required");
 
             RuleFor(x => x.ReactionType)
                 .NotNull().WithMessage("Reaction type is required")

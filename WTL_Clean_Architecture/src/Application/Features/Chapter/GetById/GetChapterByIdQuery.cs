@@ -8,9 +8,9 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.Chapter.GetById
 {
-    public class GetChapterByIdQuery(long id) : IRequest<IActionResult>
+    public class GetChapterByIdQuery(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class GetChapterByIdQueryHandler : IRequestHandler<GetChapterByIdQuery, IActionResult>

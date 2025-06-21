@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class ChapterRepository : RepositoryBase<Chapter, long, MyDbContext>, IChapterRepository
+    public class ChapterRepository : RepositoryBase<Chapter, string, MyDbContext>, IChapterRepository
     {
         private readonly ISasTokenGenerator _sasTokenGenerator;
         private readonly IChapterImageRepository _chapterImageRepository;
@@ -29,9 +29,11 @@ namespace Infrastructure.Repositories
             var currentUserId = _authenticationRepository.GetUserId();
             var chapter = new Chapter
             {
+                Id = Guid.NewGuid().ToString(),
                 IsDeleted = false,
                 CreatedAt = DateTimeOffset.UtcNow,
                 CreatedBy = currentUserId,
+                MangaId = model.MangaId,
                 Name = model.Name.Trim(),
                 NovelContent = model.NovelContent,
                 HasDraft = model.HasDraft,
@@ -47,7 +49,7 @@ namespace Infrastructure.Repositories
             return chapter;
         }
 
-        public async Task<Chapter?> DeleteChapterAsync(long id)
+        public async Task<Chapter?> DeleteChapterAsync(string id)
         {
             var chapter = await GetChapterById(id);
             if (chapter != null)
@@ -58,7 +60,7 @@ namespace Infrastructure.Repositories
             return chapter;
         }
 
-        public async Task<Chapter?> GetChapterById(long id)
+        public async Task<Chapter?> GetChapterById(string id)
         {
             var query = FindByCondition(x => x.Id == id);
             var specification = new GetChapterByIdSpecification(id);
@@ -79,14 +81,14 @@ namespace Infrastructure.Repositories
             return result;
         }
 
-        public async Task<Chapter> UpdateChapterAsync(long chapterId, UpdateChapterDto model)
+        public async Task<Chapter> UpdateChapterAsync(string chapterId, UpdateChapterDto model)
         {
             var currentChapter = await GetByIdAsync(chapterId) ?? throw new ArgumentNullException(nameof(chapterId), "Chapter not found");
             currentChapter.UpdatedAt = DateTimeOffset.UtcNow;
             currentChapter.Name = model.Name.Trim();
-            currentChapter.NovelContent = model.NovelContent.Trim();
+            currentChapter.NovelContent = model.NovelContent?.Trim() ?? currentChapter.NovelContent;
             currentChapter.HasDraft = model.HasDraft;
-            currentChapter.ThumbnailImage = model.ThumbnailImage.Trim();
+            currentChapter.ThumbnailImage = model.ThumbnailImage?.Trim() ?? currentChapter.ThumbnailImage;
             currentChapter.PublishedDate = model.PublishedDate ?? currentChapter.PublishedDate;
             currentChapter.HasComment = model.HasComment ?? currentChapter.HasComment;
             currentChapter.StatusChapter = model.StatusChapter ?? currentChapter.StatusChapter;

@@ -8,10 +8,10 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.FeaturedCollectionPermissions.Delete
 {
-    public class DeleteFeaturedCollectionPermissionCommand(long collectionId, List<long> userIds) : IRequest<IActionResult>
+    public class DeleteFeaturedCollectionPermissionCommand(string collectionId, List<string> userIds) : IRequest<IActionResult>
     {
-        public long CollectionId { get; private set; } = collectionId;
-        public List<long> userIds { get; private set; } = userIds;
+        public string CollectionId { get; private set; } = collectionId;
+        public List<string> userIds { get; private set; } = userIds;
     }
 
     public class DeleteFeaturedCollectionPermissionCommandHandler : IRequestHandler<DeleteFeaturedCollectionPermissionCommand, IActionResult>
@@ -40,7 +40,7 @@ namespace Application.Features.FeaturedCollectionPermissions.Delete
             }
 
             var result = await _repository.DeleteListFeaturedCollectionPermissionAsync(query.CollectionId, query.userIds);
-            if (result == null)
+            if (!result)
             {
                 return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes.Status404?.NotFound, "FeaturedCollectionPermission does not exist");
             }

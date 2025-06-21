@@ -2,9 +2,9 @@ using Domain.Entities;
 
 namespace Domain.Specifications.CommentReactions
 {
-    public class GetCommentReactionByCommentAndUserSpecification : Specification<CommentReaction, long>
+    public class GetCommentReactionByCommentAndUserSpecification : Specification<CommentReaction, string>
     {
-        public GetCommentReactionByCommentAndUserSpecification(long commentId, long userId) : base(reaction => 
+        public GetCommentReactionByCommentAndUserSpecification(string commentId, string userId) : base(reaction => 
             reaction.CommentId == commentId && 
             reaction.UserId == userId)
         {

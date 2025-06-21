@@ -10,7 +10,7 @@ namespace Application.Features.Comments.Delete
 {
     public class DeleteCommentCommand : IRequest<IActionResult>
     {
-        public required long Id { get; set; }
+        public required string Id { get; set; }
     }
 
     public class DeleteCommentCommandHandler : IRequestHandler<DeleteCommentCommand, IActionResult>
@@ -34,7 +34,7 @@ namespace Application.Features.Comments.Delete
             try
             {
                 // Get the comment to check ownership
-                var comment = await _repository.GetByIdAsync(request.Id);
+                var comment = await _repository.GetCommendByIdAsync(request.Id);
                 if (comment == null)
                 {
                     return JsonUtil.Error(StatusCodes.Status404NotFound, _errorCodes?.Status404?.NotFound, "Comment not found");

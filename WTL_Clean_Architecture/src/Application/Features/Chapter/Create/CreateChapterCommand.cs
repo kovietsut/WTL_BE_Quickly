@@ -11,14 +11,15 @@ namespace Application.Features.Chapter.Create
 {
     public class CreateChapterCommand : IRequest<IActionResult>
     {
-        public string Name { get; set; }
+        public required string MangaId { get; set; }
+        public required string Name { get; set; }
         public string? NovelContent { get; set; }
         public bool? HasDraft { get; set; }
         public string? ThumbnailImage { get; set; }
         public DateTime? PublishedDate { get; set; }
         public bool? HasComment { get; set; }
         public int? StatusChapter { get; set; }
-        public List<ChapterImageDto> ImageList { get; set; }
+        public required List<ChapterImageDto> ImageList { get; set; }
     }
 
     public class CreateChapterCommmandHandler(IChapterRepository repository, IOptions<ErrorCode> errorCodes) : IRequestHandler<CreateChapterCommand, IActionResult>
@@ -31,6 +32,7 @@ namespace Application.Features.Chapter.Create
             {
                 var createChapterDto = new CreateChapterDto
                 {
+                    MangaId = query.MangaId,
                     Name = query.Name,
                     NovelContent = query.NovelContent,
                     HasDraft = query.HasDraft,

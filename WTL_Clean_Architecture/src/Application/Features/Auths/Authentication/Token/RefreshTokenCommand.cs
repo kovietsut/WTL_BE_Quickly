@@ -56,7 +56,7 @@ namespace Application.Features.Auths.Authentication.Token
                     }
                 }
                 //check 3: Check accessToken expire
-                var utcExpireDate = long.Parse(tokenInVerification.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Exp)!.Value);
+                var utcExpireDate = tokenInVerification.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Exp)!.Value;
                 var expireDate = tokenRepository.ConvertUnixTimeToDateTime(utcExpireDate);
                 if (expireDate > DateTime.Now)
                 {

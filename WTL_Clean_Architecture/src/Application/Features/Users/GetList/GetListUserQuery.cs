@@ -8,12 +8,12 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.Users.GetList
 {
-    public class GetListUserQuery(int? pageNumber, int? pageSize, string? searchText, int? roleId) : IRequest<IActionResult>
+    public class GetListUserQuery(int? pageNumber, int? pageSize, string? searchText, string? roleId) : IRequest<IActionResult>
     {
         public string? SearchText { get; set; } = searchText;
         public int? PageNumber { get; set; } = pageNumber;
         public int? PageSize { get; set; } = pageSize;
-        public int? RoleId { get; set; } = roleId;
+        public string? RoleId { get; set; } = roleId;
     }
 
     public class GetListUserQueryHandler : IRequestHandler<GetListUserQuery, IActionResult>

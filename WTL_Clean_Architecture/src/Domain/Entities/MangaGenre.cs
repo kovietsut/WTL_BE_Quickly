@@ -1,10 +1,10 @@
 ﻿namespace Domain.Entities;
 
-public partial class MangaGenre : EntityBase<long>
+public partial class MangaGenre : EntityBase<string>
 {
-    public long MangaId { get; set; }
+    public required string MangaId { get; set; }
 
-    public long GenreId { get; set; }
+    public required string GenreId { get; set; }
 
     public virtual Genere Genre { get; set; } = null!;
 

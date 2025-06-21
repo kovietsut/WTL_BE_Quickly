@@ -3,12 +3,12 @@ using Domain.Enums;
 
 namespace Application.Interfaces
 {
-    public interface ICommentReactionRepository : IRepositoryBase<CommentReaction, long>
+    public interface ICommentReactionRepository : IRepositoryBase<CommentReaction, string>
     {
-        Task<(IEnumerable<CommentReaction> Items, int TotalCount)> GetListByCommentIdAsync(long commentId, int? pageNumber = null, int? pageSize = null);
-        Task<CommentReaction?> GetByCommentAndUserAsync(long commentId, long userId);
-        Task<CommentReaction> CreateAsync(long commentId, CommentReactionType reactionType, string? reason = null);
-        Task<CommentReaction> UpdateAsync(long id, CommentReactionType reactionType, string? reason = null);
-        Task<bool> DeleteAsync(long id);
+        Task<(IEnumerable<CommentReaction> Items, int TotalCount)> GetListByCommentIdAsync(string commentId, int? pageNumber = null, int? pageSize = null);
+        Task<CommentReaction?> GetByCommentAndUserAsync(string commentId, string userId);
+        Task<CommentReaction> CreateAsync(string commentId, CommentReactionType reactionType, string? reason = null);
+        Task<CommentReaction> UpdateAsync(string id, CommentReactionType reactionType, string? reason = null);
+        Task<bool> DeleteAsync(string id);
     }
 } 

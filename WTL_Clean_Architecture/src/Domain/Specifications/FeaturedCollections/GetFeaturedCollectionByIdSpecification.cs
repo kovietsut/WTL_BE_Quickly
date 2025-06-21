@@ -2,9 +2,9 @@
 
 namespace Domain.Specifications.FeaturedCollections
 {
-    public class GetFeaturedCollectionByIdSpecification : Specification<FeaturedCollection, long>
+    public class GetFeaturedCollectionByIdSpecification : Specification<FeaturedCollection, string>
     {
-        public GetFeaturedCollectionByIdSpecification(long id) : base(collection => collection.Id == id)
+        public GetFeaturedCollectionByIdSpecification(string id) : base(collection => collection.Id == id)
         {
 
         }

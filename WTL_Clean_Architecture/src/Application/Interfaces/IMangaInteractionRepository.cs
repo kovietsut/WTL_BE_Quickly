@@ -4,11 +4,11 @@ using Domain.Enums;
 
 namespace Application.Interfaces
 {
-    public interface IMangaInteractionRepository : IRepositoryBase<MangaInteraction, long>
+    public interface IMangaInteractionRepository : IRepositoryBase<MangaInteraction, string>
     {
         Task<MangaInteraction> CreateMangaInteractionAsync(CreateMangaInteractionDto mangaInteractionDto);
-        Task<MangaInteraction?> DeleteMangaInteractionAsync(long? mangaId, long? chapterId);
-        Task<MangaInteraction?> GetMangaInteractionByUserAndContentAsync(long userId, long? mangaId, long? chapterId, MangaInteractionType? interactionType);
-        Task<IEnumerable<MangaInteraction>> GetMangaInteractionListAsync(long userId, long? mangaId, long? chapterId, MangaInteractionType? interactionType, int? pageNumber, int? pageSize);
+        Task<MangaInteraction?> DeleteMangaInteractionAsync(string? mangaId, string? chapterId);
+        Task<MangaInteraction?> GetMangaInteractionByUserAndContentAsync(string userId, string? mangaId, string? chapterId, MangaInteractionType? interactionType);
+        Task<IEnumerable<MangaInteraction>> GetMangaInteractionListAsync(string userId, string? mangaId, string? chapterId, MangaInteractionType? interactionType, int? pageNumber, int? pageSize);
     }
 } 

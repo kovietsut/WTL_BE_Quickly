@@ -9,7 +9,7 @@ namespace Application.Features.Comments.Create
         {
             RuleFor(x => x.UserId)
                 .NotNull().WithMessage("UserId is required")
-                .GreaterThan(0).WithMessage("UserId must be greater than 0");
+                .NotEmpty().WithMessage("UserId is required");
 
             RuleFor(x => x.Content)
                 .NotNull().WithMessage("Content is required")
@@ -17,16 +17,16 @@ namespace Application.Features.Comments.Create
                 .MaximumLength(1000).WithMessage("Content cannot exceed 1000 characters");
 
             RuleFor(x => x.MangaId)
-                .GreaterThan(0).WithMessage("MangaId must be greater than 0")
-                .When(x => x.MangaId.HasValue);
+                .NotEmpty().WithMessage("MangaId is required")
+                .When(x => x.MangaId != null);
 
             RuleFor(x => x.ChapterId)
-                .GreaterThan(0).WithMessage("ChapterId must be greater than 0")
-                .When(x => x.ChapterId.HasValue);
+                .NotEmpty().WithMessage("ChapterId is required")
+                .When(x => x.ChapterId != null);
 
             RuleFor(x => x.ParentCommentId)
-                .GreaterThan(0).WithMessage("ParentCommentId must be greater than 0")
-                .When(x => x.ParentCommentId.HasValue);
+                .NotEmpty().WithMessage("ParentCommentId is required")
+                .When(x => x.ParentCommentId != null);
         }
     }
 } 

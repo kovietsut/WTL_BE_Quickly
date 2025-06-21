@@ -1,10 +1,10 @@
-using Domain.Entities;
+using CommentReactionEntity = Domain.Entities.CommentReaction;
 
 namespace Domain.Specifications.CommentReactions
 {
-    public class GetCommentReactionsByCommentIdSpecification : Specification<CommentReaction, long>
+    public class GetCommentReactionsByCommentIdSpecification : Specification<CommentReactionEntity, string>
     {
-        public GetCommentReactionsByCommentIdSpecification(long commentId, int? pageNumber = null, int? pageSize = null) : base(reaction => 
+        public GetCommentReactionsByCommentIdSpecification(string commentId, int? pageNumber = null, int? pageSize = null) : base(reaction => 
             reaction.CommentId == commentId)
         {
             // Apply pagination if provided

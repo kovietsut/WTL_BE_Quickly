@@ -2,7 +2,7 @@
 {
     public class UpdateFeaturedCollectionDto
     {
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         public string? CoverImage { get; set; }
 

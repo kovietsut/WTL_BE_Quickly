@@ -10,8 +10,8 @@ namespace Application.Features.MangaInteractions.Delete
 {
     public class DeleteMangaInteractionCommand : IRequest<IActionResult>
     {
-        public long? MangaId { get; set; }
-        public long? ChapterId { get; set; }
+        public string? MangaId { get; set; }
+        public string? ChapterId { get; set; }
     }
 
     public class DeleteMangaInteractionCommandHandler : IRequestHandler<DeleteMangaInteractionCommand, IActionResult>

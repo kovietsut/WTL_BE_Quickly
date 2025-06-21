@@ -2,9 +2,9 @@
 
 namespace Domain.Specifications.Genres
 {
-    public class GetGenreByIdSpecification : Specification<Genere, long>
+    public class GetGenreByIdSpecification : Specification<Genere, string>
     {
-        public GetGenreByIdSpecification(long id) : base(genre => genre.Id == id)
+        public GetGenreByIdSpecification(string id) : base(genre => genre.Id == id)
         {
 
         }

@@ -8,9 +8,9 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.Users.GetById
 {
-    public class GetUserByIdQuery(long id) : IRequest<IActionResult>
+    public class GetUserByIdQuery(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, IActionResult>

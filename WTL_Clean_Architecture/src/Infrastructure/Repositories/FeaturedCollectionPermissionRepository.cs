@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class FeaturedCollectionPermissionRepository : RepositoryBase<FeaturedCollectionPermission, long, MyDbContext>, IFeaturedCollectionPermissionRepository
+    public class FeaturedCollectionPermissionRepository : RepositoryBase<FeaturedCollectionPermission, string, MyDbContext>, IFeaturedCollectionPermissionRepository
     {
         private readonly ISasTokenGenerator _sasTokenGenerator;
         private readonly IAuthenticationRepository _authenticationRepository;
@@ -28,13 +28,14 @@ namespace Infrastructure.Repositories
         }
 
         //Add permission for one or many user
-        public async Task<List<long>> CreateListFeaturedCollectionPermissionAsync(CreateFeaturedCollectionPermissionDto model)
+        public async Task<List<string>> CreateListFeaturedCollectionPermissionAsync(CreateFeaturedCollectionPermissionDto model)
         {
             List<FeaturedCollectionPermission> permissions = new List<FeaturedCollectionPermission>();
             foreach (var userId in model.UserIds)
             {
                 var collectionPermission = new FeaturedCollectionPermission
                 {
+                    Id = Guid.NewGuid().ToString(),
                     IsDeleted = false,
                     CreatedAt = DateTimeOffset.UtcNow,
                     UserId = userId,
@@ -47,7 +48,7 @@ namespace Infrastructure.Repositories
             return result.ToList();
         }
 
-        public async Task<FeaturedCollectionPermission?> GetFeaturedCollectionPermissionById(long collectionId, long userId)
+        public async Task<FeaturedCollectionPermission?> GetFeaturedCollectionPermissionById(string collectionId, string userId)
         {
             var query = FindByCondition(x => x.FeaturedCollectionId == collectionId && x.UserId == userId);
             var specification = new GetFeaturedCollectionPermissionByIdSpecification(collectionId, userId);
@@ -55,7 +56,7 @@ namespace Infrastructure.Repositories
             return result;
         }
 
-        public async Task<bool> DeleteListFeaturedCollectionPermissionAsync(long collectionId, List<long> userIds)
+        public async Task<bool> DeleteListFeaturedCollectionPermissionAsync(string collectionId, List<string> userIds)
         {
             List<FeaturedCollectionPermission> permissions = new List<FeaturedCollectionPermission>();
             foreach (var userId in userIds)

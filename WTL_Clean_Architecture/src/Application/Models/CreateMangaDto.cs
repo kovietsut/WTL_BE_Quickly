@@ -21,16 +21,16 @@ namespace Application.Models
 
         public bool? HasAdult { get; set; }
 
-        public long? CreatedBy { get; set; }
+        public string? CreatedBy { get; set; }
 
-        public long? SubAuthor { get; set; }
+        public string? SubAuthor { get; set; }
 
-        public long? Publishor { get; set; }
+        public string? Publishor { get; set; }
 
-        public long? Artist { get; set; }
+        public string? Artist { get; set; }
 
-        public long? Translator { get; set; }
+        public string? Translator { get; set; }
 
-        public List<long>? GenreIds { get; set; }
+        public List<string>? GenreIds { get; set; }
     }
 }

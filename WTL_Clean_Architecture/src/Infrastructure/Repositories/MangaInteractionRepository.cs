@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-    public class MangaInteractionRepository : RepositoryBase<MangaInteraction, long, MyDbContext>, IMangaInteractionRepository
+    public class MangaInteractionRepository : RepositoryBase<MangaInteraction, string, MyDbContext>, IMangaInteractionRepository
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
 
@@ -21,10 +21,11 @@ namespace Infrastructure.Repositories
 
         public async Task<MangaInteraction> CreateMangaInteractionAsync(CreateMangaInteractionDto mangaInteractionDto)
         {
-            var userId = long.Parse(_httpContextAccessor.HttpContext?.User?.FindFirst("Id")?.Value ?? "0");
+            var userId = _httpContextAccessor.HttpContext?.User?.FindFirst("Id")?.Value ?? "0";
             
             var mangaInteraction = new MangaInteraction
             {
+                Id = Guid.NewGuid().ToString(),
                 UserId = userId,
                 MangaId = mangaInteractionDto.MangaId,
                 ChapterId = mangaInteractionDto.ChapterId,
@@ -36,9 +37,9 @@ namespace Infrastructure.Repositories
             return mangaInteraction;
         }
 
-        public async Task<MangaInteraction?> DeleteMangaInteractionAsync(long? mangaId, long? chapterId)
+        public async Task<MangaInteraction?> DeleteMangaInteractionAsync(string? mangaId, string? chapterId)
         {
-            var userId = long.Parse(_httpContextAccessor.HttpContext?.User?.FindFirst("Id")?.Value ?? "0");
+            var userId = _httpContextAccessor.HttpContext?.User?.FindFirst("Id")?.Value ?? "0";
             var mangaInteraction = await GetMangaInteractionByUserAndContentAsync(userId, mangaId, chapterId, null);
             if (mangaInteraction != null)
             {
@@ -47,13 +48,13 @@ namespace Infrastructure.Repositories
             return mangaInteraction;
         }
 
-        public async Task<MangaInteraction?> GetMangaInteractionByUserAndContentAsync(long userId, long? mangaId, long? chapterId, MangaInteractionType? interactionType)
+        public async Task<MangaInteraction?> GetMangaInteractionByUserAndContentAsync(string userId, string? mangaId, string? chapterId, MangaInteractionType? interactionType)
         {
             var specification = new GetMangaInteractionByUserAndContentSpecification(userId, mangaId, chapterId, interactionType);
             return await GetBySpecificationAsync(specification);
         }
 
-        public async Task<IEnumerable<MangaInteraction>> GetMangaInteractionListAsync(long userId, long? mangaId, long? chapterId, MangaInteractionType? interactionType, int? pageNumber, int? pageSize)
+        public async Task<IEnumerable<MangaInteraction>> GetMangaInteractionListAsync(string userId, string? mangaId, string? chapterId, MangaInteractionType? interactionType, int? pageNumber, int? pageSize)
         {
             try
             {

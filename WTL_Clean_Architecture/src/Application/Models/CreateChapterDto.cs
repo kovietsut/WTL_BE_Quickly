@@ -2,7 +2,8 @@
 {
     public class CreateChapterDto
     {
-        public string Name { get; set; }
+        public required string MangaId { get; set; }
+        public required string Name { get; set; }
 
         public string? NovelContent { get; set; }
 
@@ -16,6 +17,6 @@
 
         public int? StatusChapter { get; set; }
 
-        public List<ChapterImageDto> ImageList { get; set; }
+        public required List<ChapterImageDto> ImageList { get; set; }
     }
 }

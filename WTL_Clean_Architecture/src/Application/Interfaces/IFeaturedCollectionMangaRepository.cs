@@ -3,10 +3,10 @@ using Domain.Entities;
 
 namespace Application.Interfaces
 {
-    public interface IFeaturedCollectionMangaRepository : IRepositoryBase<FeaturedCollectionManga, long>
+    public interface IFeaturedCollectionMangaRepository : IRepositoryBase<FeaturedCollectionManga, string>
     {
-        Task<FeaturedCollectionManga?> GetFeaturedCollectionMangaById(long collectionId, long mangaId);
+        Task<FeaturedCollectionManga?> GetFeaturedCollectionMangaById(string collectionId, string mangaId);
         Task<FeaturedCollectionManga> CreateFeaturedCollectionMangaAsync(CreateFeaturedCollectionMangaDto model);
-        Task<FeaturedCollectionManga?> DeleteFeaturedCollectionMangaAsync(long collectionId, long mangaId);
+        Task<FeaturedCollectionManga?> DeleteFeaturedCollectionMangaAsync(string collectionId, string mangaId);
     }
 }

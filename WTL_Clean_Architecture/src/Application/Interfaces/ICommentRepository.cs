@@ -3,13 +3,13 @@ using Domain.Entities;
 
 namespace Application.Interfaces
 {
-    public interface ICommentRepository : IRepositoryBase<Comment, long>
+    public interface ICommentRepository : IRepositoryBase<Comment, string>
     {
-        Task<(IEnumerable<object> Items, int TotalCount)> GetListAsync(long? mangaId, long? chapterId, long? parentCommentId, int pageNumber, int pageSize);
-        Task<Comment> GetByIdAsync(long id);
+        Task<(IEnumerable<object> Items, int TotalCount)> GetListAsync(string? mangaId, string? chapterId, string? parentCommentId, int pageNumber, int pageSize);
+        Task<Comment> GetCommendByIdAsync(string id);
         Task<Comment> CreateCommentAsync(CreateCommentDto createCommentDto);
-        Task<Comment> UpdateCommentAsync(long id, UpdateCommentDto updateCommentDto);
-        Task<bool> DeleteCommentAsync(long id);
-        Task<bool> DeleteChildCommentsAsync(long parentCommentId);
+        Task<Comment> UpdateCommentAsync(string id, UpdateCommentDto updateCommentDto);
+        Task<bool> DeleteCommentAsync(string id);
+        Task<bool> DeleteChildCommentsAsync(string parentCommentId);
     }
 } 

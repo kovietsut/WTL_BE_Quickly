@@ -9,9 +9,9 @@ using Microsoft.Extensions.Options;
 
 namespace Application.Features.Manga.GetById
 {
-    public class GetMangaByIdQuery(long id) : IRequest<IActionResult>
+    public class GetMangaByIdQuery(string id) : IRequest<IActionResult>
     {
-        public long Id { get; private set; } = id;
+        public string Id { get; private set; } = id;
     }
 
     public class GetMangaByIdQueryHandler : IRequestHandler<GetMangaByIdQuery, IActionResult>

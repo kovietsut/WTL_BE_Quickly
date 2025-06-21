@@ -1,6 +1,6 @@
 ﻿namespace Domain.Entities;
 
-public partial class Role : EntityBase<long>
+public partial class Role : EntityBase<string>
 {
     public string Name { get; set; } = null!;
 

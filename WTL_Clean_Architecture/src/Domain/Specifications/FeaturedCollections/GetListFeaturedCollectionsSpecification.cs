@@ -2,9 +2,9 @@
 
 namespace Domain.Specifications.FeaturedCollections
 {
-    public class GetListFeaturedCollectionsSpecification : Specification<FeaturedCollection, long>
+    public class GetListFeaturedCollectionsSpecification : Specification<FeaturedCollection, string>
     {
-        public GetListFeaturedCollectionsSpecification(int? pageNumber, int? pageSize, string? searchText, long currentUserId)
+        public GetListFeaturedCollectionsSpecification(int? pageNumber, int? pageSize, string? searchText, string currentUserId)
             : base(collection => 
                 collection.IsDeleted != true &&
                 collection.CreatedBy == currentUserId &&
