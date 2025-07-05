@@ -19,7 +19,6 @@ namespace Application.Features.Manga.Create
         public MangaReleaseStatus? ReleaseStatus { get; set; }
         public string? Preface { get; set; }
         public bool? HasAdult { get; set; }
-        public string? CreatedBy { get; set; }
         public string? SubAuthor { get; set; }
         public string? Publishor { get; set; }
         public string? Artist { get; set; }
@@ -31,15 +30,18 @@ namespace Application.Features.Manga.Create
     {
         private readonly IMangaRepository _repository;
         private readonly IMangaGenreRepository _mangaGenreRepository;
+        private readonly IAuthenticationRepository _authenticationRepository;
         private readonly ErrorCode _errorCodes;
 
         public CreateMangaCommmandHandler(
             IMangaRepository repository,
             IMangaGenreRepository mangaGenreRepository,
+            IAuthenticationRepository authenticationRepository,
             IOptions<ErrorCode> errorCodes)
         {
             _repository = repository;
             _mangaGenreRepository = mangaGenreRepository;
+            _authenticationRepository = authenticationRepository;
             _errorCodes = errorCodes.Value;
         }
 
@@ -47,6 +49,13 @@ namespace Application.Features.Manga.Create
         {
             try
             {
+                // Get the current user ID from authentication
+                var currentUserId = _authenticationRepository.GetUserId();
+                if (string.IsNullOrEmpty(currentUserId))
+                {
+                    return JsonUtil.Error(StatusCodes.Status401Unauthorized, _errorCodes?.Status401?.Unauthorized ?? "Unauthorized", "User not authenticated");
+                }
+
                 var createMangaDto = new CreateMangaDto
                 {
                     Title = query.Title,
@@ -56,7 +65,7 @@ namespace Application.Features.Manga.Create
                     ReleaseStatus = (MangaReleaseStatus?)query.ReleaseStatus,
                     Preface = query.Preface,
                     HasAdult = query.HasAdult,
-                    CreatedBy = query.CreatedBy,
+                    CreatedBy = currentUserId,
                     SubAuthor = query.SubAuthor,
                     Publishor = query.Publishor,
                     Artist = query.Artist,

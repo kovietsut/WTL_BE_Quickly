@@ -7,7 +7,7 @@ namespace Domain.SpecificationModels
         public MangaFormatDto? Format { get; set; }
         public MangaRegionDto? Region { get; set; }
         public MangaReleaseStatusDto? ReleaseStatus { get; set; }
-        public List<long>? GenreIds { get; set; }
+        public List<string>? GenreIds { get; set; }
         public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 10;
         public string? SearchTerm { get; set; }

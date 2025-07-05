@@ -12,20 +12,22 @@ namespace Application.Features.Manga.UploadCover
     public class UploadMangaCoverCommand : IRequest<IActionResult>
     {
         public required string MangaId { get; set; }
-        public required IFormFile CoverImageFile { get; set; }
+        public required IFormFile CoverImage { get; set; }
     }
 
     public class UploadMangaCoverCommandHandler : IRequestHandler<UploadMangaCoverCommand, IActionResult>
     {
         private readonly IMangaRepository _repository;
         private readonly ErrorCode _errorCodes;
-
+        private readonly IAzureBlobRepository _azureBlobRepository;
         public UploadMangaCoverCommandHandler(
             IMangaRepository repository,
+            IAzureBlobRepository azureBlobRepository,
             IOptions<ErrorCode> errorCodes)
         {
             _repository = repository;
             _errorCodes = errorCodes.Value;
+            _azureBlobRepository = azureBlobRepository;
         }
 
         public async Task<IActionResult> Handle(UploadMangaCoverCommand command, CancellationToken cancellationToken)
@@ -35,7 +37,7 @@ namespace Application.Features.Manga.UploadCover
                 var uploadMangaCoverDto = new UploadMangaCoverDto
                 {
                     MangaId = command.MangaId,
-                    CoverImageFile = command.CoverImageFile
+                    CoverImageFile = command.CoverImage
                 };
 
                 var validator = new UploadMangaCoverValidator();
@@ -47,8 +49,46 @@ namespace Application.Features.Manga.UploadCover
                         validationResult.Errors);
                 }
 
-                var coverImageUrl = await _repository.UploadCoverImageAsync(command.MangaId, command.CoverImageFile);
-                return JsonUtil.Success(StatusCodes.Status200OK, "Cover image saved");
+                var uploadResult = await _azureBlobRepository.UploadFile(uploadMangaCoverDto.CoverImageFile, "test");
+                
+                // Extract file path from the upload result
+                if (uploadResult is ObjectResult objectResult && objectResult.StatusCode == 200)
+                {
+                    var responseData = objectResult.Value;
+                    string? filePath = null;
+                    
+                    // The JsonUtil.Success wraps data in a structure with 'data' property
+                    if (responseData != null)
+                    {
+                        var responseType = responseData.GetType();
+                        var dataProperty = responseType.GetProperty("data");
+                        if (dataProperty != null)
+                        {
+                            var data = dataProperty.GetValue(responseData);
+                            if (data != null)
+                            {
+                                var dataType = data.GetType();
+                                var filePathProperty = dataType.GetProperty("FilePath");
+                                if (filePathProperty != null)
+                                {
+                                    filePath = filePathProperty.GetValue(data)?.ToString();
+                                }
+                            }
+                        }
+                    }
+                    
+                    if (!string.IsNullOrEmpty(filePath))
+                    {
+                        var coverImageUrl = await _repository.UploadCoverImageAsync(uploadMangaCoverDto.MangaId, filePath);
+                        return JsonUtil.Success(new
+                        {
+                            Message = "Cover image uploaded successfully",
+                            CoverImageUrl = coverImageUrl
+                        });
+                    }
+                }
+                
+                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes?.Status500?.APIServerError, "Failed to upload file to blob storage");
             }
             catch (ArgumentNullException ex)
             {
@@ -60,7 +100,7 @@ namespace Application.Features.Manga.UploadCover
             }
             catch (Exception ex)
             {
-                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes?.Status500?.APIServerError, "An error occurred while uploading the cover image");
+                return JsonUtil.Error(StatusCodes.Status500InternalServerError, _errorCodes?.Status500?.APIServerError, "An error occurred while uploading the cover image: " + ex.Message);
             }
         }
     }

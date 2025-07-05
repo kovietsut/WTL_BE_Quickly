@@ -15,7 +15,9 @@ namespace Domain.Specifications.Mangas
             (!filter.Region.HasValue || manga.Region == MangaMapper.ToDomainRegion(filter.Region)) &&
             (!filter.ReleaseStatus.HasValue || manga.ReleaseStatus == MangaMapper.ToDomainReleaseStatus(filter.ReleaseStatus)) &&
             (!filter.PublishedDayOfWeek.HasValue || manga.PublishedDate.HasValue &&
-                (EF.Functions.DateDiffDay(DateTime.SpecifyKind(new DateTime(1900, 1, 1), DateTimeKind.Utc), manga.PublishedDate.Value) + 1) % 7 == (int)filter.PublishedDayOfWeek.Value))
+                (EF.Functions.DateDiffDay(DateTime.SpecifyKind(new DateTime(1900, 1, 1), DateTimeKind.Utc), manga.PublishedDate.Value) + 1) % 7 == (int)filter.PublishedDayOfWeek.Value) &&
+            (filter.GenreIds == null || !filter.GenreIds.Any() || 
+                manga.MangaGenres.Any(mg => mg.IsDeleted != true && filter.GenreIds.Contains(mg.GenreId))))
         {
             if (includePaging)
             {

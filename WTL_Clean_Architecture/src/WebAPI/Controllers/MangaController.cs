@@ -55,7 +55,6 @@ namespace WebAPI.Controllers
                 ReleaseStatus = (Domain.Enums.MangaReleaseStatus?)model.ReleaseStatus,
                 Preface = model.Preface,
                 HasAdult = model.HasAdult,
-                CreatedBy = model.CreatedBy,
                 SubAuthor = model.SubAuthor,
                 Publishor = model.Publishor,
                 Artist = model.Artist,
@@ -97,15 +96,15 @@ namespace WebAPI.Controllers
             return result;
         }
 
-        [HttpPost("{mangaId}/cover")]
-        public async Task<IActionResult> UploadCover(string mangaId, IFormFile coverImageFile)
+        [HttpPost("upload-cover")]
+        public async Task<IActionResult> UploadCover([FromForm] UploadMangaCoverDto model)
         {
-            var command = new UploadMangaCoverCommand
+            var query = new UploadMangaCoverCommand()
             {
-                MangaId = mangaId,
-                CoverImageFile = coverImageFile
+                MangaId = model.MangaId,
+                CoverImage = model.CoverImageFile
             };
-            var result = await _mediator.Send(command);
+            var result = await _mediator.Send(query);
             return result;
         }
     }

@@ -16,17 +16,17 @@ namespace Application.Features.Comments.Create
                 .NotEmpty().WithMessage("Content cannot be empty")
                 .MaximumLength(1000).WithMessage("Content cannot exceed 1000 characters");
 
-            RuleFor(x => x.MangaId)
-                .NotEmpty().WithMessage("MangaId is required")
-                .When(x => x.MangaId != null);
+            // RuleFor(x => x.MangaId)
+            //     .NotEmpty().WithMessage("MangaId is required")
+            //     .When(x => x.MangaId != null);
 
-            RuleFor(x => x.ChapterId)
-                .NotEmpty().WithMessage("ChapterId is required")
-                .When(x => x.ChapterId != null);
+            // RuleFor(x => x.ChapterId)
+            //     .NotEmpty().WithMessage("ChapterId is required")
+            //     .When(x => x.ChapterId != null);
 
-            RuleFor(x => x.ParentCommentId)
-                .NotEmpty().WithMessage("ParentCommentId is required")
-                .When(x => x.ParentCommentId != null);
+            // RuleFor(x => x.ParentCommentId)
+            //     .NotEmpty().WithMessage("ParentCommentId is required")
+            //     .When(x => x.ParentCommentId != null);
         }
     }
 } 

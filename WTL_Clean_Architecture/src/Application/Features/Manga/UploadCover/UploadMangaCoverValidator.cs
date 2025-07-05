@@ -19,9 +19,9 @@ namespace Application.Features.Manga.UploadCover
                 .GreaterThan(0)
                 .WithMessage("Cover image file cannot be empty");
 
-            RuleFor(x => x.CoverImageFile.ContentType)
-                .Must(x => x != null && (x.StartsWith("image/") || x == "application/octet-stream"))
-                .WithMessage("File must be an image");
+            // RuleFor(x => x.CoverImageFile.ContentType)
+            //     .Must(contentType => contentType.StartsWith("image/"))
+            //     .WithMessage("File must be an image");
         }
     }
 } 

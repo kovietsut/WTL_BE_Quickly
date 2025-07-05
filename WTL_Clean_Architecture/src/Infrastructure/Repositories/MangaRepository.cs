@@ -120,19 +120,15 @@ namespace Infrastructure.Repositories
             return currentManga;
         }
 
-        public async Task<string> UploadCoverImageAsync(string mangaId, IFormFile coverImageFile)
+        public async Task<string> UploadCoverImageAsync(string mangaId, string coverImageUrl)
         {
+            
             var manga = await GetByIdAsync(mangaId) ?? throw new ArgumentNullException(nameof(mangaId), "Manga not found");
 
-            if (coverImageFile == null)
-            {
-                throw new ArgumentNullException(nameof(coverImageFile), "Cover image file is required");
-            }
-
-            manga.CoverImage = await _imageRepository.ConvertImageToBase64Async(coverImageFile);
+            manga.CoverImage = coverImageUrl;
             await UpdateAsync(manga);
 
-            return coverImageFile.Name;
+            return manga.CoverImage;
         }
     }
 }

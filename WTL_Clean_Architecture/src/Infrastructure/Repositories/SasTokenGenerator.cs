@@ -6,7 +6,7 @@ using Domain.Configurations;
 using Microsoft.Extensions.Options;
 
 
-namespace Domain.Entities
+namespace Infrastructure.Repositories
 {
     public class SasTokenGenerator : ISasTokenGenerator
     {

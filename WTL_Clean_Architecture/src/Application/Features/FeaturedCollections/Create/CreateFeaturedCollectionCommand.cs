@@ -2,6 +2,7 @@
 using Application.Models;
 using Application.Utils;
 using Domain.Configurations;
+using Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,18 +17,41 @@ namespace Application.Features.FeaturedCollections.Create
         public bool? IsPublish { get; set; }
     }
 
-    public class CreateFeaturedCollectionCommandHandler(IFeaturedCollectionRepository repository, IOptions<ErrorCode> errorCodes) : IRequestHandler<CreateFeaturedCollectionCommand, IActionResult>
+    public class CreateFeaturedCollectionCommandHandler : IRequestHandler<CreateFeaturedCollectionCommand, IActionResult>
     {
-        private readonly ErrorCode _errorCodes = errorCodes.Value;
+        private readonly IFeaturedCollectionRepository _repository;
+        private readonly ErrorCode _errorCodes;
+        private readonly IAuthenticationRepository _authRepository;
+        private readonly IFeaturedCollectionPermissionRepository _permissionRepository;
+
+        public CreateFeaturedCollectionCommandHandler(
+            IFeaturedCollectionRepository repository, 
+            IOptions<ErrorCode> errorCodes,
+            IAuthenticationRepository authRepository,
+            IFeaturedCollectionPermissionRepository permissionRepository)
+        {
+            _repository = repository;
+            _errorCodes = errorCodes.Value;
+            _authRepository = authRepository;
+            _permissionRepository = permissionRepository;
+        }
 
         public async Task<IActionResult> Handle(CreateFeaturedCollectionCommand query, CancellationToken cancellationToken)
         {
             try
             {
+                var currentUserId = _authRepository.GetUserId();
+                
+                // Validate that we have a valid user ID
+                if (string.IsNullOrEmpty(currentUserId))
+                {
+                    return JsonUtil.Error(StatusCodes.Status401Unauthorized, _errorCodes?.Status401?.Unauthorized ?? "Unauthorized", "User not authenticated");
+                }
+                
                 var createCollectionDto = new CreateFeaturedCollectionDto
                 {
                     Name = query.Name,
-                    CoverImage = query.CoverImage,
+                    CoverImage = query.CoverImage,  
                     IsPublish = query.IsPublish
                 };
                 var validator = new CreateFeaturedCollectionValidator();
@@ -37,7 +61,13 @@ namespace Application.Features.FeaturedCollections.Create
                     return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", check.Errors);
                 }
 
-                var collection = await repository.CreateFeaturedCollectionAsync(createCollectionDto);
+                var userIds = new List<string> { currentUserId };
+                var collection = await _repository.CreateFeaturedCollectionAsync(createCollectionDto);
+                var permission = await _permissionRepository.CreateListFeaturedCollectionPermissionAsync(new CreateFeaturedCollectionPermissionDto {
+                    UserIds = userIds,
+                    FeaturedCollectionId = collection.Id,
+                    PermissionType = CollectionPermissionType.Write
+                });
                 return JsonUtil.Success(collection.Id);
             }
             catch (Exception ex)

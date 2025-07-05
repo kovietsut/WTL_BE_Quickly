@@ -8,6 +8,7 @@ namespace Application.Features.Users.Update
     {
         public UpdateUserValidator()
         {
+            RuleFor(x => x.RoleId).NotEmpty().WithMessage("RoleId is required");
             RuleFor(x => x.Email).NotNull().WithMessage("Email is required")
                 .NotEmpty().WithMessage("Email not empty")
                 .EmailAddress().WithMessage("Invalid email address");

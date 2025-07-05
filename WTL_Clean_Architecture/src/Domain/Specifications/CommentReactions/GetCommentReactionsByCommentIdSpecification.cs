@@ -17,8 +17,8 @@ namespace Domain.Specifications.CommentReactions
             AddOrderByDescending(r => r.CreatedAt);
             
             // Include related entities
-            AddInclude(r => r.User);
-            AddInclude(r => r.Comment);
+            // AddInclude(r => r.User);
+            // AddInclude(r => r.Comment);
             
             // Use split query for better performance
             IsSplitQuery = true;

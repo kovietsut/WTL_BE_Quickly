@@ -12,6 +12,6 @@ namespace Application.Interfaces
         Task<Manga> CreateMangaAsync(CreateMangaDto model);
         Task<Manga> UpdateMangaAsync(string mangaId, UpdateMangaDto model);
         Task<Manga?> DeleteMangaAsync(string id);
-        Task<string> UploadCoverImageAsync(string mangaId, IFormFile coverImageFile);
+        Task<string> UploadCoverImageAsync(string mangaId, string coverImageUrl);
     }
 }
