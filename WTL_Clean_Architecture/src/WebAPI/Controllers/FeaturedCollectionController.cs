@@ -10,19 +10,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
 {
-    [Route("api/featured-collection")]
+    [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class FeaturedCollectionController : ControllerBase
+    public class FeaturedCollectionsController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public FeaturedCollectionController(IMediator mediator)
+        public FeaturedCollectionsController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        [HttpGet("get-list")]
+        [HttpGet]
         public async Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText)
         {
             var query = new GetListFeaturedCollectionQuery(pageNumber, pageSize, searchText);

@@ -1,5 +1,7 @@
 ﻿using Application.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+using FluentValidation;
 
 namespace Application
 {
@@ -14,6 +16,9 @@ namespace Application
                 config.AddOpenBehavior(typeof(BusinessRulesBehavior<,>));
                 config.AddOpenBehavior(typeof(ValidationBehavior<,>));
             });
+
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;
         }
     }

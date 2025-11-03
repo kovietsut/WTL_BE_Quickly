@@ -46,17 +46,14 @@ public partial class MyDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        if (!optionsBuilder.IsConfigured)
-        {
-            optionsBuilder.UseSqlServer("Server=.;Database=WebTruyenLo;Trusted_Connection=True;TrustServerCertificate=True;User ID=sa;Password=123456");
-        }
-
         optionsBuilder.ConfigureWarnings(warnings =>
             warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // Prefer configuration classes from Infrastructure
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(Infrastructure.DependencyInjection).Assembly);
         modelBuilder.Entity<AuthMethod>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__AuthMeth__3214EC078CF7B1CD");

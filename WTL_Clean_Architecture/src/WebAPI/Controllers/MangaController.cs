@@ -16,11 +16,11 @@ namespace WebAPI.Controllers
     [ApiController]
     [Authorize]
     //[EnableRateLimiting("fixed")]
-    public class MangaController : ControllerBase
+    public class MangasController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public MangaController(IMediator mediator)
+        public MangasController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -35,8 +35,8 @@ namespace WebAPI.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("get-list")]
-        public async Task<IActionResult> GetList([FromBody] MangaFilterDto filter)
+        [HttpGet]
+        public async Task<IActionResult> GetList([FromQuery] MangaFilterDto filter)
         {
             var query = new GetListMangaQuery { Filter = filter };
             var result = await _mediator.Send(query);

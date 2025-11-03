@@ -13,11 +13,11 @@ namespace WebAPI.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
-    public class GenreController : ControllerBase
+    public class GenresController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public GenreController(IMediator mediator)
+        public GenresController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -32,7 +32,7 @@ namespace WebAPI.Controllers
         }
 
         [AllowAnonymous]
-        [HttpGet("get-list")]
+        [HttpGet]
         public async Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText)
         {
             var query = new GetListGenreQuery(pageNumber, pageSize, searchText);

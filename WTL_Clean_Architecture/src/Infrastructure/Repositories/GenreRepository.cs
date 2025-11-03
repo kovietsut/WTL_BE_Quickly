@@ -5,26 +5,24 @@ using Domain.Persistence;
 using Domain.Specifications;
 using Domain.Specifications.Genres;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
 
 namespace Infrastructure.Repositories
 {
     public class GenreRepository : RepositoryBase<Genere, string, MyDbContext>, IGenreRepository
     {
         private readonly IEncryptionRepository _iEncryptionRepository;
-        public GenreRepository(MyDbContext dbContext, IUnitOfWork<MyDbContext> unitOfWork, IEncryptionRepository iEncryptionRepository)
+        private readonly IMapper _mapper;
+        public GenreRepository(MyDbContext dbContext, IUnitOfWork<MyDbContext> unitOfWork, IEncryptionRepository iEncryptionRepository, IMapper mapper)
            : base(dbContext, unitOfWork)
         {
             _iEncryptionRepository = iEncryptionRepository;
+            _mapper = mapper;
         }
         public async Task<Genere> CreateGenreAsync(CreateGenreDto model)
         {
-            var genre = new Genere()
-            {
-                Id = Guid.NewGuid().ToString(),
-                IsDeleted = false,
-                CreatedAt = DateTimeOffset.UtcNow,
-                Name = model.Name.Trim()
-            };
+            var genre = _mapper.Map<Genere>(model);
+            genre.Id = Guid.NewGuid().ToString();
             await CreateAsync(genre);
             return genre;
         }
@@ -47,8 +45,7 @@ namespace Infrastructure.Repositories
         public async Task<Genere> UpdateGenreAsync(string genreId, UpdateGenreDto model)
         {
             var currentGenre = await GetByIdAsync(genreId) ?? throw new ArgumentNullException(nameof(genreId), "Genre not found");
-            currentGenre.UpdatedAt = DateTimeOffset.UtcNow;
-            currentGenre.Name = model.Name.Trim();
+            _mapper.Map(model, currentGenre);
             await UpdateAsync(currentGenre);
             return currentGenre;
         }

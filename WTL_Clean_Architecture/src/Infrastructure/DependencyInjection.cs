@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Infrastructure.Persistence.Interceptors;
+using Microsoft.AspNetCore.Http;
 
 namespace Infrastructure
 {
@@ -50,9 +52,11 @@ namespace Infrastructure
 
             services.AddDbContext<MyDbContext>(options =>
             {
-                options.UseSqlServer(databaseSettings.ConnectionString,
-                    builder =>
-                        builder.MigrationsAssembly(typeof(MyDbContext).Assembly.FullName));
+                options.UseSqlServer(
+                    databaseSettings.ConnectionString,
+                    builder => builder.MigrationsAssembly(typeof(DependencyInjection).Assembly.FullName)
+                );
+                options.AddInterceptors(new AuditFieldsInterceptor(services.BuildServiceProvider().GetRequiredService<IHttpContextAccessor>()));
             });
             return services;
         }

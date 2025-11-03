@@ -1,4 +1,4 @@
-﻿using Application.Features.Users.Create;
+using Application.Features.Users.Create;
 using Application.Features.Users.Delete;
 using Application.Features.Users.GetById;
 using Application.Features.Users.GetList;
@@ -13,11 +13,11 @@ namespace WebAPI.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
-    public class UserController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public UserController(IMediator mediator)
+        public UsersController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -30,7 +30,7 @@ namespace WebAPI.Controllers
             return result;
         }
 
-        [HttpGet("get-list")]
+        [HttpGet]
         public async Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText, string? roleId)
         {
             var query = new GetListUserQuery(pageNumber, pageSize, searchText, roleId);
@@ -82,3 +82,5 @@ namespace WebAPI.Controllers
         }
     }
 }
+
+

@@ -44,12 +44,6 @@ namespace Application.Features.Users.Update
                     Address = query.Address,
                     Gender = query.Gender
                 };
-                var validator = new UpdateUserValidator();
-                var check = await validator.ValidateAsync(updateUserDto, cancellationToken);
-                if (!check.IsValid)
-                {
-                    return JsonUtil.Errors(StatusCodes.Status400BadRequest, _errorCodes?.Status400?.ConstraintViolation ?? "ConstraintViolation", check.Errors);
-                }
                 var currentUser = await _repository.GetByIdAsync(query.Id);
                 if (currentUser == null)
                 {

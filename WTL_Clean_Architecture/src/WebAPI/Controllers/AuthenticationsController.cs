@@ -1,4 +1,4 @@
-﻿using Application.Features.Auths.Authentication.Login;
+using Application.Features.Auths.Authentication.Login;
 using Application.Features.Auths.Authentication.Password;
 using Application.Features.Auths.Authentication.Token;
 using Application.Features.Users.Create;
@@ -13,7 +13,7 @@ namespace WebAPI.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
-    public class AuthenticationController(IMediator mediator) : ControllerBase
+    public class AuthenticationsController(IMediator mediator) : ControllerBase
     {
         private readonly IMediator _mediator = mediator;
 
@@ -94,3 +94,5 @@ namespace WebAPI.Controllers
         }
     }
 }
+
+

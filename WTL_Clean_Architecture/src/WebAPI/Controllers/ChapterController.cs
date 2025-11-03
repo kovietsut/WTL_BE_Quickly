@@ -13,11 +13,11 @@ namespace WebAPI.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class ChapterController : ControllerBase
+    public class ChaptersController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public ChapterController(IMediator mediator)
+        public ChaptersController(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -30,7 +30,7 @@ namespace WebAPI.Controllers
             return result;
         }
 
-        [HttpGet("get-list")]
+        [HttpGet]
         public async Task<IActionResult> GetList(int? pageNumber, int? pageSize, string? searchText)
         {
             var query = new GetListChapterQuery(pageNumber, pageSize, searchText);
